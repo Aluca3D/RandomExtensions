@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "randexten:ruby"
+  },
+  "base": {
+    "item": "minecraft:diamond_boots"
+  },
+  "result": {
+    "item": "randexten:diamond_ruby_boots"
+  },
+  "template": {
+    "item": "randexten:gems_upgrade_template"
+  }
+}

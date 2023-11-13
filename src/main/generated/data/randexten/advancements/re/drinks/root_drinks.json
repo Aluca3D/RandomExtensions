@@ -1,0 +1,47 @@
+{
+  "parent": "randexten:re/foods/new_foods",
+  "criteria": {
+    "has_iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Burp"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:empty_soda_can"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Lets Make some Drinks"
+    }
+  },
+  "requirements": [
+    [
+      "has_iron"
+    ]
+  ],
+  "rewards": {
+    "experience": 20,
+    "recipes": [
+      "randexten:empty_soda_can",
+      "randexten:red_soda_can",
+      "randexten:green_soda_can"
+    ]
+  },
+  "sends_telemetry_event": true
+}

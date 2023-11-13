@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "randexten:aquamarin"
+  },
+  "base": {
+    "item": "minecraft:diamond_helmet"
+  },
+  "result": {
+    "item": "randexten:diamond_aquamarin_helmet"
+  },
+  "template": {
+    "item": "randexten:gems_upgrade_template"
+  }
+}

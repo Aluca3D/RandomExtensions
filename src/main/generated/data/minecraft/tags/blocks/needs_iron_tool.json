@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "randexten:aquamarin_ore",
+    "randexten:soul_ore",
+    "randexten:ruby_block",
+    "randexten:ruby_ore",
+    "randexten:topas_block",
+    "randexten:topas_ore"
+  ]
+}

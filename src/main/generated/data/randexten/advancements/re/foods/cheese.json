@@ -1,0 +1,48 @@
+{
+  "parent": "randexten:re/misc/cheese_bucket",
+  "criteria": {
+    "has_consumed_cheese": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:cheese"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Gromit, where are my crackers?"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:cheese"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "CHEESE"
+    }
+  },
+  "requirements": [
+    [
+      "has_consumed_cheese"
+    ]
+  ],
+  "rewards": {
+    "experience": 20,
+    "recipes": [
+      "randexten:cheese_block",
+      "randexten:cheese_slabs",
+      "randexten:cheese_stairs",
+      "randexten:cheese_walls"
+    ]
+  },
+  "sends_telemetry_event": true
+}

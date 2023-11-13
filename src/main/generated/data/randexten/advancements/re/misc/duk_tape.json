@@ -1,0 +1,42 @@
+{
+  "parent": "randexten:re/projectile/explosive/bamboo_explosive",
+  "criteria": {
+    "has_duk_tape": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:duk_tape"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Duck.png"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:duk_tape"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Duck Tape OwO"
+    }
+  },
+  "requirements": [
+    [
+      "has_duk_tape"
+    ]
+  ],
+  "rewards": {
+    "experience": 40
+  },
+  "sends_telemetry_event": true
+}

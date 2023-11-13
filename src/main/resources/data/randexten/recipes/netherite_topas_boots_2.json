@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "randexten:topas"
+  },
+  "base": {
+    "item": "minecraft:netherite_boots"
+  },
+  "result": {
+    "item": "randexten:netherite_topas_boots"
+  },
+  "template": {
+    "item": "randexten:gems_upgrade_template"
+  }
+}

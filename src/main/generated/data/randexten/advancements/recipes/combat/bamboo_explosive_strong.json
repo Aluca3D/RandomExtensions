@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bamboo_explosive": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:bamboo_explosive"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_duk_tape": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:duk_tape"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:bamboo_explosive_strong"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bamboo_explosive",
+      "has_duk_tape"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:bamboo_explosive_strong"
+    ]
+  },
+  "sends_telemetry_event": false
+}

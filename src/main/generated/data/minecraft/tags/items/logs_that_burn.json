@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "randexten:burned_log",
+    "randexten:burned_wood",
+    "randexten:stripped_burned_wood",
+    "randexten:stripped_burned_log"
+  ]
+}

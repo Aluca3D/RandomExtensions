@@ -1,0 +1,42 @@
+{
+  "parent": "randexten:re/foods/cheese",
+  "criteria": {
+    "has_stinky_cheese": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:stinky_cheese"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Lets trow it at People that we don't like"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:stinky_cheese"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Eww, Stinky"
+    }
+  },
+  "requirements": [
+    [
+      "has_stinky_cheese"
+    ]
+  ],
+  "rewards": {
+    "experience": 20
+  },
+  "sends_telemetry_event": true
+}

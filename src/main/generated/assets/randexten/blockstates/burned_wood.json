@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "randexten:block/burned_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "randexten:block/burned_wood"
+    },
+    "axis=z": {
+      "model": "randexten:block/burned_wood",
+      "x": 90
+    }
+  }
+}

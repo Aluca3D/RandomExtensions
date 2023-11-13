@@ -1,0 +1,40 @@
+{
+  "parent": "randexten:re/foods/new_foods",
+  "criteria": {
+    "has_consumed_sandwich": {
+      "conditions": {
+        "item": {
+          "items": [
+            "randexten:sandwich"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Mmmm, Sandwich"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:sandwich"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Sandwich"
+    }
+  },
+  "requirements": [
+    [
+      "has_consumed_sandwich"
+    ]
+  ],
+  "rewards": {
+    "experience": 20
+  },
+  "sends_telemetry_event": true
+}

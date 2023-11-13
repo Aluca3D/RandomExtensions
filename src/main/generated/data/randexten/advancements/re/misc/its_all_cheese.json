@@ -1,0 +1,72 @@
+{
+  "parent": "randexten:re/foods/cheese",
+  "criteria": {
+    "has_cheese_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:cheese_slabs"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cheese_stair": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:cheese_stairs"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cheese_wall": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:cheese_walls"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Yes, yes it is"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:cheese_stairs"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Its all Cheese?"
+    }
+  },
+  "requirements": [
+    [
+      "has_cheese_stair"
+    ],
+    [
+      "has_cheese_slab"
+    ],
+    [
+      "has_cheese_wall"
+    ]
+  ],
+  "rewards": {
+    "experience": 200
+  },
+  "sends_telemetry_event": true
+}

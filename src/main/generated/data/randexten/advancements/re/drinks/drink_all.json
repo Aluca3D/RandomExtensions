@@ -1,0 +1,53 @@
+{
+  "parent": "randexten:re/drinks/root_drinks",
+  "criteria": {
+    "has_drank_green": {
+      "conditions": {
+        "item": {
+          "items": [
+            "randexten:green_soda_can"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "has_drank_red": {
+      "conditions": {
+        "item": {
+          "items": [
+            "randexten:red_soda_can"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "ENERGY!?!"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "randexten:red_soda_can"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Dats a lot of drinks"
+    }
+  },
+  "requirements": [
+    [
+      "has_drank_red"
+    ],
+    [
+      "has_drank_green"
+    ]
+  ],
+  "rewards": {
+    "experience": 200
+  },
+  "sends_telemetry_event": true
+}

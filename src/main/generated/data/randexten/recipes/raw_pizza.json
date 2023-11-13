@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "randexten:cheese"
+    },
+    {
+      "item": "randexten:tomato"
+    },
+    {
+      "item": "randexten:dough"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "randexten:raw_pizza"
+  }
+}

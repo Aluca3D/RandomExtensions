@@ -1,0 +1,33 @@
+{
+  "parent": "randexten:re/randexten",
+  "criteria": {
+    "exist": {
+      "conditions": {
+        "block": "minecraft:air"
+      },
+      "trigger": "minecraft:enter_block"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Lets Trow some thinks"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:snowball"
+    },
+    "show_toast": false,
+    "title": {
+      "text": "Projectiles"
+    }
+  },
+  "requirements": [
+    [
+      "exist"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:fermented_spider_eye"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "randexten:empty_soda_can"
+    }
+  ],
+  "result": {
+    "item": "randexten:red_soda_can"
+  }
+}

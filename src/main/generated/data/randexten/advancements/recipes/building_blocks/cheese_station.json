@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cheese": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:cheese"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cheese_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:cheese_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:cheese_station"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stone",
+      "has_cheese",
+      "has_cheese_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:cheese_station"
+    ]
+  },
+  "sends_telemetry_event": false
+}

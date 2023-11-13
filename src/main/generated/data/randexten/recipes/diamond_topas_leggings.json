@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "randexten:topas"
+  },
+  "base": {
+    "item": "minecraft:diamond_leggings"
+  },
+  "result": {
+    "item": "randexten:diamond_topas_leggings"
+  },
+  "template": {
+    "item": "randexten:gems_upgrade_template"
+  }
+}

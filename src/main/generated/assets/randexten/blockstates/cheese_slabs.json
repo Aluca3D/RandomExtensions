@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "randexten:block/cheese_slabs"
+    },
+    "type=double": {
+      "model": "randexten:block/cheese_block"
+    },
+    "type=top": {
+      "model": "randexten:block/cheese_slabs_top"
+    }
+  }
+}

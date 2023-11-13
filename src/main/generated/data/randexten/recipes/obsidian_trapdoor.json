@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "E": {
+      "item": "minecraft:iron_trapdoor"
+    },
+    "S": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "SES",
+    "SES"
+  ],
+  "result": {
+    "count": 2,
+    "item": "randexten:obsidian_trapdoor"
+  },
+  "show_notification": true
+}

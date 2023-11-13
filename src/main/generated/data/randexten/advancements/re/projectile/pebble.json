@@ -1,0 +1,45 @@
+{
+  "parent": "randexten:re/projectile/root_projectile",
+  "criteria": {
+    "has_pebble": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:pebble"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Throw at Friend"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:pebble"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Rock"
+    }
+  },
+  "requirements": [
+    [
+      "has_pebble"
+    ]
+  ],
+  "rewards": {
+    "experience": 20,
+    "recipes": [
+      "randexten:bamboo_explosive"
+    ]
+  },
+  "sends_telemetry_event": true
+}

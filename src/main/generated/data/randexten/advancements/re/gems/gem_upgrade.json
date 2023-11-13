@@ -1,0 +1,42 @@
+{
+  "parent": "randexten:re/gems/root_gem",
+  "criteria": {
+    "has_gems_upgrade_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:gems_upgrade_template"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Welcome to the Jungle"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "randexten:gems_upgrade_template"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Time for Upgrades"
+    }
+  },
+  "requirements": [
+    [
+      "has_gems_upgrade_template"
+    ]
+  ],
+  "rewards": {
+    "experience": 40
+  },
+  "sends_telemetry_event": true
+}

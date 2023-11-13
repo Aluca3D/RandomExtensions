@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_diamond_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:diamond_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_gems_upgrade_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:gems_upgrade_template"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:diamond_topas_chestplate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_topas": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:topas"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gems_upgrade_template",
+      "has_diamond_chestplate",
+      "has_topas"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:diamond_topas_chestplate"
+    ]
+  },
+  "sends_telemetry_event": false
+}

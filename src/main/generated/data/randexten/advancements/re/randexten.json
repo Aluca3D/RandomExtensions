@@ -1,0 +1,43 @@
+{
+  "criteria": {
+    "exist": {
+      "conditions": {
+        "block": "minecraft:air"
+      },
+      "trigger": "minecraft:enter_block"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Its filled with Random Stuff"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "randexten:cheese_block"
+    },
+    "show_toast": false,
+    "title": {
+      "text": "Random Extensions"
+    }
+  },
+  "requirements": [
+    [
+      "exist"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "randexten:pebble_from_cobblestone",
+      "randexten:cobblestone_from_pebble",
+      "randexten:wooden_paxel",
+      "randexten:stone_paxel",
+      "randexten:iron_paxel",
+      "randexten:golden_paxel",
+      "randexten:diamond_paxel"
+    ]
+  },
+  "sends_telemetry_event": true
+}

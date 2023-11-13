@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aquamarin": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:aquamarin"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_diamond_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:diamond_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_gems_upgrade_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:gems_upgrade_template"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:diamond_aquamarin_helmet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gems_upgrade_template",
+      "has_diamond_helmet",
+      "has_aquamarin"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:diamond_aquamarin_helmet"
+    ]
+  },
+  "sends_telemetry_event": false
+}

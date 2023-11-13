@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "cheese_block_from_bucket_cheese",
+  "ingredients": [
+    {
+      "item": "randexten:bucket_cheese"
+    }
+  ],
+  "result": {
+    "item": "randexten:cheese_block"
+  }
+}

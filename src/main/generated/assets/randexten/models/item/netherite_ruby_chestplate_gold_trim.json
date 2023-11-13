@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "randexten:item/netherite_ruby_chestplate",
+    "layer1": "minecraft:trims/items/chestplate_trim_gold"
+  }
+}

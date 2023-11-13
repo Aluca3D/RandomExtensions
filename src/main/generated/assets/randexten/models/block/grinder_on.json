@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "randexten:block/grinder_front_on",
+    "side": "randexten:block/grinder_side",
+    "top": "randexten:block/grinder_top"
+  }
+}

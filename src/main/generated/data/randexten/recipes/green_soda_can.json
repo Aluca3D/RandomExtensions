@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:rabbit_foot"
+    },
+    {
+      "item": "randexten:empty_soda_can"
+    }
+  ],
+  "result": {
+    "item": "randexten:green_soda_can"
+  }
+}

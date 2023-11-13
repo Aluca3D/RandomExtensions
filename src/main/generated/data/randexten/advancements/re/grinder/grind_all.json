@@ -1,0 +1,63 @@
+{
+  "parent": "randexten:re/grinder/grinder_root",
+  "criteria": {
+    "has_recipe_cobblestone": {
+      "conditions": {
+        "recipe": "randexten:grinder/cobblestone_grinder"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_recipe_flour": {
+      "conditions": {
+        "recipe": "randexten:grinder/flour_grinder"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_recipe_gravel": {
+      "conditions": {
+        "recipe": "randexten:grinder/gravel_grinder"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_recipe_sand": {
+      "conditions": {
+        "recipe": "randexten:grinder/sand_grinder"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Automation, Baby"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "randexten:grinder"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Grind Everything"
+    }
+  },
+  "requirements": [
+    [
+      "has_recipe_cobblestone"
+    ],
+    [
+      "has_recipe_gravel"
+    ],
+    [
+      "has_recipe_sand"
+    ],
+    [
+      "has_recipe_flour"
+    ]
+  ],
+  "rewards": {
+    "experience": 40
+  },
+  "sends_telemetry_event": true
+}

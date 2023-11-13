@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "randexten:ruby"
+  },
+  "base": {
+    "item": "minecraft:diamond_chestplate"
+  },
+  "result": {
+    "item": "randexten:diamond_ruby_chestplate"
+  },
+  "template": {
+    "item": "randexten:gems_upgrade_template"
+  }
+}

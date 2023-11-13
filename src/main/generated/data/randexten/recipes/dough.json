@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "minecraft:water_bucket"
+    },
+    "S": {
+      "item": "randexten:flour"
+    }
+  },
+  "pattern": [
+    "S",
+    "R"
+  ],
+  "result": {
+    "item": "randexten:dough"
+  },
+  "show_notification": true
+}

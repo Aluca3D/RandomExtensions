@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "E": {
+      "item": "minecraft:iron_door"
+    },
+    "S": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "SES",
+    "SES",
+    "SES"
+  ],
+  "result": {
+    "count": 3,
+    "item": "randexten:obsidian_door"
+  },
+  "show_notification": true
+}

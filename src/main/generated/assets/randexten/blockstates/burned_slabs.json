@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "randexten:block/burned_slabs"
+    },
+    "type=double": {
+      "model": "randexten:block/burned_planks"
+    },
+    "type=top": {
+      "model": "randexten:block/burned_slabs_top"
+    }
+  }
+}

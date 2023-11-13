@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "randexten:obsidian_door",
+    "randexten:obsidian_trapdoor",
+    "randexten:obsidian_glass",
+    "randexten:obsidian_glass_pane",
+    "randexten:tinted_obsidian_glass"
+  ]
+}

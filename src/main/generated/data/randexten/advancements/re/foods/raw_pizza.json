@@ -1,0 +1,42 @@
+{
+  "parent": "randexten:re/foods/new_foods",
+  "criteria": {
+    "has_raw_pizza": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:raw_pizza"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Needs to be backed"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:raw_pizza"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Its Raw"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_pizza"
+    ]
+  ],
+  "rewards": {
+    "experience": 20
+  },
+  "sends_telemetry_event": true
+}

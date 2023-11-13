@@ -1,0 +1,42 @@
+{
+  "parent": "randexten:re/randexten",
+  "criteria": {
+    "has_soul": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:soul"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "their is no joke"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:soul_ore"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Soul"
+    }
+  },
+  "requirements": [
+    [
+      "has_soul"
+    ]
+  ],
+  "rewards": {
+    "experience": 20
+  },
+  "sends_telemetry_event": true
+}

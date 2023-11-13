@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "randexten:cake",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 73599505,
+    "spacing": 12,
+    "separation": 7
+  }
+}

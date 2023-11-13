@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "R": {
+      "item": "minecraft:stone"
+    },
+    "S": {
+      "item": "minecraft:grindstone"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "RSR",
+    "RRR"
+  ],
+  "result": {
+    "item": "randexten:grinder"
+  },
+  "show_notification": true
+}

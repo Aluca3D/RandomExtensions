@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "randexten:block/stripped_burned_log",
+    "side": "randexten:block/stripped_burned_log"
+  }
+}

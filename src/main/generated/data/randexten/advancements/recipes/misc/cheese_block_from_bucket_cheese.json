@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bucket_cheese": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:bucket_cheese"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:cheese_block_from_bucket_cheese"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bucket_cheese"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:cheese_block_from_bucket_cheese"
+    ]
+  },
+  "sends_telemetry_event": false
+}

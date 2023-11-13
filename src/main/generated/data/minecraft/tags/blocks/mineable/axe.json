@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "randexten:burned_log",
+    "randexten:stripped_burned_log",
+    "randexten:burned_wood",
+    "randexten:stripped_burned_wood",
+    "randexten:burned_fence",
+    "randexten:burned_gate",
+    "randexten:burned_button",
+    "randexten:burned_pressure_plate",
+    "randexten:burned_slabs",
+    "randexten:burned_planks",
+    "randexten:burned_stairs",
+    "randexten:burned_door",
+    "randexten:burned_trapdoor"
+  ]
+}

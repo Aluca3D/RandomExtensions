@@ -1,0 +1,48 @@
+{
+  "parent": "randexten:re/randexten",
+  "criteria": {
+    "has_obsidian": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:obsidian"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "its BOOM prof"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:obsidian_glass"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Stronger Glass"
+    }
+  },
+  "requirements": [
+    [
+      "has_obsidian"
+    ]
+  ],
+  "rewards": {
+    "experience": 20,
+    "recipes": [
+      "randexten:obsidian_door",
+      "randexten:obsidian_glass",
+      "randexten:obsidian_glass_pane",
+      "randexten:obsidian_trapdoor"
+    ]
+  },
+  "sends_telemetry_event": true
+}

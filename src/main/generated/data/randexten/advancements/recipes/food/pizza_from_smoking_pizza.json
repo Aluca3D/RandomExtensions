@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_pizza": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:raw_pizza"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:pizza_from_smoking_pizza"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_pizza"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:pizza_from_smoking_pizza"
+    ]
+  },
+  "sends_telemetry_event": false
+}

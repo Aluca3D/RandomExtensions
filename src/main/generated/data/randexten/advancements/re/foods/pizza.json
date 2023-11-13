@@ -1,0 +1,40 @@
+{
+  "parent": "randexten:re/foods/raw_pizza",
+  "criteria": {
+    "has_tomato": {
+      "conditions": {
+        "item": {
+          "items": [
+            "randexten:pizza"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Pizza Time"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "randexten:pizza"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "PIZZA"
+    }
+  },
+  "requirements": [
+    [
+      "has_tomato"
+    ]
+  ],
+  "rewards": {
+    "experience": 200
+  },
+  "sends_telemetry_event": true
+}

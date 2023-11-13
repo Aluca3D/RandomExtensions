@@ -1,0 +1,51 @@
+{
+  "name": "randexten:default_sky_island_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:list_pool_element",
+        "projection": "rigid",
+        "elements": [
+          {
+            "element_type": "minecraft:single_pool_element",
+            "projection": "rigid",
+            "location": "randexten:sky_island/cheery_tree",
+            "processors": "minecraft:empty"
+          }
+        ]
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:list_pool_element",
+        "projection": "rigid",
+        "elements": [
+          {
+            "element_type": "minecraft:single_pool_element",
+            "projection": "rigid",
+            "location": "randexten:sky_island/flying_tower",
+            "processors": "minecraft:empty"
+          }
+        ]
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:list_pool_element",
+        "projection": "rigid",
+        "elements": [
+          {
+            "element_type": "minecraft:single_pool_element",
+            "projection": "rigid",
+            "location": "randexten:sky_island/tiny_island",
+            "processors": "minecraft:empty"
+          }
+        ]
+      }
+    }
+  ]
+}

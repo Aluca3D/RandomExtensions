@@ -1,0 +1,45 @@
+{
+  "parent": "randexten:re/foods/new_foods",
+  "criteria": {
+    "has_cheese_bucket": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:bucket_cheese"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Dear God"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:bucket_cheese"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "This, is a (Cheese filed) Bucket"
+    }
+  },
+  "requirements": [
+    [
+      "has_cheese_bucket"
+    ]
+  ],
+  "rewards": {
+    "experience": 20,
+    "recipes": [
+      "randexten:cheese_block_from_bucket_cheese"
+    ]
+  },
+  "sends_telemetry_event": true
+}

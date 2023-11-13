@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "randexten:aquamarin_block",
+    "randexten:aquamarin_ore",
+    "randexten:ruby_block",
+    "randexten:ruby_ore",
+    "randexten:topas_block",
+    "randexten:topas_ore",
+    "randexten:soul_ore",
+    "randexten:obsidian_glass",
+    "randexten:obsidian_glass_pane",
+    "randexten:tinted_obsidian_glass",
+    "randexten:obsidian_door",
+    "randexten:obsidian_trapdoor",
+    "randexten:charcoal_block",
+    "randexten:grinder",
+    "randexten:cheese_block"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "randexten:burned_wood"
+      },
+      {
+        "item": "randexten:burned_log"
+      },
+      {
+        "item": "randexten:stripped_burned_wood"
+      },
+      {
+        "item": "randexten:stripped_burned_log"
+      }
+    ]
+  },
+  "result": {
+    "item": "randexten:burned_planks",
+    "count": 4
+  }
+}

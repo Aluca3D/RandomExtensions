@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "randexten:cheese/cheese_cross",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 2075057876,
+    "spacing": 34,
+    "separation": 9
+  }
+}

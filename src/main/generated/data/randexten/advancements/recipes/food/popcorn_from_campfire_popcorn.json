@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_corn": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:corn"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:popcorn_from_campfire_popcorn"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_corn"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:popcorn_from_campfire_popcorn"
+    ]
+  },
+  "sends_telemetry_event": false
+}

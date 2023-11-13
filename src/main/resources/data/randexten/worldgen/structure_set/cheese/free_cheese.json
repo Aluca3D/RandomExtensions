@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "randexten:cheese/free_cheese",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 4235011,
+    "spacing": 45,
+    "separation": 13
+  }
+}

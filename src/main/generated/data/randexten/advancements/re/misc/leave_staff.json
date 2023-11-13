@@ -1,0 +1,43 @@
+{
+  "parent": "randexten:re/legendary_item/legendary_item_root",
+  "criteria": {
+    "has_leave_staff": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:leave_staff"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Because they leaf me in tears"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:leave_staff",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Do you like tree jokes?"
+    }
+  },
+  "requirements": [
+    [
+      "has_leave_staff"
+    ]
+  ],
+  "rewards": {
+    "experience": 400
+  },
+  "sends_telemetry_event": true
+}

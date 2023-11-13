@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "randexten:block/burned_planks",
+    "side": "randexten:block/burned_planks",
+    "top": "randexten:block/burned_planks"
+  }
+}

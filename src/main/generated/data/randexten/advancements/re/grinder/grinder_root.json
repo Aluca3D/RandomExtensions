@@ -1,0 +1,45 @@
+{
+  "parent": "randexten:re/randexten",
+  "criteria": {
+    "get_grindstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:grindstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "maybe we can build something with that?"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:grinder"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Grinder"
+    }
+  },
+  "requirements": [
+    [
+      "get_grindstone"
+    ]
+  ],
+  "rewards": {
+    "experience": 20,
+    "recipes": [
+      "randexten:grinder"
+    ]
+  },
+  "sends_telemetry_event": true
+}

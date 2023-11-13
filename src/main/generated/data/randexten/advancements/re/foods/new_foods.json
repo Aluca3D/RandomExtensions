@@ -1,0 +1,38 @@
+{
+  "parent": "randexten:re/randexten",
+  "criteria": {
+    "consumed_item": {
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "there are new things, like CHEESE"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:cheese"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Many new Foods"
+    }
+  },
+  "requirements": [
+    [
+      "consumed_item"
+    ]
+  ],
+  "rewards": {
+    "experience": 20,
+    "recipes": [
+      "randexten:sandwich",
+      "randexten:bucket_cheese_from_milk",
+      "randexten:raw_pizza"
+    ]
+  },
+  "sends_telemetry_event": true
+}

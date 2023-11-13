@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "randexten:block/tomato_crop_stage4"
+  }
+}

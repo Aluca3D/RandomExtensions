@@ -1,0 +1,88 @@
+{
+  "parent": "randexten:re/gems/aquamarin_root",
+  "criteria": {
+    "has_aquamarin_armor_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:diamond_aquamarin_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_aquamarin_armor_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:diamond_aquamarin_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_aquamarin_armor_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:diamond_aquamarin_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_aquamarin_armor_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:diamond_aquamarin_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "i cant swim"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "randexten:diamond_aquamarin_helmet",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Lets be Fish"
+    }
+  },
+  "requirements": [
+    [
+      "has_aquamarin_armor_helmet"
+    ],
+    [
+      "has_aquamarin_armor_chestplate"
+    ],
+    [
+      "has_aquamarin_armor_leggings"
+    ],
+    [
+      "has_aquamarin_armor_boots"
+    ]
+  ],
+  "rewards": {
+    "experience": 40
+  },
+  "sends_telemetry_event": true
+}

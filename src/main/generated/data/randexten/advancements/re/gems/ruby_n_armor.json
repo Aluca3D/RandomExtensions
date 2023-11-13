@@ -1,0 +1,88 @@
+{
+  "parent": "randexten:re/gems/ruby_d_armor",
+  "criteria": {
+    "has_ruby_armor_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:netherite_ruby_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ruby_armor_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:netherite_ruby_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ruby_armor_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:netherite_ruby_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ruby_armor_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:netherite_ruby_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Deja vu"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "randexten:netherite_ruby_helmet",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Speeeed"
+    }
+  },
+  "requirements": [
+    [
+      "has_ruby_armor_helmet"
+    ],
+    [
+      "has_ruby_armor_chestplate"
+    ],
+    [
+      "has_ruby_armor_leggings"
+    ],
+    [
+      "has_ruby_armor_boots"
+    ]
+  ],
+  "rewards": {
+    "experience": 200
+  },
+  "sends_telemetry_event": true
+}

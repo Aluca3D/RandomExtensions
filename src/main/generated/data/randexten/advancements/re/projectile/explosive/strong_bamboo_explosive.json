@@ -1,0 +1,42 @@
+{
+  "parent": "randexten:re/projectile/explosive/bamboo_explosive",
+  "criteria": {
+    "has_strong_bamboo_explosive": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:bamboo_explosive_strong"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "explosive_sound.mp4"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "randexten:bamboo_explosive_strong"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Even bigger BOOM"
+    }
+  },
+  "requirements": [
+    [
+      "has_strong_bamboo_explosive"
+    ]
+  ],
+  "rewards": {
+    "experience": 20
+  },
+  "sends_telemetry_event": true
+}

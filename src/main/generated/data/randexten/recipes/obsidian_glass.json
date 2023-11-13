@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "R": {
+      "item": "minecraft:glass"
+    },
+    "S": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "SRS",
+    "RRR",
+    "SRS"
+  ],
+  "result": {
+    "count": 6,
+    "item": "randexten:obsidian_glass"
+  },
+  "show_notification": true
+}

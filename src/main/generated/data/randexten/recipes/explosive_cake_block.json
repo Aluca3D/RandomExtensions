@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:cake"
+    },
+    "R": {
+      "item": "minecraft:tnt"
+    },
+    "S": {
+      "item": "minecraft:red_candle"
+    }
+  },
+  "pattern": [
+    "S",
+    "C",
+    "R"
+  ],
+  "result": {
+    "item": "randexten:explosive_cake_block"
+  },
+  "show_notification": true
+}

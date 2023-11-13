@@ -1,0 +1,20 @@
+{
+  "nightmare_tv_ambient": {
+    "subtitle": "sounds.randexten.nightmare_tv_ambient",
+    "sounds": [
+      "randexten:nightmare_tv_ambient"
+    ]
+  },
+  "nightmare_tv_hurt": {
+    "subtitle": "sounds.randexten.nightmare_tv_hurt",
+    "sounds": [
+      "randexten:nightmare_tv_hurt"
+    ]
+  },
+  "magic_shot": {
+    "subtitle": "sounds.randexten.magic_shot",
+    "sounds": [
+      "randexten:magic_shot"
+    ]
+  }
+}

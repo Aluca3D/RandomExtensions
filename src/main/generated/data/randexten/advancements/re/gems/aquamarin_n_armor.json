@@ -1,0 +1,88 @@
+{
+  "parent": "randexten:re/gems/aquamarin_d_armor",
+  "criteria": {
+    "has_aquamarin_armor_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:netherite_aquamarin_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_aquamarin_armor_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:netherite_aquamarin_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_aquamarin_armor_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:netherite_aquamarin_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_aquamarin_armor_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:netherite_aquamarin_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Aquaman"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "randexten:netherite_aquamarin_helmet",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "I can finally Breath"
+    }
+  },
+  "requirements": [
+    [
+      "has_aquamarin_armor_helmet"
+    ],
+    [
+      "has_aquamarin_armor_chestplate"
+    ],
+    [
+      "has_aquamarin_armor_leggings"
+    ],
+    [
+      "has_aquamarin_armor_boots"
+    ]
+  ],
+  "rewards": {
+    "experience": 200
+  },
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "minecraft:golden_axe"
+    },
+    {
+      "item": "minecraft:golden_pickaxe"
+    },
+    {
+      "item": "minecraft:golden_shovel"
+    }
+  ],
+  "result": {
+    "item": "randexten:golden_paxel"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "randexten:diamond_aquamarin_helmet",
+    "randexten:diamond_aquamarin_chestplate",
+    "randexten:diamond_aquamarin_leggings",
+    "randexten:diamond_aquamarin_boots",
+    "randexten:netherite_aquamarin_helmet",
+    "randexten:netherite_aquamarin_chestplate",
+    "randexten:netherite_aquamarin_leggings",
+    "randexten:netherite_aquamarin_boots",
+    "randexten:diamond_ruby_helmet",
+    "randexten:diamond_ruby_chestplate",
+    "randexten:diamond_ruby_leggings",
+    "randexten:diamond_ruby_boots",
+    "randexten:netherite_ruby_helmet",
+    "randexten:netherite_ruby_chestplate",
+    "randexten:netherite_ruby_leggings",
+    "randexten:netherite_ruby_boots",
+    "randexten:diamond_topas_helmet",
+    "randexten:diamond_topas_chestplate",
+    "randexten:diamond_topas_leggings",
+    "randexten:diamond_topas_boots",
+    "randexten:netherite_topas_helmet",
+    "randexten:netherite_topas_chestplate",
+    "randexten:netherite_topas_leggings",
+    "randexten:netherite_topas_boots"
+  ]
+}

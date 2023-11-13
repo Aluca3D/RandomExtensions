@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "randexten:ruby"
+  },
+  "base": {
+    "item": "minecraft:netherite_helmet"
+  },
+  "result": {
+    "item": "randexten:netherite_ruby_helmet"
+  },
+  "template": {
+    "item": "randexten:gems_upgrade_template"
+  }
+}

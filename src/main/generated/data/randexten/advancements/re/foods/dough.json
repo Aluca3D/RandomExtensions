@@ -1,0 +1,47 @@
+{
+  "parent": "randexten:re/foods/flour",
+  "criteria": {
+    "has_dough": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:dough"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "its Cauldron time"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "randexten:dough"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "A better way to make bread"
+    }
+  },
+  "requirements": [
+    [
+      "has_dough"
+    ]
+  ],
+  "rewards": {
+    "experience": 20,
+    "recipes": [
+      "randexten:bread_from_campfire_dough",
+      "randexten:bread_from_dough",
+      "randexten:bread_from_smoking_dough"
+    ]
+  },
+  "sends_telemetry_event": true
+}

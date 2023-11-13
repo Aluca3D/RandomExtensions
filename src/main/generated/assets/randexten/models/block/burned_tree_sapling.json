@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "randexten:block/burned_tree_sapling"
+  }
+}

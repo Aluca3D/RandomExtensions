@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "randexten:cheese"
+    },
+    {
+      "item": "randexten:corn"
+    },
+    {
+      "item": "randexten:tomato"
+    },
+    {
+      "item": "minecraft:bread"
+    }
+  ],
+  "result": {
+    "item": "randexten:sandwich"
+  }
+}
