@@ -148,6 +148,7 @@ public class ItemGroups_RaEx {
                         entries.add(Items_RaEx.BAMBOO_EXPLOSIVE);
                         entries.add(Items_RaEx.BAMBOO_EXPLOSIVE_STRONG);
                         entries.add(Blocks_RaEx.GRINDER);
+                        entries.add(Blocks_RaEx.ICE_CRYSTAL);
                         entries.add(Items_RaEx.PEBBLE);
 
                         entries.add(Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK);
