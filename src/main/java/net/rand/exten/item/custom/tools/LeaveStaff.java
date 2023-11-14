@@ -15,7 +15,7 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.rand.exten.block.Blocks_RaEx;
-import net.rand.exten.entity.projectile.SeedBullet;
+import net.rand.exten.entity.projectile.LeafBulled;
 import net.rand.exten.sound.Sounds_RaEx;
 
 public class LeaveStaff extends Item {
@@ -45,9 +45,9 @@ public class LeaveStaff extends Item {
         world.playSound(null, user.getX(), user.getY(), user.getZ(), Sounds_RaEx.MAGIC_SHOT, SoundCategory.NEUTRAL, 1F, 1.75F);
         user.getItemCooldownManager().set(this, 10);
         if (!world.isClient()) {
-            SeedBullet seedBulled = new SeedBullet(user, world);
-            seedBulled.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 2.75F, 0.25F);
-            world.spawnEntity(seedBulled);
+            LeafBulled leafBulled = new LeafBulled(user, world);
+            leafBulled.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 2.75F, 0.25F);
+            world.spawnEntity(leafBulled);
         }
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));
@@ -69,7 +69,6 @@ public class LeaveStaff extends Item {
         if (!user.isSneaking() && below.equals(Blocks.AIR)) {
             BlockState state = Blocks_RaEx.FAKE_LEAVES.getDefaultState();
             world.setBlockState(posBelow, state);
-            }
 
         } else if (user.isSneaking() && below.equals(Blocks_RaEx.FAKE_LEAVES)) {
             BlockState state = Blocks.AIR.getDefaultState();

@@ -1,5 +1,5 @@
 {
-  "parent": "randexten:re/legendary_item/legendary_item_root",
+  "parent": "randexten:re/legendary_item/legendary_root",
   "criteria": {
     "has_leave_staff": {
       "conditions": {

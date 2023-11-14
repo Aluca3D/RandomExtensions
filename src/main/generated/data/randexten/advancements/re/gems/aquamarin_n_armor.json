@@ -54,7 +54,7 @@
     "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
     "description": {
-      "text": "Aquaman"
+      "text": "Aqua-man"
     },
     "frame": "challenge",
     "hidden": false,

@@ -1,5 +1,5 @@
 {
-  "parent": "randexten:re/misc/cheese_bucket",
+  "parent": "randexten:re/foods/cheese_bucket",
   "criteria": {
     "has_consumed_cheese": {
       "conditions": {

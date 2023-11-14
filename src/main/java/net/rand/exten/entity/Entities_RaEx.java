@@ -38,9 +38,9 @@ public class Entities_RaEx {
             FabricEntityTypeBuilder.<Pebble>create(SpawnGroup.MISC, Pebble::new)
                     .dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build());
 
-    public static final EntityType<SeedBullet> SEED_BULLET = Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(RandomExtensions.MOD_ID, "seed_bullet"),
-            FabricEntityTypeBuilder.<SeedBullet>create(SpawnGroup.MISC, SeedBullet::new)
+    public static final EntityType<LeafBulled> LEAF_BULLED = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(RandomExtensions.MOD_ID, "leaf_bulled"),
+            FabricEntityTypeBuilder.<LeafBulled>create(SpawnGroup.MISC, LeafBulled::new)
                     .dimensions(EntityDimensions.fixed(0.5f, 0.5f)).build());
 
     public static void registerEntityAttributes() {

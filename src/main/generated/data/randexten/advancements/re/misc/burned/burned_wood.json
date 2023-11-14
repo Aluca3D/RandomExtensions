@@ -1,5 +1,5 @@
 {
-  "parent": "randexten:re/misc/burned_root",
+  "parent": "randexten:re/misc/burned/burned_root",
   "criteria": {
     "has_burned_sapling": {
       "conditions": {

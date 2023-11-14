@@ -19,15 +19,16 @@ import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.World;
 import net.rand.exten.entity.Entities_RaEx;
+import net.rand.exten.util.tools.Math_RaEx;
 
-public class SeedBullet extends ThrownItemEntity {
+public class LeafBulled extends ThrownItemEntity {
 
-    public SeedBullet(EntityType<? extends ThrownItemEntity> entityType, World world) {
+    public LeafBulled(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
     }
 
-    public SeedBullet(LivingEntity livingEntity, World world) {
-        super(Entities_RaEx.SEED_BULLET, livingEntity, world);
+    public LeafBulled(LivingEntity livingEntity, World world) {
+        super(Entities_RaEx.LEAF_BULLED, livingEntity, world);
 
         for (int i = 0; i < 8; ++i) {
             this.getWorld().addParticle(new ItemStackParticleEffect(ParticleTypes.ITEM, this.getStack()), this.getX(), this.getY(), this.getZ(), ((double)this.random.nextFloat() - 0.5) * 0.08, ((double)this.random.nextFloat() - 0.5) * 0.08, ((double)this.random.nextFloat() - 0.5) * 0.08);
@@ -55,17 +56,17 @@ public class SeedBullet extends ThrownItemEntity {
 
     @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
-
+        Math_RaEx math = new Math_RaEx();
         Entity hitEntity = entityHitResult.getEntity();
         Entity owner = this.getOwner();
 
         LivingEntity livingentity = owner instanceof LivingEntity ? (LivingEntity)owner : null;
-        float damage = 2f;
+        float damage = math.randomInt(6) ;
 
         boolean hurt = hitEntity.damage(this.getDamageSources().mobProjectile(this, livingentity), damage);
         if (hurt) {
             if(hitEntity instanceof LivingEntity livingHitEntity) {
-                livingHitEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 100, 1), owner);
+                livingHitEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 100, math.randomInt(3)), owner);
             }
         }
 

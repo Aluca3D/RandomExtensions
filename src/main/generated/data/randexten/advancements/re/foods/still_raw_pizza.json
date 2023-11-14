@@ -1,11 +1,11 @@
 {
   "parent": "randexten:re/foods/raw_pizza",
   "criteria": {
-    "has_eaten_pizza": {
+    "has_raw_eaten_pizza": {
       "conditions": {
         "item": {
           "items": [
-            "randexten:pizza"
+            "randexten:raw_pizza"
           ]
         }
       },
@@ -16,21 +16,21 @@
     "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
     "description": {
-      "text": "Pizza Time"
+      "text": "Why?"
     },
-    "frame": "challenge",
+    "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "randexten:pizza"
+      "item": "randexten:raw_pizza"
     },
     "show_toast": true,
     "title": {
-      "text": "PIZZA"
+      "text": "Still Raw"
     }
   },
   "requirements": [
     [
-      "has_eaten_pizza"
+      "has_raw_eaten_pizza"
     ]
   ],
   "rewards": {

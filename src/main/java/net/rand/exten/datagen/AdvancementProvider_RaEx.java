@@ -118,9 +118,9 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .criterion("has_leave_staff", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.LEAVE_STAFF))
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(mainRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/legendary_item_root");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/legendary_root");
 
-        // Burned Wood
+
         AdvancementEntry burnedRoot = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.BURNED_TREE_SAPLING),
                         Text.literal("In the Furnace with it"), Text.literal("Burn a Sapling"),
@@ -129,8 +129,9 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .criterion("has_furnace", InventoryChangedCriterion.Conditions.items(Items.FURNACE))
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(mainRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/burned_root");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/burned/burned_root");
 
+        // Burned Wood
         AdvancementEntry burnedWood = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.BURNED_LOG),
                         Text.literal("Its Burned"), Text.literal("Let it Burn"),
@@ -148,7 +149,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         .setExperience(20)
                 )
                 .parent(burnedRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/burned_wood");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/burned/burned_wood");
 
         // Food
         AdvancementEntry sandwich = Advancement.Builder.create()
@@ -171,7 +172,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         .setExperience(20)
                 )
                 .parent(foodRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/cheese_bucket");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/foods/cheese_bucket");
 
         AdvancementEntry cheese = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Items_RaEx.CHEESE),
@@ -208,12 +209,22 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .parent(foodRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/foods/raw_pizza");
 
+        AdvancementEntry stillRawPizza = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Items_RaEx.RAW_PIZZA),
+                        Text.literal("Still Raw"), Text.literal("Why?"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, false))
+                .criterion("has_raw_eaten_pizza", ConsumeItemCriterion.Conditions.item(Items_RaEx.RAW_PIZZA))
+                .rewards(AdvancementRewards.Builder.experience(200))
+                .parent(rawPizza)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/foods/still_raw_pizza");
+
         AdvancementEntry Pizza = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Items_RaEx.PIZZA),
                         Text.literal("PIZZA"), Text.literal("Pizza Time"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.CHALLENGE,
                         true, true, false))
-                .criterion("has_tomato", ConsumeItemCriterion.Conditions.item(Items_RaEx.PIZZA))
+                .criterion("has_eaten_pizza", ConsumeItemCriterion.Conditions.item(Items_RaEx.PIZZA))
                 .rewards(AdvancementRewards.Builder.experience(200))
                 .parent(rawPizza)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/foods/pizza");
@@ -366,7 +377,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
 
         AdvancementEntry aquamarinNArmor = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.N_AQUAMARIN_HELMET),
-                        Text.literal("I can finally Breath"), Text.literal("Aquaman"),
+                        Text.literal("I can finally Breath"), Text.literal("Aqua-man"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.CHALLENGE,
                         true, true, false))
                 .criterion("has_aquamarin_armor_helmet", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_AQUAMARIN_HELMET))
@@ -402,7 +413,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
 
         AdvancementEntry rubyNArmor = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.N_RUBY_HELMET),
-                        Text.literal("Speeeed"), Text.literal("Deja vu"),
+                        Text.literal("Speed"), Text.literal("Deja vu"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.CHALLENGE,
                         true, true, false))
                 .criterion("has_ruby_armor_helmet", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_RUBY_HELMET))
@@ -482,7 +493,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .criterion("has_leave_staff", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.LEAVE_STAFF))
                 .rewards(AdvancementRewards.Builder.experience(400))
                 .parent(legendaryItemRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/leave_staff");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/leave_staff");
 
     }
 }
