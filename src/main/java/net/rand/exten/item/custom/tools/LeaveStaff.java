@@ -17,7 +17,6 @@ import net.minecraft.world.World;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.entity.projectile.SeedBullet;
 import net.rand.exten.sound.Sounds_RaEx;
-import net.rand.exten.util.tools.Math_RaEx;
 
 public class LeaveStaff extends Item {
     public LeaveStaff(Settings settings) {
@@ -64,17 +63,12 @@ public class LeaveStaff extends Item {
         BlockState blockStateBelow = user.getWorld().getBlockState(posBelow);
         Block below = blockStateBelow.getBlock();
 
-        Math_RaEx math = new Math_RaEx();
-        Hand hand = Hand.OFF_HAND;
-        ItemStack itemStack = user.getStackInHand(hand);
+        //Hand hand = Hand.OFF_HAND;
+        //ItemStack itemStack = user.getStackInHand(hand);
 
         if (!user.isSneaking() && below.equals(Blocks.AIR)) {
             BlockState state = Blocks_RaEx.FAKE_LEAVES.getDefaultState();
             world.setBlockState(posBelow, state);
-
-            // This is not the best solution, but it is the best I can do at 3AM
-            if (math.randomInt(100) == 1) {
-                itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
             }
 
         } else if (user.isSneaking() && below.equals(Blocks_RaEx.FAKE_LEAVES)) {
