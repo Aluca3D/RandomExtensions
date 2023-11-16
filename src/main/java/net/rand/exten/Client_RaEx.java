@@ -30,7 +30,10 @@ public class Client_RaEx implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.OBSIDIAN_GLASS_PANE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.TINTED_OBSIDIAN_GLASS, RenderLayer.getTranslucent());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.CRYSTAL, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.ICE_CRYSTAL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.SAND_CRYSTAL, RenderLayer.getTranslucent());
+
 
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.OBSIDIAN_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.OBSIDIAN_TRAPDOOR, RenderLayer.getCutout());

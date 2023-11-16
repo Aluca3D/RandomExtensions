@@ -70,9 +70,15 @@ public class Blocks_RaEx {
                 }
             });
 
-    public static final Block ICE_CRYSTAL = registerBlock("ice_crystal",
+    /**Crystal*/
+    public static final Block CRYSTAL = registerBlock("crystal",
             new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque().allowsSpawning(Blocks::never).
                     solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+    public static final Block ICE_CRYSTAL = registerBlock("ice_crystal",
+            new GlassBlock(FabricBlockSettings.copyOf(Blocks_RaEx.CRYSTAL)));
+    public static final Block SAND_CRYSTAL = registerBlock("sand_crystal",
+            new GlassBlock(FabricBlockSettings.copyOf(Blocks_RaEx.CRYSTAL)));
+
     /**Cheese*/
     public static final Block CHEESE_BLOCK = registerBlock("cheese_block",
             new Block(FabricBlockSettings.copyOf(Blocks.DIRT)));

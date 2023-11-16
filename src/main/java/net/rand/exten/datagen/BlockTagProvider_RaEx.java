@@ -40,7 +40,9 @@ public class BlockTagProvider_RaEx extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks_RaEx.CHARCOAL_BLOCK)
                 .add(Blocks_RaEx.GRINDER)
                 .add(Blocks_RaEx.CHEESE_BLOCK)
+                .add(Blocks_RaEx.CRYSTAL)
                 .add(Blocks_RaEx.ICE_CRYSTAL)
+                .add(Blocks_RaEx.SAND_CRYSTAL)
 
         ;
 

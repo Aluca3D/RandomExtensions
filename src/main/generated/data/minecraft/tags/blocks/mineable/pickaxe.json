@@ -16,6 +16,8 @@
     "randexten:charcoal_block",
     "randexten:grinder",
     "randexten:cheese_block",
-    "randexten:ice_crystal"
+    "randexten:crystal",
+    "randexten:ice_crystal",
+    "randexten:sand_crystal"
   ]
 }
