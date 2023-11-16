@@ -58,7 +58,7 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         blockStateModelGenerator.registerCooker(Blocks_RaEx.GRINDER, TexturedModel.ORIENTABLE);
 
 
-        blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.CRYSTAL);
+        blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.MOSSY_CRYSTAL);
         blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.ICE_CRYSTAL);
         blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.SAND_CRYSTAL);
 

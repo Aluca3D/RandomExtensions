@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "randexten:crystal"
+          "name": "randexten:mossy_crystal"
         }
       ],
       "rolls": 1.0

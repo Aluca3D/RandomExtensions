@@ -59,6 +59,35 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.CHEESE_STAIRS)));
         offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.CHEESE_WALLS, Blocks_RaEx.CHEESE_BLOCK);
 
+        // Crystal
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.MOSSY_CRYSTAL, 4)
+                .pattern("SAS")
+                .pattern("A A")
+                .pattern("SAS")
+                .input('A', Items.MOSS_BLOCK)
+                .input('S', Items.AMETHYST_SHARD)
+                .criterion(hasItem(Items.MOSS_BLOCK), conditionsFromItem(Items.MOSS_BLOCK))
+                .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.MOSSY_CRYSTAL)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.ICE_CRYSTAL, 4)
+                .pattern("SAS")
+                .pattern("A A")
+                .pattern("SAS")
+                .input('A', Items.ICE)
+                .input('S', Items.AMETHYST_SHARD)
+                .criterion(hasItem(Items.ICE), conditionsFromItem(Items.ICE))
+                .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.ICE_CRYSTAL)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.SAND_CRYSTAL, 4)
+                .pattern("SAS")
+                .pattern("A A")
+                .pattern("SAS")
+                .input('A', Items.SAND)
+                .input('S', Items.AMETHYST_SHARD)
+                .criterion(hasItem(Items.SAND), conditionsFromItem(Items.SAND))
+                .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.SAND_CRYSTAL)));
+
         // Burned Wood
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.BURNED_SLABS, Ingredient.ofItems(Blocks_RaEx.BURNED_PLANKS))
                 .criterion(hasItem(Blocks_RaEx.BURNED_PLANKS), conditionsFromItem(Blocks_RaEx.BURNED_PLANKS))

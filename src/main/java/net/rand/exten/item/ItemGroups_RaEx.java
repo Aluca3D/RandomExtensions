@@ -152,7 +152,7 @@ public class ItemGroups_RaEx {
                         entries.add(Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK);
 
                         /// Crystal
-                        entries.add(Blocks_RaEx.CRYSTAL);
+                        entries.add(Blocks_RaEx.MOSSY_CRYSTAL);
                         entries.add(Blocks_RaEx.ICE_CRYSTAL);
                         entries.add(Blocks_RaEx.SAND_CRYSTAL);
 
