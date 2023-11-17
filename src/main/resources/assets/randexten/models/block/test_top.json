@@ -1,0 +1,6 @@
+{
+  "parent": "randexten:block/reverse_stairs_top",
+  "textures": {
+    "texture": "randexten:block/burned_planks"
+  }
+}
