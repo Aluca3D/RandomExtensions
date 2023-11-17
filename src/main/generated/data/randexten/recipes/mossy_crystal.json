@@ -5,17 +5,20 @@
     "A": {
       "item": "minecraft:moss_block"
     },
+    "B": {
+      "item": "randexten:mossy_crystal"
+    },
     "S": {
       "item": "minecraft:amethyst_shard"
     }
   },
   "pattern": [
     "SAS",
-    "A A",
+    "ABA",
     "SAS"
   ],
   "result": {
-    "count": 4,
+    "count": 5,
     "item": "randexten:mossy_crystal"
   },
   "show_notification": true

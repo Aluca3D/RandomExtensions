@@ -5,17 +5,20 @@
     "A": {
       "item": "minecraft:ice"
     },
+    "B": {
+      "item": "randexten:ice_crystal"
+    },
     "S": {
       "item": "minecraft:amethyst_shard"
     }
   },
   "pattern": [
     "SAS",
-    "A A",
+    "ABA",
     "SAS"
   ],
   "result": {
-    "count": 4,
+    "count": 5,
     "item": "randexten:ice_crystal"
   },
   "show_notification": true

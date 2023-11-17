@@ -25,6 +25,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_ice_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:ice_crystal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "minecraft:ice_crystal"
@@ -35,6 +47,7 @@
   "requirements": [
     [
       "has_the_recipe",
+      "has_ice_crystal",
       "has_ice",
       "has_amethyst_shard"
     ]

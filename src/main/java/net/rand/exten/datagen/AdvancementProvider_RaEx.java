@@ -54,6 +54,22 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .parent(mainRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/foods/new_foods");
 
+        AdvancementEntry crystalRoot = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.MOSSY_CRYSTAL),
+                        Text.literal("Crystals"), Text.literal("Alternative Medicine"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_sand_crystal", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.SAND_CRYSTAL))
+                .criterion("has_ice_crystal", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.ICE_CRYSTAL))
+                .criterion("has_mossy_crystal", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.MOSSY_CRYSTAL))
+                .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:mossy_crystal"))
+                        .addRecipe(new Identifier("randexten:ice_crystal"))
+                        .addRecipe(new Identifier("randexten:sand_crystal"))
+                        .setExperience(40)
+                )
+                .parent(mainRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/crystal_root");
+
         AdvancementEntry drinkRoot = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Items_RaEx.EMPTY_SODA_CAN),
                         Text.literal("Lets Make some Drinks"), Text.literal("Burp"),
@@ -482,6 +498,34 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(mainRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/misc/soul_ore");
+
+        AdvancementEntry mossyCrystal = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.MOSSY_CRYSTAL),
+                        Text.literal("Moss"), Text.literal("Green"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_mossy_crystal", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.MOSSY_CRYSTAL))
+                .rewards(AdvancementRewards.Builder.experience(20))
+                .parent(crystalRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/mossy_crystal");
+        AdvancementEntry iceCrystal = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.ICE_CRYSTAL),
+                        Text.literal("Cold"), Text.literal("Blue"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_ice_crystal", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.ICE_CRYSTAL))
+                .rewards(AdvancementRewards.Builder.experience(20))
+                .parent(crystalRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/ice_crystal");
+        AdvancementEntry sandCrystal = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.SAND_CRYSTAL),
+                        Text.literal("Sandy"), Text.literal("Yellow"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_sand_crystal", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.SAND_CRYSTAL))
+                .rewards(AdvancementRewards.Builder.experience(20))
+                .parent(crystalRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/sand_crystal");
 
 
         // Legendary
