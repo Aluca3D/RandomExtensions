@@ -23,6 +23,23 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.ROOMBA_ITEM, 1)
+                .pattern("BOB")
+                .pattern("IHI")
+                .pattern("IDI")
+                .input('B', Items.BLACK_CONCRETE)
+                .input('O', Items.OBSERVER)
+                .input('H', Items.HEART_OF_THE_SEA)
+                .input('I', Items.IRON_INGOT)
+                .input('D', Items.DIAMOND)
+                .criterion(hasItem(Items.BLACK_CONCRETE), conditionsFromItem(Items.BLACK_CONCRETE))
+                .criterion(hasItem(Items.OBSERVER), conditionsFromItem(Items.OBSERVER))
+                .criterion(hasItem(Items.HEART_OF_THE_SEA), conditionsFromItem(Items.HEART_OF_THE_SEA))
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.ROOMBA_ITEM)));
+
         // Gem Block
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, Items_RaEx.AQUAMARIN, RecipeCategory.DECORATIONS,
                 Blocks_RaEx.AQUAMARIN_BLOCK);

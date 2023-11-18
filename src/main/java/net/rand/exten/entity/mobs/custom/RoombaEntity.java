@@ -1,5 +1,6 @@
 package net.rand.exten.entity.mobs.custom;
 
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -19,6 +20,10 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.EntityView;
 import net.minecraft.world.World;
 import net.rand.exten.sound.Sounds_RaEx;
@@ -28,17 +33,18 @@ import java.util.EnumSet;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class RoombaEntity extends TameableEntity {
-    static final Predicate<ItemEntity> PICKABLE_DROP_FILTER = item -> !item.cannotPickup() && item.isAlive();
-
-    public final AnimationState idleAnimationState = new AnimationState();
+public class RoombaEntity extends TameableEntity implements Mount{
+   public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
     public final AnimationState sitAnimationState = new AnimationState();
 
-
     public RoombaEntity(EntityType<? extends TameableEntity> entityType, World world) {
         super(entityType, world);
-        this.setCanPickUpLoot(true);
+    }
+
+    @Override
+    public boolean shouldDropXp() {
+        return false;
     }
 
     @Override
@@ -46,7 +52,6 @@ public class RoombaEntity extends TameableEntity {
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new EscapeDangerGoal(this, 2));
         this.goalSelector.add(2, new SitGoal(this));
-        this.goalSelector.add(2, new PickupItemGoal());
         this.goalSelector.add(3, new FollowOwnerGoal(this, 1.0, 10.0f, 2.0f, false));
         this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 4.0F));
         this.goalSelector.add(5, new LookAroundGoal(this));
@@ -79,18 +84,15 @@ public class RoombaEntity extends TameableEntity {
     @Override
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);
-        this.setSitting(nbt.getBoolean("Sitting"));
     }
 
     @Override
     public void writeCustomDataToNbt(NbtCompound nbt) {
         super.writeCustomDataToNbt(nbt);
-        nbt.putBoolean("Sitting", this.isSitting());
     }
 
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
-
         if(hand == Hand.MAIN_HAND) {
             if (!this.isTamed()) {
                 if (!this.getWorld().isClient()) {
@@ -104,60 +106,18 @@ public class RoombaEntity extends TameableEntity {
                 }
                 return ActionResult.SUCCESS;
             } else if (this.isTamed() && this.isOwner(player)) {
-                boolean sitting = !isSitting();
-                setSitting(sitting);
-                setInSittingPose(sitting);
-                this.playSound(Sounds_RaEx.ON_OFF, 1, 1);
-                return ActionResult.SUCCESS;
+                if (!player.isSneaking() && !this.isSitting()) {
+                    setRiding(player);
+                } else {
+                    boolean sitting = !isSitting();
+                    setSitting(sitting);
+                    setInSittingPose(sitting);
+                    this.playSound(Sounds_RaEx.ON_OFF, 1, 1);
+                    return ActionResult.SUCCESS;
+                }
             }
         }
         return super.interactMob(player, hand);
-    }
-
-    @Override
-    public boolean canEquip(ItemStack stack) {
-        EquipmentSlot equipmentSlot = MobEntity.getPreferredEquipmentSlot(stack);
-        if (!this.getEquippedStack(equipmentSlot).isEmpty()) {
-            return false;
-        }
-        return equipmentSlot == EquipmentSlot.MAINHAND && super.canEquip(stack);
-    }
-
-    @Override
-    public boolean canPickupItem(ItemStack stack) {
-        ItemStack itemStack = this.getEquippedStack(EquipmentSlot.MAINHAND);
-        return itemStack.isEmpty();
-    }
-
-    private void dropItem(ItemStack stack) {
-        ItemEntity itemEntity = new ItemEntity(this.getWorld(), this.getX(), this.getY(), this.getZ(), stack);
-        this.getWorld().spawnEntity(itemEntity);
-    }
-
-    @Override
-    protected void loot(ItemEntity item) {
-        ItemStack itemStack = item.getStack();
-        if (this.canPickupItem(itemStack)) {
-            int i = itemStack.getCount();
-            if (i > 1) {
-                this.dropItem(itemStack.split(i - 1));
-            }
-            this.triggerItemPickedUpByEntityCriteria(item);
-            this.equipStack(EquipmentSlot.MAINHAND, itemStack.split(1));
-            this.updateDropChances(EquipmentSlot.MAINHAND);
-            this.sendPickup(item, itemStack.getCount());
-            item.discard();
-        }
-    }
-
-    @Override
-    protected void drop(DamageSource source) {
-        ItemStack itemStack = this.getEquippedStack(EquipmentSlot.MAINHAND);
-        if (!itemStack.isEmpty()) {
-            this.dropStack(itemStack);
-            this.equipStack(EquipmentSlot.MAINHAND, ItemStack.EMPTY);
-        }
-        super.drop(source);
     }
 
     @Override
@@ -179,28 +139,92 @@ public class RoombaEntity extends TameableEntity {
             this.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).setBaseValue(0.3);
             this.setHealth(20.0f);
             this.setMovementSpeed(0.3f);
-            this.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(20.0);
-            this.setHealth(20.0f);
         } else {
             this.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(1.0);
-            this.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(0.0);
+            this.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).setBaseValue(0.0);
         }
     }
 
-    boolean wantsToPickupItem() {
-        return !this.isSleeping() && !this.isSitting();
+    @Nullable
+    @Override
+    public LivingEntity getControllingPassenger() {
+        return (LivingEntity) this.getFirstPassenger();
     }
 
-        @Override
+    private void setRiding(PlayerEntity pPlayer) {
+        this.setInSittingPose(false);
+
+        pPlayer.setYaw(this.getYaw());
+        pPlayer.setPitch(this.getPitch());
+        pPlayer.startRiding(this);
+    }
+
+    @Override
+    public void travel(Vec3d movementInput) {
+        if(this.hasPassengers() && getControllingPassenger() instanceof PlayerEntity) {
+            LivingEntity livingentity = this.getControllingPassenger();
+            this.setYaw(livingentity.getYaw());
+            this.prevYaw = this.getYaw();
+            this.setPitch(livingentity.getPitch() * 0.5F);
+            this.setRotation(this.getYaw(), this.getPitch());
+            this.bodyYaw = this.getYaw();
+            this.headYaw = this.bodyYaw;
+            float f = livingentity.sidewaysSpeed * 0.5F;
+            float f1 = livingentity.forwardSpeed;
+            if (f1 <= 0.0F) {
+                f1 *= 0.25F;
+            }
+
+            if (this.isLogicalSideForUpdatingMovement()) {
+                float newSpeed = (float)this.getAttributeValue(EntityAttributes.GENERIC_MOVEMENT_SPEED);
+
+                if(MinecraftClient.getInstance().options.sprintKey.isPressed()) {
+                    newSpeed *= 2; // Change this to ~1.5 or so
+                }
+
+                this.setMovementSpeed(newSpeed);
+                super.travel(new Vec3d(f, movementInput.y, f1));
+            }
+        } else {
+            super.travel(movementInput);
+        }
+    }
+
+    @Override
+    public Vec3d updatePassengerForDismount(LivingEntity passenger) {
+        Direction direction = this.getMovementDirection();
+        if (direction.getAxis() == Direction.Axis.Y) {
+            return super.updatePassengerForDismount(passenger);
+        }
+        int[][] is = Dismounting.getDismountOffsets(direction);
+        BlockPos blockPos = this.getBlockPos();
+        BlockPos.Mutable mutable = new BlockPos.Mutable();
+        for (EntityPose entityPose : passenger.getPoses()) {
+            Box box = passenger.getBoundingBox(entityPose);
+            for (int[] js : is) {
+                mutable.set(blockPos.getX() + js[0], blockPos.getY(), blockPos.getZ() + js[1]);
+                double d = this.getWorld().getDismountHeight(mutable);
+                if (!Dismounting.canDismountInBlock(d)) continue;
+                Vec3d vec3d = Vec3d.ofCenter(mutable, d);
+                if (!Dismounting.canPlaceEntityAt(this.getWorld(), passenger, box.offset(vec3d))) continue;
+                passenger.setPose(entityPose);
+                return vec3d;
+            }
+        }
+        return super.updatePassengerForDismount(passenger);
+    }
+
+    @Override
     public void tick() {
         super.tick();
         if (this.getWorld().isClient) {
             setupAnimationStates();
         }
     }
+
     @Override
     public boolean canBreatheInWater() {
-        return false;
+        return true;
     }
 
     @Nullable
@@ -223,46 +247,5 @@ public class RoombaEntity extends TameableEntity {
     @Override
     protected SoundEvent getDeathSound() {
         return SoundEvents.ENTITY_GENERIC_DEATH;
-    }
-
-    class PickupItemGoal extends Goal {
-        public PickupItemGoal() {
-            this.setControls(EnumSet.of(Goal.Control.MOVE));
-        }
-
-        @Override
-        public boolean canStart() {
-            if (!RoombaEntity.this.getEquippedStack(EquipmentSlot.MAINHAND).isEmpty()) {
-                return false;
-            }
-            if (RoombaEntity.this.getTarget() != null || RoombaEntity.this.getAttacker() != null) {
-                return false;
-            }
-            if (!RoombaEntity.this.wantsToPickupItem()) {
-                return false;
-            }
-            if (RoombaEntity.this.getRandom().nextInt(RoombaEntity.PickupItemGoal.toGoalTicks(10)) != 0) {
-                return false;
-            }
-            List<ItemEntity> list = RoombaEntity.this.getWorld().getEntitiesByClass(ItemEntity.class, RoombaEntity.this.getBoundingBox().expand(8.0, 8.0, 8.0), PICKABLE_DROP_FILTER);
-            return !list.isEmpty() && RoombaEntity.this.getEquippedStack(EquipmentSlot.MAINHAND).isEmpty();
-        }
-
-        @Override
-        public void tick() {
-            List<ItemEntity> list = RoombaEntity.this.getWorld().getEntitiesByClass(ItemEntity.class, RoombaEntity.this.getBoundingBox().expand(8.0, 8.0, 8.0), PICKABLE_DROP_FILTER);
-            ItemStack itemStack = RoombaEntity.this.getEquippedStack(EquipmentSlot.MAINHAND);
-            if (itemStack.isEmpty() && !list.isEmpty()) {
-                RoombaEntity.this.getNavigation().startMovingTo(list.get(0), 1.2f);
-            }
-        }
-
-        @Override
-        public void start() {
-            List<ItemEntity> list = RoombaEntity.this.getWorld().getEntitiesByClass(ItemEntity.class, RoombaEntity.this.getBoundingBox().expand(8.0, 8.0, 8.0), PICKABLE_DROP_FILTER);
-            if (!list.isEmpty()) {
-                RoombaEntity.this.getNavigation().startMovingTo(list.get(0), 1.2f);
-            }
-        }
     }
 }

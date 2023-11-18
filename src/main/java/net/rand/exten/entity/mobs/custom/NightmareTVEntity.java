@@ -2,10 +2,7 @@ package net.rand.exten.entity.mobs.custom;
 
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ai.goal.ActiveTargetGoal;
-import net.minecraft.entity.ai.goal.LookAtEntityGoal;
-import net.minecraft.entity.ai.goal.RevengeGoal;
-import net.minecraft.entity.ai.goal.WanderAroundFarGoal;
+import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
@@ -15,6 +12,7 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
+import net.minecraft.entity.passive.OcelotEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -88,10 +86,11 @@ public class NightmareTVEntity extends HostileEntity {
         this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 4F));
         this.goalSelector.add(6, new WanderAroundFarGoal(this, 1D));
         this.goalSelector.add(1, new NightmareTVGoal(this));
+        this.goalSelector.add(0, new FleeEntityGoal<>(this, RoombaEntity.class, 6.0f, 1.0, 1.2));
 
         this.targetSelector.add(2, new RevengeGoal(this));
-        this.targetSelector.add(3, new ActiveTargetGoal(this, PlayerEntity.class, true));
-        this.targetSelector.add(4, new ActiveTargetGoal(this, IronGolemEntity.class, true));
+        this.targetSelector.add(3, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(4, new ActiveTargetGoal<>(this, IronGolemEntity.class, true));
     }
 
     @Override
