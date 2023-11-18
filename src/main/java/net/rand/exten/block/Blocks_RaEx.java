@@ -16,12 +16,11 @@ import net.minecraft.world.World;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.custom.blocks.ExplosiveCakeBlock;
 import net.rand.exten.block.custom.blocks.Grinder;
-import net.rand.exten.block.custom.blocks.StepBlock;
 import net.rand.exten.block.custom.blocks.SoulOre;
 import net.rand.exten.world.gen.tree.BurnedTreeSaplingGenerator;
 
 public class Blocks_RaEx {
-    ///Gems
+    /**Gems */
     public static final Block AQUAMARIN_ORE = registerBlock("aquamarin_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_DIAMOND_ORE), UniformIntProvider.create(2, 7)));
     public static final Block AQUAMARIN_BLOCK = registerBlock("aquamarin_block",
@@ -37,11 +36,11 @@ public class Blocks_RaEx {
     public static final Block TOPAS_BLOCK = registerBlock("topas_block",
             new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK)));
 
-    ///Souls
+    /**Souls*/
     public static final Block SOUL_ORE = registerBlock("soul_ore",
             new SoulOre(FabricBlockSettings.copyOf(Blocks.COAL_ORE)));
 
-    ///Flowers
+    /**Flowers*/
     public static final Block NIGHT_SHADE = registerBlock("night_shade",
             new FlowerBlock(StatusEffects.NIGHT_VISION, 30,
                     FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
@@ -49,7 +48,7 @@ public class Blocks_RaEx {
     public static final Block POTTED_NIGHT_SHADE = Registry.register(Registries.BLOCK, new Identifier(RandomExtensions.MOD_ID, "potted_night_shade"),
             new FlowerPotBlock(NIGHT_SHADE, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
 
-    ///Misc
+    /**Misc*/
     public static final Block CHARCOAL_BLOCK = registerBlock("charcoal_block",
             new Block(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK)));
 
@@ -71,8 +70,16 @@ public class Blocks_RaEx {
                 }
             });
 
+    /**Crystal*/
+    public static final Block MOSSY_CRYSTAL = registerBlock("mossy_crystal",
+            new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque().allowsSpawning(Blocks::never).
+                    solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+    public static final Block ICE_CRYSTAL = registerBlock("ice_crystal",
+            new GlassBlock(FabricBlockSettings.copyOf(Blocks_RaEx.MOSSY_CRYSTAL).slipperiness(0.98f)));
+    public static final Block SAND_CRYSTAL = registerBlock("sand_crystal",
+            new GlassBlock(FabricBlockSettings.copyOf(Blocks_RaEx.MOSSY_CRYSTAL)));
 
-    /// Cheese
+    /**Cheese*/
     public static final Block CHEESE_BLOCK = registerBlock("cheese_block",
             new Block(FabricBlockSettings.copyOf(Blocks.DIRT)));
     public static final Block CHEESE_STAIRS = registerBlock("cheese_stairs",
@@ -84,7 +91,7 @@ public class Blocks_RaEx {
     public static final Block CHEESE_STATION = registerBlock("cheese_station",
             new Block(FabricBlockSettings.copyOf(Blocks_RaEx.CHEESE_BLOCK)));
 
-    ///Obsidian
+    /**Obsidian*/
     public static final Block OBSIDIAN_GLASS = registerBlock("obsidian_glass",
             new GlassBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN)
                     .nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never)
@@ -106,8 +113,7 @@ public class Blocks_RaEx {
     public static final Block OBSIDIAN_TRAPDOOR = registerBlock("obsidian_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).nonOpaque(), BlockSetType.IRON));
 
-    //Wood
-    /// Burned Tree
+    /**Burned Tree*/
     public static final Block BURNED_WOOD = registerBlock("burned_wood",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
     public static final Block BURNED_LOG = registerBlock("burned_log",

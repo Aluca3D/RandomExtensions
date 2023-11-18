@@ -1,0 +1,42 @@
+{
+  "parent": "randexten:re/misc/crystal_root",
+  "criteria": {
+    "has_ice_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:ice_crystal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Blue"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:ice_crystal"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Cold"
+    }
+  },
+  "requirements": [
+    [
+      "has_ice_crystal"
+    ]
+  ],
+  "rewards": {
+    "experience": 20
+  },
+  "sends_telemetry_event": true
+}
