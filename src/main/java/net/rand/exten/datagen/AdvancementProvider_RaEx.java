@@ -11,6 +11,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.Blocks_RaEx;
+import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
 
@@ -184,6 +185,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         .addRecipe(new Identifier("randexten:cheese_slabs"))
                         .addRecipe(new Identifier("randexten:cheese_stairs"))
                         .addRecipe(new Identifier("randexten:cheese_walls"))
+                        .addRecipe(new Identifier("randexten:cheese_step"))
                         .setExperience(20)
                 )
                 .parent(cheeseBucket)
@@ -469,6 +471,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .criterion("has_cheese_stair", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.CHEESE_STAIRS))
                 .criterion("has_cheese_slab", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.CHEESE_SLABS))
                 .criterion("has_cheese_wall", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.CHEESE_WALLS))
+                .criterion("has_cheese_step", InventoryChangedCriterion.Conditions.items(StepBlockRegistry.CHEESE_STEP))
                 .rewards(AdvancementRewards.Builder.experience(200))
                 .parent(cheese)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/misc/its_all_cheese");

@@ -41,7 +41,8 @@
       "randexten:cheese_block",
       "randexten:cheese_slabs",
       "randexten:cheese_stairs",
-      "randexten:cheese_walls"
+      "randexten:cheese_walls",
+      "randexten:cheese_step"
     ]
   },
   "sends_telemetry_event": true

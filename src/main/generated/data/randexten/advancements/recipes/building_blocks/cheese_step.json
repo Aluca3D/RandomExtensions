@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cheese_slabs": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:cheese_slabs"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:cheese_step"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cheese_slabs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:cheese_step"
+    ]
+  },
+  "sends_telemetry_event": false
+}
