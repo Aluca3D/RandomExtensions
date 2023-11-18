@@ -1,6 +1,6 @@
 {
   "parent": "randexten:block/step",
   "textures": {
-    "texture": "randexten:block/burned_planks"
+    "texture": "randexten:block/cheese_block"
   }
 }

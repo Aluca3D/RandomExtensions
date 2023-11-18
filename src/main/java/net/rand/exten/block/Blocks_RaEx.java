@@ -71,8 +71,6 @@ public class Blocks_RaEx {
                 }
             });
 
-    public static final Block TEST = registerBlock("test",
-            new StepBlock(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK)));
 
     /// Cheese
     public static final Block CHEESE_BLOCK = registerBlock("cheese_block",

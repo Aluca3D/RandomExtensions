@@ -1,41 +1,41 @@
 {
   "variants": {
     "facing=north,top_or_bottom=true" : {
-      "model": "randexten:block/test",
+      "model": "randexten:block/cheese_step",
       "uvlock": true
     },
     "facing=south,top_or_bottom=true" : {
-      "model": "randexten:block/test",
+      "model": "randexten:block/cheese_step",
       "uvlock": true,
       "y": 180
     },
     "facing=east,top_or_bottom=true" : {
-      "model": "randexten:block/test",
+      "model": "randexten:block/cheese_step",
       "uvlock": true,
       "y": 90
     },
     "facing=west,top_or_bottom=true" : {
-      "model": "randexten:block/test",
+      "model": "randexten:block/cheese_step",
       "uvlock": true,
       "y": 270
     },
 
     "facing=north,top_or_bottom=false" : {
-      "model": "randexten:block/test_top",
+      "model": "randexten:block/cheese_step_top",
       "uvlock": true
     },
     "facing=south,top_or_bottom=false" : {
-      "model": "randexten:block/test_top",
+      "model": "randexten:block/cheese_step_top",
       "uvlock": true,
       "y": 180
     },
     "facing=east,top_or_bottom=false" : {
-      "model": "randexten:block/test_top",
+      "model": "randexten:block/cheese_step_top",
       "uvlock": true,
       "y": 90
     },
     "facing=west,top_or_bottom=false" : {
-      "model": "randexten:block/test_top",
+      "model": "randexten:block/cheese_step_top",
       "uvlock": true,
       "y": 270
     }

@@ -25,8 +25,6 @@ public class StepBlock extends Block implements Waterloggable {
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final BooleanProperty TOP_OR_BOTTOM = Properties_RaEx.TOP_OR_BOTTOM;
 
-    //ToDo Maybe add Corners (like Stairs)
-
     protected static final VoxelShape SHAPE_NORTH = Block.createCuboidShape(0, 0, 8, 16, 8, 16);
     protected static final VoxelShape SHAPE_SOUTH = Block.createCuboidShape(0, 0, 0, 16, 8, 8);
     protected static final VoxelShape SHAPE_WEST = Block.createCuboidShape(8, 0, 0, 16, 8, 16);
