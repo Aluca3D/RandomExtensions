@@ -75,7 +75,7 @@ public class Blocks_RaEx {
             new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque().allowsSpawning(Blocks::never).
                     solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
     public static final Block ICE_CRYSTAL = registerBlock("ice_crystal",
-            new GlassBlock(FabricBlockSettings.copyOf(Blocks_RaEx.MOSSY_CRYSTAL)));
+            new GlassBlock(FabricBlockSettings.copyOf(Blocks_RaEx.MOSSY_CRYSTAL).slipperiness(0.98f)));
     public static final Block SAND_CRYSTAL = registerBlock("sand_crystal",
             new GlassBlock(FabricBlockSettings.copyOf(Blocks_RaEx.MOSSY_CRYSTAL)));
 
