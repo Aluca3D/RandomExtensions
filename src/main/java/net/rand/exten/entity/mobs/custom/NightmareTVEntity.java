@@ -40,7 +40,7 @@ public class NightmareTVEntity extends HostileEntity {
     public static DefaultAttributeContainer.Builder createNightmareTVAttributes() {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 50)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f)
                 .add(EntityAttributes.GENERIC_ARMOR, 0.7f)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 6)
                 .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 1.5f)

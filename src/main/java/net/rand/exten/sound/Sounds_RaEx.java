@@ -8,6 +8,9 @@ import net.rand.exten.RandomExtensions;
 
 public class Sounds_RaEx {
 
+    // todo Roomba
+    public static final SoundEvent ROOMBA_AMBIENT = registerSoundEvent("roomba_ambient");
+    public static final SoundEvent ROOMBA_HURT = registerSoundEvent("roomba_hurt");
     public static final SoundEvent NIGHTMARE_TV_AMBIENT = registerSoundEvent("nightmare_tv_ambient");
     public static final SoundEvent NIGHTMARE_TV_HURT = registerSoundEvent("nightmare_tv_hurt");
     public static final SoundEvent MAGIC_SHOT = registerSoundEvent("magic_shot");

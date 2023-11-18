@@ -90,6 +90,7 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         itemModelGenerator.register(Items_RaEx.PEBBLE, Models.GENERATED);
 
         itemModelGenerator.register(Items_RaEx.DUK_TAPE, Models.GENERATED);
+        itemModelGenerator.register(Items_RaEx.ROOMBA_ITEM, Models.GENERATED);
 
         itemModelGenerator.register(Items_RaEx.EMPTY_SODA_CAN, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.RED_SODA_CAN, Models.GENERATED);

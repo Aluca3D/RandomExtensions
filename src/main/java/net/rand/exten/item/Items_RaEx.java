@@ -109,6 +109,11 @@ public class Items_RaEx {
     public static final Item NIGHTMARE_TV_SPAWN_EGG = registerItem("nightmare_tv_spawn_egg",
             new SpawnEggItem(Entities_RaEx.NIGHTMARE_TV, 0x000000, 0xFFFFFF, new FabricItemSettings()));
 
+    //Todo Add Texture
+    public static final Item ROOMBA_ITEM = registerItem("roomba_item",
+            new SpawnEggItem(Entities_RaEx.ROOMBA, 0x000000, 0xFFFFFF, new FabricItemSettings()));
+
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(RandomExtensions.MOD_ID, name), item);
     }
