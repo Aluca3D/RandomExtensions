@@ -20,7 +20,7 @@ import net.minecraft.world.WorldAccess;
 import net.rand.exten.block.custom.Properties_RaEx;
 import org.jetbrains.annotations.Nullable;
 
-public class ReverseStairs extends Block implements Waterloggable {
+public class StepBlock extends Block implements Waterloggable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final BooleanProperty TOP_OR_BOTTOM = Properties_RaEx.TOP_OR_BOTTOM;
@@ -37,7 +37,7 @@ public class ReverseStairs extends Block implements Waterloggable {
     protected static final VoxelShape TOP_SHAPE_WEST = Block.createCuboidShape(8, 8, 0, 16, 16, 16);
     protected static final VoxelShape TOP_SHAPE_EAST = Block.createCuboidShape(0, 8, 0, 8, 16, 16);
 
-    public ReverseStairs(Settings settings) {
+    public StepBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH).with(TOP_OR_BOTTOM, true));
     }

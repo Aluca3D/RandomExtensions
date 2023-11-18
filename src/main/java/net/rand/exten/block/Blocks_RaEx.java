@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.custom.blocks.ExplosiveCakeBlock;
 import net.rand.exten.block.custom.blocks.Grinder;
-import net.rand.exten.block.custom.blocks.ReverseStairs;
+import net.rand.exten.block.custom.blocks.StepBlock;
 import net.rand.exten.block.custom.blocks.SoulOre;
 import net.rand.exten.world.gen.tree.BurnedTreeSaplingGenerator;
 
@@ -72,7 +72,7 @@ public class Blocks_RaEx {
             });
 
     public static final Block TEST = registerBlock("test",
-            new ReverseStairs(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK)));
+            new StepBlock(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK)));
 
     /// Cheese
     public static final Block CHEESE_BLOCK = registerBlock("cheese_block",

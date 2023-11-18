@@ -1,5 +1,5 @@
 {
-  "parent": "randexten:block/reverse_stairs",
+  "parent": "randexten:block/step",
   "textures": {
     "texture": "randexten:block/burned_planks"
   }
