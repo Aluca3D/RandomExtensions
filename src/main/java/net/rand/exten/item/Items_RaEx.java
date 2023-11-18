@@ -111,7 +111,7 @@ public class Items_RaEx {
 
     //Todo Add Texture
     public static final Item ROOMBA_ITEM = registerItem("roomba_item",
-            new SpawnEggItem(Entities_RaEx.ROOMBA, 0x000000, 0xFFFFFF, new FabricItemSettings()));
+            new SpawnEggItem(Entities_RaEx.ROOMBA, 0xFFFFFF, 0xFFFFFF, new FabricItemSettings()));
 
 
     private static Item registerItem(String name, Item item) {

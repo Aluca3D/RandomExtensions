@@ -7,7 +7,6 @@ import net.minecraft.client.render.entity.animation.Transformation;
 
 public class RoombaAnimation {
 
-
     public static final Animation ROOMBA_IDLE = Animation.Builder.create(1f).looping()
             .addBoneAnimation("torso",
                     new Transformation(Transformation.Targets.TRANSLATE,
@@ -100,6 +99,10 @@ public class RoombaAnimation {
             .addBoneAnimation("wheel3",
                     new Transformation(Transformation.Targets.TRANSLATE,
                             new Keyframe(0f, AnimationHelper.createTranslationalVector(0f, 1.25f, 0f),
+                                    Transformation.Interpolations.LINEAR)))
+            .addBoneAnimation("off",
+                    new Transformation(Transformation.Targets.TRANSLATE,
+                            new Keyframe(0f, AnimationHelper.createTranslationalVector(0f, 1f, 0f),
                                     Transformation.Interpolations.LINEAR))).build();
     public static final Animation ROOMBA_UN_TAMED = Animation.Builder.create(0.041676664f).looping()
             .addBoneAnimation("roomba",
@@ -121,5 +124,9 @@ public class RoombaAnimation {
             .addBoneAnimation("wheel3",
                     new Transformation(Transformation.Targets.TRANSLATE,
                             new Keyframe(0f, AnimationHelper.createTranslationalVector(0f, 1.25f, 0f),
+                                    Transformation.Interpolations.LINEAR)))
+            .addBoneAnimation("off",
+                    new Transformation(Transformation.Targets.TRANSLATE,
+                            new Keyframe(0f, AnimationHelper.createTranslationalVector(0f, 1f, 0f),
                                     Transformation.Interpolations.LINEAR))).build();
 }

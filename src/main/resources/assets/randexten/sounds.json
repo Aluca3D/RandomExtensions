@@ -16,5 +16,23 @@
     "sounds": [
       "randexten:magic_shot"
     ]
+  },
+  "roomba_ambient": {
+    "subtitle": "sounds.randexten.roomba_ambient",
+    "sounds": [
+      "randexten:roomba_ambient"
+    ]
+  },
+  "roomba_hurt": {
+    "subtitle": "sounds.randexten.roomba_hurt",
+    "sounds": [
+      "randexten:roomba_hurt"
+    ]
+  },
+  "on_off": {
+    "subtitle": "sounds.randexten.on_off",
+    "sounds": [
+      "randexten:on_off"
+    ]
   }
 }

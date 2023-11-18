@@ -28,6 +28,8 @@ public class RoombaModel<T extends RoombaEntity> extends SinglePartEntityModel<T
 
 		ModelPartData torso = body.addChild("torso", ModelPartBuilder.create().uv(0, 0).cuboid(-7.0F, -3.0F, -9.0F, 14.0F, 4.0F, 14.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -2.0F, 2.0F));
 
+		ModelPartData off = torso.addChild("off", ModelPartBuilder.create().uv(24, 18).cuboid(-1.0F, -2.75F, -2.0F, 2.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+
 		ModelPartData head = torso.addChild("head", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -3.0F, -6.0F));
 
 		ModelPartData eye = head.addChild("eye", ModelPartBuilder.create(), ModelTransform.pivot(-2.5F, 0.0F, 0.5F));
