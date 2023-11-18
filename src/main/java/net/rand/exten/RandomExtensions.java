@@ -3,6 +3,7 @@ package net.rand.exten;
 import net.fabricmc.api.ModInitializer;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.CropBlocks_RaEx;
+import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.block.custom.blocks.entity.BlockEntity_RaEx;
 import net.rand.exten.enchantment.Enchantments_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
@@ -32,6 +33,7 @@ public class RandomExtensions implements ModInitializer {
         Items_RaEx.registerRaExItems();
         LootBag_RaEx.registerRaExItems();
         Blocks_RaEx.registerRaExBlock();
+        StepBlockRegistry.registerStepBlocks();
         BlockEntity_RaEx.registerBlockEntities();
         Recipes_RaEx.registerRecipes();
         ScreenHandlers_RaEx.registerScreenHandler();

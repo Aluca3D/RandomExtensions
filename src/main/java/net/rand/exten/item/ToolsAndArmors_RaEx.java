@@ -16,7 +16,7 @@ import net.rand.exten.item.custom.tools.PaxelItem;
 public class ToolsAndArmors_RaEx {
     /**Special*/
     public static final Item LEAVE_STAFF = registerItem("leave_staff",
-            new LeaveStaff(new FabricItemSettings().maxCount(1).fireproof().maxDamage(2048)));
+            new LeaveStaff(new FabricItemSettings().maxCount(1).fireproof().maxDamage(204)));
 
     /**Paxel*/
     public static final Item WOODEN_PAXEL = registerItem("wooden_paxel",

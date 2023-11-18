@@ -9,6 +9,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.Blocks_RaEx;
+import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.item.custom.LootBag_RaEx;
 
 public class ItemGroups_RaEx {
@@ -165,6 +166,9 @@ public class ItemGroups_RaEx {
 
                         /// Spawn Egg
                         entries.add(Items_RaEx.NIGHTMARE_TV_SPAWN_EGG);
+
+                        /// Step Blocks
+                        entries.add(StepBlockRegistry.CHEESE_STEP);
 
                     }).build());
 

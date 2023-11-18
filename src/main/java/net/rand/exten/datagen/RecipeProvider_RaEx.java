@@ -3,16 +3,15 @@ package net.rand.exten.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.*;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 import net.rand.exten.block.Blocks_RaEx;
+import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
 
@@ -58,6 +57,9 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks_RaEx.CHEESE_BLOCK), conditionsFromItem(Blocks_RaEx.CHEESE_BLOCK))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.CHEESE_STAIRS)));
         offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.CHEESE_WALLS, Blocks_RaEx.CHEESE_BLOCK);
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, StepBlockRegistry.CHEESE_STEP, Ingredient.ofItems(Blocks_RaEx.CHEESE_SLABS))
+                .criterion(hasItem(Blocks_RaEx.CHEESE_SLABS), conditionsFromItem(Blocks_RaEx.CHEESE_SLABS))
+                .offerTo(exporter, new Identifier(getRecipeName(StepBlockRegistry.CHEESE_STEP)));
 
         // Crystal
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.MOSSY_CRYSTAL, 5)
@@ -596,5 +598,9 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.GUNPOWDER), conditionsFromItem(Items.PAPER))
                 .criterion(hasItem(Items.BAMBOO), conditionsFromItem(Items.HONEY_BOTTLE))
                 .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.DUK_TAPE)));
+    }
+
+    public static CraftingRecipeJsonBuilder createStepRecipe(RecipeCategory category, ItemConvertible output, Ingredient input) {
+        return ShapedRecipeJsonBuilder.create(category, output, 6).input(Character.valueOf('#'), input).pattern("###");
     }
 }

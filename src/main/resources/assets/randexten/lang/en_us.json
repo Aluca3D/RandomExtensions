@@ -150,5 +150,7 @@
   "sounds.randexten.nightmare_tv_hurt": "NightmareTV Hurt",
   "sounds.randexten.magic_shot": "Magic",
 
+  "block.randexten.cheese_step": "Cheese Step",
+
   "itemgroup.randexten_group": "Random Extensions"
 }
