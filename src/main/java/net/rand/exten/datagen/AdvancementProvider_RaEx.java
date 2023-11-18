@@ -12,6 +12,7 @@ import net.minecraft.util.Identifier;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.StepBlockRegistry;
+import net.rand.exten.entity.Entities_RaEx;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
 
@@ -488,7 +489,8 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .criterion("has_cheese_slab", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.CHEESE_SLABS))
                 .criterion("has_cheese_wall", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.CHEESE_WALLS))
                 .criterion("has_cheese_step", InventoryChangedCriterion.Conditions.items(StepBlockRegistry.CHEESE_STEP))
-                .rewards(AdvancementRewards.Builder.experience(200))
+                .rewards(AdvancementRewards.Builder.experience(200)
+                        .addRecipe(new Identifier("randexten:roomba_item")))
                 .parent(cheese)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/misc/its_all_cheese");
 
@@ -502,6 +504,19 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .parent(mainRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/misc/soul_ore");
 
+        AdvancementEntry roomba = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Items_RaEx.ROOMBA_ITEM),
+                        Text.literal("Roomba"), Text.literal("Good Boy"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.CHALLENGE,
+                        true, true, true))
+                .criterion("has_roomba", InventoryChangedCriterion.Conditions.items(Items_RaEx.ROOMBA_ITEM))
+                .rewards(AdvancementRewards.Builder.experience(200))
+                .parent(mainRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/roomba");
+
+
+
+        // Crystal
         AdvancementEntry mossyCrystal = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.MOSSY_CRYSTAL),
                         Text.literal("Moss"), Text.literal("Green"),
@@ -529,6 +544,8 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(crystalRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/misc/sand_crystal");
+
+
 
 
         // Legendary

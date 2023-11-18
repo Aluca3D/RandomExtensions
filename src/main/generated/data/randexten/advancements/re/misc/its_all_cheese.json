@@ -81,7 +81,10 @@
     ]
   ],
   "rewards": {
-    "experience": 200
+    "experience": 200,
+    "recipes": [
+      "randexten:roomba_item"
+    ]
   },
   "sends_telemetry_event": true
 }

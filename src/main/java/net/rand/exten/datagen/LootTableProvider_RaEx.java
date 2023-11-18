@@ -8,6 +8,7 @@ import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.predicate.StatePredicate;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.CropBlocks_RaEx;
+import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.block.custom.crops.CornCropBlock;
 import net.rand.exten.block.custom.crops.TomatoCropBlock;
 import net.rand.exten.item.Items_RaEx;
@@ -56,6 +57,7 @@ public class LootTableProvider_RaEx extends FabricBlockLootTableProvider {
         addDrop(Blocks_RaEx.CHEESE_SLABS, slabDrops(Blocks_RaEx.CHEESE_SLABS));
         addDrop(Blocks_RaEx.CHEESE_STAIRS);
         addDrop(Blocks_RaEx.CHEESE_WALLS);
+        addDrop(StepBlockRegistry.CHEESE_STEP);
 
         // Misc
         addDrop(Blocks_RaEx.CHARCOAL_BLOCK);

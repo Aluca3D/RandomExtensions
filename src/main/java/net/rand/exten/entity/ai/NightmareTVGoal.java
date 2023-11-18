@@ -74,7 +74,7 @@ public class NightmareTVGoal extends MeleeAttackGoal {
     }
 
     private boolean isEnemyWithinAttackDistance(LivingEntity pEnemy) {
-        return this.mob.distanceTo(pEnemy) <= 3f; // TODO
+        return this.mob.distanceTo(pEnemy) <= 6f; // TODO
     }
 
     protected void resetAttackCooldown() {

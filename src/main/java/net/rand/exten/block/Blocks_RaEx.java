@@ -58,7 +58,7 @@ public class Blocks_RaEx {
     public static final Block GRINDER = registerBlock("grinder",
             new Grinder(FabricBlockSettings.copyOf(Blocks.STONE)));
 
-    public static final Block FAKE_LEAVES = registerBlock("fake_leaves",
+    public static final Block FAKE_LEAVES = registerBlockWithoutItem("fake_leaves",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).breakInstantly().dropsNothing()) {
                 @Override
                 public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
@@ -150,6 +150,10 @@ public class Blocks_RaEx {
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, new Identifier(RandomExtensions.MOD_ID, name), block);
+    }
+
+    private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(RandomExtensions.MOD_ID, name), block);
     }
 

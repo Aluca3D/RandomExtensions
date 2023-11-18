@@ -10,6 +10,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.entity.mobs.custom.NightmareTVEntity;
+import net.rand.exten.entity.mobs.custom.RoombaEntity;
 import net.rand.exten.entity.projectile.*;
 
 public class Entities_RaEx {
@@ -18,6 +19,11 @@ public class Entities_RaEx {
             new Identifier(RandomExtensions.MOD_ID, "nightmare_tv"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, NightmareTVEntity::new)
                     .dimensions(EntityDimensions.fixed(0.75f, 2f)).build());
+
+    public static final EntityType<RoombaEntity> ROOMBA = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(RandomExtensions.MOD_ID, "roomba"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MISC, RoombaEntity::new)
+                    .dimensions(EntityDimensions.fixed(1f, 0.5f)).build());
 
     public static final EntityType<BambooExplosive> THROWN_BAMBOO_EXPLOSIVE_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(RandomExtensions.MOD_ID, "thrown_bamboo_explosive_projectile"),
@@ -45,6 +51,7 @@ public class Entities_RaEx {
 
     public static void registerEntityAttributes() {
         FabricDefaultAttributeRegistry.register(Entities_RaEx.NIGHTMARE_TV, NightmareTVEntity.createNightmareTVAttributes());
+        FabricDefaultAttributeRegistry.register(Entities_RaEx.ROOMBA, RoombaEntity.createRoombaAttributes());
     }
 
     public static void registerModEntities() {

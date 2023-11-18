@@ -7,7 +7,6 @@ import net.minecraft.client.render.entity.animation.Transformation;
 
 public class NightmareTVAnimation {
 
-
     public static final Animation NIGHTMARE_TV_WALK = Animation.Builder.create(1f).looping()
             .addBoneAnimation("head",
                     new Transformation(Transformation.Targets.TRANSLATE,

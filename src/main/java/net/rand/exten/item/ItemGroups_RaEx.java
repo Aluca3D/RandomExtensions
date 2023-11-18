@@ -165,6 +165,7 @@ public class ItemGroups_RaEx {
                         entries.add(Blocks_RaEx.OBSIDIAN_TRAPDOOR);
 
                         /// Spawn Egg
+                        entries.add(Items_RaEx.ROOMBA_ITEM);
                         entries.add(Items_RaEx.NIGHTMARE_TV_SPAWN_EGG);
 
                         /// Step Blocks
