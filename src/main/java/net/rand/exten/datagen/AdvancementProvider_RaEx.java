@@ -559,5 +559,15 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .parent(legendaryItemRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/leave_staff");
 
+        AdvancementEntry toyHammer = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.TOY_HAMMER),
+                        Text.literal("Bonk"), Text.literal("Yeet"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.GOAL,
+                        true, true, true))
+                .criterion("has_toy_hammer", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.TOY_HAMMER))
+                .rewards(AdvancementRewards.Builder.experience(400))
+                .parent(legendaryItemRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/toy_hammer");
+
     }
 }
