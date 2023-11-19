@@ -18,7 +18,7 @@ import java.util.Random;
 
 public class LootBag_RaEx {
 
-    //LootBags
+    /**LootBags*/
     public static final Item CHEESE_LOOT_BAG = registerItem("cheese_loot_bag",
             new LootBag(new FabricItemSettings(), "item.randexten.cheese_loot_bag.tooltip") {
                 @Override

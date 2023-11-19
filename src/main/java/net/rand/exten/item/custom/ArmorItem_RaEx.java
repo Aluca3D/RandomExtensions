@@ -62,7 +62,7 @@ public class ArmorItem_RaEx extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> N_TOPAS_EFFECT_MAP_2 =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(ArmorMaterials_RaEx.NETHERITE_TOPAS,
-                            new StatusEffectInstance(StatusEffects.SLOW_FALLING, 400, 0, false, false, true)).build();
+                            new StatusEffectInstance(StatusEffects.NIGHT_VISION, 400, 0, false, false, true)).build();
 
     public ArmorItem_RaEx(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);

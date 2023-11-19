@@ -42,7 +42,9 @@ public class ExplosiveCakeBlock extends Block {
         } else {
             if (!world.isClient) {
                 TntEntity tntEntity = new TntEntity(EntityType.TNT, world);
-                tntEntity.setFuse(1);
+                tntEntity.setInvisible(true);
+                tntEntity.setNoGravity(true);
+                tntEntity.setFuse(0);
                 tntEntity.setPos(pos.getX(), pos.getY(), pos.getZ());
                 world.spawnEntity(tntEntity);
 
