@@ -17,9 +17,9 @@ import net.rand.exten.item.custom.tools.ToyHammer;
 public class ToolsAndArmors_RaEx {
     /**Special*/
     public static final Item LEAVE_STAFF = registerItem("leave_staff",
-            new LeaveStaff(new FabricItemSettings().maxCount(1).fireproof().maxDamage(204)));
+            new LeaveStaff(new FabricItemSettings().maxCount(1).fireproof().maxDamage(240)));
     public static final Item TOY_HAMMER = registerItem("toy_hammer",
-            new ToyHammer(ToolMaterials.WOOD,new FabricItemSettings().maxCount(1).maxDamage(1024)));
+            new ToyHammer(ToolMaterials.WOOD,new FabricItemSettings().maxCount(1).maxDamage(240)));
 
     /**Paxel*/
     public static final Item WOODEN_PAXEL = registerItem("wooden_paxel",
