@@ -37,12 +37,17 @@ public class ItemGroups_RaEx {
                         entries.add(Items_RaEx.TOPAS);
                         entries.add(Blocks_RaEx.TOPAS_BLOCK);
 
-                        entries.add(Items_RaEx.GEMS_UPGRADE_TEMPLATE);
-
                         // Tools
                         /// Special
                         entries.add(ToolsAndArmors_RaEx.LEAVE_STAFF);
                         entries.add(ToolsAndArmors_RaEx.TOY_HAMMER);
+
+                        /// Copper
+                        entries.add(ToolsAndArmors_RaEx.COPPER_SHOVEL);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_PICKAXE);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_AXE);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_HOE);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_SWORD);
 
                         /// Paxel
                         entries.add(ToolsAndArmors_RaEx.WOODEN_PAXEL);
@@ -53,6 +58,14 @@ public class ItemGroups_RaEx {
                         entries.add(ToolsAndArmors_RaEx.NETHERITE_PAXEL);
 
                         // Armor
+                        /// Copper
+                        entries.add(ToolsAndArmors_RaEx.COPPER_HELMET);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_CHESTPLATE);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_LEGGINGS);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_BOOTS);
+
+
+                        entries.add(Items_RaEx.GEMS_UPGRADE_TEMPLATE);
                         /// Aquamarin
                         entries.add(ToolsAndArmors_RaEx.D_AQUAMARIN_HELMET);
                         entries.add(ToolsAndArmors_RaEx.D_AQUAMARIN_CHESTPLATE);

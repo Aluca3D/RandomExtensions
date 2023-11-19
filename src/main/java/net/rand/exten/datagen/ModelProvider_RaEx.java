@@ -123,6 +123,16 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         itemModelGenerator.register(Items_RaEx.FLOUR, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.POPCORN, Models.GENERATED);
 
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_BOOTS);
+        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_SWORD, Models.HANDHELD);
+
         itemModelGenerator.register(Items_RaEx.GEMS_UPGRADE_TEMPLATE, Models.GENERATED);
 
         itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.D_AQUAMARIN_HELMET);

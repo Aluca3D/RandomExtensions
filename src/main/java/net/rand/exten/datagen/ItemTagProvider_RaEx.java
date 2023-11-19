@@ -34,7 +34,10 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
                         ToolsAndArmors_RaEx.D_TOPAS_LEGGINGS, ToolsAndArmors_RaEx.D_TOPAS_BOOTS,
 
                         ToolsAndArmors_RaEx.N_TOPAS_HELMET, ToolsAndArmors_RaEx.N_TOPAS_CHESTPLATE,
-                        ToolsAndArmors_RaEx.N_TOPAS_LEGGINGS, ToolsAndArmors_RaEx.N_TOPAS_BOOTS
+                        ToolsAndArmors_RaEx.N_TOPAS_LEGGINGS, ToolsAndArmors_RaEx.N_TOPAS_BOOTS,
+
+                        ToolsAndArmors_RaEx.COPPER_HELMET, ToolsAndArmors_RaEx.COPPER_CHESTPLATE,
+                        ToolsAndArmors_RaEx.COPPER_LEGGINGS, ToolsAndArmors_RaEx.COPPER_BOOTS
 
                 );
 

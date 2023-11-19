@@ -7,9 +7,9 @@ import net.minecraft.recipe.Ingredient;
 import java.util.function.Supplier;
 
 public enum ToolMaterial_RaEx implements ToolMaterial {
-
-    Example(3, 1561, 8.0F, 3.0f, 22,
-            () -> Ingredient.ofItems(Items.DIAMOND)),
+    /**Copper*/
+    COPPER(3, 230, 4.0F, 2.0f, 12,
+            () -> Ingredient.ofItems(Items.COPPER_INGOT)),
 
     ;
 
