@@ -1,0 +1,54 @@
+{
+  "parent": "randexten:re/randexten",
+  "criteria": {
+    "has_copper_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:copper_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Rust Prof"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:cooper_pickaxe",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Copper"
+    }
+  },
+  "requirements": [
+    [
+      "has_copper_ingot"
+    ]
+  ],
+  "rewards": {
+    "experience": 20,
+    "recipes": [
+      "randexten:cooper_axe",
+      "randexten:cooper_pickaxe",
+      "randexten:cooper_shovel",
+      "randexten:cooper_hoe",
+      "randexten:cooper_sword",
+      "randexten:cooper_helmet",
+      "randexten:cooper_chestplate",
+      "randexten:cooper_leggings",
+      "randexten:cooper_boots"
+    ]
+  },
+  "sends_telemetry_event": true
+}

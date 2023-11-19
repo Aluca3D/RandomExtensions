@@ -343,8 +343,83 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
 
         // Armor and Tools
         offerSmithingTemplateCopyingRecipe(exporter, Items_RaEx.GEMS_UPGRADE_TEMPLATE, Items_RaEx.AQUAMARIN);
+        /// Tools
+        //// Copper
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_AXE, 1)
+                .pattern("CC")
+                .pattern("CS")
+                .pattern(" S")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_AXE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_SHOVEL, 1)
+                .pattern("C")
+                .pattern("S")
+                .pattern("S")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_SHOVEL)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_PICKAXE, 1)
+                .pattern("CCC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_PICKAXE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_HOE, 1)
+                .pattern("CC")
+                .pattern(" S")
+                .pattern(" S")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_HOE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_SWORD, 1)
+                .pattern("C")
+                .pattern("C")
+                .pattern("S")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_SWORD)));
 
         /// Armor
+        //// Copper
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_HELMET, 1)
+                .pattern("CCC")
+                .pattern("C C")
+                .input('C', Items.COPPER_INGOT)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_HELMET)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_CHESTPLATE, 1)
+                .pattern("C C")
+                .pattern("CCC")
+                .pattern("CCC")
+                .input('C', Items.COPPER_INGOT)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_CHESTPLATE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_LEGGINGS, 1)
+                .pattern("CCC")
+                .pattern("C C")
+                .pattern("C C")
+                .input('C', Items.COPPER_INGOT)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_LEGGINGS)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_BOOTS, 1)
+                .pattern("C C")
+                .pattern("C C")
+                .input('C', Items.COPPER_INGOT)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_BOOTS)));
+
         //// Aquamarin
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items_RaEx.GEMS_UPGRADE_TEMPLATE),
