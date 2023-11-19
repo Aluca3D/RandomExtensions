@@ -18,7 +18,7 @@ public class ToolsAndArmors_RaEx {
     public static final Item LEAVE_STAFF = registerItem("leave_staff",
             new LeaveStaff(new FabricItemSettings().maxCount(1).fireproof().maxDamage(240)));
     public static final Item TOY_HAMMER = registerItem("toy_hammer",
-            new ToyHammer(ToolMaterials.WOOD,new FabricItemSettings().maxCount(1).maxDamage(240)));
+            new ToyHammer(ToolMaterials.WOOD,new FabricItemSettings().maxCount(1).maxDamage(960)));
 
     /**Paxel*/
     public static final Item WOODEN_PAXEL = registerItem("wooden_paxel",

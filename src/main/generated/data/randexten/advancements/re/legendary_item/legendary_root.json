@@ -12,15 +12,27 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_toy_hammer": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:toy_hammer"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
     "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
     "description": {
-      "text": "Ooh, shiny"
+      "text": "I Have ALL OF THEM"
     },
-    "frame": "task",
+    "frame": "challenge",
     "hidden": true,
     "icon": {
       "item": "randexten:leave_staff",
@@ -34,10 +46,13 @@
   "requirements": [
     [
       "has_leave_staff"
+    ],
+    [
+      "has_toy_hammer"
     ]
   ],
   "rewards": {
-    "experience": 20
+    "experience": 400
   },
   "sends_telemetry_event": true
 }
