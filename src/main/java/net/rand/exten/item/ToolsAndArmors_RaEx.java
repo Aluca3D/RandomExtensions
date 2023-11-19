@@ -12,11 +12,14 @@ import net.rand.exten.item.custom.ArmorItem_RaEx;
 import net.rand.exten.item.custom.ArmorMaterials_RaEx;
 import net.rand.exten.item.custom.tools.LeaveStaff;
 import net.rand.exten.item.custom.tools.PaxelItem;
+import net.rand.exten.item.custom.tools.ToyHammer;
 
 public class ToolsAndArmors_RaEx {
     /**Special*/
     public static final Item LEAVE_STAFF = registerItem("leave_staff",
-            new LeaveStaff(new FabricItemSettings().maxCount(1).fireproof().maxDamage(204)));
+            new LeaveStaff(new FabricItemSettings().maxCount(1).fireproof().maxDamage(240)));
+    public static final Item TOY_HAMMER = registerItem("toy_hammer",
+            new ToyHammer(ToolMaterials.WOOD,new FabricItemSettings().maxCount(1).maxDamage(240)));
 
     /**Paxel*/
     public static final Item WOODEN_PAXEL = registerItem("wooden_paxel",

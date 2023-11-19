@@ -14,6 +14,7 @@ public class Sounds_RaEx {
     public static final SoundEvent NIGHTMARE_TV_AMBIENT = registerSoundEvent("nightmare_tv_ambient");
     public static final SoundEvent NIGHTMARE_TV_HURT = registerSoundEvent("nightmare_tv_hurt");
 
+    public static final SoundEvent BOING = registerSoundEvent("boing");
     public static final SoundEvent ON_OFF = registerSoundEvent("on_off");
     public static final SoundEvent MAGIC_SHOT = registerSoundEvent("magic_shot");
 

@@ -23,7 +23,7 @@ public class Entities_RaEx {
     public static final EntityType<RoombaEntity> ROOMBA = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(RandomExtensions.MOD_ID, "roomba"),
             FabricEntityTypeBuilder.create(SpawnGroup.MISC, RoombaEntity::new)
-                    .dimensions(EntityDimensions.fixed(1f, 0.5f)).build());
+                    .dimensions(EntityDimensions.fixed(0.85f, 0.4f)).build());
 
     public static final EntityType<BambooExplosive> THROWN_BAMBOO_EXPLOSIVE_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(RandomExtensions.MOD_ID, "thrown_bamboo_explosive_projectile"),
