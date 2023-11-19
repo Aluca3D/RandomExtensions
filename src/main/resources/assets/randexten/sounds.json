@@ -34,5 +34,11 @@
     "sounds": [
       "randexten:on_off"
     ]
+  },
+  "boing": {
+    "subtitle": "sounds.randexten.boing",
+    "sounds": [
+      "randexten:boing"
+    ]
   }
 }

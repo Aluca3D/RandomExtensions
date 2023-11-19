@@ -173,7 +173,7 @@ public class NightmareTVModel<T extends NightmareTVEntity> extends SinglePartEnt
 
     private void setHeadAngles(float headYaw, float headPitch) {
         headYaw = MathHelper.clamp(headYaw, -30.0f, 30.0f);
-        headPitch = MathHelper.clamp(headPitch, -25.0f, 35.0f);
+        headPitch = MathHelper.clamp(headPitch, -15.0f, 15.0f);
 
         this.head.yaw = headYaw * 0.017453292f;
         this.head.pitch = headPitch * 0.017453292f;
