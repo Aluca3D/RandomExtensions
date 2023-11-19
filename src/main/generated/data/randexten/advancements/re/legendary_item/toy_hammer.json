@@ -1,0 +1,43 @@
+{
+  "parent": "randexten:re/legendary_item/legendary_root",
+  "criteria": {
+    "has_toy_hammer": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:toy_hammer"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Yeet"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:toy_hammer",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Bonk"
+    }
+  },
+  "requirements": [
+    [
+      "has_toy_hammer"
+    ]
+  ],
+  "rewards": {
+    "experience": 400
+  },
+  "sends_telemetry_event": true
+}
