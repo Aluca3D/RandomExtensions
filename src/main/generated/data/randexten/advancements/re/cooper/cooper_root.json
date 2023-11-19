@@ -1,24 +1,12 @@
 {
   "parent": "randexten:re/randexten",
   "criteria": {
-    "has_leave_staff": {
+    "has_copper_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "randexten:leave_staff"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_toy_hammer": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "randexten:toy_hammer"
+              "minecraft:copper_ingot"
             ]
           }
         ]
@@ -30,29 +18,37 @@
     "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
     "description": {
-      "text": "I Have ALL OF THEM"
+      "text": "Rust Prof"
     },
-    "frame": "challenge",
+    "frame": "task",
     "hidden": true,
     "icon": {
-      "item": "randexten:leave_staff",
+      "item": "randexten:cooper_pickaxe",
       "nbt": "{Damage:0}"
     },
     "show_toast": true,
     "title": {
-      "text": "That's a Legendary"
+      "text": "Copper"
     }
   },
   "requirements": [
     [
-      "has_leave_staff"
-    ],
-    [
-      "has_toy_hammer"
+      "has_copper_ingot"
     ]
   ],
   "rewards": {
-    "experience": 400
+    "experience": 20,
+    "recipes": [
+      "randexten:cooper_axe",
+      "randexten:cooper_pickaxe",
+      "randexten:cooper_shovel",
+      "randexten:cooper_hoe",
+      "randexten:cooper_sword",
+      "randexten:cooper_helmet",
+      "randexten:cooper_chestplate",
+      "randexten:cooper_leggings",
+      "randexten:cooper_boots"
+    ]
   },
   "sends_telemetry_event": true
 }

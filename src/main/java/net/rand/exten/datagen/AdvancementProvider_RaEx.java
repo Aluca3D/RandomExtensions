@@ -56,6 +56,26 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .parent(mainRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/foods/new_foods");
 
+        AdvancementEntry copperRoot = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.COPPER_PICKAXE),
+                        Text.literal("Copper"), Text.literal("Rust Prof"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_copper_ingot", InventoryChangedCriterion.Conditions.items(Items.COPPER_INGOT))
+                .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:cooper_axe"))
+                        .addRecipe(new Identifier("randexten:cooper_pickaxe"))
+                        .addRecipe(new Identifier("randexten:cooper_shovel"))
+                        .addRecipe(new Identifier("randexten:cooper_hoe"))
+                        .addRecipe(new Identifier("randexten:cooper_sword"))
+                        .addRecipe(new Identifier("randexten:cooper_helmet"))
+                        .addRecipe(new Identifier("randexten:cooper_chestplate"))
+                        .addRecipe(new Identifier("randexten:cooper_leggings"))
+                        .addRecipe(new Identifier("randexten:cooper_boots"))
+                        .setExperience(20)
+                )
+                .parent(mainRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/cooper/cooper_root");
+
         AdvancementEntry crystalRoot = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.MOSSY_CRYSTAL),
                         Text.literal("Crystals"), Text.literal("Alternative Medicine"),
@@ -130,14 +150,14 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
 
         AdvancementEntry legendaryItemRoot = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.LEAVE_STAFF),
-                        Text.literal("That's a Legendary"), Text.literal("Ooh, shiny"),
-                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        Text.literal("That's a Legendary"), Text.literal("I Have ALL OF THEM"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.CHALLENGE,
                         true, true, true))
                 .criterion("has_leave_staff", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.LEAVE_STAFF))
-                .rewards(AdvancementRewards.Builder.experience(20))
+                .criterion("has_toy_hammer", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.TOY_HAMMER))
+                .rewards(AdvancementRewards.Builder.experience(400))
                 .parent(mainRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/legendary_root");
-
 
         AdvancementEntry burnedRoot = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.BURNED_TREE_SAPLING),
@@ -514,7 +534,33 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .parent(mainRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/misc/roomba");
 
+        // Copper
+        AdvancementEntry cooperArmor = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.COPPER_HELMET),
+                        Text.literal("Copper Armor"), Text.literal("Dose not Rust, i *promise*"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_copper_helmet", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_HELMET))
+                .criterion("has_copper_chestplate", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_CHESTPLATE))
+                .criterion("has_copper_leggings", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_LEGGINGS))
+                .criterion("has_copper_boots", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_BOOTS))
+                .rewards(AdvancementRewards.Builder.experience(20))
+                .parent(copperRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/cooper/cooper_armor");
 
+        AdvancementEntry cooperTools = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.COPPER_AXE),
+                        Text.literal("Tools of Copper"), Text.literal("Cant Rust"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_copper_axe", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_AXE))
+                .criterion("has_copper_pickaxe", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_PICKAXE))
+                .criterion("has_copper_shovel", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_SHOVEL))
+                .criterion("has_copper_hoe", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_HOE))
+                .criterion("has_copper_sword", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_SWORD))
+                .rewards(AdvancementRewards.Builder.experience(20))
+                .parent(copperRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/cooper/cooper_tools");
 
         // Crystal
         AdvancementEntry mossyCrystal = Advancement.Builder.create()

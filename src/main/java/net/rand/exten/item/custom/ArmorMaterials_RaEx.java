@@ -25,7 +25,10 @@ public enum ArmorMaterials_RaEx implements ArmorMaterial {
     DIAMOND_TOPAS("d_topas", 33, new int[]{3, 8, 6, 3}, 10,
             SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0f, 0.0f, () -> Ingredient.ofItems(Items.DIAMOND)),
     NETHERITE_TOPAS("n_topas", 37, new int[]{3, 8, 6, 3}, 15,
-            SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0f, 0.1f, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));
+            SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0f, 0.1f, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
+/**Copper*/
+    COPPER("copper", 20, new int[]{2, 5, 6, 2}, 8,
+            SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.COPPER_INGOT));
 
     private static final int[] BASE_DURABILITY = {11, 16, 15, 13};
     private final String name;
@@ -48,7 +51,6 @@ public enum ArmorMaterials_RaEx implements ArmorMaterial {
         this.knockbackResistance = knockbackResistance;
         this.repairIngredient = repairIngredient;
     }
-
 
     @Override
     public int getDurability(ArmorItem.Type type) {

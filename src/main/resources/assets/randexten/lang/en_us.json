@@ -138,6 +138,16 @@
 
   "item.randexten.leave_staff": "Leave Staff",
 
+  "item.randexten.cooper_axe": "Copper Axe",
+  "item.randexten.cooper_pickaxe": "Copper Pickaxe",
+  "item.randexten.cooper_shovel": "Copper Shovel",
+  "item.randexten.cooper_hoe": "Copper Hoe",
+  "item.randexten.cooper_sword": "Copper Sword",
+  "item.randexten.cooper_helmet": "Copper Helmet",
+  "item.randexten.cooper_chestplate": "Copper Chestplate",
+  "item.randexten.cooper_leggings": "Copper Leggings",
+  "item.randexten.cooper_boots": "Copper Boots",
+
   "enchantment.randexten.escaper": "Escaper",
   "enchantment.randexten.evokers_bite": "Evoker's Bite",
   "enchantment.randexten.life_steal": "Life Steal",
