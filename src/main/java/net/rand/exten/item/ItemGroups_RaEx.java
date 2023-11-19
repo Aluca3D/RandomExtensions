@@ -42,6 +42,7 @@ public class ItemGroups_RaEx {
                         // Tools
                         /// Special
                         entries.add(ToolsAndArmors_RaEx.LEAVE_STAFF);
+                        entries.add(ToolsAndArmors_RaEx.TOY_HAMMER);
 
                         /// Paxel
                         entries.add(ToolsAndArmors_RaEx.WOODEN_PAXEL);
