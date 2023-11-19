@@ -1,14 +1,8 @@
 package net.rand.exten.item.custom.tools;
 
-
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.item.ToolItem;
-import net.minecraft.item.ToolMaterial;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
+import net.minecraft.item.*;
+import net.rand.exten.util.tools.Math_RaEx;
 
 public class ToyHammer extends ToolItem {
     public ToyHammer(ToolMaterial toolMaterial, Settings settings) {
@@ -22,9 +16,9 @@ public class ToyHammer extends ToolItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-
-        //ToDo set target Fly
-
+        Math_RaEx m = new Math_RaEx();
+        int i = m.randomInt(3)+1;
+        target.setVelocity(target.getVelocity().x * i, target.getVelocity().y * i,target.getVelocity().z * i);
         return true;
     }
 }
