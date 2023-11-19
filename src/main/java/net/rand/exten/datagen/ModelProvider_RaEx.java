@@ -86,6 +86,8 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         itemModelGenerator.register(ToolsAndArmors_RaEx.DIAMOND_PAXEL, Models.HANDHELD);
         itemModelGenerator.register(ToolsAndArmors_RaEx.NETHERITE_PAXEL, Models.HANDHELD);
 
+        itemModelGenerator.register(ToolsAndArmors_RaEx.TOY_HAMMER, Models.HANDHELD);
+
         itemModelGenerator.register(Items_RaEx.SOUL, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.PEBBLE, Models.GENERATED);
 
