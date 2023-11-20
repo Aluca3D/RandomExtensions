@@ -8,6 +8,7 @@ import net.minecraft.util.Identifier;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.CropBlocks_RaEx;
 import net.rand.exten.block.custom.crops.CornCropBlock;
+import net.rand.exten.block.custom.crops.EndBarryBlock;
 import net.rand.exten.block.custom.crops.TomatoCropBlock;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
@@ -56,7 +57,6 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         // Misc
         blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.CHARCOAL_BLOCK);
         blockStateModelGenerator.registerCooker(Blocks_RaEx.GRINDER, TexturedModel.ORIENTABLE);
-
 
         blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.MOSSY_CRYSTAL);
         blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.ICE_CRYSTAL);
@@ -117,6 +117,7 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         itemModelGenerator.register(Items_RaEx.CHEESE, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.CORN, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.TOMATO, Models.GENERATED);
+        itemModelGenerator.register(Items_RaEx.END_BARRY, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.RAW_PIZZA, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.PIZZA, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.DOUGH, Models.GENERATED);

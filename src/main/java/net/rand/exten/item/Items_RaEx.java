@@ -48,6 +48,9 @@ public class Items_RaEx {
     public static final Item CORN_SEEDS = registerItem("corn_seeds",
             new AliasedBlockItem(CropBlocks_RaEx.CORN_CROP, new FabricItemSettings()));
 
+    public static final Item END_BARRY = registerItem("end_barry",
+            new AliasedBlockItem(CropBlocks_RaEx.END_BARRY_BUSH ,new FabricItemSettings().food(FoodComponents_RaEx.END_BARRY)));
+
  /**Food*/
     public static final Item SANDWICH = registerItem("sandwich",
             new Item(new FabricItemSettings().food(FoodComponents_RaEx.SANDWICH)));

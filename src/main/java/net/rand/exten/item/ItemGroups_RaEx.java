@@ -126,6 +126,8 @@ public class ItemGroups_RaEx {
                         entries.add(Items_RaEx.POPCORN);
 
                         /// Crops
+                        entries.add(Items_RaEx.END_BARRY);
+
                         entries.add(Items_RaEx.TOMATO_SEEDS);
                         entries.add(Items_RaEx.TOMATO);
 

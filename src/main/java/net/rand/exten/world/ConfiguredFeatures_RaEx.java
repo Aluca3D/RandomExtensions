@@ -17,37 +17,43 @@ import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.Blocks_RaEx;
+import net.rand.exten.block.CropBlocks_RaEx;
 
 import java.util.List;
 
+import static net.minecraft.block.SweetBerryBushBlock.AGE;
+
 public class ConfiguredFeatures_RaEx {
 
-    //Ores
+    /**Ores*/
     public static final RegistryKey<ConfiguredFeature<?, ?>> SOUL_ORE_KEY = registerKey("soul_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AQUARAMIN_ORE_KEY = registerKey("aquamarin_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> RUBY_ORE_KEY = registerKey("ruby_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> TOPAS_ORE_KEY = registerKey("topas_ore");
 
-    //Flowers
+    /**Flowers*/
     public static final RegistryKey<ConfiguredFeature<?, ?>> NIGHT_SHADE_KEY = registerKey("night_shade");
 
-    //Tree
+    /**Bushes*/
+    public static final RegistryKey<ConfiguredFeature<?, ?>> END_BARRY_KEY = registerKey("end_barry");
+
+    /**Tree*/
     public static final RegistryKey<ConfiguredFeature<?, ?>> BURNED_TREE_KEY = registerKey("burned_tree");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
-        RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
-        RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
-        RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
-        RuleTest endReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
+        RuleTest stoneReplaceable = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceable = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest netherReplaceable = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
+        RuleTest endReplaceable = new BlockMatchRuleTest(Blocks.END_STONE);
 
         List<OreFeatureConfig.Target> soulOres =
-                List.of(OreFeatureConfig.createTarget(endReplaceables, Blocks_RaEx.SOUL_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(endReplaceable, Blocks_RaEx.SOUL_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> aquamarinOres =
-                List.of(OreFeatureConfig.createTarget(deepslateReplaceables, Blocks_RaEx.AQUAMARIN_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(deepslateReplaceable, Blocks_RaEx.AQUAMARIN_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> rubyOres =
-                List.of(OreFeatureConfig.createTarget(deepslateReplaceables, Blocks_RaEx.RUBY_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(deepslateReplaceable, Blocks_RaEx.RUBY_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> topasOres =
-                List.of(OreFeatureConfig.createTarget(deepslateReplaceables, Blocks_RaEx.TOPAS_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(deepslateReplaceable, Blocks_RaEx.TOPAS_ORE.getDefaultState()));
 
         //Ores
         register(context, SOUL_ORE_KEY, Feature.ORE, new OreFeatureConfig(soulOres, 4));
@@ -58,6 +64,10 @@ public class ConfiguredFeatures_RaEx {
         //Flowers
         register(context, NIGHT_SHADE_KEY, Feature.FLOWER, new RandomPatchFeatureConfig(16, 4, 2, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(Blocks_RaEx.NIGHT_SHADE)))));
+
+        //Bushes
+        register(context, END_BARRY_KEY, Feature.FLOWER, new RandomPatchFeatureConfig(16, 4, 2, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(BlockStateProvider.of(CropBlocks_RaEx.END_BARRY_BUSH.getDefaultState().with(AGE, 3))))));
 
         //Tree
         register(context, BURNED_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(

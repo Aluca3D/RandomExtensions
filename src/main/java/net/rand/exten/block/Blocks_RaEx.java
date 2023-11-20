@@ -142,9 +142,8 @@ public class Blocks_RaEx {
             new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
                     FabricBlockSettings.copyOf(Blocks_RaEx.BURNED_PLANKS), BlockSetType.OAK));
     /*End List
-     * - New Trees (1-2)
-     * - New Busch =  End Barry's
-     */
+        - New Trees (1-2)
+    */
 
     public static final Block BURNED_TREE_SAPLING = registerBlock("burned_tree_sapling",
             new SaplingBlock(new BurnedTreeSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));

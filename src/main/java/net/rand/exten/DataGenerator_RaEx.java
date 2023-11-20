@@ -7,7 +7,6 @@ import net.minecraft.registry.RegistryKeys;
 import net.rand.exten.datagen.*;
 import net.rand.exten.world.ConfiguredFeatures_RaEx;
 import net.rand.exten.world.PlacedFeatures_RaEx;
-import net.rand.exten.world.gen.biome.Biomes_RaEx;
 
 public class DataGenerator_RaEx implements DataGeneratorEntrypoint {
     @Override
@@ -27,7 +26,6 @@ public class DataGenerator_RaEx implements DataGeneratorEntrypoint {
     public void buildRegistry(RegistryBuilder registryBuilder) {
         registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ConfiguredFeatures_RaEx::bootstrap);
         registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, PlacedFeatures_RaEx::bootstrap);
-        registryBuilder.addRegistry(RegistryKeys.BIOME, Biomes_RaEx::bootstrap);
     }
 
 }
