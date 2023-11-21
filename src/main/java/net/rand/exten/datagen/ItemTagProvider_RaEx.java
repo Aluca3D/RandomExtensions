@@ -45,6 +45,11 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
                 .add(Blocks_RaEx.BURNED_LOG.asItem(), Blocks_RaEx.BURNED_WOOD.asItem(),
                         Blocks_RaEx.STRIPPED_BURNED_WOOD.asItem(), Blocks_RaEx.STRIPPED_BURNED_LOG.asItem());
 
+        getOrCreateTagBuilder(ItemTags.FLOWERS)
+                .add(Blocks_RaEx.NIGHT_SHADE.asItem());
+        getOrCreateTagBuilder(ItemTags.SMALL_FLOWERS)
+                .add(Blocks_RaEx.NIGHT_SHADE.asItem());
+
         getOrCreateTagBuilder(ItemTags.LOGS)
                 .add(Blocks_RaEx.BURNED_LOG.asItem())
                 .add(Blocks_RaEx.STRIPPED_BURNED_LOG.asItem())

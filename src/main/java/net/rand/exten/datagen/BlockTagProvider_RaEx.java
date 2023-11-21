@@ -152,6 +152,11 @@ public class BlockTagProvider_RaEx extends FabricTagProvider.BlockTagProvider {
 
         ;
 
+        getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS)
+                .add(Blocks_RaEx.NIGHT_SHADE)
+
+        ;
+
         getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
                 .add(Blocks_RaEx.POTTED_NIGHT_SHADE)
 
