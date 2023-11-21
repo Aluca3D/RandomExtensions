@@ -14,6 +14,9 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
         super(output, completableFuture);
     }
 
+
+// Todo add Flower Item/Block Tag
+
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
