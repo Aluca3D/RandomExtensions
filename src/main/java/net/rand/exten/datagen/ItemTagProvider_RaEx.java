@@ -14,9 +14,6 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
         super(output, completableFuture);
     }
 
-
-// Todo add Flower Item/Block Tag
-
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
@@ -47,6 +44,11 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
                 .add(Blocks_RaEx.BURNED_LOG.asItem(), Blocks_RaEx.BURNED_WOOD.asItem(),
                         Blocks_RaEx.STRIPPED_BURNED_WOOD.asItem(), Blocks_RaEx.STRIPPED_BURNED_LOG.asItem());
+
+        getOrCreateTagBuilder(ItemTags.FLOWERS)
+                .add(Blocks_RaEx.NIGHT_SHADE.asItem());
+        getOrCreateTagBuilder(ItemTags.SMALL_FLOWERS)
+                .add(Blocks_RaEx.NIGHT_SHADE.asItem());
 
         getOrCreateTagBuilder(ItemTags.LOGS)
                 .add(Blocks_RaEx.BURNED_LOG.asItem())
