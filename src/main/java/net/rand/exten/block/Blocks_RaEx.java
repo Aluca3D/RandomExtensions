@@ -17,7 +17,9 @@ import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.custom.blocks.ExplosiveCakeBlock;
 import net.rand.exten.block.custom.blocks.Grinder;
 import net.rand.exten.block.custom.blocks.SoulOre;
+import net.rand.exten.block.custom.blocks.tree.PurPurMushroomBlock;
 import net.rand.exten.world.gen.tree.BurnedTreeSaplingGenerator;
+import net.rand.exten.world.gen.tree.PurPurMushroomGenerator;
 
 public class Blocks_RaEx {
     /**Gems */
@@ -141,14 +143,30 @@ public class Blocks_RaEx {
     public static final Block BURNED_PRESSURE_PLATE = registerBlock("burned_pressure_plate",
             new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
                     FabricBlockSettings.copyOf(Blocks_RaEx.BURNED_PLANKS), BlockSetType.OAK));
-    /*End List
-        - New Trees (1-2)
-    */
 
     public static final Block BURNED_TREE_SAPLING = registerBlock("burned_tree_sapling",
             new SaplingBlock(new BurnedTreeSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block POTTED_BURNED_TREE_SAPLING = Registry.register(Registries.BLOCK, new Identifier(RandomExtensions.MOD_ID, "potted_burned_tree_sapling"),
-            new FlowerPotBlock(BURNED_TREE_SAPLING, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).nonOpaque()));
+            new FlowerPotBlock(BURNED_TREE_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING).nonOpaque()));
+
+    /**PurPur Mushroom*/
+    /*
+    Todo
+     - add PurPur Mushroom Wood/Planks
+     - add Loot Table
+     - add Texture
+     - add Recipes (like Food and Wood)
+     */
+
+    public static final Block PURPUR_MUSHROOM_STEM = registerBlock("purpur_mushroom_stem",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.MUSHROOM_STEM)));
+    public static final Block PURPUR_MUSHROOM_BLOCK = registerBlock("purpur_mushroom_block",
+            new Block(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_MUSHROOM_STEM)));
+
+    public static final Block PURPUR_MUSHROOM = registerBlock("purpur_mushroom",
+            new PurPurMushroomBlock(new PurPurMushroomGenerator(), FabricBlockSettings.copyOf(Blocks.BROWN_MUSHROOM)));
+    public static final Block POTTED_PURPUR_MUSHROOM = Registry.register(Registries.BLOCK, new Identifier(RandomExtensions.MOD_ID, "potted_purpur_mushroom"),
+            new FlowerPotBlock(PURPUR_MUSHROOM, FabricBlockSettings.copyOf(Blocks.POTTED_BROWN_MUSHROOM).nonOpaque()));
 
 
     private static Block registerBlock(String name, Block block) {

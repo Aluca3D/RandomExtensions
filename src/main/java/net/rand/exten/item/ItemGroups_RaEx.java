@@ -142,7 +142,11 @@ public class ItemGroups_RaEx {
                         /// Flowers
                         entries.add(Blocks_RaEx.NIGHT_SHADE);
 
-                        // Wood
+                        // Tree
+                        entries.add(Blocks_RaEx.PURPUR_MUSHROOM);
+                        entries.add(Blocks_RaEx.PURPUR_MUSHROOM_STEM);
+                        entries.add(Blocks_RaEx.PURPUR_MUSHROOM_BLOCK);
+
                         /// Burned Tree
                         entries.add(Blocks_RaEx.BURNED_LOG);
                         entries.add(Blocks_RaEx.BURNED_WOOD);

@@ -40,7 +40,12 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         cheesePool.slab(Blocks_RaEx.CHEESE_SLABS);
         cheesePool.wall(Blocks_RaEx.CHEESE_WALLS);
 
-        // Wood
+        // Trees
+        /// PurPur Mushroom
+        blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.PURPUR_MUSHROOM_BLOCK);
+        blockStateModelGenerator.registerLog(Blocks_RaEx.PURPUR_MUSHROOM_STEM).log(Blocks_RaEx.PURPUR_MUSHROOM_STEM);
+        blockStateModelGenerator.registerFlowerPotPlant(Blocks_RaEx.PURPUR_MUSHROOM, Blocks_RaEx.POTTED_PURPUR_MUSHROOM, BlockStateModelGenerator.TintType.NOT_TINTED);
+
         /// Burned Tree
         blockStateModelGenerator.registerLog(Blocks_RaEx.BURNED_LOG).log(Blocks_RaEx.BURNED_LOG).wood(Blocks_RaEx.BURNED_WOOD);
         blockStateModelGenerator.registerLog(Blocks_RaEx.STRIPPED_BURNED_LOG).log(Blocks_RaEx.STRIPPED_BURNED_LOG).wood(Blocks_RaEx.STRIPPED_BURNED_WOOD);
