@@ -8,6 +8,7 @@ import net.rand.exten.world.ConfiguredFeatures_RaEx;
 import org.jetbrains.annotations.Nullable;
 
 public class PurPurMushroomGenerator extends SaplingGenerator {
+    // Todo maybe make into --> LargeTreeSaplingGenerator
     @Nullable
     @Override
     protected RegistryKey<ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
