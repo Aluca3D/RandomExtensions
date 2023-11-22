@@ -17,7 +17,7 @@ import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.custom.blocks.ExplosiveCakeBlock;
 import net.rand.exten.block.custom.blocks.Grinder;
 import net.rand.exten.block.custom.blocks.SoulOre;
-import net.rand.exten.block.custom.blocks.tree.PurPurMushroomBlock;
+import net.rand.exten.block.custom.blocks.tree.PurPurTreeBlock;
 import net.rand.exten.world.gen.tree.BurnedTreeSaplingGenerator;
 import net.rand.exten.world.gen.tree.PurPurTreeGenerator;
 
@@ -164,7 +164,7 @@ public class Blocks_RaEx {
             new Block(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_LOG)));
 
     public static final Block PURPUR_SAPLING = registerBlock("purpur_sapling",
-            new PurPurMushroomBlock(new PurPurTreeGenerator(), FabricBlockSettings.copyOf(Blocks.BROWN_MUSHROOM)));
+            new PurPurTreeBlock(new PurPurTreeGenerator(), FabricBlockSettings.copyOf(Blocks.BROWN_MUSHROOM)));
     public static final Block POTTED_PURPUR_SAPLING = Registry.register(Registries.BLOCK, new Identifier(RandomExtensions.MOD_ID, "potted_purpur_sapling"),
             new FlowerPotBlock(PURPUR_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_BROWN_MUSHROOM).nonOpaque()));
 

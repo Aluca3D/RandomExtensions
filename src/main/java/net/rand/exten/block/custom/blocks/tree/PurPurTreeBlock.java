@@ -7,8 +7,8 @@ import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
-public class PurPurMushroomBlock extends SaplingBlock {
-    public PurPurMushroomBlock(SaplingGenerator generator, Settings settings) {
+public class PurPurTreeBlock extends SaplingBlock {
+    public PurPurTreeBlock(SaplingGenerator generator, Settings settings) {
         super(generator, settings);
     }
 
