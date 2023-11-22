@@ -8,7 +8,6 @@ import net.minecraft.util.Identifier;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.CropBlocks_RaEx;
 import net.rand.exten.block.custom.crops.CornCropBlock;
-import net.rand.exten.block.custom.crops.EndBarryBlock;
 import net.rand.exten.block.custom.crops.TomatoCropBlock;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
@@ -42,9 +41,9 @@ public class ModelProvider_RaEx extends FabricModelProvider {
 
         // Trees
         /// PurPur Mushroom
-        blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.PURPUR_MUSHROOM_BLOCK);
-        blockStateModelGenerator.registerLog(Blocks_RaEx.PURPUR_MUSHROOM_STEM).log(Blocks_RaEx.PURPUR_MUSHROOM_STEM);
-        blockStateModelGenerator.registerFlowerPotPlant(Blocks_RaEx.PURPUR_MUSHROOM, Blocks_RaEx.POTTED_PURPUR_MUSHROOM, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.PURPUR_LEAVES);
+        blockStateModelGenerator.registerLog(Blocks_RaEx.PURPUR_LOG).log(Blocks_RaEx.PURPUR_LOG);
+        blockStateModelGenerator.registerFlowerPotPlant(Blocks_RaEx.PURPUR_SAPLING, Blocks_RaEx.POTTED_PURPUR_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         /// Burned Tree
         blockStateModelGenerator.registerLog(Blocks_RaEx.BURNED_LOG).log(Blocks_RaEx.BURNED_LOG).wood(Blocks_RaEx.BURNED_WOOD);

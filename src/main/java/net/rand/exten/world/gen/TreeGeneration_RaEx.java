@@ -9,6 +9,6 @@ import net.rand.exten.world.PlacedFeatures_RaEx;
 public class TreeGeneration_RaEx {
     public static void generateTrees() {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_BARRENS, BiomeKeys.END_MIDLANDS, BiomeKeys.END_HIGHLANDS),
-                GenerationStep.Feature.VEGETAL_DECORATION, PlacedFeatures_RaEx.PURPUR_MUSHROOM_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, PlacedFeatures_RaEx.PURPUR_TREE_PLACED_KEY);
     }
 }

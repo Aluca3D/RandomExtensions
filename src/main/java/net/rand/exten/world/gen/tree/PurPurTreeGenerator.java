@@ -7,11 +7,11 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.rand.exten.world.ConfiguredFeatures_RaEx;
 import org.jetbrains.annotations.Nullable;
 
-public class PurPurMushroomGenerator extends SaplingGenerator {
+public class PurPurTreeGenerator extends SaplingGenerator {
     // Todo maybe make into --> LargeTreeSaplingGenerator
     @Nullable
     @Override
     protected RegistryKey<ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
-        return ConfiguredFeatures_RaEx.PURPUR_MUSHROOM_KEY;
+        return ConfiguredFeatures_RaEx.PURPUR_TREE_KEY;
     }
 }

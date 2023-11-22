@@ -27,6 +27,8 @@ import net.rand.exten.block.CropBlocks_RaEx;
 
 import java.util.List;
 
+import static net.minecraft.block.SweetBerryBushBlock.AGE;
+
 
 public class ConfiguredFeatures_RaEx {
 
@@ -43,8 +45,8 @@ public class ConfiguredFeatures_RaEx {
     public static final RegistryKey<ConfiguredFeature<?, ?>> END_BARRY_KEY = registerKey("end_barry");
 
     /**Tree*/
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PURPUR_TREE_KEY = registerKey("purpur_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> BURNED_TREE_KEY = registerKey("burned_tree");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> PURPUR_MUSHROOM_KEY = registerKey("purpur_mushroom");
     public static final RegistryKey<ConfiguredFeature<?, ?>> LARGE_BURNED_TREE_KEY = registerKey("large_burned_tree");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
@@ -93,10 +95,11 @@ public class ConfiguredFeatures_RaEx {
                 new TwoLayersFeatureSize(1, 0, 2)).build()
         );
 
-        register(context, PURPUR_MUSHROOM_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                BlockStateProvider.of(Blocks_RaEx.PURPUR_MUSHROOM_STEM),
+        // ToDo Change similar to Acacia
+        register(context, PURPUR_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(Blocks_RaEx.PURPUR_LOG),
                 new StraightTrunkPlacer(6,5,0),
-                BlockStateProvider.of(Blocks_RaEx.PURPUR_MUSHROOM_BLOCK),
+                BlockStateProvider.of(Blocks_RaEx.PURPUR_LEAVES),
                 new PineFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), ConstantIntProvider.create(3)),
                 new TwoLayersFeatureSize(2, 0, 2))
                 .ignoreVines().dirtProvider(BlockStateProvider.of(Blocks.END_STONE)).build()

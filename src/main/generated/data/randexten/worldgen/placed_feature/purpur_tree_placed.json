@@ -1,5 +1,5 @@
 {
-  "feature": "randexten:purpur_mushroom",
+  "feature": "randexten:purpur_tree",
   "placement": [
     {
       "type": "minecraft:count",
@@ -36,7 +36,7 @@
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "randexten:purpur_mushroom",
+          "Name": "randexten:purpur_sapling",
           "Properties": {
             "stage": "0"
           }

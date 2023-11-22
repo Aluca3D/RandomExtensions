@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "randexten:block/purpur_mushroom"
+    "layer0": "randexten:block/purpur_sapling"
   }
 }

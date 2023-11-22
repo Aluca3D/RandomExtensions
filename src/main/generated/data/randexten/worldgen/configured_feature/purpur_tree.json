@@ -17,7 +17,7 @@
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "randexten:purpur_mushroom_block"
+        "Name": "randexten:purpur_leaves"
       }
     },
     "force_dirt": false,
@@ -37,7 +37,7 @@
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "randexten:purpur_mushroom_stem",
+        "Name": "randexten:purpur_log",
         "Properties": {
           "axis": "y"
         }

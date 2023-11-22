@@ -28,8 +28,7 @@ public class PlacedFeatures_RaEx {
     public static final RegistryKey<PlacedFeature> END_BARRY_PLACED_KEY = registerKey("end_barry_placed");
 
     /**Tree*/
-    public static final RegistryKey<PlacedFeature> BURNED_TREE_PLACED_KEY = registerKey("burned_tree_placed");
-    public static final RegistryKey<PlacedFeature> PURPUR_MUSHROOM_PLACED_KEY = registerKey("purpur_mushroom_placed");
+    public static final RegistryKey<PlacedFeature> PURPUR_TREE_PLACED_KEY = registerKey("purpur_tree_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -60,13 +59,9 @@ public class PlacedFeatures_RaEx {
                 RarityFilterPlacementModifier.of(10), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
 
         //Tree
-        register(context, BURNED_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeatures_RaEx.BURNED_TREE_KEY),
+        register(context, PURPUR_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeatures_RaEx.PURPUR_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(1, 0.1f, 1), Blocks_RaEx.BURNED_TREE_SAPLING));
-
-        register(context, PURPUR_MUSHROOM_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeatures_RaEx.PURPUR_MUSHROOM_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(0, 0.025f, 1), Blocks_RaEx.PURPUR_MUSHROOM));
+                        PlacedFeatures.createCountExtraModifier(0, 0.025f, 1), Blocks_RaEx.PURPUR_SAPLING));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

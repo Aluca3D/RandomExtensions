@@ -19,7 +19,7 @@ import net.rand.exten.block.custom.blocks.Grinder;
 import net.rand.exten.block.custom.blocks.SoulOre;
 import net.rand.exten.block.custom.blocks.tree.PurPurMushroomBlock;
 import net.rand.exten.world.gen.tree.BurnedTreeSaplingGenerator;
-import net.rand.exten.world.gen.tree.PurPurMushroomGenerator;
+import net.rand.exten.world.gen.tree.PurPurTreeGenerator;
 
 public class Blocks_RaEx {
     /**Gems */
@@ -158,15 +158,15 @@ public class Blocks_RaEx {
      - add Recipes (like Food and Wood)
      */
 
-    public static final Block PURPUR_MUSHROOM_STEM = registerBlock("purpur_mushroom_stem",
+    public static final Block PURPUR_LOG = registerBlock("purpur_log",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.MUSHROOM_STEM)));
-    public static final Block PURPUR_MUSHROOM_BLOCK = registerBlock("purpur_mushroom_block",
-            new Block(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_MUSHROOM_STEM)));
+    public static final Block PURPUR_LEAVES = registerBlock("purpur_leaves",
+            new Block(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_LOG)));
 
-    public static final Block PURPUR_MUSHROOM = registerBlock("purpur_mushroom",
-            new PurPurMushroomBlock(new PurPurMushroomGenerator(), FabricBlockSettings.copyOf(Blocks.BROWN_MUSHROOM)));
-    public static final Block POTTED_PURPUR_MUSHROOM = Registry.register(Registries.BLOCK, new Identifier(RandomExtensions.MOD_ID, "potted_purpur_mushroom"),
-            new FlowerPotBlock(PURPUR_MUSHROOM, FabricBlockSettings.copyOf(Blocks.POTTED_BROWN_MUSHROOM).nonOpaque()));
+    public static final Block PURPUR_SAPLING = registerBlock("purpur_sapling",
+            new PurPurMushroomBlock(new PurPurTreeGenerator(), FabricBlockSettings.copyOf(Blocks.BROWN_MUSHROOM)));
+    public static final Block POTTED_PURPUR_SAPLING = Registry.register(Registries.BLOCK, new Identifier(RandomExtensions.MOD_ID, "potted_purpur_sapling"),
+            new FlowerPotBlock(PURPUR_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_BROWN_MUSHROOM).nonOpaque()));
 
 
     private static Block registerBlock(String name, Block block) {
