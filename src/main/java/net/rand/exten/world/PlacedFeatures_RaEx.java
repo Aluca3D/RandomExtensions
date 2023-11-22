@@ -25,7 +25,8 @@ public class PlacedFeatures_RaEx {
     public static final RegistryKey<PlacedFeature> NIGHT_SHADE_PLACED_KEY = registerKey("night_shade_placed");
 
     //Tree
-    public static final RegistryKey<PlacedFeature> BURNED_TREE_PLACED_KEY = registerKey("burned_tree_placed");
+
+
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
@@ -50,9 +51,7 @@ public class PlacedFeatures_RaEx {
         register(context, NIGHT_SHADE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeatures_RaEx.NIGHT_SHADE_KEY),
                 RarityFilterPlacementModifier.of(5), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
         //Tree
-        register(context, BURNED_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeatures_RaEx.BURNED_TREE_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(1, 0.1f, 2), Blocks_RaEx.BURNED_TREE_SAPLING));
+
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
