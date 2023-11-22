@@ -60,6 +60,20 @@ public class BlockTagProvider_RaEx extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks_RaEx.BURNED_STAIRS)
                 .add(Blocks_RaEx.BURNED_DOOR)
                 .add(Blocks_RaEx.BURNED_TRAPDOOR)
+
+                .add(Blocks_RaEx.PURPUR_LOG)
+                .add(Blocks_RaEx.STRIPPED_PURPUR_LOG)
+                .add(Blocks_RaEx.PURPUR_WOOD)
+                .add(Blocks_RaEx.STRIPPED_PURPUR_WOOD)
+                .add(Blocks_RaEx.PURPUR_FENCE)
+                .add(Blocks_RaEx.PURPUR_GATE)
+                .add(Blocks_RaEx.PURPUR_BUTTON)
+                .add(Blocks_RaEx.PURPUR_PRESSURE_PLATE)
+                .add(Blocks_RaEx.PURPUR_SLABS)
+                .add(Blocks_RaEx.PURPUR_PLANKS)
+                .add(Blocks_RaEx.PURPUR_STAIRS)
+                .add(Blocks_RaEx.PURPUR_DOOR)
+                .add(Blocks_RaEx.PURPUR_TRAPDOOR)
         ;
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
@@ -103,10 +117,12 @@ public class BlockTagProvider_RaEx extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.FENCES)
                 .add(Blocks_RaEx.BURNED_FENCE)
+                .add(Blocks_RaEx.PURPUR_FENCE)
         ;
 
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .add(Blocks_RaEx.BURNED_GATE)
+                .add(Blocks_RaEx.PURPUR_GATE)
         ;
 
         getOrCreateTagBuilder(BlockTags.WALLS)
@@ -115,36 +131,59 @@ public class BlockTagProvider_RaEx extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.BUTTONS)
                 .add(Blocks_RaEx.BURNED_BUTTON)
-
+                .add(Blocks_RaEx.PURPUR_BUTTON)
         ;
 
         getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES)
                 .add(Blocks_RaEx.BURNED_PRESSURE_PLATE)
-
+                .add(Blocks_RaEx.PURPUR_PRESSURE_PLATE)
         ;
 
         getOrCreateTagBuilder(BlockTags.STAIRS)
                 .add(Blocks_RaEx.BURNED_STAIRS)
+                .add(Blocks_RaEx.PURPUR_STAIRS)
                 .add(Blocks_RaEx.CHEESE_STAIRS)
         ;
 
         getOrCreateTagBuilder(BlockTags.SLABS)
                 .add(Blocks_RaEx.BURNED_SLABS)
+                .add(Blocks_RaEx.PURPUR_SLABS)
                 .add(Blocks_RaEx.CHEESE_SLABS)
         ;
 
         getOrCreateTagBuilder(BlockTags.DOORS)
                 .add(Blocks_RaEx.OBSIDIAN_DOOR)
                 .add(Blocks_RaEx.BURNED_DOOR)
+                .add(Blocks_RaEx.PURPUR_DOOR)
         ;
 
         getOrCreateTagBuilder(BlockTags.TRAPDOORS)
                 .add(Blocks_RaEx.OBSIDIAN_TRAPDOOR)
                 .add(Blocks_RaEx.BURNED_TRAPDOOR)
+                .add(Blocks_RaEx.PURPUR_TRAPDOOR)
         ;
+
+        getOrCreateTagBuilder(BlockTags.LOGS)
+                .add(Blocks_RaEx.PURPUR_LOG)
+                .add(Blocks_RaEx.STRIPPED_BURNED_LOG)
+                .add(Blocks_RaEx.BURNED_LOG)
+                .add(Blocks_RaEx.STRIPPED_BURNED_LOG)
+
+                .add(Blocks_RaEx.PURPUR_WOOD)
+                .add(Blocks_RaEx.STRIPPED_BURNED_WOOD)
+                .add(Blocks_RaEx.BURNED_WOOD)
+                .add(Blocks_RaEx.STRIPPED_BURNED_WOOD)
+        ;
+
 
         getOrCreateTagBuilder(BlockTags.PLANKS)
                 .add(Blocks_RaEx.BURNED_PLANKS)
+                .add(Blocks_RaEx.PURPUR_PLANKS)
+        ;
+
+        getOrCreateTagBuilder(BlockTags.LEAVES)
+                .add(Blocks_RaEx.PURPUR_LEAVES)
+
         ;
 
         getOrCreateTagBuilder(BlockTags.FLOWERS)
@@ -169,10 +208,12 @@ public class BlockTagProvider_RaEx extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.SAPLINGS)
                 .add(Blocks_RaEx.BURNED_TREE_SAPLING)
+                .add(Blocks_RaEx.PURPUR_SAPLING)
         ;
 
         getOrCreateTagBuilder(BlockTags.ENDERMAN_HOLDABLE)
                 .add(Blocks_RaEx.BURNED_TREE_SAPLING)
+                .add(Blocks_RaEx.PURPUR_SAPLING)
                 .add(Blocks_RaEx.NIGHT_SHADE)
                 .add(Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK)
                 .add(Blocks_RaEx.CHEESE_BLOCK)

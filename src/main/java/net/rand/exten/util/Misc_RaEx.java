@@ -128,5 +128,8 @@ public class Misc_RaEx {
     private static void registerStrippable() {
         StrippableBlockRegistry.register(Blocks_RaEx.BURNED_LOG, Blocks_RaEx.STRIPPED_BURNED_LOG);
         StrippableBlockRegistry.register(Blocks_RaEx.BURNED_WOOD, Blocks_RaEx.STRIPPED_BURNED_WOOD);
+
+        StrippableBlockRegistry.register(Blocks_RaEx.PURPUR_LOG, Blocks_RaEx.STRIPPED_PURPUR_LOG);
+        StrippableBlockRegistry.register(Blocks_RaEx.PURPUR_WOOD, Blocks_RaEx.STRIPPED_PURPUR_WOOD);
     }
 }

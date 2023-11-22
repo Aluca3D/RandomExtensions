@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "randexten:burned_pressure_plate"
+    "randexten:burned_pressure_plate",
+    "randexten:purpur_pressure_plate"
   ]
 }

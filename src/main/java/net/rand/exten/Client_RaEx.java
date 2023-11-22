@@ -32,12 +32,15 @@ public class Client_RaEx implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.ICE_CRYSTAL, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.SAND_CRYSTAL, RenderLayer.getTranslucent());
 
-
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.OBSIDIAN_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.OBSIDIAN_TRAPDOOR, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.BURNED_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.BURNED_TRAPDOOR, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.PURPUR_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.PURPUR_TRAPDOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.PURPUR_DOOR, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.NIGHT_SHADE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.POTTED_NIGHT_SHADE, RenderLayer.getCutout());
@@ -65,5 +68,7 @@ public class Client_RaEx implements ClientModInitializer {
 
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> world != null && pos != null ? BiomeColors.getFoliageColor(world, pos)
                 : FoliageColors.getDefaultColor(), Blocks_RaEx.FAKE_LEAVES);
+
+
     }
 }

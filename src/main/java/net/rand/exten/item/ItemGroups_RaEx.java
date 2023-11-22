@@ -143,9 +143,21 @@ public class ItemGroups_RaEx {
                         entries.add(Blocks_RaEx.NIGHT_SHADE);
 
                         // Tree
-                        entries.add(Blocks_RaEx.PURPUR_SAPLING);
                         entries.add(Blocks_RaEx.PURPUR_LOG);
+                        entries.add(Blocks_RaEx.PURPUR_WOOD);
                         entries.add(Blocks_RaEx.PURPUR_LEAVES);
+                        entries.add(Blocks_RaEx.STRIPPED_PURPUR_LOG);
+                        entries.add(Blocks_RaEx.STRIPPED_PURPUR_WOOD);
+                        entries.add(Blocks_RaEx.PURPUR_PLANKS);
+                        entries.add(Blocks_RaEx.PURPUR_STAIRS);
+                        entries.add(Blocks_RaEx.PURPUR_SLABS);
+                        entries.add(Blocks_RaEx.PURPUR_FENCE);
+                        entries.add(Blocks_RaEx.PURPUR_GATE);
+                        entries.add(Blocks_RaEx.PURPUR_DOOR);
+                        entries.add(Blocks_RaEx.PURPUR_TRAPDOOR);
+                        entries.add(Blocks_RaEx.PURPUR_PRESSURE_PLATE);
+                        entries.add(Blocks_RaEx.PURPUR_BUTTON);
+                        entries.add(Blocks_RaEx.PURPUR_SAPLING);
 
                         /// Burned Tree
                         entries.add(Blocks_RaEx.BURNED_LOG);

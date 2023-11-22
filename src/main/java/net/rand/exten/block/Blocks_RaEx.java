@@ -149,19 +149,43 @@ public class Blocks_RaEx {
     public static final Block POTTED_BURNED_TREE_SAPLING = Registry.register(Registries.BLOCK, new Identifier(RandomExtensions.MOD_ID, "potted_burned_tree_sapling"),
             new FlowerPotBlock(BURNED_TREE_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING).nonOpaque()));
 
-    /**PurPur Mushroom*/
+    /**PurPur Tree*/
     /*
     Todo
-     - add PurPur Mushroom Wood/Planks
-     - add Loot Table
-     - add Texture
+     - add Texture(purpur_door, purpur_door_bottom, purpur_door_top, purpur_trapdoor, purpur_leaves)
+     - redo Tomato (again)
      - add Recipes (like Food and Wood)
      */
 
     public static final Block PURPUR_LOG = registerBlock("purpur_log",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.MUSHROOM_STEM)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
+    public static final Block PURPUR_WOOD = registerBlock("purpur_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_LOG)));
+    public static final Block STRIPPED_PURPUR_WOOD = registerBlock("stripped_purpur_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)));
+    public static final Block STRIPPED_PURPUR_LOG = registerBlock("stripped_purpur_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks_RaEx.STRIPPED_PURPUR_WOOD)));
+    public static final Block PURPUR_PLANKS = registerBlock("purpur_planks",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block PURPUR_STAIRS = registerBlock("purpur_stairs",
+            new StairsBlock(Blocks_RaEx.PURPUR_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS)));
+    public static final Block PURPUR_SLABS = registerBlock("purpur_slabs",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS)));
+    public static final Block PURPUR_FENCE = registerBlock("purpur_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS)));
+    public static final Block PURPUR_GATE = registerBlock("purpur_gate",
+            new FenceGateBlock(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS), WoodType.OAK));
+    public static final Block PURPUR_DOOR = registerBlock("purpur_door",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS).nonOpaque(), BlockSetType.OAK));
+    public static final Block PURPUR_TRAPDOOR = registerBlock("purpur_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS).nonOpaque(), BlockSetType.OAK));
+    public static final Block PURPUR_BUTTON = registerBlock("purpur_button",
+            new ButtonBlock(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS), BlockSetType.OAK, 60, true));
+    public static final Block PURPUR_PRESSURE_PLATE = registerBlock("purpur_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
+                    FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS), BlockSetType.OAK));
     public static final Block PURPUR_LEAVES = registerBlock("purpur_leaves",
-            new Block(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_LOG)));
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
 
     public static final Block PURPUR_SAPLING = registerBlock("purpur_sapling",
             new PurPurTreeBlock(new PurPurTreeGenerator(), FabricBlockSettings.copyOf(Blocks.BROWN_MUSHROOM)));

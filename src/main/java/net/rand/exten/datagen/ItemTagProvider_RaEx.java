@@ -55,11 +55,16 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
                 .add(Blocks_RaEx.STRIPPED_BURNED_LOG.asItem())
                 .add(Blocks_RaEx.BURNED_WOOD.asItem())
                 .add(Blocks_RaEx.STRIPPED_BURNED_WOOD.asItem())
+                .add(Blocks_RaEx.PURPUR_LOG.asItem())
+                .add(Blocks_RaEx.STRIPPED_PURPUR_LOG.asItem())
+                .add(Blocks_RaEx.PURPUR_WOOD.asItem())
+                .add(Blocks_RaEx.STRIPPED_PURPUR_WOOD.asItem())
 
         ;
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(Blocks_RaEx.BURNED_PLANKS.asItem())
+                .add(Blocks_RaEx.PURPUR_PLANKS.asItem())
 
         ;
 

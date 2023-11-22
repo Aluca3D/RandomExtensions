@@ -23,6 +23,7 @@ public class ModelProvider_RaEx extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         BlockStateModelGenerator.BlockTexturePool burnedWoodPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks_RaEx.BURNED_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool purpurWoodPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks_RaEx.PURPUR_PLANKS);
         BlockStateModelGenerator.BlockTexturePool cheesePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks_RaEx.CHEESE_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.SOUL_ORE);
@@ -40,10 +41,19 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         cheesePool.wall(Blocks_RaEx.CHEESE_WALLS);
 
         // Trees
-        /// PurPur Mushroom
+        /// PurPur Tree
         blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.PURPUR_LEAVES);
-        blockStateModelGenerator.registerLog(Blocks_RaEx.PURPUR_LOG).log(Blocks_RaEx.PURPUR_LOG);
+        blockStateModelGenerator.registerLog(Blocks_RaEx.PURPUR_LOG).log(Blocks_RaEx.PURPUR_LOG).wood(Blocks_RaEx.PURPUR_WOOD);
         blockStateModelGenerator.registerFlowerPotPlant(Blocks_RaEx.PURPUR_SAPLING, Blocks_RaEx.POTTED_PURPUR_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerLog(Blocks_RaEx.STRIPPED_PURPUR_LOG).log(Blocks_RaEx.STRIPPED_PURPUR_LOG).wood(Blocks_RaEx.STRIPPED_PURPUR_WOOD);
+        purpurWoodPool.fence(Blocks_RaEx.PURPUR_FENCE);
+        purpurWoodPool.fenceGate(Blocks_RaEx.PURPUR_GATE);
+        purpurWoodPool.stairs(Blocks_RaEx.PURPUR_STAIRS);
+        purpurWoodPool.slab(Blocks_RaEx.PURPUR_SLABS);
+        purpurWoodPool.button(Blocks_RaEx.PURPUR_BUTTON);
+        purpurWoodPool.pressurePlate(Blocks_RaEx.PURPUR_PRESSURE_PLATE);
+        blockStateModelGenerator.registerDoor(Blocks_RaEx.PURPUR_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(Blocks_RaEx.PURPUR_TRAPDOOR);
 
         /// Burned Tree
         blockStateModelGenerator.registerLog(Blocks_RaEx.BURNED_LOG).log(Blocks_RaEx.BURNED_LOG).wood(Blocks_RaEx.BURNED_WOOD);

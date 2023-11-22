@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "randexten:burned_tree_sapling"
+    "randexten:burned_tree_sapling",
+    "randexten:purpur_sapling"
   ]
 }
