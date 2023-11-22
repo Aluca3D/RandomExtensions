@@ -14,21 +14,17 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.AcaciaFoliagePlacer;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
-
-import net.minecraft.world.gen.foliage.PineFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
-
 import net.minecraft.world.gen.trunk.GiantTrunkPlacer;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.CropBlocks_RaEx;
+import net.rand.exten.block.custom.crops.EndBarryBlock;
 
 
 import java.util.List;
 
-import static net.minecraft.block.SweetBerryBushBlock.AGE;
 
 
 public class ConfiguredFeatures_RaEx {
@@ -78,7 +74,7 @@ public class ConfiguredFeatures_RaEx {
 
         //Bushes
         register(context, END_BARRY_KEY, Feature.FLOWER, new RandomPatchFeatureConfig(16, 4, 2, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
-                new SimpleBlockFeatureConfig(BlockStateProvider.of(CropBlocks_RaEx.END_BARRY_BUSH.getDefaultState().with(AGE, 3))))));
+                new SimpleBlockFeatureConfig(BlockStateProvider.of(CropBlocks_RaEx.END_BARRY_BUSH.getDefaultState().with(EndBarryBlock.AGE, 3))))));
 
         //Tree
         register(context, BURNED_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
