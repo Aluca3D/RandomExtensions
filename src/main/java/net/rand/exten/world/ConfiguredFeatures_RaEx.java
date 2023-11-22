@@ -10,23 +10,23 @@ import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.AcaciaFoliagePlacer;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+
 import net.minecraft.world.gen.foliage.PineFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.trunk.BendingTrunkPlacer;
 import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
+
+import net.minecraft.world.gen.trunk.GiantTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.CropBlocks_RaEx;
 
+
 import java.util.List;
 
-import static net.minecraft.block.SweetBerryBushBlock.AGE;
 
 public class ConfiguredFeatures_RaEx {
 
@@ -45,6 +45,7 @@ public class ConfiguredFeatures_RaEx {
     /**Tree*/
     public static final RegistryKey<ConfiguredFeature<?, ?>> BURNED_TREE_KEY = registerKey("burned_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PURPUR_MUSHROOM_KEY = registerKey("purpur_mushroom");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> LARGE_BURNED_TREE_KEY = registerKey("large_burned_tree");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceable = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -80,7 +81,15 @@ public class ConfiguredFeatures_RaEx {
                 BlockStateProvider.of(Blocks_RaEx.BURNED_LOG),
                 new ForkingTrunkPlacer(2, 3, 3),
                 BlockStateProvider.of(Blocks.AIR),
-                new BlobFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), 0),
+                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
+                new TwoLayersFeatureSize(1, 0, 2)).build()
+        );
+
+        register(context, LARGE_BURNED_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(Blocks_RaEx.BURNED_LOG),
+                new GiantTrunkPlacer(13, 2, 14),
+                BlockStateProvider.of(Blocks.AIR),
+                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
                 new TwoLayersFeatureSize(1, 0, 2)).build()
         );
 
