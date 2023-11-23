@@ -10,5 +10,8 @@ public class FlowerGeneration_RaEx {
     public static void generateFlowers() {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST),
                 GenerationStep.Feature.VEGETAL_DECORATION, PlacedFeatures_RaEx.NIGHT_SHADE_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_BARRENS, BiomeKeys.END_MIDLANDS, BiomeKeys.END_HIGHLANDS),
+                GenerationStep.Feature.VEGETAL_DECORATION, PlacedFeatures_RaEx.END_BARRY_PLACED_KEY);
     }
 }

@@ -29,6 +29,7 @@ public class LootTableProvider_RaEx extends FabricBlockLootTableProvider {
         addDrop(Blocks_RaEx.TOPAS_ORE, oreDrops(Blocks_RaEx.TOPAS_ORE, Items_RaEx.RAW_TOPAS));
 
         // Wood
+        /// Burned Tree
         addDrop(Blocks_RaEx.BURNED_PLANKS);
         addDrop(Blocks_RaEx.BURNED_LOG);
         addDrop(Blocks_RaEx.STRIPPED_BURNED_LOG);
@@ -43,6 +44,25 @@ public class LootTableProvider_RaEx extends FabricBlockLootTableProvider {
         addDrop(Blocks_RaEx.BURNED_PRESSURE_PLATE);
         addDrop(Blocks_RaEx.BURNED_STAIRS);
         addDrop(Blocks_RaEx.BURNED_TREE_SAPLING);
+        addPottedPlantDrops(Blocks_RaEx.POTTED_BURNED_TREE_SAPLING);
+
+        /// PurPur Tree
+        addDrop(Blocks_RaEx.PURPUR_PLANKS);
+        addDrop(Blocks_RaEx.PURPUR_LOG);
+        addDrop(Blocks_RaEx.STRIPPED_PURPUR_WOOD);
+        addDrop(Blocks_RaEx.PURPUR_WOOD);
+        addDrop(Blocks_RaEx.STRIPPED_PURPUR_LOG);
+        addDrop(Blocks_RaEx.PURPUR_TRAPDOOR);
+        addDrop(Blocks_RaEx.PURPUR_DOOR, doorDrops(Blocks_RaEx.PURPUR_DOOR));
+        addDrop(Blocks_RaEx.PURPUR_GATE);
+        addDrop(Blocks_RaEx.PURPUR_FENCE);
+        addDrop(Blocks_RaEx.PURPUR_SLABS, slabDrops(Blocks_RaEx.PURPUR_SLABS));
+        addDrop(Blocks_RaEx.PURPUR_BUTTON);
+        addDrop(Blocks_RaEx.PURPUR_PRESSURE_PLATE);
+        addDrop(Blocks_RaEx.PURPUR_STAIRS);
+        addDrop(Blocks_RaEx.PURPUR_LEAVES, leavesDrops(Blocks_RaEx.PURPUR_LEAVES, Blocks_RaEx.PURPUR_SAPLING, 0.05f, 0.0625f, 0.083333336f, 0.1f));
+        addDrop(Blocks_RaEx.PURPUR_SAPLING);
+        addPottedPlantDrops(Blocks_RaEx.POTTED_PURPUR_SAPLING);
 
         // Obsidian
         addDrop(Blocks_RaEx.OBSIDIAN_GLASS);

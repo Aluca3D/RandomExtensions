@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_aquamarin": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:raw_aquamarin"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:aquamarin_from_raw_aquamarin"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_aquamarin"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:aquamarin_from_raw_aquamarin"
+    ]
+  },
+  "sends_telemetry_event": false
+}

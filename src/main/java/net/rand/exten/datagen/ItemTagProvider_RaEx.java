@@ -2,10 +2,13 @@ package net.rand.exten.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 import net.rand.exten.block.Blocks_RaEx;
+import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
+import net.rand.exten.util.Tags_RaEx;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -55,11 +58,31 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
                 .add(Blocks_RaEx.STRIPPED_BURNED_LOG.asItem())
                 .add(Blocks_RaEx.BURNED_WOOD.asItem())
                 .add(Blocks_RaEx.STRIPPED_BURNED_WOOD.asItem())
+                .add(Blocks_RaEx.PURPUR_LOG.asItem())
+                .add(Blocks_RaEx.STRIPPED_PURPUR_LOG.asItem())
+                .add(Blocks_RaEx.PURPUR_WOOD.asItem())
+                .add(Blocks_RaEx.STRIPPED_PURPUR_WOOD.asItem())
 
+        ;
+
+        getOrCreateTagBuilder(Tags_RaEx.Items.GEMS)
+                .add(Items_RaEx.AQUAMARIN)
+                .add(Items_RaEx.RUBY)
+                .add(Items_RaEx.TOPAS)
+        ;
+
+        getOrCreateTagBuilder(Tags_RaEx.Items.PROJECTILE)
+                .add(Items_RaEx.PEBBLE)
+                .add(Items_RaEx.STINKY_CHEESE)
+                .add(Items_RaEx.BAMBOO_EXPLOSIVE)
+                .add(Items_RaEx.BAMBOO_EXPLOSIVE_STRONG)
+
+                .add(Items.SNOWBALL)
         ;
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(Blocks_RaEx.BURNED_PLANKS.asItem())
+                .add(Blocks_RaEx.PURPUR_PLANKS.asItem())
 
         ;
 

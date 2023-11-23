@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "randexten:block/purpur_slabs"
+    },
+    "type=double": {
+      "model": "randexten:block/purpur_planks"
+    },
+    "type=top": {
+      "model": "randexten:block/purpur_slabs_top"
+    }
+  }
+}

@@ -17,10 +17,14 @@ import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.custom.blocks.ExplosiveCakeBlock;
 import net.rand.exten.block.custom.blocks.Grinder;
 import net.rand.exten.block.custom.blocks.SoulOre;
+import net.rand.exten.block.custom.blocks.tree.PurPurTreeBlock;
 import net.rand.exten.world.gen.tree.BurnedTreeSaplingGenerator;
+import net.rand.exten.world.gen.tree.PurPurTreeGenerator;
 
 public class Blocks_RaEx {
-    /**Gems */
+    /**
+     * Gems
+     */
     public static final Block AQUAMARIN_ORE = registerBlock("aquamarin_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_DIAMOND_ORE), UniformIntProvider.create(2, 7)));
     public static final Block AQUAMARIN_BLOCK = registerBlock("aquamarin_block",
@@ -36,11 +40,15 @@ public class Blocks_RaEx {
     public static final Block TOPAS_BLOCK = registerBlock("topas_block",
             new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK)));
 
-    /**Souls*/
+    /**
+     * Souls
+     */
     public static final Block SOUL_ORE = registerBlock("soul_ore",
             new SoulOre(FabricBlockSettings.copyOf(Blocks.COAL_ORE)));
 
-    /**Flowers*/
+    /**
+     * Flowers
+     */
     public static final Block NIGHT_SHADE = registerBlock("night_shade",
             new FlowerBlock(StatusEffects.NIGHT_VISION, 30,
                     FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
@@ -48,7 +56,9 @@ public class Blocks_RaEx {
     public static final Block POTTED_NIGHT_SHADE = Registry.register(Registries.BLOCK, new Identifier(RandomExtensions.MOD_ID, "potted_night_shade"),
             new FlowerPotBlock(NIGHT_SHADE, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
 
-    /**Misc*/
+    /**
+     * Misc
+     */
     public static final Block CHARCOAL_BLOCK = registerBlock("charcoal_block",
             new Block(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK)));
 
@@ -70,7 +80,9 @@ public class Blocks_RaEx {
                 }
             });
 
-    /**Crystal*/
+    /**
+     * Crystal
+     */
     public static final Block MOSSY_CRYSTAL = registerBlock("mossy_crystal",
             new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque().allowsSpawning(Blocks::never).
                     solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
@@ -79,7 +91,9 @@ public class Blocks_RaEx {
     public static final Block SAND_CRYSTAL = registerBlock("sand_crystal",
             new GlassBlock(FabricBlockSettings.copyOf(Blocks_RaEx.MOSSY_CRYSTAL)));
 
-    /**Cheese*/
+    /**
+     * Cheese
+     */
     public static final Block CHEESE_BLOCK = registerBlock("cheese_block",
             new Block(FabricBlockSettings.copyOf(Blocks.DIRT)));
     public static final Block CHEESE_STAIRS = registerBlock("cheese_stairs",
@@ -91,7 +105,9 @@ public class Blocks_RaEx {
     public static final Block CHEESE_STATION = registerBlock("cheese_station",
             new Block(FabricBlockSettings.copyOf(Blocks_RaEx.CHEESE_BLOCK)));
 
-    /**Obsidian*/
+    /**
+     * Obsidian
+     */
     public static final Block OBSIDIAN_GLASS = registerBlock("obsidian_glass",
             new GlassBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN)
                     .nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never)
@@ -113,7 +129,9 @@ public class Blocks_RaEx {
     public static final Block OBSIDIAN_TRAPDOOR = registerBlock("obsidian_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).nonOpaque(), BlockSetType.IRON));
 
-    /**Burned Tree*/
+    /**
+     * Burned Tree
+     */
     public static final Block BURNED_WOOD = registerBlock("burned_wood",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
     public static final Block BURNED_LOG = registerBlock("burned_log",
@@ -145,7 +163,45 @@ public class Blocks_RaEx {
     public static final Block BURNED_TREE_SAPLING = registerBlock("burned_tree_sapling",
             new SaplingBlock(new BurnedTreeSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block POTTED_BURNED_TREE_SAPLING = Registry.register(Registries.BLOCK, new Identifier(RandomExtensions.MOD_ID, "potted_burned_tree_sapling"),
-            new FlowerPotBlock(BURNED_TREE_SAPLING, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).nonOpaque()));
+            new FlowerPotBlock(BURNED_TREE_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING).nonOpaque()));
+
+    /**
+     * PurPur Tree
+     */
+    public static final Block PURPUR_LOG = registerBlock("purpur_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
+    public static final Block PURPUR_WOOD = registerBlock("purpur_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_LOG)));
+    public static final Block STRIPPED_PURPUR_WOOD = registerBlock("stripped_purpur_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)));
+    public static final Block STRIPPED_PURPUR_LOG = registerBlock("stripped_purpur_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks_RaEx.STRIPPED_PURPUR_WOOD)));
+    public static final Block PURPUR_PLANKS = registerBlock("purpur_planks",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block PURPUR_STAIRS = registerBlock("purpur_stairs",
+            new StairsBlock(Blocks_RaEx.PURPUR_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS)));
+    public static final Block PURPUR_SLABS = registerBlock("purpur_slabs",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS)));
+    public static final Block PURPUR_FENCE = registerBlock("purpur_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS)));
+    public static final Block PURPUR_GATE = registerBlock("purpur_gate",
+            new FenceGateBlock(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS), WoodType.OAK));
+    public static final Block PURPUR_DOOR = registerBlock("purpur_door",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS).nonOpaque(), BlockSetType.OAK));
+    public static final Block PURPUR_TRAPDOOR = registerBlock("purpur_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS).nonOpaque(), BlockSetType.OAK));
+    public static final Block PURPUR_BUTTON = registerBlock("purpur_button",
+            new ButtonBlock(FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS), BlockSetType.OAK, 60, true));
+    public static final Block PURPUR_PRESSURE_PLATE = registerBlock("purpur_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
+                    FabricBlockSettings.copyOf(Blocks_RaEx.PURPUR_PLANKS), BlockSetType.OAK));
+    public static final Block PURPUR_LEAVES = registerBlock("purpur_leaves",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+
+    public static final Block PURPUR_SAPLING = registerBlock("purpur_sapling",
+            new PurPurTreeBlock(new PurPurTreeGenerator(), FabricBlockSettings.copyOf(Blocks.BROWN_MUSHROOM)));
+    public static final Block POTTED_PURPUR_SAPLING = Registry.register(Registries.BLOCK, new Identifier(RandomExtensions.MOD_ID, "potted_purpur_sapling"),
+            new FlowerPotBlock(PURPUR_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_BROWN_MUSHROOM).nonOpaque()));
 
 
     private static Block registerBlock(String name, Block block) {

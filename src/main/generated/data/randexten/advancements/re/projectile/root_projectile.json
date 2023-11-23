@@ -1,11 +1,15 @@
 {
   "parent": "randexten:re/randexten",
   "criteria": {
-    "exist": {
+    "has_a_projectile": {
       "conditions": {
-        "block": "minecraft:air"
+        "items": [
+          {
+            "tag": "randexten:projectile"
+          }
+        ]
       },
-      "trigger": "minecraft:enter_block"
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -15,7 +19,7 @@
       "text": "Lets Trow some thinks"
     },
     "frame": "task",
-    "hidden": false,
+    "hidden": true,
     "icon": {
       "item": "minecraft:snowball"
     },
@@ -26,7 +30,7 @@
   },
   "requirements": [
     [
-      "exist"
+      "has_a_projectile"
     ]
   ],
   "sends_telemetry_event": true

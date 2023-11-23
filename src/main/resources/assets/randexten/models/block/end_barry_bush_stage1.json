@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "randexten:block/end_barry_bush_stage1"
+  }
+}

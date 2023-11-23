@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "randexten:block/purpur_log_top",
+    "side": "randexten:block/purpur_log"
+  }
+}

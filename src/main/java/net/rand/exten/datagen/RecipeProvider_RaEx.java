@@ -21,6 +21,10 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
         super(output);
     }
 
+    public static CraftingRecipeJsonBuilder createStepRecipe(RecipeCategory category, ItemConvertible output, Ingredient input) {
+        return ShapedRecipeJsonBuilder.create(category, output, 6).input(Character.valueOf('#'), input).pattern("###");
+    }
+
     @Override
     public void generate(RecipeExporter exporter) {
 
@@ -51,9 +55,9 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.FOOD, Items_RaEx.CHEESE, RecipeCategory.FOOD,
                 Blocks_RaEx.CHEESE_BLOCK);
 
-        offerFoodCookingRecipe(exporter, "milk", RecipeSerializer.SMOKING, 150, Items.MILK_BUCKET , Items_RaEx.BUCKET_CHEESE, 0.2f);
+        offerFoodCookingRecipe(exporter, "milk", RecipeSerializer.SMOKING, 150, Items.MILK_BUCKET, Items_RaEx.BUCKET_CHEESE, 0.2f);
 
-        offerSingleOutputShapelessRecipe(exporter,Blocks_RaEx.CHEESE_BLOCK, Items_RaEx.BUCKET_CHEESE, "cheese_block_from_bucket_cheese");
+        offerSingleOutputShapelessRecipe(exporter, Blocks_RaEx.CHEESE_BLOCK, Items_RaEx.BUCKET_CHEESE, "cheese_block_from_bucket_cheese");
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.CHEESE_STATION, 1)
                 .pattern("SAS")
@@ -114,6 +118,14 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.SAND_CRYSTAL)));
 
         // Burned Wood
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.BURNED_WOOD, 3)
+                .input(Blocks_RaEx.BURNED_LOG, 4)
+                .criterion(hasItem(Blocks_RaEx.BURNED_LOG), conditionsFromItem(Blocks_RaEx.BURNED_LOG))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.BURNED_WOOD)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.STRIPPED_BURNED_WOOD, 3)
+                .input(Blocks_RaEx.STRIPPED_BURNED_LOG, 4)
+                .criterion(hasItem(Blocks_RaEx.STRIPPED_BURNED_LOG), conditionsFromItem(Blocks_RaEx.STRIPPED_BURNED_LOG))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.STRIPPED_BURNED_WOOD)));
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.BURNED_SLABS, Ingredient.ofItems(Blocks_RaEx.BURNED_PLANKS))
                 .criterion(hasItem(Blocks_RaEx.BURNED_PLANKS), conditionsFromItem(Blocks_RaEx.BURNED_PLANKS))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.BURNED_SLABS)));
@@ -136,6 +148,39 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks_RaEx.BURNED_PLANKS), conditionsFromItem(Blocks_RaEx.BURNED_PLANKS))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.BURNED_PRESSURE_PLATE)));
         offerSingleOutputShapelessRecipe(exporter, Blocks_RaEx.BURNED_BUTTON, Blocks_RaEx.BURNED_PLANKS, "");
+
+        // PurPur Wood
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.PURPUR_WOOD, 3)
+                .input(Blocks_RaEx.PURPUR_LOG, 4)
+                .criterion(hasItem(Blocks_RaEx.PURPUR_LOG), conditionsFromItem(Blocks_RaEx.PURPUR_LOG))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_WOOD)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.STRIPPED_PURPUR_WOOD, 3)
+                .input(Blocks_RaEx.STRIPPED_PURPUR_LOG, 4)
+                .criterion(hasItem(Blocks_RaEx.STRIPPED_PURPUR_LOG), conditionsFromItem(Blocks_RaEx.STRIPPED_PURPUR_LOG))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.STRIPPED_PURPUR_WOOD)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.PURPUR_SLABS, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_SLABS)));
+        createStairsRecipe(Blocks_RaEx.PURPUR_STAIRS, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_STAIRS)));
+        createDoorRecipe(Blocks_RaEx.PURPUR_DOOR, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_DOOR)));
+        createTrapdoorRecipe(Blocks_RaEx.PURPUR_TRAPDOOR, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_TRAPDOOR)));
+        createFenceRecipe(Blocks_RaEx.PURPUR_FENCE, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_FENCE)));
+        createFenceGateRecipe(Blocks_RaEx.PURPUR_GATE, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_GATE)));
+        createPressurePlateRecipe(RecipeCategory.REDSTONE, Blocks_RaEx.PURPUR_PRESSURE_PLATE, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_PRESSURE_PLATE)));
+        offerSingleOutputShapelessRecipe(exporter, Blocks_RaEx.PURPUR_BUTTON, Blocks_RaEx.PURPUR_PLANKS, "");
 
 
         //Food
@@ -195,17 +240,21 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.DIAMOND_PICKAXE), conditionsFromItem(Items.DIAMOND_PICKAXE))
                 .criterion(hasItem(Items.DIAMOND_SHOVEL), conditionsFromItem(Items.DIAMOND_SHOVEL))
                 .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.DIAMOND_PAXEL)));
-       SmithingTransformRecipeJsonBuilder.create(
-               Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-               Ingredient.ofItems(ToolsAndArmors_RaEx.DIAMOND_PAXEL),
-               Ingredient.ofItems(Items.NETHERITE_INGOT),
-               RecipeCategory.TOOLS, ToolsAndArmors_RaEx.NETHERITE_PAXEL)
-               .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-               .criterion(hasItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL), conditionsFromItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL))
-               .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-               .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.NETHERITE_PAXEL)));
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.ofItems(ToolsAndArmors_RaEx.DIAMOND_PAXEL),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.TOOLS, ToolsAndArmors_RaEx.NETHERITE_PAXEL)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL), conditionsFromItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL))
+                .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.NETHERITE_PAXEL)));
 
         // Misc
+        offerFoodCookingRecipe(exporter, "raw_ruby", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_RUBY, Items_RaEx.RUBY, 0.2f);
+        offerFoodCookingRecipe(exporter, "raw_aquamarin", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_AQUAMARIN, Items_RaEx.AQUAMARIN, 0.2f);
+        offerFoodCookingRecipe(exporter, "raw_topas", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_TOPAS, Items_RaEx.TOPAS, 0.2f);
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.COBBLESTONE, 1)
                 .input(Items_RaEx.PEBBLE, 3)
                 .criterion(hasItem(Items_RaEx.PEBBLE), conditionsFromItem(Items_RaEx.PEBBLE))
@@ -690,9 +739,5 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.GUNPOWDER), conditionsFromItem(Items.PAPER))
                 .criterion(hasItem(Items.BAMBOO), conditionsFromItem(Items.HONEY_BOTTLE))
                 .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.DUK_TAPE)));
-    }
-
-    public static CraftingRecipeJsonBuilder createStepRecipe(RecipeCategory category, ItemConvertible output, Ingredient input) {
-        return ShapedRecipeJsonBuilder.create(category, output, 6).input(Character.valueOf('#'), input).pattern("###");
     }
 }

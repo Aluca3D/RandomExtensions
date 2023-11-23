@@ -9,6 +9,7 @@ public class FoodComponents_RaEx {
     public static final FoodComponent SANDWICH = new FoodComponent.Builder().hunger(5).saturationModifier(1.0f).meat().build();
     public static final FoodComponent TOMATO = new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build();
     public static final FoodComponent CORN = new FoodComponent.Builder().hunger(2).saturationModifier(0.6f).build();
+    public static final FoodComponent END_BARRY = new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).build();
     public static final FoodComponent CHEESE = new FoodComponent.Builder().hunger(3).saturationModifier(0.5f).alwaysEdible().meat().build();
     public static final FoodComponent PIZZA = new FoodComponent.Builder().hunger(8).saturationModifier(0.8f).build();
 
