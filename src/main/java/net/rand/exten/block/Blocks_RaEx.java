@@ -150,12 +150,6 @@ public class Blocks_RaEx {
             new FlowerPotBlock(BURNED_TREE_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING).nonOpaque()));
 
     /**PurPur Tree*/
-    /*
-    Todo
-     - add Texture(purpur_door, purpur_door_bottom, purpur_door_top, purpur_trapdoor, purpur_leaves)
-     - redo Tomato (again)
-     */
-
     public static final Block PURPUR_LOG = registerBlock("purpur_log",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
     public static final Block PURPUR_WOOD = registerBlock("purpur_wood",
