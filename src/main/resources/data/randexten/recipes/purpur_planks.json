@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "randexten:purpur_wood"
+      },
+      {
+        "item": "randexten:purpur_log"
+      },
+      {
+        "item": "randexten:stripped_purpur_wood"
+      },
+      {
+        "item": "randexten:stripped_purpur_log"
+      }
+    ]
+  },
+  "result": {
+    "item": "randexten:purpur_planks",
+    "count": 4
+  }
+}

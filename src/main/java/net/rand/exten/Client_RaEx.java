@@ -23,7 +23,6 @@ public class Client_RaEx implements ClientModInitializer {
 
         HandledScreens.register(ScreenHandlers_RaEx.GRINDER_SCREEN_HANDLER, GrinderScreen::new);
 
-
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.OBSIDIAN_GLASS, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.OBSIDIAN_GLASS_PANE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.TINTED_OBSIDIAN_GLASS, RenderLayer.getTranslucent());

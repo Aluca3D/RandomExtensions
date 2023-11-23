@@ -127,6 +127,22 @@
   "block.randexten.burned_pressure_plate": "Burned Pressure Plate",
   "block.randexten.burned_tree_sapling": "Burned Tree Sapling",
 
+  "block.randexten.purpur_wood": "PurPur Wood",
+  "block.randexten.purpur_log": "PurPur Log",
+  "block.randexten.stripped_purpur_wood": "Stripped PurPur Wood",
+  "block.randexten.stripped_purpur_log": "Stripped PurPur Log",
+  "block.randexten.purpur_planks": "PurPur Planks",
+  "block.randexten.purpur_stairs": "PurPur Stairs",
+  "block.randexten.purpur_slabs": "PurPur Slabs",
+  "block.randexten.purpur_fence": "PurPur Fence",
+  "block.randexten.purpur_gate": "PurPur Gate",
+  "block.randexten.purpur_door": "PurPur Door",
+  "block.randexten.purpur_trapdoor": "PurPur Trapdoor",
+  "block.randexten.purpur_button": "PurPur Button",
+  "block.randexten.purpur_leaves": "PurPur Button",
+  "block.randexten.purpur_pressure_plate": "PurPur Pressure Plate",
+  "block.randexten.purpur_sapling": "PurPur Tree Sapling",
+
   "item.randexten.pebble": "Pebble",
 
   "item.randexten.wooden_paxel": "Wooden Paxel",

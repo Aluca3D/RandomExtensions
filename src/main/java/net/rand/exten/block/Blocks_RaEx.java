@@ -154,7 +154,6 @@ public class Blocks_RaEx {
     Todo
      - add Texture(purpur_door, purpur_door_bottom, purpur_door_top, purpur_trapdoor, purpur_leaves)
      - redo Tomato (again)
-     - add Recipes (like Food and Wood)
      */
 
     public static final Block PURPUR_LOG = registerBlock("purpur_log",

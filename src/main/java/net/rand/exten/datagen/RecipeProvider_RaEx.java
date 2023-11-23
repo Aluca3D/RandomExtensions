@@ -114,6 +114,14 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.SAND_CRYSTAL)));
 
         // Burned Wood
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.BURNED_WOOD, 3)
+                .input(Blocks_RaEx.BURNED_LOG, 4)
+                .criterion(hasItem(Blocks_RaEx.BURNED_LOG), conditionsFromItem(Blocks_RaEx.BURNED_LOG))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.BURNED_WOOD)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.STRIPPED_BURNED_WOOD, 3)
+                .input(Blocks_RaEx.STRIPPED_BURNED_LOG, 4)
+                .criterion(hasItem(Blocks_RaEx.STRIPPED_BURNED_LOG), conditionsFromItem(Blocks_RaEx.STRIPPED_BURNED_LOG))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.STRIPPED_BURNED_WOOD)));
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.BURNED_SLABS, Ingredient.ofItems(Blocks_RaEx.BURNED_PLANKS))
                 .criterion(hasItem(Blocks_RaEx.BURNED_PLANKS), conditionsFromItem(Blocks_RaEx.BURNED_PLANKS))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.BURNED_SLABS)));
@@ -136,6 +144,39 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks_RaEx.BURNED_PLANKS), conditionsFromItem(Blocks_RaEx.BURNED_PLANKS))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.BURNED_PRESSURE_PLATE)));
         offerSingleOutputShapelessRecipe(exporter, Blocks_RaEx.BURNED_BUTTON, Blocks_RaEx.BURNED_PLANKS, "");
+
+        // PurPur Wood
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.PURPUR_WOOD, 3)
+                .input(Blocks_RaEx.PURPUR_LOG, 4)
+                .criterion(hasItem(Blocks_RaEx.PURPUR_LOG), conditionsFromItem(Blocks_RaEx.PURPUR_LOG))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_WOOD)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.STRIPPED_PURPUR_WOOD, 3)
+                .input(Blocks_RaEx.STRIPPED_PURPUR_LOG, 4)
+                .criterion(hasItem(Blocks_RaEx.STRIPPED_PURPUR_LOG), conditionsFromItem(Blocks_RaEx.STRIPPED_PURPUR_LOG))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.STRIPPED_PURPUR_WOOD)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.PURPUR_SLABS, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_SLABS)));
+        createStairsRecipe(Blocks_RaEx.PURPUR_STAIRS, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_STAIRS)));
+        createDoorRecipe(Blocks_RaEx.PURPUR_DOOR, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_DOOR)));
+        createTrapdoorRecipe(Blocks_RaEx.PURPUR_TRAPDOOR, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_TRAPDOOR)));
+        createFenceRecipe(Blocks_RaEx.PURPUR_FENCE, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_FENCE)));
+        createFenceGateRecipe(Blocks_RaEx.PURPUR_GATE, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_GATE)));
+        createPressurePlateRecipe(RecipeCategory.REDSTONE, Blocks_RaEx.PURPUR_PRESSURE_PLATE, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_PRESSURE_PLATE)));
+        offerSingleOutputShapelessRecipe(exporter, Blocks_RaEx.PURPUR_BUTTON, Blocks_RaEx.PURPUR_PLANKS, "");
 
 
         //Food
