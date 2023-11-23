@@ -14,6 +14,7 @@ import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
+import net.rand.exten.util.Tags_RaEx;
 
 public class RecipeProvider_RaEx extends FabricRecipeProvider {
 
@@ -391,7 +392,7 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.OBSIDIAN_DOOR)));
 
         // Armor and Tools
-        offerSmithingTemplateCopyingRecipe(exporter, Items_RaEx.GEMS_UPGRADE_TEMPLATE, Items_RaEx.AQUAMARIN);
+        offerSmithingTemplateCopyingRecipe(exporter, Items_RaEx.GEMS_UPGRADE_TEMPLATE, Tags_RaEx.Items.GEMS);
         /// Tools
         //// Copper
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_AXE, 1)

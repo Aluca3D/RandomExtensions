@@ -16,7 +16,7 @@
     "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
     "description": {
-      "text": "I Have ALL OF THEM"
+      "text": "Got one"
     },
     "frame": "task",
     "hidden": true,
