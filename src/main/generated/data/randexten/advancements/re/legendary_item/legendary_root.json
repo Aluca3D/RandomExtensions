@@ -1,25 +1,11 @@
 {
   "parent": "randexten:re/randexten",
   "criteria": {
-    "has_leave_staff": {
+    "has_a_legendary": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "randexten:leave_staff"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_toy_hammer": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "randexten:toy_hammer"
-            ]
+            "tag": "randexten:legendary"
           }
         ]
       },
@@ -32,7 +18,7 @@
     "description": {
       "text": "I Have ALL OF THEM"
     },
-    "frame": "challenge",
+    "frame": "task",
     "hidden": true,
     "icon": {
       "item": "randexten:leave_staff",
@@ -45,14 +31,11 @@
   },
   "requirements": [
     [
-      "has_leave_staff"
-    ],
-    [
-      "has_toy_hammer"
+      "has_a_legendary"
     ]
   ],
   "rewards": {
-    "experience": 400
+    "experience": 20
   },
   "sends_telemetry_event": true
 }

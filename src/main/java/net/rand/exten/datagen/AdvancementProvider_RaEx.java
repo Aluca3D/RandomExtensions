@@ -155,12 +155,11 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
 
         AdvancementEntry legendaryItemRoot = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.LEAVE_STAFF),
-                        Text.literal("That's a Legendary"), Text.literal("I Have ALL OF THEM"),
-                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.CHALLENGE,
+                        Text.literal("That's a Legendary"), Text.literal("Got one"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
                         true, true, true))
-                .criterion("has_leave_staff", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.LEAVE_STAFF))
-                .criterion("has_toy_hammer", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.TOY_HAMMER))
-                .rewards(AdvancementRewards.Builder.experience(400))
+                .criterion("has_a_legendary", InventoryChangedCriterion.Conditions.items(ItemPredicate.Builder.create().tag(Tags_RaEx.Items.LEGENDARY)))
+                .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(mainRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/legendary_root");
 

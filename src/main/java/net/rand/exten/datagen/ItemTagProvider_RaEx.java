@@ -71,6 +71,11 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
                 .add(Items_RaEx.TOPAS)
         ;
 
+        getOrCreateTagBuilder(Tags_RaEx.Items.LEGENDARY)
+                .add(ToolsAndArmors_RaEx.TOY_HAMMER)
+                .add(ToolsAndArmors_RaEx.LEAVE_STAFF)
+        ;
+
         getOrCreateTagBuilder(Tags_RaEx.Items.PROJECTILE)
                 .add(Items_RaEx.PEBBLE)
                 .add(Items_RaEx.STINKY_CHEESE)
