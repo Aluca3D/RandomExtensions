@@ -1,12 +1,12 @@
 {
   "parent": "randexten:re/randexten",
   "criteria": {
-    "has_furnace": {
+    "has_purpur_log": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:furnace"
+              "randexten:purpur_log"
             ]
           }
         ]
@@ -18,25 +18,35 @@
     "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
     "description": {
-      "text": "Burn a Sapling"
+      "text": "ColOR"
     },
     "frame": "task",
     "hidden": true,
     "icon": {
-      "item": "randexten:burned_tree_sapling"
+      "item": "randexten:purpur_log"
     },
     "show_toast": true,
     "title": {
-      "text": "In the Furnace with it"
+      "text": "PurPur"
     }
   },
   "requirements": [
     [
-      "has_furnace"
+      "has_purpur_log"
     ]
   ],
   "rewards": {
-    "experience": 20
+    "experience": 20,
+    "recipes": [
+      "randexten:purpur_button_from_purpur_planks",
+      "randexten:purpur_door",
+      "randexten:purpur_gate",
+      "randexten:purpur_trapdoor",
+      "randexten:purpur_pressure_plate",
+      "randexten:purpur_fence",
+      "randexten:purpur_slabs",
+      "randexten:purpur_stairs"
+    ]
   },
   "sends_telemetry_event": true
 }

@@ -21,6 +21,10 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
         super(output);
     }
 
+    public static CraftingRecipeJsonBuilder createStepRecipe(RecipeCategory category, ItemConvertible output, Ingredient input) {
+        return ShapedRecipeJsonBuilder.create(category, output, 6).input(Character.valueOf('#'), input).pattern("###");
+    }
+
     @Override
     public void generate(RecipeExporter exporter) {
 
@@ -51,9 +55,9 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.FOOD, Items_RaEx.CHEESE, RecipeCategory.FOOD,
                 Blocks_RaEx.CHEESE_BLOCK);
 
-        offerFoodCookingRecipe(exporter, "milk", RecipeSerializer.SMOKING, 150, Items.MILK_BUCKET , Items_RaEx.BUCKET_CHEESE, 0.2f);
+        offerFoodCookingRecipe(exporter, "milk", RecipeSerializer.SMOKING, 150, Items.MILK_BUCKET, Items_RaEx.BUCKET_CHEESE, 0.2f);
 
-        offerSingleOutputShapelessRecipe(exporter,Blocks_RaEx.CHEESE_BLOCK, Items_RaEx.BUCKET_CHEESE, "cheese_block_from_bucket_cheese");
+        offerSingleOutputShapelessRecipe(exporter, Blocks_RaEx.CHEESE_BLOCK, Items_RaEx.BUCKET_CHEESE, "cheese_block_from_bucket_cheese");
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.CHEESE_STATION, 1)
                 .pattern("SAS")
@@ -236,17 +240,21 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.DIAMOND_PICKAXE), conditionsFromItem(Items.DIAMOND_PICKAXE))
                 .criterion(hasItem(Items.DIAMOND_SHOVEL), conditionsFromItem(Items.DIAMOND_SHOVEL))
                 .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.DIAMOND_PAXEL)));
-       SmithingTransformRecipeJsonBuilder.create(
-               Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-               Ingredient.ofItems(ToolsAndArmors_RaEx.DIAMOND_PAXEL),
-               Ingredient.ofItems(Items.NETHERITE_INGOT),
-               RecipeCategory.TOOLS, ToolsAndArmors_RaEx.NETHERITE_PAXEL)
-               .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-               .criterion(hasItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL), conditionsFromItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL))
-               .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-               .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.NETHERITE_PAXEL)));
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.ofItems(ToolsAndArmors_RaEx.DIAMOND_PAXEL),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.TOOLS, ToolsAndArmors_RaEx.NETHERITE_PAXEL)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL), conditionsFromItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL))
+                .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.NETHERITE_PAXEL)));
 
         // Misc
+        offerFoodCookingRecipe(exporter, "raw_ruby", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_RUBY, Items_RaEx.RUBY, 0.2f);
+        offerFoodCookingRecipe(exporter, "raw_aquamarin", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_AQUAMARIN, Items_RaEx.AQUAMARIN, 0.2f);
+        offerFoodCookingRecipe(exporter, "raw_topas", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_TOPAS, Items_RaEx.TOPAS, 0.2f);
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.COBBLESTONE, 1)
                 .input(Items_RaEx.PEBBLE, 3)
                 .criterion(hasItem(Items_RaEx.PEBBLE), conditionsFromItem(Items_RaEx.PEBBLE))
@@ -731,9 +739,5 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.GUNPOWDER), conditionsFromItem(Items.PAPER))
                 .criterion(hasItem(Items.BAMBOO), conditionsFromItem(Items.HONEY_BOTTLE))
                 .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.DUK_TAPE)));
-    }
-
-    public static CraftingRecipeJsonBuilder createStepRecipe(RecipeCategory category, ItemConvertible output, Ingredient input) {
-        return ShapedRecipeJsonBuilder.create(category, output, 6).input(Character.valueOf('#'), input).pattern("###");
     }
 }

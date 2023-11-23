@@ -1,12 +1,22 @@
 {
-  "parent": "randexten:re/gems/gem_upgrade",
+  "parent": "randexten:re/randexten",
   "criteria": {
-    "has_aquamarin": {
+    "has_a_sapling": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:saplings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_furnace": {
       "conditions": {
         "items": [
           {
             "items": [
-              "randexten:aquamarin"
+              "minecraft:furnace"
             ]
           }
         ]
@@ -18,21 +28,24 @@
     "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
     "description": {
-      "text": "we, are the..."
+      "text": "Burn a Sapling"
     },
     "frame": "task",
     "hidden": true,
     "icon": {
-      "item": "randexten:aquamarin_block"
+      "item": "randexten:burned_tree_sapling"
     },
     "show_toast": true,
     "title": {
-      "text": "Its Aquamarin"
+      "text": "In the Furnace with it"
     }
   },
   "requirements": [
     [
-      "has_aquamarin"
+      "has_furnace"
+    ],
+    [
+      "has_a_sapling"
     ]
   ],
   "rewards": {

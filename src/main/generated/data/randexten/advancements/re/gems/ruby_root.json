@@ -1,12 +1,12 @@
 {
   "parent": "randexten:re/gems/gem_upgrade",
   "criteria": {
-    "has_aquamarin": {
+    "has_ruby": {
       "conditions": {
         "items": [
           {
             "items": [
-              "randexten:aquamarin"
+              "randexten:ruby"
             ]
           }
         ]
@@ -15,24 +15,24 @@
     }
   },
   "display": {
-    "announce_to_chat": false,
+    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
     "description": {
       "text": "Retro"
     },
     "frame": "task",
-    "hidden": false,
+    "hidden": true,
     "icon": {
       "item": "randexten:ruby_block"
     },
-    "show_toast": false,
+    "show_toast": true,
     "title": {
       "text": "Ruby Time"
     }
   },
   "requirements": [
     [
-      "has_aquamarin"
+      "has_ruby"
     ]
   ],
   "rewards": {
