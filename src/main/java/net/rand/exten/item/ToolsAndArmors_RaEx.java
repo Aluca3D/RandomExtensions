@@ -10,6 +10,7 @@ import net.rand.exten.item.custom.ArmorItem_RaEx;
 import net.rand.exten.item.custom.ArmorMaterials_RaEx;
 import net.rand.exten.item.custom.ToolMaterial_RaEx;
 import net.rand.exten.item.custom.tools.LeaveStaff;
+import net.rand.exten.item.custom.tools.LongSwordItem;
 import net.rand.exten.item.custom.tools.PaxelItem;
 import net.rand.exten.item.custom.tools.ToyHammer;
 
@@ -19,6 +20,20 @@ public class ToolsAndArmors_RaEx {
             new LeaveStaff(new FabricItemSettings().maxCount(1).fireproof().maxDamage(240)));
     public static final Item TOY_HAMMER = registerItem("toy_hammer",
             new ToyHammer(ToolMaterials.WOOD,new FabricItemSettings().maxCount(1).maxDamage(960)));
+
+    /**Long Sword*/
+    public static final Item WOODEN_LONGSWORD = registerItem("wooden_longsword",
+            new LongSwordItem(ToolMaterials.WOOD,3, -2.4f,new FabricItemSettings()));
+    public static final Item STONE_LONGSWORD = registerItem("stone_longsword",
+            new LongSwordItem(ToolMaterials.STONE,3, -2.4f,new FabricItemSettings()));
+    public static final Item IRON_LONGSWORD = registerItem("iron_longsword",
+            new LongSwordItem(ToolMaterials.IRON,3, -2.4f,new FabricItemSettings()));
+    public static final Item GOLDEN_LONGSWORD = registerItem("golden_longsword",
+            new LongSwordItem(ToolMaterials.GOLD,3, -2.4f,new FabricItemSettings()));
+    public static final Item DIAMOND_LONGSWORD = registerItem("diamond_longsword",
+            new LongSwordItem(ToolMaterials.DIAMOND,3, -2.4f,new FabricItemSettings()));
+    public static final Item NETHERITE_LONGSWORD = registerItem("netherite_longsword",
+            new LongSwordItem(ToolMaterials.NETHERITE,3, -2.4f,new FabricItemSettings()));
 
     /**Paxel*/
     public static final Item WOODEN_PAXEL = registerItem("wooden_paxel",

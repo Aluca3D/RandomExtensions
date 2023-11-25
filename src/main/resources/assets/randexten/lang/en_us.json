@@ -14,6 +14,13 @@
   "item.randexten.mine_loot_bag": "Mine Loot Bag",
   "item.randexten.mine_loot_bag.tooltip": "Stuff from the Mine",
 
+  "item.randexten.wooden_longsword": "Wooden Longsword",
+  "item.randexten.stone_longsword": "Stone Longsword",
+  "item.randexten.iron_longsword": "Iron Longsword",
+  "item.randexten.golden_longsword": "Golden Longsword",
+  "item.randexten.diamond_longsword": "Diamond Longsword",
+  "item.randexten.netherite_longsword": "Netherite Longsword",
+
   "item.randexten.diamond_aquamarin_helmet": "Aquamarin Diamond Helmet",
   "item.randexten.diamond_aquamarin_chestplate": "Aquamarin Diamond Chestplate",
   "item.randexten.diamond_aquamarin_leggings": "Aquamarin Diamond Leggings",
