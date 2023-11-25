@@ -1,4 +1,4 @@
-package net.rand.exten.item.custom.tools;
+package net.rand.exten.item.custom.legendary;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
