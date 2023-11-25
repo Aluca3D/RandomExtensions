@@ -13,6 +13,7 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.World;
+import net.minecraft.world.dimension.DimensionType;
 
 public class EscapeRope extends Item {
     public EscapeRope(Settings settings) {
@@ -21,13 +22,13 @@ public class EscapeRope extends Item {
 
     @Override
     public boolean canRepair(ItemStack stack, ItemStack ingredient) {
-        return ingredient.isOf(Items.STRING);
+        return ingredient.isOf(Items.ENDER_PEARL);
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        if (user.isOnGround()) {
+        if (user.isOnGround() && world.getDimension().bedWorks()) {
             world.playSound(null, user.getX(), user.getY(), user.getZ(),
                     SoundEvents.BLOCK_PORTAL_TRAVEL, SoundCategory.NEUTRAL, 0.125f,1);
 
@@ -41,6 +42,8 @@ public class EscapeRope extends Item {
                 itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
             }
             return TypedActionResult.success(itemStack, world.isClient());
+        } else if (!world.isClient) {
+            user.sendMessage(Text.literal("Teleporting did not work"));
         }
         return TypedActionResult.fail(itemStack);
     }

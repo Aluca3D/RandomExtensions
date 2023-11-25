@@ -1,4 +1,4 @@
-package net.rand.exten.item.custom.food.drinks;
+package net.rand.exten.item.custom.food;
 
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.LivingEntity;
@@ -53,10 +53,6 @@ public class Soda extends Item {
 
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.DRINK;
-    }
-
-    public SoundEvent getDrinkSound() {
-        return SoundEvents.ENTITY_GENERIC_DRINK;
     }
 
     public SoundEvent getEatSound() {

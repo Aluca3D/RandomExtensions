@@ -41,6 +41,7 @@ public class ItemGroups_RaEx {
                         /// Special
                         entries.add(ToolsAndArmors_RaEx.LEAVE_STAFF);
                         entries.add(ToolsAndArmors_RaEx.TOY_HAMMER);
+                        entries.add(Items_RaEx.ESCAPE_POTION);
                         entries.add(ToolsAndArmors_RaEx.ESCAPE_ROPE);
 
                         /// LongSword

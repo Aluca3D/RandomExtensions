@@ -39,7 +39,7 @@ public class LootBag_RaEx {
                 protected void ItemList(PlayerEntity user, Random rItem) {
                     List<Item> givenList = Arrays.asList(
                             Items.COBBLESTONE, Items.STICK, Items.TORCH, Items.COBBLESTONE, Items.COAL,
-                            Items.OAK_PLANKS
+                            Items.OAK_PLANKS, Items_RaEx.ESCAPE_POTION, Items_RaEx.ESCAPE_POTION
                     );
 
                     Item randomItem = givenList.get(rItem.nextInt(givenList.size()));
