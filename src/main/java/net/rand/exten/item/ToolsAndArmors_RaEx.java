@@ -9,10 +9,10 @@ import net.rand.exten.RandomExtensions;
 import net.rand.exten.item.custom.ArmorItem_RaEx;
 import net.rand.exten.item.custom.ArmorMaterials_RaEx;
 import net.rand.exten.item.custom.ToolMaterial_RaEx;
-import net.rand.exten.item.custom.tools.LeaveStaff;
-import net.rand.exten.item.custom.tools.LongSwordItem;
-import net.rand.exten.item.custom.tools.PaxelItem;
-import net.rand.exten.item.custom.tools.ToyHammer;
+import net.rand.exten.item.custom.legendary.EscapeRope;
+import net.rand.exten.item.custom.legendary.LeaveStaff;
+import net.rand.exten.item.custom.legendary.ToyHammer;
+import net.rand.exten.item.custom.tools.*;
 
 public class ToolsAndArmors_RaEx {
     /**Special*/
@@ -20,6 +20,8 @@ public class ToolsAndArmors_RaEx {
             new LeaveStaff(new FabricItemSettings().maxCount(1).fireproof().maxDamage(240)));
     public static final Item TOY_HAMMER = registerItem("toy_hammer",
             new ToyHammer(ToolMaterials.WOOD,new FabricItemSettings().maxCount(1).maxDamage(960)));
+    public static final Item ESCAPE_ROPE = registerItem("escape_rope",
+            new EscapeRope(new FabricItemSettings().maxCount(1).fireproof().maxDamage(64)));
 
     /**Long Sword*/
     public static final Item WOODEN_LONGSWORD = registerItem("wooden_longsword",
