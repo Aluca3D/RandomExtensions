@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "tag": "minecraft:planks"
+    },
+    "S": {
+      "item": "minecraft:wooden_sword"
+    }
+  },
+  "pattern": [
+    "C",
+    "C",
+    "S"
+  ],
+  "result": {
+    "item": "randexten:wooden_longsword"
+  },
+  "show_notification": true
+}

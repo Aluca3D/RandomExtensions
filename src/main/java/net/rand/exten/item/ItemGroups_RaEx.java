@@ -42,6 +42,14 @@ public class ItemGroups_RaEx {
                         entries.add(ToolsAndArmors_RaEx.LEAVE_STAFF);
                         entries.add(ToolsAndArmors_RaEx.TOY_HAMMER);
 
+                        /// LongSword
+                        entries.add(ToolsAndArmors_RaEx.WOODEN_LONGSWORD);
+                        entries.add(ToolsAndArmors_RaEx.STONE_LONGSWORD);
+                        entries.add(ToolsAndArmors_RaEx.IRON_LONGSWORD);
+                        entries.add(ToolsAndArmors_RaEx.GOLDEN_LONGSWORD);
+                        entries.add(ToolsAndArmors_RaEx.DIAMOND_LONGSWORD);
+                        entries.add(ToolsAndArmors_RaEx.NETHERITE_LONGSWORD);
+
                         /// Copper
                         entries.add(ToolsAndArmors_RaEx.COPPER_SHOVEL);
                         entries.add(ToolsAndArmors_RaEx.COPPER_PICKAXE);
@@ -64,8 +72,8 @@ public class ItemGroups_RaEx {
                         entries.add(ToolsAndArmors_RaEx.COPPER_LEGGINGS);
                         entries.add(ToolsAndArmors_RaEx.COPPER_BOOTS);
 
-
                         entries.add(Items_RaEx.GEMS_UPGRADE_TEMPLATE);
+
                         /// Aquamarin
                         entries.add(ToolsAndArmors_RaEx.D_AQUAMARIN_HELMET);
                         entries.add(ToolsAndArmors_RaEx.D_AQUAMARIN_CHESTPLATE);
