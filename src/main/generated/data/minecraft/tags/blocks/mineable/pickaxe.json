@@ -15,6 +15,9 @@
     "randexten:obsidian_trapdoor",
     "randexten:charcoal_block",
     "randexten:grinder",
-    "randexten:cheese_block"
+    "randexten:cheese_block",
+    "randexten:mossy_crystal",
+    "randexten:ice_crystal",
+    "randexten:sand_crystal"
   ]
 }

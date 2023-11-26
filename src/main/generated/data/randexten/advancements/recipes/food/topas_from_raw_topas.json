@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_topas": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:raw_topas"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:topas_from_raw_topas"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_topas"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:topas_from_raw_topas"
+    ]
+  },
+  "sends_telemetry_event": false
+}

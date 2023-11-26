@@ -15,17 +15,21 @@ import java.util.List;
 
 public class PlacedFeatures_RaEx {
 
-    //Ores
+    /**Ores*/
     public static final RegistryKey<PlacedFeature> SOUL_ORE_PLACED_KEY = registerKey("soul_ore_placed");
     public static final RegistryKey<PlacedFeature> AQUARAMIN_ORE_PLACED_KEY = registerKey("aquamarin_ore_placed");
     public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = registerKey("ruby_ore_placed");
     public static final RegistryKey<PlacedFeature> TOPAS_ORE_PLACED_KEY = registerKey("topas_ore_placed");
 
-    //Flowers
+    /**Flowers*/
     public static final RegistryKey<PlacedFeature> NIGHT_SHADE_PLACED_KEY = registerKey("night_shade_placed");
 
-    //Tree
-    public static final RegistryKey<PlacedFeature> BURNED_TREE_PLACED_KEY = registerKey("burned_tree_placed");
+    /**Bushes*/
+    public static final RegistryKey<PlacedFeature> END_BARRY_PLACED_KEY = registerKey("end_barry_placed");
+
+    /**Tree*/
+    public static final RegistryKey<PlacedFeature> PURPUR_TREE_PLACED_KEY = registerKey("purpur_tree_placed");
+
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
@@ -49,10 +53,15 @@ public class PlacedFeatures_RaEx {
         //Flowers
         register(context, NIGHT_SHADE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeatures_RaEx.NIGHT_SHADE_KEY),
                 RarityFilterPlacementModifier.of(5), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
+        //Bushes
+        register(context, END_BARRY_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeatures_RaEx.END_BARRY_KEY),
+                RarityFilterPlacementModifier.of(10), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
         //Tree
-        register(context, BURNED_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeatures_RaEx.BURNED_TREE_KEY),
+        register(context, PURPUR_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeatures_RaEx.PURPUR_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(1, 0.1f, 2), Blocks_RaEx.BURNED_TREE_SAPLING));
+                        PlacedFeatures.createCountExtraModifier(0, 0.025f, 1), Blocks_RaEx.PURPUR_SAPLING));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

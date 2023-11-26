@@ -25,6 +25,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_cheese_step": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:cheese_step"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_cheese_wall": {
       "conditions": {
         "items": [
@@ -63,10 +75,16 @@
     ],
     [
       "has_cheese_wall"
+    ],
+    [
+      "has_cheese_step"
     ]
   ],
   "rewards": {
-    "experience": 200
+    "experience": 200,
+    "recipes": [
+      "randexten:roomba_item"
+    ]
   },
   "sends_telemetry_event": true
 }

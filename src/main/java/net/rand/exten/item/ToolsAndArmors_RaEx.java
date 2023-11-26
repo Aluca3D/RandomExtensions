@@ -1,36 +1,76 @@
 package net.rand.exten.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ToolMaterials;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.item.custom.ArmorItem_RaEx;
 import net.rand.exten.item.custom.ArmorMaterials_RaEx;
-import net.rand.exten.item.custom.tools.LeaveStaff;
-import net.rand.exten.item.custom.tools.PaxelItem;
+import net.rand.exten.item.custom.ToolMaterial_RaEx;
+import net.rand.exten.item.custom.legendary.EscapeRope;
+import net.rand.exten.item.custom.legendary.LeaveStaff;
+import net.rand.exten.item.custom.legendary.ToyHammer;
+import net.rand.exten.item.custom.tools.*;
 
 public class ToolsAndArmors_RaEx {
     /**Special*/
     public static final Item LEAVE_STAFF = registerItem("leave_staff",
-            new LeaveStaff(new FabricItemSettings().maxCount(1).fireproof().maxDamage(2048)));
+            new LeaveStaff(new FabricItemSettings().maxCount(1).fireproof().maxDamage(240)));
+    public static final Item TOY_HAMMER = registerItem("toy_hammer",
+            new ToyHammer(ToolMaterials.WOOD,new FabricItemSettings().maxCount(1).maxDamage(960)));
+    public static final Item ESCAPE_ROPE = registerItem("escape_rope",
+            new EscapeRope(new FabricItemSettings().maxCount(1).fireproof().maxDamage(64)));
+
+    /**Long Sword*/
+    public static final Item WOODEN_LONGSWORD = registerItem("wooden_longsword",
+            new LongSwordItem(ToolMaterials.WOOD,3, -2.4f,new FabricItemSettings()));
+    public static final Item STONE_LONGSWORD = registerItem("stone_longsword",
+            new LongSwordItem(ToolMaterials.STONE,3, -2.4f,new FabricItemSettings()));
+    public static final Item IRON_LONGSWORD = registerItem("iron_longsword",
+            new LongSwordItem(ToolMaterials.IRON,3, -2.4f,new FabricItemSettings()));
+    public static final Item GOLDEN_LONGSWORD = registerItem("golden_longsword",
+            new LongSwordItem(ToolMaterials.GOLD,3, -2.4f,new FabricItemSettings()));
+    public static final Item DIAMOND_LONGSWORD = registerItem("diamond_longsword",
+            new LongSwordItem(ToolMaterials.DIAMOND,3, -2.4f,new FabricItemSettings()));
+    public static final Item NETHERITE_LONGSWORD = registerItem("netherite_longsword",
+            new LongSwordItem(ToolMaterials.NETHERITE,3, -2.4f,new FabricItemSettings()));
 
     /**Paxel*/
     public static final Item WOODEN_PAXEL = registerItem("wooden_paxel",
-            new PaxelItem(ToolMaterials.WOOD, 0, 0f, new FabricItemSettings()));
+            new PaxelItem(ToolMaterials.WOOD, 4, -3f, new FabricItemSettings()));
     public static final Item STONE_PAXEL = registerItem("stone_paxel",
-            new PaxelItem(ToolMaterials.STONE, 0, 0f, new FabricItemSettings()));
+            new PaxelItem(ToolMaterials.STONE, 6, -3f, new FabricItemSettings()));
     public static final Item IRON_PAXEL = registerItem("iron_paxel",
-            new PaxelItem(ToolMaterials.IRON, 0, 0f, new FabricItemSettings()));
+            new PaxelItem(ToolMaterials.IRON, 6, -3f, new FabricItemSettings()));
     public static final Item GOLDEN_PAXEL = registerItem("golden_paxel",
-            new PaxelItem(ToolMaterials.GOLD, 0, 0f, new FabricItemSettings()));
+            new PaxelItem(ToolMaterials.GOLD, 4, -3f, new FabricItemSettings()));
     public static final Item DIAMOND_PAXEL = registerItem("diamond_paxel",
-            new PaxelItem(ToolMaterials.DIAMOND, 0, 0f, new FabricItemSettings()));
+            new PaxelItem(ToolMaterials.DIAMOND, 6, -3f, new FabricItemSettings()));
     public static final Item NETHERITE_PAXEL = registerItem("netherite_paxel",
-            new PaxelItem(ToolMaterials.NETHERITE, 0, 0f, new FabricItemSettings().fireproof()));
+            new PaxelItem(ToolMaterials.NETHERITE, 7, -3f, new FabricItemSettings().fireproof()));
+
+    /**Copper*/
+    public static final Item COPPER_AXE = registerItem("cooper_axe",
+            new AxeItem(ToolMaterial_RaEx.COPPER, 5, -3f, new FabricItemSettings()));
+    public static final Item COPPER_PICKAXE = registerItem("cooper_pickaxe",
+            new PickaxeItem(ToolMaterial_RaEx.COPPER, 1, -2.8f, new FabricItemSettings()));
+    public static final Item COPPER_SHOVEL = registerItem("cooper_shovel",
+            new ShovelItem(ToolMaterial_RaEx.COPPER, 1, -3f, new FabricItemSettings()));
+    public static final Item COPPER_HOE = registerItem("cooper_hoe",
+            new HoeItem(ToolMaterial_RaEx.COPPER, -2, -3f, new FabricItemSettings()));
+    public static final Item COPPER_SWORD = registerItem("cooper_sword",
+            new SwordItem(ToolMaterial_RaEx.COPPER, 3, -2.4f, new FabricItemSettings()));
+
+    public static final Item COPPER_HELMET = registerItem("cooper_helmet",
+            new ArmorItem(ArmorMaterials_RaEx.COPPER, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item COPPER_CHESTPLATE = registerItem("cooper_chestplate",
+            new ArmorItem(ArmorMaterials_RaEx.COPPER, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+    public static final Item COPPER_LEGGINGS = registerItem("cooper_leggings",
+            new ArmorItem(ArmorMaterials_RaEx.COPPER, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+    public static final Item COPPER_BOOTS = registerItem("cooper_boots",
+            new ArmorItem(ArmorMaterials_RaEx.COPPER, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
     /**Aquamarin Armor*/
     public static final Item D_AQUAMARIN_HELMET = registerItem("diamond_aquamarin_helmet",

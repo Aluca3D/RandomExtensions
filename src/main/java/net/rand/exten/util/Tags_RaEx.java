@@ -20,6 +20,15 @@ public class Tags_RaEx {
 
     public static class Items {
 
+        public static final TagKey<Item> GEMS =
+                createTag("gems");
+
+        public static final TagKey<Item> PROJECTILE =
+                createTag("projectile");
+
+        public static final TagKey<Item> LEGENDARY =
+                createTag("legendary");
+
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, new Identifier(RandomExtensions.MOD_ID, name));
         }

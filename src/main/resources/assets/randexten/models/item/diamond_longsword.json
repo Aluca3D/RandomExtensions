@@ -1,0 +1,6 @@
+{
+  "parent": "randexten:item/long_handheld",
+  "textures": {
+    "layer0": "randexten:item/diamond_longsword"
+  }
+}

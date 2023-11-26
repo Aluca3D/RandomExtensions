@@ -6,7 +6,7 @@
       "item": "minecraft:diamond"
     },
     "C": {
-      "item": "randexten:aquamarin"
+      "tag": "randexten:gems"
     },
     "S": {
       "item": "randexten:gems_upgrade_template"

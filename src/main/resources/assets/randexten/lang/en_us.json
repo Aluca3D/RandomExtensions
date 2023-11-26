@@ -14,6 +14,13 @@
   "item.randexten.mine_loot_bag": "Mine Loot Bag",
   "item.randexten.mine_loot_bag.tooltip": "Stuff from the Mine",
 
+  "item.randexten.wooden_longsword": "Wooden Longsword",
+  "item.randexten.stone_longsword": "Stone Longsword",
+  "item.randexten.iron_longsword": "Iron Longsword",
+  "item.randexten.golden_longsword": "Golden Longsword",
+  "item.randexten.diamond_longsword": "Diamond Longsword",
+  "item.randexten.netherite_longsword": "Netherite Longsword",
+
   "item.randexten.diamond_aquamarin_helmet": "Aquamarin Diamond Helmet",
   "item.randexten.diamond_aquamarin_chestplate": "Aquamarin Diamond Chestplate",
   "item.randexten.diamond_aquamarin_leggings": "Aquamarin Diamond Leggings",
@@ -73,6 +80,10 @@
 
   "block.randexten.explosive_cake_block": "Explosive Cake",
 
+  "block.randexten.mossy_crystal": "Mossy Crystal",
+  "block.randexten.ice_crystal": "Ice Crystal",
+  "block.randexten.sand_crystal": "Sand Crystal",
+
   "item.randexten.sandwich": "Sandwich",
   "item.randexten.popcorn": "Popcorn",
 
@@ -86,6 +97,9 @@
   "item.randexten.flour": "Flour",
 
   "item.randexten.duk_tape": "Duk Tape",
+  "item.randexten.toy_hammer": "Toy Hammer",
+
+  "item.randexten.escape_rope": "Escape Rope",
 
   "block.randexten.grinder": "Grinder",
   "block.randexten.cheese_station": "Cheese Station",
@@ -94,6 +108,7 @@
   "entity.minecraft.villager.cheese_maker": "Cheese Maker",
   "item.randexten.cheese": "Cheese",
   "item.randexten.bucket_cheese": "Cheese Bucket",
+  "item.randexten.escape_potion": "Escape Potion",
 
   "item.randexten.bamboo_explosive": "Bamboo Explosive",
   "item.randexten.bamboo_explosive.tooltip": "Goes Boom",
@@ -122,6 +137,22 @@
   "block.randexten.burned_pressure_plate": "Burned Pressure Plate",
   "block.randexten.burned_tree_sapling": "Burned Tree Sapling",
 
+  "block.randexten.purpur_wood": "PurPur Wood",
+  "block.randexten.purpur_log": "PurPur Log",
+  "block.randexten.stripped_purpur_wood": "Stripped PurPur Wood",
+  "block.randexten.stripped_purpur_log": "Stripped PurPur Log",
+  "block.randexten.purpur_planks": "PurPur Planks",
+  "block.randexten.purpur_stairs": "PurPur Stairs",
+  "block.randexten.purpur_slabs": "PurPur Slabs",
+  "block.randexten.purpur_fence": "PurPur Fence",
+  "block.randexten.purpur_gate": "PurPur Gate",
+  "block.randexten.purpur_door": "PurPur Door",
+  "block.randexten.purpur_trapdoor": "PurPur Trapdoor",
+  "block.randexten.purpur_button": "PurPur Button",
+  "block.randexten.purpur_leaves": "PurPur Button",
+  "block.randexten.purpur_pressure_plate": "PurPur Pressure Plate",
+  "block.randexten.purpur_sapling": "PurPur Tree Sapling",
+
   "item.randexten.pebble": "Pebble",
 
   "item.randexten.wooden_paxel": "Wooden Paxel",
@@ -133,6 +164,16 @@
 
   "item.randexten.leave_staff": "Leave Staff",
 
+  "item.randexten.cooper_axe": "Copper Axe",
+  "item.randexten.cooper_pickaxe": "Copper Pickaxe",
+  "item.randexten.cooper_shovel": "Copper Shovel",
+  "item.randexten.cooper_hoe": "Copper Hoe",
+  "item.randexten.cooper_sword": "Copper Sword",
+  "item.randexten.cooper_helmet": "Copper Helmet",
+  "item.randexten.cooper_chestplate": "Copper Chestplate",
+  "item.randexten.cooper_leggings": "Copper Leggings",
+  "item.randexten.cooper_boots": "Copper Boots",
+
   "enchantment.randexten.escaper": "Escaper",
   "enchantment.randexten.evokers_bite": "Evoker's Bite",
   "enchantment.randexten.life_steal": "Life Steal",
@@ -140,11 +181,22 @@
   "enchantment.randexten.curse_of_self_harming": "Curse of Self Harming",
   "enchantment.randexten.poisoned_blade": "Poisoned Blade",
 
+  "item.randexten.end_barry": "End Barry",
+  "block.randexten.end_barry_bush": "End Barry Bush",
+
   "item.randexten.nightmare_tv_spawn_egg": "NightmareTV Spawn Egg",
+  "item.randexten.roomba_item": "Roomba",
   "entity.randexten.nightmare_tv": "NightmareTV",
+  "entity.randexten.roomba": "Roomba",
   "sounds.randexten.nightmare_tv_ambient": "NightmareTV Ambient",
   "sounds.randexten.nightmare_tv_hurt": "NightmareTV Hurt",
   "sounds.randexten.magic_shot": "Magic",
+  "sounds.randexten.roomba_ambient": "Roomba Ambient",
+  "sounds.randexten.on_off": "On/Off",
+  "sounds.randexten.roomba_hurt": "Roomba Hurt",
+  "sounds.randexten.boing": "Boing",
+
+  "block.randexten.cheese_step": "Cheese Step",
 
   "itemgroup.randexten_group": "Random Extensions"
 }

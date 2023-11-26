@@ -7,4 +7,7 @@ import net.rand.exten.RandomExtensions;
 public class ModelLayers_RaEx {
     public static final EntityModelLayer NIGHTMARETV =
             new EntityModelLayer(new Identifier(RandomExtensions.MOD_ID, "nightmare_tv"), "main");
+
+    public static final EntityModelLayer ROOMBA =
+            new EntityModelLayer(new Identifier(RandomExtensions.MOD_ID, "roomba"), "main");
 }

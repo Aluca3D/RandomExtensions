@@ -1,0 +1,77 @@
+{
+  "parent": "randexten:re/randexten",
+  "criteria": {
+    "has_ice_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:ice_crystal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_mossy_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:mossy_crystal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_sand_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:sand_crystal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Alternative Medicine"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:mossy_crystal"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Crystals"
+    }
+  },
+  "requirements": [
+    [
+      "has_sand_crystal"
+    ],
+    [
+      "has_ice_crystal"
+    ],
+    [
+      "has_mossy_crystal"
+    ]
+  ],
+  "rewards": {
+    "experience": 40,
+    "recipes": [
+      "randexten:mossy_crystal",
+      "randexten:ice_crystal",
+      "randexten:sand_crystal"
+    ]
+  },
+  "sends_telemetry_event": true
+}

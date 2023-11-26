@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "randexten:purpur_log",
+    "randexten:stripped_burned_log",
+    "randexten:burned_log",
+    "randexten:stripped_burned_log",
+    "randexten:purpur_wood",
+    "randexten:stripped_burned_wood",
+    "randexten:burned_wood",
+    "randexten:stripped_burned_wood"
+  ]
+}

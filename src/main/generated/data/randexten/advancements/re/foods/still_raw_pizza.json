@@ -1,0 +1,40 @@
+{
+  "parent": "randexten:re/foods/raw_pizza",
+  "criteria": {
+    "has_raw_eaten_pizza": {
+      "conditions": {
+        "item": {
+          "items": [
+            "randexten:raw_pizza"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Why?"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "randexten:raw_pizza"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Still Raw"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_eaten_pizza"
+    ]
+  ],
+  "rewards": {
+    "experience": 200
+  },
+  "sends_telemetry_event": true
+}

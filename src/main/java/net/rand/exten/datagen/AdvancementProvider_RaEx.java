@@ -3,16 +3,23 @@ package net.rand.exten.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.minecraft.advancement.*;
-import net.minecraft.advancement.criterion.*;
+import net.minecraft.advancement.criterion.ConsumeItemCriterion;
+import net.minecraft.advancement.criterion.EnterBlockCriterion;
+import net.minecraft.advancement.criterion.InventoryChangedCriterion;
+import net.minecraft.advancement.criterion.RecipeUnlockedCriterion;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.predicate.item.ItemPredicate;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.Blocks_RaEx;
+import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
+import net.rand.exten.util.Tags_RaEx;
 
 import java.util.function.Consumer;
 
@@ -32,12 +39,12 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         false, false, false))
                 .criterion("exist", EnterBlockCriterion.Conditions.block(Blocks.AIR))
                 .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:pebble_from_cobblestone"))
-                                .addRecipe(new Identifier("randexten:cobblestone_from_pebble"))
-                                .addRecipe(new Identifier("randexten:wooden_paxel"))
-                                .addRecipe(new Identifier("randexten:stone_paxel"))
-                                .addRecipe(new Identifier("randexten:iron_paxel"))
-                                .addRecipe(new Identifier("randexten:golden_paxel"))
-                                .addRecipe(new Identifier("randexten:diamond_paxel"))
+                        .addRecipe(new Identifier("randexten:cobblestone_from_pebble"))
+                        .addRecipe(new Identifier("randexten:wooden_paxel"))
+                        .addRecipe(new Identifier("randexten:stone_paxel"))
+                        .addRecipe(new Identifier("randexten:iron_paxel"))
+                        .addRecipe(new Identifier("randexten:golden_paxel"))
+                        .addRecipe(new Identifier("randexten:diamond_paxel"))
                 ).build(consumer, RandomExtensions.MOD_ID + ":re/randexten");
 
         AdvancementEntry foodRoot = Advancement.Builder.create()
@@ -53,6 +60,42 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 )
                 .parent(mainRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/foods/new_foods");
+
+        AdvancementEntry copperRoot = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.COPPER_PICKAXE),
+                        Text.literal("Copper"), Text.literal("Rust Prof"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_copper_ingot", InventoryChangedCriterion.Conditions.items(Items.COPPER_INGOT))
+                .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:cooper_axe"))
+                        .addRecipe(new Identifier("randexten:cooper_pickaxe"))
+                        .addRecipe(new Identifier("randexten:cooper_shovel"))
+                        .addRecipe(new Identifier("randexten:cooper_hoe"))
+                        .addRecipe(new Identifier("randexten:cooper_sword"))
+                        .addRecipe(new Identifier("randexten:cooper_helmet"))
+                        .addRecipe(new Identifier("randexten:cooper_chestplate"))
+                        .addRecipe(new Identifier("randexten:cooper_leggings"))
+                        .addRecipe(new Identifier("randexten:cooper_boots"))
+                        .setExperience(20)
+                )
+                .parent(mainRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/cooper/cooper_root");
+
+        AdvancementEntry crystalRoot = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.MOSSY_CRYSTAL),
+                        Text.literal("Crystals"), Text.literal("Alternative Medicine"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_sand_crystal", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.SAND_CRYSTAL))
+                .criterion("has_ice_crystal", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.ICE_CRYSTAL))
+                .criterion("has_mossy_crystal", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.MOSSY_CRYSTAL))
+                .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:mossy_crystal"))
+                        .addRecipe(new Identifier("randexten:ice_crystal"))
+                        .addRecipe(new Identifier("randexten:sand_crystal"))
+                        .setExperience(40)
+                )
+                .parent(mainRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/crystal_root");
 
         AdvancementEntry drinkRoot = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Items_RaEx.EMPTY_SODA_CAN),
@@ -72,8 +115,8 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .display(new AdvancementDisplay(new ItemStack(Items.SNOWBALL),
                         Text.literal("Projectiles"), Text.literal("Lets Trow some thinks"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
-                        false, false, false))
-                .criterion("exist", EnterBlockCriterion.Conditions.block(Blocks.AIR))
+                        false, false, true))
+                .criterion("has_a_projectile", InventoryChangedCriterion.Conditions.items(ItemPredicate.Builder.create().tag(Tags_RaEx.Items.PROJECTILE)))
                 .parent(mainRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/projectile/root_projectile");
 
@@ -93,8 +136,8 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.AQUAMARIN_ORE),
                         Text.literal("Gems"), Text.literal("we, are the..."),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
-                        false, false, false))
-                .criterion("exist", EnterBlockCriterion.Conditions.block(Blocks.AIR))
+                        false, false, true))
+                .criterion("has_a_gem", InventoryChangedCriterion.Conditions.items(ItemPredicate.Builder.create().tag(Tags_RaEx.Items.GEMS)))
                 .parent(mainRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/gems/root_gem");
 
@@ -112,26 +155,28 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
 
         AdvancementEntry legendaryItemRoot = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.LEAVE_STAFF),
-                        Text.literal("That's a Legendary"), Text.literal("Ooh, shiny"),
+                        Text.literal("That's a Legendary"), Text.literal("Got one"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
                         true, true, true))
-                .criterion("has_leave_staff", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.LEAVE_STAFF))
+                .criterion("has_a_legendary", InventoryChangedCriterion.Conditions.items(ItemPredicate.Builder.create().tag(Tags_RaEx.Items.LEGENDARY)))
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(mainRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/legendary_item_root");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/legendary_root");
 
-        // Burned Wood
         AdvancementEntry burnedRoot = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.BURNED_TREE_SAPLING),
                         Text.literal("In the Furnace with it"), Text.literal("Burn a Sapling"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
                         true, true, true))
                 .criterion("has_furnace", InventoryChangedCriterion.Conditions.items(Items.FURNACE))
+                .criterion("has_a_sapling", InventoryChangedCriterion.Conditions.items(ItemPredicate.Builder.create().tag(ItemTags.SAPLINGS)))
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(mainRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/burned_root");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/tree/burned_root");
 
-        AdvancementEntry burnedWood = Advancement.Builder.create()
+        /// Tree
+        // Burned Tree
+        AdvancementEntry burnedTree = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.BURNED_LOG),
                         Text.literal("Its Burned"), Text.literal("Let it Burn"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
@@ -148,7 +193,27 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         .setExperience(20)
                 )
                 .parent(burnedRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/burned_wood");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/tree/burned_tree");
+
+        // PurPur Tree
+        AdvancementEntry purpurTree = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.PURPUR_LOG),
+                        Text.literal("PurPur"), Text.literal("ColOR"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_purpur_log", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.PURPUR_LOG))
+                .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:purpur_button_from_purpur_planks"))
+                        .addRecipe(new Identifier("randexten:purpur_door"))
+                        .addRecipe(new Identifier("randexten:purpur_gate"))
+                        .addRecipe(new Identifier("randexten:purpur_trapdoor"))
+                        .addRecipe(new Identifier("randexten:purpur_pressure_plate"))
+                        .addRecipe(new Identifier("randexten:purpur_fence"))
+                        .addRecipe(new Identifier("randexten:purpur_slabs"))
+                        .addRecipe(new Identifier("randexten:purpur_stairs"))
+                        .setExperience(20)
+                )
+                .parent(mainRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/tree/purpur_tree");
 
         // Food
         AdvancementEntry sandwich = Advancement.Builder.create()
@@ -171,7 +236,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         .setExperience(20)
                 )
                 .parent(foodRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/cheese_bucket");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/foods/cheese_bucket");
 
         AdvancementEntry cheese = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Items_RaEx.CHEESE),
@@ -183,6 +248,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         .addRecipe(new Identifier("randexten:cheese_slabs"))
                         .addRecipe(new Identifier("randexten:cheese_stairs"))
                         .addRecipe(new Identifier("randexten:cheese_walls"))
+                        .addRecipe(new Identifier("randexten:cheese_step"))
                         .setExperience(20)
                 )
                 .parent(cheeseBucket)
@@ -208,12 +274,22 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .parent(foodRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/foods/raw_pizza");
 
+        AdvancementEntry stillRawPizza = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Items_RaEx.RAW_PIZZA),
+                        Text.literal("Still Raw"), Text.literal("Why?"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, false))
+                .criterion("has_raw_eaten_pizza", ConsumeItemCriterion.Conditions.item(Items_RaEx.RAW_PIZZA))
+                .rewards(AdvancementRewards.Builder.experience(200))
+                .parent(rawPizza)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/foods/still_raw_pizza");
+
         AdvancementEntry Pizza = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Items_RaEx.PIZZA),
                         Text.literal("PIZZA"), Text.literal("Pizza Time"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.CHALLENGE,
                         true, true, false))
-                .criterion("has_tomato", ConsumeItemCriterion.Conditions.item(Items_RaEx.PIZZA))
+                .criterion("has_eaten_pizza", ConsumeItemCriterion.Conditions.item(Items_RaEx.PIZZA))
                 .rewards(AdvancementRewards.Builder.experience(200))
                 .parent(rawPizza)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/foods/pizza");
@@ -345,7 +421,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.AQUAMARIN_BLOCK),
                         Text.literal("Its Aquamarin"), Text.literal("we, are the..."),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
-                        false, false, false))
+                        true, true, true))
                 .criterion("has_aquamarin", InventoryChangedCriterion.Conditions.items(Items_RaEx.AQUAMARIN))
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(gemUpgrade)
@@ -366,7 +442,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
 
         AdvancementEntry aquamarinNArmor = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.N_AQUAMARIN_HELMET),
-                        Text.literal("I can finally Breath"), Text.literal("Aquaman"),
+                        Text.literal("I can finally Breath"), Text.literal("Aqua-man"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.CHALLENGE,
                         true, true, false))
                 .criterion("has_aquamarin_armor_helmet", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_AQUAMARIN_HELMET))
@@ -381,8 +457,8 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.RUBY_BLOCK),
                         Text.literal("Ruby Time"), Text.literal("Retro"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
-                        false, false, false))
-                .criterion("has_aquamarin", InventoryChangedCriterion.Conditions.items(Items_RaEx.AQUAMARIN))
+                        true, true, true))
+                .criterion("has_ruby", InventoryChangedCriterion.Conditions.items(Items_RaEx.RUBY))
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(gemUpgrade)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/gems/ruby_root");
@@ -402,7 +478,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
 
         AdvancementEntry rubyNArmor = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.N_RUBY_HELMET),
-                        Text.literal("Speeeed"), Text.literal("Deja vu"),
+                        Text.literal("Speed"), Text.literal("Deja vu"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.CHALLENGE,
                         true, true, false))
                 .criterion("has_ruby_armor_helmet", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_RUBY_HELMET))
@@ -417,8 +493,8 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.TOPAS_BLOCK),
                         Text.literal("Topas"), Text.literal("Topas"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
-                        false, false, false))
-                .criterion("has_aquamarin", InventoryChangedCriterion.Conditions.items(Items_RaEx.AQUAMARIN))
+                        true, true, true))
+                .criterion("has_topas", InventoryChangedCriterion.Conditions.items(Items_RaEx.TOPAS))
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(gemUpgrade)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/gems/topas_root");
@@ -458,7 +534,9 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .criterion("has_cheese_stair", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.CHEESE_STAIRS))
                 .criterion("has_cheese_slab", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.CHEESE_SLABS))
                 .criterion("has_cheese_wall", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.CHEESE_WALLS))
-                .rewards(AdvancementRewards.Builder.experience(200))
+                .criterion("has_cheese_step", InventoryChangedCriterion.Conditions.items(StepBlockRegistry.CHEESE_STEP))
+                .rewards(AdvancementRewards.Builder.experience(200)
+                        .addRecipe(new Identifier("randexten:roomba_item")))
                 .parent(cheese)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/misc/its_all_cheese");
 
@@ -472,6 +550,72 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .parent(mainRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/misc/soul_ore");
 
+        AdvancementEntry roomba = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Items_RaEx.ROOMBA_ITEM),
+                        Text.literal("Roomba"), Text.literal("Good Boy"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.CHALLENGE,
+                        true, true, true))
+                .criterion("has_roomba", InventoryChangedCriterion.Conditions.items(Items_RaEx.ROOMBA_ITEM))
+                .rewards(AdvancementRewards.Builder.experience(200))
+                .parent(mainRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/roomba");
+
+        // Copper
+        AdvancementEntry cooperArmor = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.COPPER_HELMET),
+                        Text.literal("Copper Armor"), Text.literal("Dose not Rust, i *promise*"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_copper_helmet", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_HELMET))
+                .criterion("has_copper_chestplate", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_CHESTPLATE))
+                .criterion("has_copper_leggings", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_LEGGINGS))
+                .criterion("has_copper_boots", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_BOOTS))
+                .rewards(AdvancementRewards.Builder.experience(20))
+                .parent(copperRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/cooper/cooper_armor");
+
+        AdvancementEntry cooperTools = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.COPPER_AXE),
+                        Text.literal("Tools of Copper"), Text.literal("Cant Rust"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_copper_axe", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_AXE))
+                .criterion("has_copper_pickaxe", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_PICKAXE))
+                .criterion("has_copper_shovel", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_SHOVEL))
+                .criterion("has_copper_hoe", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_HOE))
+                .criterion("has_copper_sword", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_SWORD))
+                .rewards(AdvancementRewards.Builder.experience(20))
+                .parent(copperRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/cooper/cooper_tools");
+
+        // Crystal
+        AdvancementEntry mossyCrystal = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.MOSSY_CRYSTAL),
+                        Text.literal("Moss"), Text.literal("Green"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_mossy_crystal", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.MOSSY_CRYSTAL))
+                .rewards(AdvancementRewards.Builder.experience(20))
+                .parent(crystalRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/mossy_crystal");
+        AdvancementEntry iceCrystal = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.ICE_CRYSTAL),
+                        Text.literal("Cold"), Text.literal("Blue"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_ice_crystal", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.ICE_CRYSTAL))
+                .rewards(AdvancementRewards.Builder.experience(20))
+                .parent(crystalRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/ice_crystal");
+        AdvancementEntry sandCrystal = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.SAND_CRYSTAL),
+                        Text.literal("Sandy"), Text.literal("Yellow"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_sand_crystal", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.SAND_CRYSTAL))
+                .rewards(AdvancementRewards.Builder.experience(20))
+                .parent(crystalRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/sand_crystal");
 
         // Legendary
         AdvancementEntry leaveStaff = Advancement.Builder.create()
@@ -482,7 +626,17 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .criterion("has_leave_staff", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.LEAVE_STAFF))
                 .rewards(AdvancementRewards.Builder.experience(400))
                 .parent(legendaryItemRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/leave_staff");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/leave_staff");
+
+        AdvancementEntry toyHammer = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.TOY_HAMMER),
+                        Text.literal("Bonk"), Text.literal("Yeet"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.GOAL,
+                        true, true, true))
+                .criterion("has_toy_hammer", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.TOY_HAMMER))
+                .rewards(AdvancementRewards.Builder.experience(400))
+                .parent(legendaryItemRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/toy_hammer");
 
     }
 }

@@ -3,18 +3,20 @@ package net.rand.exten.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.*;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 import net.rand.exten.block.Blocks_RaEx;
+import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
+import net.rand.exten.util.Tags_RaEx;
 
 public class RecipeProvider_RaEx extends FabricRecipeProvider {
 
@@ -24,6 +26,23 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.ROOMBA_ITEM, 1)
+                .pattern("BOB")
+                .pattern("IHI")
+                .pattern("IDI")
+                .input('B', Items.BLACK_CONCRETE)
+                .input('O', Items.OBSERVER)
+                .input('H', Items.HEART_OF_THE_SEA)
+                .input('I', Items.IRON_INGOT)
+                .input('D', Items.DIAMOND)
+                .criterion(hasItem(Items.BLACK_CONCRETE), conditionsFromItem(Items.BLACK_CONCRETE))
+                .criterion(hasItem(Items.OBSERVER), conditionsFromItem(Items.OBSERVER))
+                .criterion(hasItem(Items.HEART_OF_THE_SEA), conditionsFromItem(Items.HEART_OF_THE_SEA))
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.ROOMBA_ITEM)));
+
         // Gem Block
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, Items_RaEx.AQUAMARIN, RecipeCategory.DECORATIONS,
                 Blocks_RaEx.AQUAMARIN_BLOCK);
@@ -35,9 +54,9 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.FOOD, Items_RaEx.CHEESE, RecipeCategory.FOOD,
                 Blocks_RaEx.CHEESE_BLOCK);
 
-        offerFoodCookingRecipe(exporter, "milk", RecipeSerializer.SMOKING, 150, Items.MILK_BUCKET , Items_RaEx.BUCKET_CHEESE, 0.2f);
+        offerFoodCookingRecipe(exporter, "milk", RecipeSerializer.SMOKING, 150, Items.MILK_BUCKET, Items_RaEx.BUCKET_CHEESE, 0.2f);
 
-        offerSingleOutputShapelessRecipe(exporter,Blocks_RaEx.CHEESE_BLOCK, Items_RaEx.BUCKET_CHEESE, "cheese_block_from_bucket_cheese");
+        offerSingleOutputShapelessRecipe(exporter, Blocks_RaEx.CHEESE_BLOCK, Items_RaEx.BUCKET_CHEESE, "cheese_block_from_bucket_cheese");
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.CHEESE_STATION, 1)
                 .pattern("SAS")
@@ -58,8 +77,54 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks_RaEx.CHEESE_BLOCK), conditionsFromItem(Blocks_RaEx.CHEESE_BLOCK))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.CHEESE_STAIRS)));
         offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.CHEESE_WALLS, Blocks_RaEx.CHEESE_BLOCK);
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, StepBlockRegistry.CHEESE_STEP, Ingredient.ofItems(Blocks_RaEx.CHEESE_SLABS))
+                .criterion(hasItem(Blocks_RaEx.CHEESE_SLABS), conditionsFromItem(Blocks_RaEx.CHEESE_SLABS))
+                .offerTo(exporter, new Identifier(getRecipeName(StepBlockRegistry.CHEESE_STEP)));
+
+        // Crystal
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.MOSSY_CRYSTAL, 5)
+                .pattern("SAS")
+                .pattern("ABA")
+                .pattern("SAS")
+                .input('B', Blocks_RaEx.MOSSY_CRYSTAL)
+                .input('A', Items.MOSS_BLOCK)
+                .input('S', Items.AMETHYST_SHARD)
+                .criterion(hasItem(Blocks_RaEx.MOSSY_CRYSTAL), conditionsFromItem(Blocks_RaEx.MOSSY_CRYSTAL))
+                .criterion(hasItem(Items.MOSS_BLOCK), conditionsFromItem(Items.MOSS_BLOCK))
+                .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.MOSSY_CRYSTAL)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.ICE_CRYSTAL, 5)
+                .pattern("SAS")
+                .pattern("ABA")
+                .pattern("SAS")
+                .input('B', Blocks_RaEx.ICE_CRYSTAL)
+                .input('A', Items.ICE)
+                .input('S', Items.AMETHYST_SHARD)
+                .criterion(hasItem(Blocks_RaEx.ICE_CRYSTAL), conditionsFromItem(Blocks_RaEx.ICE_CRYSTAL))
+                .criterion(hasItem(Items.ICE), conditionsFromItem(Items.ICE))
+                .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.ICE_CRYSTAL)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.SAND_CRYSTAL, 5)
+                .pattern("SAS")
+                .pattern("ABA")
+                .pattern("SAS")
+                .input('B', Blocks_RaEx.SAND_CRYSTAL)
+                .input('A', Items.SAND)
+                .input('S', Items.AMETHYST_SHARD)
+                .criterion(hasItem(Blocks_RaEx.SAND_CRYSTAL), conditionsFromItem(Blocks_RaEx.SAND_CRYSTAL))
+                .criterion(hasItem(Items.SAND), conditionsFromItem(Items.SAND))
+                .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.SAND_CRYSTAL)));
 
         // Burned Wood
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.BURNED_WOOD, 3)
+                .input(Blocks_RaEx.BURNED_LOG, 4)
+                .criterion(hasItem(Blocks_RaEx.BURNED_LOG), conditionsFromItem(Blocks_RaEx.BURNED_LOG))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.BURNED_WOOD)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.STRIPPED_BURNED_WOOD, 3)
+                .input(Blocks_RaEx.STRIPPED_BURNED_LOG, 4)
+                .criterion(hasItem(Blocks_RaEx.STRIPPED_BURNED_LOG), conditionsFromItem(Blocks_RaEx.STRIPPED_BURNED_LOG))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.STRIPPED_BURNED_WOOD)));
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.BURNED_SLABS, Ingredient.ofItems(Blocks_RaEx.BURNED_PLANKS))
                 .criterion(hasItem(Blocks_RaEx.BURNED_PLANKS), conditionsFromItem(Blocks_RaEx.BURNED_PLANKS))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.BURNED_SLABS)));
@@ -82,6 +147,39 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks_RaEx.BURNED_PLANKS), conditionsFromItem(Blocks_RaEx.BURNED_PLANKS))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.BURNED_PRESSURE_PLATE)));
         offerSingleOutputShapelessRecipe(exporter, Blocks_RaEx.BURNED_BUTTON, Blocks_RaEx.BURNED_PLANKS, "");
+
+        // PurPur Wood
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.PURPUR_WOOD, 3)
+                .input(Blocks_RaEx.PURPUR_LOG, 4)
+                .criterion(hasItem(Blocks_RaEx.PURPUR_LOG), conditionsFromItem(Blocks_RaEx.PURPUR_LOG))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_WOOD)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.STRIPPED_PURPUR_WOOD, 3)
+                .input(Blocks_RaEx.STRIPPED_PURPUR_LOG, 4)
+                .criterion(hasItem(Blocks_RaEx.STRIPPED_PURPUR_LOG), conditionsFromItem(Blocks_RaEx.STRIPPED_PURPUR_LOG))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.STRIPPED_PURPUR_WOOD)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.PURPUR_SLABS, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_SLABS)));
+        createStairsRecipe(Blocks_RaEx.PURPUR_STAIRS, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_STAIRS)));
+        createDoorRecipe(Blocks_RaEx.PURPUR_DOOR, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_DOOR)));
+        createTrapdoorRecipe(Blocks_RaEx.PURPUR_TRAPDOOR, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_TRAPDOOR)));
+        createFenceRecipe(Blocks_RaEx.PURPUR_FENCE, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_FENCE)));
+        createFenceGateRecipe(Blocks_RaEx.PURPUR_GATE, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_GATE)));
+        createPressurePlateRecipe(RecipeCategory.REDSTONE, Blocks_RaEx.PURPUR_PRESSURE_PLATE, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
+                .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_PRESSURE_PLATE)));
+        offerSingleOutputShapelessRecipe(exporter, Blocks_RaEx.PURPUR_BUTTON, Blocks_RaEx.PURPUR_PLANKS, "");
 
 
         //Food
@@ -141,17 +239,21 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.DIAMOND_PICKAXE), conditionsFromItem(Items.DIAMOND_PICKAXE))
                 .criterion(hasItem(Items.DIAMOND_SHOVEL), conditionsFromItem(Items.DIAMOND_SHOVEL))
                 .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.DIAMOND_PAXEL)));
-       SmithingTransformRecipeJsonBuilder.create(
-               Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-               Ingredient.ofItems(ToolsAndArmors_RaEx.DIAMOND_PAXEL),
-               Ingredient.ofItems(Items.NETHERITE_INGOT),
-               RecipeCategory.TOOLS, ToolsAndArmors_RaEx.NETHERITE_PAXEL)
-               .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-               .criterion(hasItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL), conditionsFromItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL))
-               .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-               .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.NETHERITE_PAXEL)));
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.ofItems(ToolsAndArmors_RaEx.DIAMOND_PAXEL),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.TOOLS, ToolsAndArmors_RaEx.NETHERITE_PAXEL)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL), conditionsFromItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL))
+                .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.NETHERITE_PAXEL)));
 
         // Misc
+        offerFoodCookingRecipe(exporter, "raw_ruby", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_RUBY, Items_RaEx.RUBY, 0.2f);
+        offerFoodCookingRecipe(exporter, "raw_aquamarin", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_AQUAMARIN, Items_RaEx.AQUAMARIN, 0.2f);
+        offerFoodCookingRecipe(exporter, "raw_topas", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_TOPAS, Items_RaEx.TOPAS, 0.2f);
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.COBBLESTONE, 1)
                 .input(Items_RaEx.PEBBLE, 3)
                 .criterion(hasItem(Items_RaEx.PEBBLE), conditionsFromItem(Items_RaEx.PEBBLE))
@@ -288,9 +390,139 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.OBSIDIAN_DOOR)));
 
         // Armor and Tools
-        offerSmithingTemplateCopyingRecipe(exporter, Items_RaEx.GEMS_UPGRADE_TEMPLATE, Items_RaEx.AQUAMARIN);
+        offerSmithingTemplateCopyingRecipe(exporter, Items_RaEx.GEMS_UPGRADE_TEMPLATE, Tags_RaEx.Items.GEMS);
+
+        /// Tools
+        //// Long Sword
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.WOODEN_LONGSWORD, 1)
+                .pattern("C")
+                .pattern("C")
+                .pattern("S")
+                .input('C', ItemTags.PLANKS)
+                .input('S', Items.WOODEN_SWORD)
+                .criterion(hasItem(Items.WOODEN_SWORD), conditionsFromItem(Items.WOODEN_SWORD))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.WOODEN_LONGSWORD)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.STONE_LONGSWORD, 1)
+                .pattern("C")
+                .pattern("C")
+                .pattern("S")
+                .input('C', ItemTags.STONE_TOOL_MATERIALS)
+                .input('S', Items.STONE_SWORD)
+                .criterion(hasItem(Items.STONE_SWORD), conditionsFromItem(Items.STONE_SWORD))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.STONE_LONGSWORD)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.GOLDEN_LONGSWORD, 1)
+                .pattern("C")
+                .pattern("C")
+                .pattern("S")
+                .input('C', Items.GOLD_INGOT)
+                .input('S', Items.GOLDEN_SWORD)
+                .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                .criterion(hasItem(Items.GOLDEN_SWORD), conditionsFromItem(Items.GOLDEN_SWORD))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.GOLDEN_LONGSWORD)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.IRON_LONGSWORD, 1)
+                .pattern("C")
+                .pattern("C")
+                .pattern("S")
+                .input('C', Items.IRON_INGOT)
+                .input('S', Items.IRON_SWORD)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.IRON_SWORD), conditionsFromItem(Items.IRON_SWORD))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.IRON_LONGSWORD)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.DIAMOND_LONGSWORD, 1)
+                .pattern("C")
+                .pattern("C")
+                .pattern("S")
+                .input('C', Items.DIAMOND)
+                .input('S', Items.DIAMOND_SWORD)
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+                .criterion(hasItem(Items.DIAMOND_SWORD), conditionsFromItem(Items.DIAMOND_SWORD))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.DIAMOND_LONGSWORD)));
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.ofItems(ToolsAndArmors_RaEx.DIAMOND_LONGSWORD),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.NETHERITE_LONGSWORD)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .criterion(hasItem(ToolsAndArmors_RaEx.DIAMOND_LONGSWORD), conditionsFromItem(ToolsAndArmors_RaEx.DIAMOND_LONGSWORD))
+                .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.NETHERITE_LONGSWORD)));
+
+        //// Copper
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_AXE, 1)
+                .pattern("CC")
+                .pattern("CS")
+                .pattern(" S")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_AXE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_SHOVEL, 1)
+                .pattern("C")
+                .pattern("S")
+                .pattern("S")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_SHOVEL)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_PICKAXE, 1)
+                .pattern("CCC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_PICKAXE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_HOE, 1)
+                .pattern("CC")
+                .pattern(" S")
+                .pattern(" S")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_HOE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_SWORD, 1)
+                .pattern("C")
+                .pattern("C")
+                .pattern("S")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_SWORD)));
 
         /// Armor
+        //// Copper
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_HELMET, 1)
+                .pattern("CCC")
+                .pattern("C C")
+                .input('C', Items.COPPER_INGOT)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_HELMET)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_CHESTPLATE, 1)
+                .pattern("C C")
+                .pattern("CCC")
+                .pattern("CCC")
+                .input('C', Items.COPPER_INGOT)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_CHESTPLATE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_LEGGINGS, 1)
+                .pattern("CCC")
+                .pattern("C C")
+                .pattern("C C")
+                .input('C', Items.COPPER_INGOT)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_LEGGINGS)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_BOOTS, 1)
+                .pattern("C C")
+                .pattern("C C")
+                .input('C', Items.COPPER_INGOT)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_BOOTS)));
+
         //// Aquamarin
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items_RaEx.GEMS_UPGRADE_TEMPLATE),

@@ -23,6 +23,7 @@ public class ModelProvider_RaEx extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         BlockStateModelGenerator.BlockTexturePool burnedWoodPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks_RaEx.BURNED_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool purpurWoodPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks_RaEx.PURPUR_PLANKS);
         BlockStateModelGenerator.BlockTexturePool cheesePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks_RaEx.CHEESE_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.SOUL_ORE);
@@ -39,7 +40,21 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         cheesePool.slab(Blocks_RaEx.CHEESE_SLABS);
         cheesePool.wall(Blocks_RaEx.CHEESE_WALLS);
 
-        // Wood
+        // Trees
+        /// PurPur Tree
+        blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.PURPUR_LEAVES);
+        blockStateModelGenerator.registerLog(Blocks_RaEx.PURPUR_LOG).log(Blocks_RaEx.PURPUR_LOG).wood(Blocks_RaEx.PURPUR_WOOD);
+        blockStateModelGenerator.registerFlowerPotPlant(Blocks_RaEx.PURPUR_SAPLING, Blocks_RaEx.POTTED_PURPUR_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerLog(Blocks_RaEx.STRIPPED_PURPUR_LOG).log(Blocks_RaEx.STRIPPED_PURPUR_LOG).wood(Blocks_RaEx.STRIPPED_PURPUR_WOOD);
+        purpurWoodPool.fence(Blocks_RaEx.PURPUR_FENCE);
+        purpurWoodPool.fenceGate(Blocks_RaEx.PURPUR_GATE);
+        purpurWoodPool.stairs(Blocks_RaEx.PURPUR_STAIRS);
+        purpurWoodPool.slab(Blocks_RaEx.PURPUR_SLABS);
+        purpurWoodPool.button(Blocks_RaEx.PURPUR_BUTTON);
+        purpurWoodPool.pressurePlate(Blocks_RaEx.PURPUR_PRESSURE_PLATE);
+        blockStateModelGenerator.registerDoor(Blocks_RaEx.PURPUR_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(Blocks_RaEx.PURPUR_TRAPDOOR);
+
         /// Burned Tree
         blockStateModelGenerator.registerLog(Blocks_RaEx.BURNED_LOG).log(Blocks_RaEx.BURNED_LOG).wood(Blocks_RaEx.BURNED_WOOD);
         blockStateModelGenerator.registerLog(Blocks_RaEx.STRIPPED_BURNED_LOG).log(Blocks_RaEx.STRIPPED_BURNED_LOG).wood(Blocks_RaEx.STRIPPED_BURNED_WOOD);
@@ -56,6 +71,10 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         // Misc
         blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.CHARCOAL_BLOCK);
         blockStateModelGenerator.registerCooker(Blocks_RaEx.GRINDER, TexturedModel.ORIENTABLE);
+
+        blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.MOSSY_CRYSTAL);
+        blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.ICE_CRYSTAL);
+        blockStateModelGenerator.registerSimpleCubeAll(Blocks_RaEx.SAND_CRYSTAL);
 
         // Obsidian
         blockStateModelGenerator.registerGlassPane(Blocks_RaEx.OBSIDIAN_GLASS, Blocks_RaEx.OBSIDIAN_GLASS_PANE);
@@ -81,10 +100,15 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         itemModelGenerator.register(ToolsAndArmors_RaEx.DIAMOND_PAXEL, Models.HANDHELD);
         itemModelGenerator.register(ToolsAndArmors_RaEx.NETHERITE_PAXEL, Models.HANDHELD);
 
+        itemModelGenerator.register(ToolsAndArmors_RaEx.TOY_HAMMER, Models.HANDHELD);
+        itemModelGenerator.register(Items_RaEx.ESCAPE_POTION, Models.GENERATED);
+        itemModelGenerator.register(ToolsAndArmors_RaEx.ESCAPE_ROPE, Models.GENERATED);
+
         itemModelGenerator.register(Items_RaEx.SOUL, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.PEBBLE, Models.GENERATED);
 
         itemModelGenerator.register(Items_RaEx.DUK_TAPE, Models.GENERATED);
+        itemModelGenerator.register(Items_RaEx.ROOMBA_ITEM, Models.GENERATED);
 
         itemModelGenerator.register(Items_RaEx.EMPTY_SODA_CAN, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.RED_SODA_CAN, Models.GENERATED);
@@ -109,11 +133,22 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         itemModelGenerator.register(Items_RaEx.CHEESE, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.CORN, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.TOMATO, Models.GENERATED);
+        itemModelGenerator.register(Items_RaEx.END_BARRY, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.RAW_PIZZA, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.PIZZA, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.DOUGH, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.FLOUR, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.POPCORN, Models.GENERATED);
+
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_BOOTS);
+        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_SWORD, Models.HANDHELD);
 
         itemModelGenerator.register(Items_RaEx.GEMS_UPGRADE_TEMPLATE, Models.GENERATED);
 

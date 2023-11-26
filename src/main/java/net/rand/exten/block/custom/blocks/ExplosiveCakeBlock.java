@@ -1,6 +1,8 @@
 package net.rand.exten.block.custom.blocks;
 
 import net.minecraft.block.*;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.TntEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -13,7 +15,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-public class ExplosiveCakeBlock extends TntBlock {
+public class ExplosiveCakeBlock extends Block {
     private static final VoxelShape SHAPE = Block.createCuboidShape(1, 0, 1, 15, 8, 15);
 
     public ExplosiveCakeBlock(Settings settings) {
@@ -38,8 +40,16 @@ public class ExplosiveCakeBlock extends TntBlock {
             }
 
         } else {
+            if (!world.isClient) {
+                TntEntity tntEntity = new TntEntity(EntityType.TNT, world);
+                tntEntity.setInvisible(true);
+                tntEntity.setNoGravity(true);
+                tntEntity.setFuse(0);
+                tntEntity.setPos(pos.getX(), pos.getY(), pos.getZ());
+                world.spawnEntity(tntEntity);
 
-            primeTnt(world, pos);
+            }
+
             world.setBlockState(pos, Blocks.AIR.getDefaultState(), 11);
             Item item = itemStack.getItem();
 

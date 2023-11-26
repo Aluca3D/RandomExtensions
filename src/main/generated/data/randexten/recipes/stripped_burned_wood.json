@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "randexten:stripped_burned_log"
+    },
+    {
+      "item": "randexten:stripped_burned_log"
+    },
+    {
+      "item": "randexten:stripped_burned_log"
+    },
+    {
+      "item": "randexten:stripped_burned_log"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "randexten:stripped_burned_wood"
+  }
+}

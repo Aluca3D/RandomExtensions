@@ -18,7 +18,7 @@ import java.util.Random;
 
 public class LootBag_RaEx {
 
-    //LootBags
+    /**LootBags*/
     public static final Item CHEESE_LOOT_BAG = registerItem("cheese_loot_bag",
             new LootBag(new FabricItemSettings(), "item.randexten.cheese_loot_bag.tooltip") {
                 @Override
@@ -39,7 +39,7 @@ public class LootBag_RaEx {
                 protected void ItemList(PlayerEntity user, Random rItem) {
                     List<Item> givenList = Arrays.asList(
                             Items.COBBLESTONE, Items.STICK, Items.TORCH, Items.COBBLESTONE, Items.COAL,
-                            Items.OAK_PLANKS
+                            Items.OAK_PLANKS, Items_RaEx.ESCAPE_POTION, Items_RaEx.ESCAPE_POTION
                     );
 
                     Item randomItem = givenList.get(rItem.nextInt(givenList.size()));

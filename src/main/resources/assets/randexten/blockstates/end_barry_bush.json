@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "randexten:block/end_barry_bush_stage0"
+    },
+    "age=1": {
+      "model": "randexten:block/end_barry_bush_stage1"
+    },
+    "age=2": {
+      "model": "randexten:block/end_barry_bush_stage2"
+    },
+    "age=3": {
+      "model": "randexten:block/end_barry_bush_stage3"
+    }
+  }
+}

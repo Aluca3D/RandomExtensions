@@ -9,6 +9,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.Blocks_RaEx;
+import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.item.custom.LootBag_RaEx;
 
 public class ItemGroups_RaEx {
@@ -36,11 +37,27 @@ public class ItemGroups_RaEx {
                         entries.add(Items_RaEx.TOPAS);
                         entries.add(Blocks_RaEx.TOPAS_BLOCK);
 
-                        entries.add(Items_RaEx.GEMS_UPGRADE_TEMPLATE);
-
                         // Tools
                         /// Special
                         entries.add(ToolsAndArmors_RaEx.LEAVE_STAFF);
+                        entries.add(ToolsAndArmors_RaEx.TOY_HAMMER);
+                        entries.add(Items_RaEx.ESCAPE_POTION);
+                        entries.add(ToolsAndArmors_RaEx.ESCAPE_ROPE);
+
+                        /// LongSword
+                        entries.add(ToolsAndArmors_RaEx.WOODEN_LONGSWORD);
+                        entries.add(ToolsAndArmors_RaEx.STONE_LONGSWORD);
+                        entries.add(ToolsAndArmors_RaEx.IRON_LONGSWORD);
+                        entries.add(ToolsAndArmors_RaEx.GOLDEN_LONGSWORD);
+                        entries.add(ToolsAndArmors_RaEx.DIAMOND_LONGSWORD);
+                        entries.add(ToolsAndArmors_RaEx.NETHERITE_LONGSWORD);
+
+                        /// Copper
+                        entries.add(ToolsAndArmors_RaEx.COPPER_SHOVEL);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_PICKAXE);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_AXE);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_HOE);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_SWORD);
 
                         /// Paxel
                         entries.add(ToolsAndArmors_RaEx.WOODEN_PAXEL);
@@ -51,6 +68,14 @@ public class ItemGroups_RaEx {
                         entries.add(ToolsAndArmors_RaEx.NETHERITE_PAXEL);
 
                         // Armor
+                        /// Copper
+                        entries.add(ToolsAndArmors_RaEx.COPPER_HELMET);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_CHESTPLATE);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_LEGGINGS);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_BOOTS);
+
+                        entries.add(Items_RaEx.GEMS_UPGRADE_TEMPLATE);
+
                         /// Aquamarin
                         entries.add(ToolsAndArmors_RaEx.D_AQUAMARIN_HELMET);
                         entries.add(ToolsAndArmors_RaEx.D_AQUAMARIN_CHESTPLATE);
@@ -111,6 +136,8 @@ public class ItemGroups_RaEx {
                         entries.add(Items_RaEx.POPCORN);
 
                         /// Crops
+                        entries.add(Items_RaEx.END_BARRY);
+
                         entries.add(Items_RaEx.TOMATO_SEEDS);
                         entries.add(Items_RaEx.TOMATO);
 
@@ -125,7 +152,23 @@ public class ItemGroups_RaEx {
                         /// Flowers
                         entries.add(Blocks_RaEx.NIGHT_SHADE);
 
-                        // Wood
+                        // Tree
+                        entries.add(Blocks_RaEx.PURPUR_LOG);
+                        entries.add(Blocks_RaEx.PURPUR_WOOD);
+                        entries.add(Blocks_RaEx.PURPUR_LEAVES);
+                        entries.add(Blocks_RaEx.STRIPPED_PURPUR_LOG);
+                        entries.add(Blocks_RaEx.STRIPPED_PURPUR_WOOD);
+                        entries.add(Blocks_RaEx.PURPUR_PLANKS);
+                        entries.add(Blocks_RaEx.PURPUR_STAIRS);
+                        entries.add(Blocks_RaEx.PURPUR_SLABS);
+                        entries.add(Blocks_RaEx.PURPUR_FENCE);
+                        entries.add(Blocks_RaEx.PURPUR_GATE);
+                        entries.add(Blocks_RaEx.PURPUR_DOOR);
+                        entries.add(Blocks_RaEx.PURPUR_TRAPDOOR);
+                        entries.add(Blocks_RaEx.PURPUR_PRESSURE_PLATE);
+                        entries.add(Blocks_RaEx.PURPUR_BUTTON);
+                        entries.add(Blocks_RaEx.PURPUR_SAPLING);
+
                         /// Burned Tree
                         entries.add(Blocks_RaEx.BURNED_LOG);
                         entries.add(Blocks_RaEx.BURNED_WOOD);
@@ -149,8 +192,12 @@ public class ItemGroups_RaEx {
                         entries.add(Items_RaEx.BAMBOO_EXPLOSIVE_STRONG);
                         entries.add(Blocks_RaEx.GRINDER);
                         entries.add(Items_RaEx.PEBBLE);
-
                         entries.add(Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK);
+
+                        /// Crystal
+                        entries.add(Blocks_RaEx.MOSSY_CRYSTAL);
+                        entries.add(Blocks_RaEx.ICE_CRYSTAL);
+                        entries.add(Blocks_RaEx.SAND_CRYSTAL);
 
                         /// Obsidian
                         entries.add(Blocks_RaEx.OBSIDIAN_GLASS);
@@ -160,7 +207,11 @@ public class ItemGroups_RaEx {
                         entries.add(Blocks_RaEx.OBSIDIAN_TRAPDOOR);
 
                         /// Spawn Egg
+                        entries.add(Items_RaEx.ROOMBA_ITEM);
                         entries.add(Items_RaEx.NIGHTMARE_TV_SPAWN_EGG);
+
+                        /// Step Blocks
+                        entries.add(StepBlockRegistry.CHEESE_STEP);
 
                     }).build());
 

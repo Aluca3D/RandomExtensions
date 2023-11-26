@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "randexten:block/purpur_planks",
+    "side": "randexten:block/purpur_planks",
+    "top": "randexten:block/purpur_planks"
+  }
+}

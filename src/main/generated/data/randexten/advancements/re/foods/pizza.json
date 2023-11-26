@@ -1,7 +1,7 @@
 {
   "parent": "randexten:re/foods/raw_pizza",
   "criteria": {
-    "has_tomato": {
+    "has_eaten_pizza": {
       "conditions": {
         "item": {
           "items": [
@@ -30,7 +30,7 @@
   },
   "requirements": [
     [
-      "has_tomato"
+      "has_eaten_pizza"
     ]
   ],
   "rewards": {
