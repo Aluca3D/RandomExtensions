@@ -24,10 +24,6 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
         super(output);
     }
 
-    public static CraftingRecipeJsonBuilder createStepRecipe(RecipeCategory category, ItemConvertible output, Ingredient input) {
-        return ShapedRecipeJsonBuilder.create(category, output, 6).input(Character.valueOf('#'), input).pattern("###");
-    }
-
     @Override
     public void generate(RecipeExporter exporter) {
 

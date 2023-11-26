@@ -15,14 +15,17 @@ import net.rand.exten.block.CropBlocks_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
 import net.rand.exten.item.custom.food.Cheese;
 import net.rand.exten.item.custom.food.FoodComponents_RaEx;
-import net.rand.exten.item.custom.food.drinks.Soda;
+import net.rand.exten.item.custom.food.EscapePotion;
+import net.rand.exten.item.custom.food.Soda;
 import net.rand.exten.item.custom.items.projectile.BambooExplosiveItem;
 import net.rand.exten.item.custom.items.projectile.PebbleItem;
 import net.rand.exten.item.custom.items.projectile.StinkyCheeseItem;
 import net.rand.exten.item.custom.items.projectile.StrongBambooExplosiveItem;
 
 public class Items_RaEx {
-    /**Gems*/
+    /**
+     * Gems
+     */
     public static final Item AQUAMARIN = registerItem("aquamarin",
             new Item(new FabricItemSettings()));
     public static final Item RAW_AQUAMARIN = registerItem("raw_aquamarin",
@@ -38,20 +41,26 @@ public class Items_RaEx {
     public static final Item RAW_TOPAS = registerItem("raw_topas",
             new Item(new FabricItemSettings()));
 
-/**Souls*/
+    /**
+     * Souls
+     */
     public static final Item SOUL = registerItem("soul",
             new Item(new FabricItemSettings()));
 
- /**Crops*/
+    /**
+     * Crops
+     */
     public static final Item TOMATO_SEEDS = registerItem("tomato_seeds",
             new AliasedBlockItem(CropBlocks_RaEx.TOMATO_CROP, new FabricItemSettings()));
     public static final Item CORN_SEEDS = registerItem("corn_seeds",
             new AliasedBlockItem(CropBlocks_RaEx.CORN_CROP, new FabricItemSettings()));
 
     public static final Item END_BARRY = registerItem("end_barry",
-            new AliasedBlockItem(CropBlocks_RaEx.END_BARRY_BUSH ,new FabricItemSettings().food(FoodComponents_RaEx.END_BARRY)));
+            new AliasedBlockItem(CropBlocks_RaEx.END_BARRY_BUSH, new FabricItemSettings().food(FoodComponents_RaEx.END_BARRY)));
 
- /**Food*/
+    /**
+     * Food
+     */
     public static final Item SANDWICH = registerItem("sandwich",
             new Item(new FabricItemSettings().food(FoodComponents_RaEx.SANDWICH)));
     public static final Item CORN = registerItem("corn",
@@ -73,7 +82,15 @@ public class Items_RaEx {
     public static final Item POPCORN = registerItem("popcorn",
             new Item(new FabricItemSettings().food(FoodComponents_RaEx.POPCORN)));
 
- /**Drinks*/
+    /**
+     * Potions
+     */
+    public static final Item ESCAPE_POTION = registerItem("escape_potion",
+            new EscapePotion(new FabricItemSettings()));
+
+    /**
+     * Soda
+     */
     public static final Item EMPTY_SODA_CAN = registerItem("empty_soda_can",
             new Item(new FabricItemSettings().maxCount(16)));
     public static final Item GREEN_SODA_CAN = registerItem("green_soda_can",
@@ -87,11 +104,15 @@ public class Items_RaEx {
                     new StatusEffectInstance(StatusEffects.STRENGTH, 1200, 2),
                     new StatusEffectInstance(StatusEffects.RESISTANCE, 1200)));
 
-    /**Food Component*/
+    /**
+     * Food Component
+     */
     public static final Item FLOUR = registerItem("flour",
             new Item(new FabricItemSettings()));
 
- /**Misc*/
+    /**
+     * Misc
+     */
     public static final Item GEMS_UPGRADE_TEMPLATE = registerItem("gems_upgrade_template",
             new Item(new FabricItemSettings()));
 
@@ -106,7 +127,9 @@ public class Items_RaEx {
     public static final Item DUK_TAPE = registerItem("duk_tape",
             new Item(new FabricItemSettings()));
 
- /**Spawn Egg*/
+    /**
+     * Spawn Egg
+     */
     public static final Item NIGHTMARE_TV_SPAWN_EGG = registerItem("nightmare_tv_spawn_egg",
             new SpawnEggItem(Entities_RaEx.NIGHTMARE_TV, 0x000000, 0xFFFFFF, new FabricItemSettings()));
 

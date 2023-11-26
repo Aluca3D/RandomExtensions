@@ -99,6 +99,8 @@
   "item.randexten.duk_tape": "Duk Tape",
   "item.randexten.toy_hammer": "Toy Hammer",
 
+  "item.randexten.escape_rope": "Escape Rope",
+
   "block.randexten.grinder": "Grinder",
   "block.randexten.cheese_station": "Cheese Station",
   "item.randexten.stinky_cheese": "Stinky Cheese",
@@ -106,6 +108,7 @@
   "entity.minecraft.villager.cheese_maker": "Cheese Maker",
   "item.randexten.cheese": "Cheese",
   "item.randexten.bucket_cheese": "Cheese Bucket",
+  "item.randexten.escape_potion": "Escape Potion",
 
   "item.randexten.bamboo_explosive": "Bamboo Explosive",
   "item.randexten.bamboo_explosive.tooltip": "Goes Boom",
