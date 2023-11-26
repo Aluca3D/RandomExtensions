@@ -74,6 +74,24 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(Tags_RaEx.Items.LEGENDARY)
                 .add(ToolsAndArmors_RaEx.TOY_HAMMER)
                 .add(ToolsAndArmors_RaEx.LEAVE_STAFF)
+                .add(ToolsAndArmors_RaEx.ESCAPE_ROPE)
+        ;
+
+        getOrCreateTagBuilder(Tags_RaEx.Items.SWORD)
+                .add(Items.WOODEN_SWORD)
+                .add(Items.STONE_SWORD)
+                .add(Items.IRON_SWORD)
+                .add(Items.GOLDEN_SWORD)
+                .add(Items.DIAMOND_SWORD)
+                .add(Items.NETHERITE_SWORD)
+
+                .add(ToolsAndArmors_RaEx.WOODEN_LONGSWORD)
+                .add(ToolsAndArmors_RaEx.STONE_LONGSWORD)
+                .add(ToolsAndArmors_RaEx.IRON_LONGSWORD)
+                .add(ToolsAndArmors_RaEx.GOLDEN_LONGSWORD)
+                .add(ToolsAndArmors_RaEx.DIAMOND_LONGSWORD)
+                .add(ToolsAndArmors_RaEx.NETHERITE_LONGSWORD)
+
         ;
 
         getOrCreateTagBuilder(Tags_RaEx.Items.PROJECTILE)

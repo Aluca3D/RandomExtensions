@@ -29,6 +29,9 @@ public class Tags_RaEx {
         public static final TagKey<Item> LEGENDARY =
                 createTag("legendary");
 
+        public static final TagKey<Item> SWORD =
+                createTag("sword");
+
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, new Identifier(RandomExtensions.MOD_ID, name));
         }

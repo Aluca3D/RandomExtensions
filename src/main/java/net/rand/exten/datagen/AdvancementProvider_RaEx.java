@@ -560,6 +560,20 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .parent(mainRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/misc/roomba");
 
+        AdvancementEntry longSword = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.IRON_LONGSWORD),
+                        Text.literal("They are LONG"), Text.literal("he Sword Long"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        false, false, true))
+                .criterion("has_a_sword", InventoryChangedCriterion.Conditions.items(ItemPredicate.Builder.create().tag(Tags_RaEx.Items.SWORD)))
+                .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:wooden_longsword"))
+                        .addRecipe(new Identifier("randexten:stone_longsword"))
+                        .addRecipe(new Identifier("randexten:iron_longsword"))
+                        .addRecipe(new Identifier("randexten:golden_longsword"))
+                        .addRecipe(new Identifier("randexten:diamond_longsword")))
+                .parent(mainRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/long_sword");
+
         // Copper
         AdvancementEntry cooperArmor = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.COPPER_HELMET),
@@ -637,6 +651,16 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .rewards(AdvancementRewards.Builder.experience(400))
                 .parent(legendaryItemRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/toy_hammer");
+
+        AdvancementEntry escapeRope = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.ESCAPE_ROPE),
+                        Text.literal("Lets get aut of here"), Text.literal("Escape!"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.GOAL,
+                        true, true, true))
+                .criterion("has_escape_rope", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.ESCAPE_ROPE))
+                .rewards(AdvancementRewards.Builder.experience(400))
+                .parent(legendaryItemRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/escape_rope");
 
     }
 }

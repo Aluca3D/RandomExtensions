@@ -1,0 +1,47 @@
+{
+  "parent": "randexten:re/randexten",
+  "criteria": {
+    "has_a_sword": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "randexten:sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "he Sword Long"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:iron_longsword",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": false,
+    "title": {
+      "text": "They are LONG"
+    }
+  },
+  "requirements": [
+    [
+      "has_a_sword"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "randexten:wooden_longsword",
+      "randexten:stone_longsword",
+      "randexten:iron_longsword",
+      "randexten:golden_longsword",
+      "randexten:diamond_longsword"
+    ]
+  },
+  "sends_telemetry_event": true
+}
