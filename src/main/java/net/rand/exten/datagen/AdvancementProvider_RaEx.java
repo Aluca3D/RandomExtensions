@@ -76,6 +76,8 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         .addRecipe(new Identifier("randexten:cooper_chestplate"))
                         .addRecipe(new Identifier("randexten:cooper_leggings"))
                         .addRecipe(new Identifier("randexten:cooper_boots"))
+                        .addRecipe(new Identifier("randexten:copper_paxel"))
+                        .addRecipe(new Identifier("randexten:copper_longsword"))
                         .setExperience(20)
                 )
                 .parent(mainRoot)

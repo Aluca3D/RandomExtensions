@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "randexten:cooper_axe"
+    },
+    {
+      "item": "randexten:cooper_pickaxe"
+    },
+    {
+      "item": "randexten:cooper_shovel"
+    }
+  ],
+  "result": {
+    "item": "randexten:copper_paxel"
+  }
+}

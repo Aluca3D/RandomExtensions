@@ -47,6 +47,7 @@ public class ItemGroups_RaEx {
                         /// LongSword
                         entries.add(ToolsAndArmors_RaEx.WOODEN_LONGSWORD);
                         entries.add(ToolsAndArmors_RaEx.STONE_LONGSWORD);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_LONGSWORD);
                         entries.add(ToolsAndArmors_RaEx.IRON_LONGSWORD);
                         entries.add(ToolsAndArmors_RaEx.GOLDEN_LONGSWORD);
                         entries.add(ToolsAndArmors_RaEx.DIAMOND_LONGSWORD);
@@ -62,6 +63,7 @@ public class ItemGroups_RaEx {
                         /// Paxel
                         entries.add(ToolsAndArmors_RaEx.WOODEN_PAXEL);
                         entries.add(ToolsAndArmors_RaEx.STONE_PAXEL);
+                        entries.add(ToolsAndArmors_RaEx.COPPER_PAXEL);
                         entries.add(ToolsAndArmors_RaEx.IRON_PAXEL);
                         entries.add(ToolsAndArmors_RaEx.GOLDEN_PAXEL);
                         entries.add(ToolsAndArmors_RaEx.DIAMOND_PAXEL);

@@ -4,9 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.*;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
-import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -215,6 +213,14 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.STONE_PICKAXE), conditionsFromItem(Items.STONE_PICKAXE))
                 .criterion(hasItem(Items.STONE_SHOVEL), conditionsFromItem(Items.STONE_SHOVEL))
                 .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.STONE_PAXEL)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_PAXEL)
+                .input(ToolsAndArmors_RaEx.COPPER_AXE, 1)
+                .input(ToolsAndArmors_RaEx.COPPER_PICKAXE, 1)
+                .input(ToolsAndArmors_RaEx.COPPER_SHOVEL, 1)
+                .criterion(hasItem(ToolsAndArmors_RaEx.COPPER_AXE), conditionsFromItem(ToolsAndArmors_RaEx.COPPER_AXE))
+                .criterion(hasItem(ToolsAndArmors_RaEx.COPPER_PICKAXE), conditionsFromItem(ToolsAndArmors_RaEx.COPPER_PICKAXE))
+                .criterion(hasItem(ToolsAndArmors_RaEx.COPPER_SHOVEL), conditionsFromItem(ToolsAndArmors_RaEx.COPPER_SHOVEL))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_PAXEL)));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.IRON_PAXEL)
                 .input(Items.IRON_AXE, 1)
                 .input(Items.IRON_PICKAXE, 1)
@@ -410,6 +416,17 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .input('S', Items.STONE_SWORD)
                 .criterion(hasItem(Items.STONE_SWORD), conditionsFromItem(Items.STONE_SWORD))
                 .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.STONE_LONGSWORD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_LONGSWORD, 1)
+                .pattern("C")
+                .pattern("C")
+                .pattern("S")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', ToolsAndArmors_RaEx.COPPER_SWORD)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(ToolsAndArmors_RaEx.COPPER_SWORD), conditionsFromItem(ToolsAndArmors_RaEx.COPPER_SWORD))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_LONGSWORD)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.GOLDEN_LONGSWORD, 1)
                 .pattern("C")
                 .pattern("C")
