@@ -39,15 +39,15 @@ public class PlacedFeatures_RaEx {
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-70), YOffset.fixed(10))));
 
         register(context, AQUARAMIN_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeatures_RaEx.AQUARAMIN_ORE_KEY),
-                OrePlacement_RaEx.modifiersWithCount(5, // Veins per Chunk
+                OrePlacement_RaEx.modifiersWithCount(3, // Veins per Chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-70), YOffset.fixed(10))));
 
         register(context, RUBY_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeatures_RaEx.RUBY_ORE_KEY),
-                OrePlacement_RaEx.modifiersWithCount(5, // Veins per Chunk
+                OrePlacement_RaEx.modifiersWithCount(3, // Veins per Chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-70), YOffset.fixed(10))));
 
         register(context, TOPAS_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeatures_RaEx.TOPAS_ORE_KEY),
-                OrePlacement_RaEx.modifiersWithCount(5, // Veins per Chunk
+                OrePlacement_RaEx.modifiersWithCount(3, // Veins per Chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-70), YOffset.fixed(10))));
 
         //Flowers

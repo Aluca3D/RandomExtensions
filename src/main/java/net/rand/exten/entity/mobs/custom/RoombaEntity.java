@@ -179,7 +179,7 @@ public class RoombaEntity extends TameableEntity implements Mount{
                 float newSpeed = (float)this.getAttributeValue(EntityAttributes.GENERIC_MOVEMENT_SPEED);
 
                 if(MinecraftClient.getInstance().options.sprintKey.isPressed()) {
-                    newSpeed *= 2; // Change this to ~1.5 or so
+                    newSpeed *= 1.25f; // Change this to ~1.5 or so
                 }
 
                 this.setMovementSpeed(newSpeed);

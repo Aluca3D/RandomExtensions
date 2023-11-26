@@ -86,7 +86,7 @@ public class Items_RaEx {
      * Potions
      */
     public static final Item ESCAPE_POTION = registerItem("escape_potion",
-            new EscapePotion(new FabricItemSettings()));
+            new EscapePotion(new FabricItemSettings().maxDamage(16)));
 
     /**
      * Soda

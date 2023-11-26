@@ -38,7 +38,7 @@ public class EscapeRope extends Item {
             }
 
             if (!user.getAbilities().creativeMode) {
-                user.getItemCooldownManager().set(this, 6000);
+                user.getItemCooldownManager().set(this, 350);
                 itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
             }
             return TypedActionResult.success(itemStack, world.isClient());
