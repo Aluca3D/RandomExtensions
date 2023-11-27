@@ -280,6 +280,15 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.STONE), conditionsFromItem(Items.STONE))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.GRINDER)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.LAND_MINE, 3)
+                .pattern("RRR")
+                .pattern("RSR")
+                .input('S', Items.TNT)
+                .input('R', Items.IRON_INGOT)
+                .criterion(hasItem(Items.TNT), conditionsFromItem(Items.TNT))
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.LAND_MINE)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK, 1)
                 .pattern("S")
                 .pattern("C")
