@@ -39,7 +39,7 @@ public class ToyHammer extends ToolItem {
 
         if (target instanceof PlayerEntity player) {
             player.playSound(Sounds_RaEx.BOING, 2, 1);
-            target.setVelocity(f * i, g * i, h * i);
+            player.setVelocity(f * i, g * i, h * i);
 
         } else {
             target.playSound(Sounds_RaEx.BOING, 2, 1);
