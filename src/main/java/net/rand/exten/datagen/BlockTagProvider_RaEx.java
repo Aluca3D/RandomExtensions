@@ -43,6 +43,7 @@ public class BlockTagProvider_RaEx extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks_RaEx.MOSSY_CRYSTAL)
                 .add(Blocks_RaEx.ICE_CRYSTAL)
                 .add(Blocks_RaEx.SAND_CRYSTAL)
+                .add(Blocks_RaEx.LAND_MINE)
 
         ;
 
