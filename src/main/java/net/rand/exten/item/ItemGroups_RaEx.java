@@ -195,6 +195,7 @@ public class ItemGroups_RaEx {
                         entries.add(Blocks_RaEx.GRINDER);
                         entries.add(Items_RaEx.PEBBLE);
                         entries.add(Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK);
+                        entries.add(Blocks_RaEx.BARBED_WIRE);
                         entries.add(Blocks_RaEx.LAND_MINE);
 
                         /// Crystal

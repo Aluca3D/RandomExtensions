@@ -44,6 +44,7 @@ public class BlockTagProvider_RaEx extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks_RaEx.ICE_CRYSTAL)
                 .add(Blocks_RaEx.SAND_CRYSTAL)
                 .add(Blocks_RaEx.LAND_MINE)
+                .add(Blocks_RaEx.BARBED_WIRE)
 
         ;
 
@@ -112,6 +113,7 @@ public class BlockTagProvider_RaEx extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(Blocks_RaEx.AQUAMARIN_BLOCK)
+                .add(Blocks_RaEx.BARBED_WIRE)
 
         ;
 

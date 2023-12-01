@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "randexten:aquamarin_block"
+    "randexten:aquamarin_block",
+    "randexten:barbed_wire"
   ]
 }
