@@ -84,6 +84,7 @@ public class LootTableProvider_RaEx extends FabricBlockLootTableProvider {
         addDrop(Blocks_RaEx.SOUL_ORE);
         addDrop(Blocks_RaEx.GRINDER);
         addDrop(Blocks_RaEx.LAND_MINE);
+        addDrop(Blocks_RaEx.BARBED_WIRE);
 
         // Crystal
         addDrop(Blocks_RaEx.MOSSY_CRYSTAL);

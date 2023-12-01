@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "randexten:default_ice_sky_island",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1517846965,
+    "spacing": 47,
+    "separation": 23
+  }
+}

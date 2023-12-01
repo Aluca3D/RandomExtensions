@@ -1,0 +1,15 @@
+{
+  "name": "randexten:the_obelisk_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "randexten:the_obelisk",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}
