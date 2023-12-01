@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:iron_bars"
+    },
+    "S": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "AAA",
+    "SSS"
+  ],
+  "result": {
+    "count": 3,
+    "item": "randexten:barbed_wire"
+  },
+  "show_notification": true
+}

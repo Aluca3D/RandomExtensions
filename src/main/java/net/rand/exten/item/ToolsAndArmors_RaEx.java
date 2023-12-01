@@ -28,6 +28,8 @@ public class ToolsAndArmors_RaEx {
             new LongSwordItem(ToolMaterials.WOOD,3, -2.4f,new FabricItemSettings()));
     public static final Item STONE_LONGSWORD = registerItem("stone_longsword",
             new LongSwordItem(ToolMaterials.STONE,3, -2.4f,new FabricItemSettings()));
+    public static final Item COPPER_LONGSWORD = registerItem("copper_longsword",
+            new LongSwordItem(ToolMaterial_RaEx.COPPER,3, -2.4f,new FabricItemSettings()));
     public static final Item IRON_LONGSWORD = registerItem("iron_longsword",
             new LongSwordItem(ToolMaterials.IRON,3, -2.4f,new FabricItemSettings()));
     public static final Item GOLDEN_LONGSWORD = registerItem("golden_longsword",
@@ -44,6 +46,8 @@ public class ToolsAndArmors_RaEx {
             new PaxelItem(ToolMaterials.STONE, 6, -3f, new FabricItemSettings()));
     public static final Item IRON_PAXEL = registerItem("iron_paxel",
             new PaxelItem(ToolMaterials.IRON, 6, -3f, new FabricItemSettings()));
+    public static final Item COPPER_PAXEL = registerItem("copper_paxel",
+            new PaxelItem(ToolMaterial_RaEx.COPPER, 6, -3f, new FabricItemSettings()));
     public static final Item GOLDEN_PAXEL = registerItem("golden_paxel",
             new PaxelItem(ToolMaterials.GOLD, 4, -3f, new FabricItemSettings()));
     public static final Item DIAMOND_PAXEL = registerItem("diamond_paxel",

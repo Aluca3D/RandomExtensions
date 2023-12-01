@@ -18,6 +18,8 @@
     "randexten:cheese_block",
     "randexten:mossy_crystal",
     "randexten:ice_crystal",
-    "randexten:sand_crystal"
+    "randexten:sand_crystal",
+    "randexten:land_mine",
+    "randexten:barbed_wire"
   ]
 }

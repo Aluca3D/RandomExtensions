@@ -47,6 +47,8 @@ public class Client_RaEx implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.PURPUR_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.POTTED_PURPUR_SAPLING, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks_RaEx.BARBED_WIRE, RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(CropBlocks_RaEx.END_BARRY_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(CropBlocks_RaEx.TOMATO_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(CropBlocks_RaEx.CORN_CROP, RenderLayer.getCutout());

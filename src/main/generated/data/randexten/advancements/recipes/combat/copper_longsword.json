@@ -1,24 +1,24 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ender_pearl": {
+    "has_cooper_sword": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:ender_pearl"
+              "randexten:cooper_sword"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_potion": {
+    "has_copper_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:potion"
+              "minecraft:copper_ingot"
             ]
           }
         ]
@@ -27,7 +27,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:escape_potion"
+        "recipe": "minecraft:copper_longsword"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -35,13 +35,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_ender_pearl",
-      "has_potion"
+      "has_copper_ingot",
+      "has_cooper_sword"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:escape_potion"
+      "minecraft:copper_longsword"
     ]
   },
   "sends_telemetry_event": false

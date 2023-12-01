@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 
 public enum ToolMaterial_RaEx implements ToolMaterial {
     /**Copper*/
-    COPPER(3, 230, 4.0F, 2.0f, 12,
+    COPPER(3, 180, 4.0F, 2.0f, 12,
             () -> Ingredient.ofItems(Items.COPPER_INGOT)),
 
     ;

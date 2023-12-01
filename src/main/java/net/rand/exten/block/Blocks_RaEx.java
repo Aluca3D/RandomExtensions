@@ -14,9 +14,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.World;
 import net.rand.exten.RandomExtensions;
-import net.rand.exten.block.custom.blocks.ExplosiveCakeBlock;
-import net.rand.exten.block.custom.blocks.Grinder;
-import net.rand.exten.block.custom.blocks.SoulOre;
+import net.rand.exten.block.custom.blocks.*;
 import net.rand.exten.block.custom.blocks.tree.PurPurTreeBlock;
 import net.rand.exten.world.gen.tree.BurnedTreeSaplingGenerator;
 import net.rand.exten.world.gen.tree.PurPurTreeGenerator;
@@ -64,9 +62,13 @@ public class Blocks_RaEx {
 
     public static final Block EXPLOSIVE_CAKE_BLOCK = registerBlock("explosive_cake_block",
             new ExplosiveCakeBlock(FabricBlockSettings.copyOf(Blocks.TNT)));
-
+    public static final Block LAND_MINE = registerBlock("land_mine",
+            new LandMine(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
     public static final Block GRINDER = registerBlock("grinder",
             new Grinder(FabricBlockSettings.copyOf(Blocks.STONE)));
+
+    public static final Block BARBED_WIRE = registerBlock("barbed_wire",
+            new BarbedWire(FabricBlockSettings.copyOf(Blocks.COBWEB)));
 
     public static final Block FAKE_LEAVES = registerBlockWithoutItem("fake_leaves",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).breakInstantly().dropsNothing()) {

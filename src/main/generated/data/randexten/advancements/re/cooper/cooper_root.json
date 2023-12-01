@@ -47,7 +47,9 @@
       "randexten:cooper_helmet",
       "randexten:cooper_chestplate",
       "randexten:cooper_leggings",
-      "randexten:cooper_boots"
+      "randexten:cooper_boots",
+      "randexten:copper_paxel",
+      "randexten:copper_longsword"
     ]
   },
   "sends_telemetry_event": true

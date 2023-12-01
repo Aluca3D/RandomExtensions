@@ -64,9 +64,9 @@ public class ConfiguredFeatures_RaEx {
 
         //Ores
         register(context, SOUL_ORE_KEY, Feature.ORE, new OreFeatureConfig(soulOres, 4));
-        register(context, AQUARAMIN_ORE_KEY, Feature.ORE, new OreFeatureConfig(aquamarinOres, 5));
-        register(context, RUBY_ORE_KEY, Feature.ORE, new OreFeatureConfig(rubyOres, 5));
-        register(context, TOPAS_ORE_KEY, Feature.ORE, new OreFeatureConfig(topasOres, 5));
+        register(context, AQUARAMIN_ORE_KEY, Feature.ORE, new OreFeatureConfig(aquamarinOres, 2));
+        register(context, RUBY_ORE_KEY, Feature.ORE, new OreFeatureConfig(rubyOres, 2));
+        register(context, TOPAS_ORE_KEY, Feature.ORE, new OreFeatureConfig(topasOres, 2));
 
         //Flowers
         register(context, NIGHT_SHADE_KEY, Feature.FLOWER, new RandomPatchFeatureConfig(16, 4, 2, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
@@ -87,7 +87,7 @@ public class ConfiguredFeatures_RaEx {
 
         register(context, LARGE_BURNED_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(Blocks_RaEx.BURNED_LOG),
-                new GiantTrunkPlacer(13, 2, 14),
+                new GiantTrunkPlacer(7, 2, 9),
                 BlockStateProvider.of(Blocks.AIR),
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
                 new TwoLayersFeatureSize(1, 0, 2)).build()
@@ -104,10 +104,10 @@ public class ConfiguredFeatures_RaEx {
 
         register(context, LARGE_PURPUR_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(Blocks_RaEx.PURPUR_LOG),
-                new GiantTrunkPlacer(16, 4, 13),
+                new GiantTrunkPlacer(8, 4, 9),
                 BlockStateProvider.of(Blocks_RaEx.PURPUR_LEAVES),
                 new AcaciaFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0)),
-                new TwoLayersFeatureSize(2, 0, 2))
+                new TwoLayersFeatureSize(4, 2, 3))
                 .ignoreVines().dirtProvider(BlockStateProvider.of(Blocks.END_STONE)).build()
         );
 

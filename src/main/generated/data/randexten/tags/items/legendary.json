@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "randexten:toy_hammer",
-    "randexten:leave_staff"
+    "randexten:leave_staff",
+    "randexten:escape_rope"
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "is_on=false": {
+      "model": "randexten:block/land_mine"
+    },
+    "is_on=true": {
+      "model": "randexten:block/land_mine_on"
+    }
+  }
+}

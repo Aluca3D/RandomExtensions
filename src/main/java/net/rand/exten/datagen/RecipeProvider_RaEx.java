@@ -4,9 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.*;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
-import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -33,15 +31,25 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .pattern("IDI")
                 .input('B', Items.BLACK_CONCRETE)
                 .input('O', Items.OBSERVER)
-                .input('H', Items.HEART_OF_THE_SEA)
+                .input('H', Items_RaEx.SOUL)
                 .input('I', Items.IRON_INGOT)
                 .input('D', Items.DIAMOND)
                 .criterion(hasItem(Items.BLACK_CONCRETE), conditionsFromItem(Items.BLACK_CONCRETE))
                 .criterion(hasItem(Items.OBSERVER), conditionsFromItem(Items.OBSERVER))
-                .criterion(hasItem(Items.HEART_OF_THE_SEA), conditionsFromItem(Items.HEART_OF_THE_SEA))
+                .criterion(hasItem(Items_RaEx.SOUL), conditionsFromItem(Items_RaEx.SOUL))
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
                 .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.ROOMBA_ITEM)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks_RaEx.BARBED_WIRE, 3)
+                .pattern("SSS")
+                .pattern("AAA")
+                .pattern("SSS")
+                .input('A', Items.IRON_BARS)
+                .input('S', Items.IRON_NUGGET)
+                .criterion(hasItem(Items.IRON_BARS), conditionsFromItem(Items.IRON_BARS))
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.BARBED_WIRE)));
 
         // Gem Block
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, Items_RaEx.AQUAMARIN, RecipeCategory.DECORATIONS,
@@ -215,6 +223,14 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.STONE_PICKAXE), conditionsFromItem(Items.STONE_PICKAXE))
                 .criterion(hasItem(Items.STONE_SHOVEL), conditionsFromItem(Items.STONE_SHOVEL))
                 .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.STONE_PAXEL)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_PAXEL)
+                .input(ToolsAndArmors_RaEx.COPPER_AXE, 1)
+                .input(ToolsAndArmors_RaEx.COPPER_PICKAXE, 1)
+                .input(ToolsAndArmors_RaEx.COPPER_SHOVEL, 1)
+                .criterion(hasItem(ToolsAndArmors_RaEx.COPPER_AXE), conditionsFromItem(ToolsAndArmors_RaEx.COPPER_AXE))
+                .criterion(hasItem(ToolsAndArmors_RaEx.COPPER_PICKAXE), conditionsFromItem(ToolsAndArmors_RaEx.COPPER_PICKAXE))
+                .criterion(hasItem(ToolsAndArmors_RaEx.COPPER_SHOVEL), conditionsFromItem(ToolsAndArmors_RaEx.COPPER_SHOVEL))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_PAXEL)));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.IRON_PAXEL)
                 .input(Items.IRON_AXE, 1)
                 .input(Items.IRON_PICKAXE, 1)
@@ -273,6 +289,15 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.GRINDSTONE), conditionsFromItem(Items.GRINDSTONE))
                 .criterion(hasItem(Items.STONE), conditionsFromItem(Items.STONE))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.GRINDER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.LAND_MINE, 3)
+                .pattern("RRR")
+                .pattern("RSR")
+                .input('S', Items.TNT)
+                .input('R', Items.IRON_INGOT)
+                .criterion(hasItem(Items.TNT), conditionsFromItem(Items.TNT))
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.LAND_MINE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK, 1)
                 .pattern("S")
@@ -410,6 +435,17 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .input('S', Items.STONE_SWORD)
                 .criterion(hasItem(Items.STONE_SWORD), conditionsFromItem(Items.STONE_SWORD))
                 .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.STONE_LONGSWORD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_LONGSWORD, 1)
+                .pattern("C")
+                .pattern("C")
+                .pattern("S")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', ToolsAndArmors_RaEx.COPPER_SWORD)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(ToolsAndArmors_RaEx.COPPER_SWORD), conditionsFromItem(ToolsAndArmors_RaEx.COPPER_SWORD))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_LONGSWORD)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.GOLDEN_LONGSWORD, 1)
                 .pattern("C")
                 .pattern("C")

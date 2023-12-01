@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cooper_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:cooper_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cooper_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:cooper_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cooper_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:cooper_shovel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:copper_paxel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cooper_axe",
+      "has_cooper_pickaxe",
+      "has_cooper_shovel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:copper_paxel"
+    ]
+  },
+  "sends_telemetry_event": false
+}
