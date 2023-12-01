@@ -1,7 +1,23 @@
 {
   "variants": {
-    "": {
-      "model": "randexten:block/barbed_wire"
+    "facing=north": {
+      "model": "randexten:block/barbed_wire",
+      "uvlock": true
+    },
+    "facing=south": {
+      "model": "randexten:block/barbed_wire",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=east": {
+      "model": "randexten:block/barbed_wire",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=west": {
+      "model": "randexten:block/barbed_wire",
+      "uvlock": true,
+      "y": 270
     }
   }
 }

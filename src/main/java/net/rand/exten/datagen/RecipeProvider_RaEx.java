@@ -31,15 +31,25 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .pattern("IDI")
                 .input('B', Items.BLACK_CONCRETE)
                 .input('O', Items.OBSERVER)
-                .input('H', Items.HEART_OF_THE_SEA)
+                .input('H', Items_RaEx.SOUL)
                 .input('I', Items.IRON_INGOT)
                 .input('D', Items.DIAMOND)
                 .criterion(hasItem(Items.BLACK_CONCRETE), conditionsFromItem(Items.BLACK_CONCRETE))
                 .criterion(hasItem(Items.OBSERVER), conditionsFromItem(Items.OBSERVER))
-                .criterion(hasItem(Items.HEART_OF_THE_SEA), conditionsFromItem(Items.HEART_OF_THE_SEA))
+                .criterion(hasItem(Items_RaEx.SOUL), conditionsFromItem(Items_RaEx.SOUL))
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
                 .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.ROOMBA_ITEM)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks_RaEx.BARBED_WIRE, 3)
+                .pattern("SSS")
+                .pattern("AAA")
+                .pattern("SSS")
+                .input('A', Items.IRON_BARS)
+                .input('S', Items.IRON_NUGGET)
+                .criterion(hasItem(Items.IRON_BARS), conditionsFromItem(Items.IRON_BARS))
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.BARBED_WIRE)));
 
         // Gem Block
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, Items_RaEx.AQUAMARIN, RecipeCategory.DECORATIONS,

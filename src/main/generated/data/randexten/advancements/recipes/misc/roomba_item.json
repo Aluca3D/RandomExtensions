@@ -25,18 +25,6 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_heart_of_the_sea": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:heart_of_the_sea"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_iron_ingot": {
       "conditions": {
         "items": [
@@ -61,6 +49,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_soul": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:soul"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "minecraft:roomba_item"
@@ -73,7 +73,7 @@
       "has_the_recipe",
       "has_black_concrete",
       "has_observer",
-      "has_heart_of_the_sea",
+      "has_soul",
       "has_iron_ingot",
       "has_diamond"
     ]
