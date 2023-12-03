@@ -1,13 +1,11 @@
 {
-  "parent": "randexten:re/projectile/explosive/bamboo_explosive",
+  "parent": "randexten:re/randexten",
   "criteria": {
-    "has_strong_bamboo_explosive": {
+    "has_a_sapling": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "randexten:bamboo_explosive_strong"
-            ]
+            "tag": "minecraft:saplings"
           }
         ]
       },
@@ -15,24 +13,24 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
+    "announce_to_chat": false,
     "background": "randexten:textures/block/cheese_block.png",
     "description": {
-      "text": "explosive_sound.mp4"
+      "text": ""
     },
     "frame": "task",
-    "hidden": false,
+    "hidden": true,
     "icon": {
-      "item": "randexten:bamboo_explosive_strong"
+      "item": "minecraft:oak_sapling"
     },
-    "show_toast": true,
+    "show_toast": false,
     "title": {
-      "text": "Even bigger BOOM"
+      "text": "New Trees"
     }
   },
   "requirements": [
     [
-      "has_strong_bamboo_explosive"
+      "has_a_sapling"
     ]
   ],
   "rewards": {

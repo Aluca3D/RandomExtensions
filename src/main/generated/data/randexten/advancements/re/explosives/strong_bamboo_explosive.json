@@ -1,12 +1,12 @@
 {
-  "parent": "randexten:re/projectile/explosive/root_explosives",
+  "parent": "randexten:re/explosives/bamboo_explosive",
   "criteria": {
-    "has_bamboo_explosive": {
+    "has_strong_bamboo_explosive": {
       "conditions": {
         "items": [
           {
             "items": [
-              "randexten:bamboo_explosive"
+              "randexten:bamboo_explosive_strong"
             ]
           }
         ]
@@ -18,29 +18,25 @@
     "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
     "description": {
-      "text": "Bamboo goes BOOM"
+      "text": "explosive_sound.mp4"
     },
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "icon": {
-      "item": "randexten:bamboo_explosive"
+      "item": "randexten:bamboo_explosive_strong"
     },
     "show_toast": true,
     "title": {
-      "text": "Hehe, BamBOOM"
+      "text": "Even bigger BOOM"
     }
   },
   "requirements": [
     [
-      "has_bamboo_explosive"
+      "has_strong_bamboo_explosive"
     ]
   ],
   "rewards": {
-    "experience": 20,
-    "recipes": [
-      "randexten:duk_tape",
-      "randexten:bamboo_explosive_strong"
-    ]
+    "experience": 20
   },
   "sends_telemetry_event": true
 }

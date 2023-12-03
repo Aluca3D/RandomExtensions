@@ -1,5 +1,5 @@
 {
-  "parent": "randexten:re/projectile/explosive/bamboo_explosive",
+  "parent": "randexten:re/explosives/bamboo_explosive",
   "criteria": {
     "has_duk_tape": {
       "conditions": {

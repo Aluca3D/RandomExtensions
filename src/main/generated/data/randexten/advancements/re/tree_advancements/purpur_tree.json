@@ -1,5 +1,5 @@
 {
-  "parent": "randexten:re/randexten",
+  "parent": "randexten:re/tree_advancements/burned_root",
   "criteria": {
     "has_purpur_log": {
       "conditions": {

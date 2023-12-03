@@ -1,0 +1,38 @@
+{
+  "parent": "randexten:re/randexten",
+  "criteria": {
+    "has_charcoal": {
+      "conditions": {
+        "recipe": "minecraft:charcoal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": ""
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:charcoal_block"
+    },
+    "show_toast": false,
+    "title": {
+      "text": "Miscellaneous stuff"
+    }
+  },
+  "requirements": [
+    [
+      "has_charcoal"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "randexten:roomba_item"
+    ]
+  },
+  "sends_telemetry_event": true
+}

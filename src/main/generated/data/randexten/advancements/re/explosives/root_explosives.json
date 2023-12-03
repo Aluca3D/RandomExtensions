@@ -1,12 +1,12 @@
 {
-  "parent": "randexten:re/misc/tree/burned_root",
+  "parent": "randexten:re/randexten",
   "criteria": {
-    "has_burned_sapling": {
+    "has_gunpowder": {
       "conditions": {
         "items": [
           {
             "items": [
-              "randexten:burned_tree_sapling"
+              "minecraft:gunpowder"
             ]
           }
         ]
@@ -18,34 +18,27 @@
     "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
     "description": {
-      "text": "Let it Burn"
+      "text": "Lets make some Bombs"
     },
     "frame": "task",
-    "hidden": false,
+    "hidden": true,
     "icon": {
-      "item": "randexten:burned_log"
+      "item": "minecraft:tnt"
     },
     "show_toast": true,
     "title": {
-      "text": "Its Burned"
+      "text": "BOOM"
     }
   },
   "requirements": [
     [
-      "has_burned_sapling"
+      "has_gunpowder"
     ]
   ],
   "rewards": {
     "experience": 20,
     "recipes": [
-      "randexten:burned_button_from_burned_planks",
-      "randexten:burned_door",
-      "randexten:burned_gate",
-      "randexten:burned_trapdoor",
-      "randexten:burned_pressure_plate",
-      "randexten:burned_fence",
-      "randexten:burned_slabs",
-      "randexten:burned_stairs"
+      "randexten:bamboo_explosive"
     ]
   },
   "sends_telemetry_event": true

@@ -1,22 +1,12 @@
 {
-  "parent": "randexten:re/randexten",
+  "parent": "randexten:re/explosives/root_explosives",
   "criteria": {
-    "has_a_sapling": {
-      "conditions": {
-        "items": [
-          {
-            "tag": "minecraft:saplings"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_furnace": {
+    "has_bamboo_explosive": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:furnace"
+              "randexten:bamboo_explosive"
             ]
           }
         ]
@@ -28,28 +18,29 @@
     "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
     "description": {
-      "text": "Burn a Sapling"
+      "text": "Bamboo goes BOOM"
     },
     "frame": "task",
     "hidden": true,
     "icon": {
-      "item": "randexten:burned_tree_sapling"
+      "item": "randexten:bamboo_explosive"
     },
     "show_toast": true,
     "title": {
-      "text": "In the Furnace with it"
+      "text": "Hehe, BamBOOM"
     }
   },
   "requirements": [
     [
-      "has_furnace"
-    ],
-    [
-      "has_a_sapling"
+      "has_bamboo_explosive"
     ]
   ],
   "rewards": {
-    "experience": 20
+    "experience": 20,
+    "recipes": [
+      "randexten:duk_tape",
+      "randexten:bamboo_explosive_strong"
+    ]
   },
   "sends_telemetry_event": true
 }

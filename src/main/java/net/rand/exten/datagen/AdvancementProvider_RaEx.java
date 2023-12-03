@@ -47,6 +47,17 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         .addRecipe(new Identifier("randexten:diamond_paxel"))
                 ).build(consumer, RandomExtensions.MOD_ID + ":re/randexten");
 
+        AdvancementEntry miscRoot = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.CHARCOAL_BLOCK),
+                        Text.literal("Miscellaneous stuff"), Text.literal(""),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        false, false, true))
+                .criterion("has_charcoal", RecipeUnlockedCriterion.create(new Identifier("minecraft:charcoal")))
+                .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:roomba_item"))
+                )
+                .parent(mainRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/misc_root");
+
         AdvancementEntry foodRoot = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Items_RaEx.CHEESE),
                         Text.literal("Many new Foods"), Text.literal("there are new things, like CHEESE"),
@@ -127,12 +138,12 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         Text.literal("BOOM"), Text.literal("Lets make some Bombs"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
                         true, true, true))
-                .criterion("has_bamboo_explosive", InventoryChangedCriterion.Conditions.items(Items.GUNPOWDER))
+                .criterion("has_gunpowder", InventoryChangedCriterion.Conditions.items(Items.GUNPOWDER))
                 .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:bamboo_explosive"))
                         .setExperience(20)
                 )
-                .parent(projectileRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/projectile/explosive/root_explosives");
+                .parent(mainRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/explosives/root_explosives");
 
         AdvancementEntry gemRoot = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.AQUAMARIN_ORE),
@@ -165,6 +176,16 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .parent(mainRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/legendary_root");
 
+        AdvancementEntry treeRoot = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Blocks.OAK_SAPLING),
+                        Text.literal("New Trees"), Text.literal(""),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        false, false, true))
+                .criterion("has_a_sapling", InventoryChangedCriterion.Conditions.items(ItemPredicate.Builder.create().tag(ItemTags.SAPLINGS)))
+                .rewards(AdvancementRewards.Builder.experience(20))
+                .parent(mainRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/tree_advancements/burned_root");
+
         AdvancementEntry burnedRoot = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.BURNED_TREE_SAPLING),
                         Text.literal("In the Furnace with it"), Text.literal("Burn a Sapling"),
@@ -173,8 +194,8 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .criterion("has_furnace", InventoryChangedCriterion.Conditions.items(Items.FURNACE))
                 .criterion("has_a_sapling", InventoryChangedCriterion.Conditions.items(ItemPredicate.Builder.create().tag(ItemTags.SAPLINGS)))
                 .rewards(AdvancementRewards.Builder.experience(20))
-                .parent(mainRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/tree/burned_root");
+                .parent(treeRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/tree_advancements/burned_root");
 
         /// Tree
         // Burned Tree
@@ -195,7 +216,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         .setExperience(20)
                 )
                 .parent(burnedRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/tree/burned_tree");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/tree_advancements/burned_tree");
 
         // PurPur Tree
         AdvancementEntry purpurTree = Advancement.Builder.create()
@@ -214,8 +235,8 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         .addRecipe(new Identifier("randexten:purpur_stairs"))
                         .setExperience(20)
                 )
-                .parent(mainRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/tree/purpur_tree");
+                .parent(treeRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/tree_advancements/purpur_tree");
 
         // Food
         AdvancementEntry sandwich = Advancement.Builder.create()
@@ -371,7 +392,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         .setExperience(20)
                 )
                 .parent(explosivesRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/projectile/explosive/bamboo_explosive");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/explosives/bamboo_explosive");
 
         AdvancementEntry dukTape = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Items_RaEx.DUK_TAPE),
@@ -391,7 +412,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .criterion("has_strong_bamboo_explosive", InventoryChangedCriterion.Conditions.items(Items_RaEx.BAMBOO_EXPLOSIVE_STRONG))
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(bambooExplosive)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/projectile/explosive/strong_bamboo_explosive");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/explosives/strong_bamboo_explosive");
 
         // Obsidian
         AdvancementEntry obsidianStuff = Advancement.Builder.create()
@@ -405,7 +426,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         .addRecipe(new Identifier("randexten:obsidian_glass_pane"))
                         .addRecipe(new Identifier("randexten:obsidian_trapdoor"))
                         .setExperience(20))
-                .parent(mainRoot)
+                .parent(miscRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/misc/obsidian_stuff");
 
         // Gems
@@ -549,7 +570,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         true, true, true))
                 .criterion("has_soul", InventoryChangedCriterion.Conditions.items(Items_RaEx.SOUL))
                 .rewards(AdvancementRewards.Builder.experience(20))
-                .parent(mainRoot)
+                .parent(miscRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/misc/soul_ore");
 
         AdvancementEntry roomba = Advancement.Builder.create()
@@ -559,7 +580,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         true, true, true))
                 .criterion("has_roomba", InventoryChangedCriterion.Conditions.items(Items_RaEx.ROOMBA_ITEM))
                 .rewards(AdvancementRewards.Builder.experience(200))
-                .parent(mainRoot)
+                .parent(miscRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/misc/roomba");
 
         AdvancementEntry longSword = Advancement.Builder.create()
@@ -573,7 +594,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         .addRecipe(new Identifier("randexten:iron_longsword"))
                         .addRecipe(new Identifier("randexten:golden_longsword"))
                         .addRecipe(new Identifier("randexten:diamond_longsword")))
-                .parent(mainRoot)
+                .parent(miscRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/misc/long_sword");
 
         // Copper
@@ -636,7 +657,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
         // Legendary
         AdvancementEntry leaveStaff = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.LEAVE_STAFF),
-                        Text.literal("Do you like tree jokes?"), Text.literal("Because they leaf me in tears"),
+                        Text.literal("Do you like Tree jokes?"), Text.literal("Because they leaf me in tears"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.GOAL,
                         true, true, true))
                 .criterion("has_leave_staff", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.LEAVE_STAFF))
