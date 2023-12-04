@@ -10,6 +10,7 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.CropBlocks_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
@@ -86,7 +87,7 @@ public class Items_RaEx {
      * Potions
      */
     public static final Item ESCAPE_POTION = registerItem("escape_potion",
-            new EscapePotion(new FabricItemSettings().maxDamage(16)));
+            new EscapePotion(new FabricItemSettings().maxDamage(16).rarity(Rarity.RARE)));
 
     /**
      * Soda
@@ -114,7 +115,7 @@ public class Items_RaEx {
      * Misc
      */
     public static final Item GEMS_UPGRADE_TEMPLATE = registerItem("gems_upgrade_template",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
 
     public static final Item BAMBOO_EXPLOSIVE = registerItem("bamboo_explosive",
             new BambooExplosiveItem(new FabricItemSettings()));
