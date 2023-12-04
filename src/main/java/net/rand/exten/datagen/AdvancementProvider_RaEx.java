@@ -24,13 +24,14 @@ import net.rand.exten.util.Tags_RaEx;
 import java.util.function.Consumer;
 
 public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
+    private final String background = "textures/block/cheese_block.png";
     public AdvancementProvider_RaEx(FabricDataOutput output) {
         super(output);
     }
 
     @Override
     public void generateAdvancement(Consumer<AdvancementEntry> consumer) {
-        String background = "textures/block/cheese_block.png";
+
         // Root
         AdvancementEntry mainRoot = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.CHEESE_BLOCK),
@@ -46,6 +47,8 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         .addRecipe(new Identifier("randexten:golden_paxel"))
                         .addRecipe(new Identifier("randexten:diamond_paxel"))
                 ).build(consumer, RandomExtensions.MOD_ID + ":re/randexten");
+
+        generateTreeAdvancement(consumer, mainRoot);
 
         AdvancementEntry miscRoot = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.CHARCOAL_BLOCK),
@@ -175,68 +178,6 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(mainRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/legendary_root");
-
-        AdvancementEntry treeRoot = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(Blocks.OAK_SAPLING),
-                        Text.literal("New Trees"), Text.literal(""),
-                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
-                        false, false, true))
-                .criterion("has_a_sapling", InventoryChangedCriterion.Conditions.items(ItemPredicate.Builder.create().tag(ItemTags.SAPLINGS)))
-                .rewards(AdvancementRewards.Builder.experience(20))
-                .parent(mainRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/tree_advancements/burned_root");
-
-        AdvancementEntry burnedRoot = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.BURNED_TREE_SAPLING),
-                        Text.literal("In the Furnace with it"), Text.literal("Burn a Sapling"),
-                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
-                        true, true, true))
-                .criterion("has_furnace", InventoryChangedCriterion.Conditions.items(Items.FURNACE))
-                .criterion("has_a_sapling", InventoryChangedCriterion.Conditions.items(ItemPredicate.Builder.create().tag(ItemTags.SAPLINGS)))
-                .rewards(AdvancementRewards.Builder.experience(20))
-                .parent(treeRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/tree_advancements/burned_root");
-
-        /// Tree
-        // Burned Tree
-        AdvancementEntry burnedTree = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.BURNED_LOG),
-                        Text.literal("Its Burned"), Text.literal("Let it Burn"),
-                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
-                        true, true, false))
-                .criterion("has_burned_sapling", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.BURNED_TREE_SAPLING))
-                .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:burned_button_from_burned_planks"))
-                        .addRecipe(new Identifier("randexten:burned_door"))
-                        .addRecipe(new Identifier("randexten:burned_gate"))
-                        .addRecipe(new Identifier("randexten:burned_trapdoor"))
-                        .addRecipe(new Identifier("randexten:burned_pressure_plate"))
-                        .addRecipe(new Identifier("randexten:burned_fence"))
-                        .addRecipe(new Identifier("randexten:burned_slabs"))
-                        .addRecipe(new Identifier("randexten:burned_stairs"))
-                        .setExperience(20)
-                )
-                .parent(burnedRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/tree_advancements/burned_tree");
-
-        // PurPur Tree
-        AdvancementEntry purpurTree = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.PURPUR_LOG),
-                        Text.literal("PurPur"), Text.literal("ColOR"),
-                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
-                        true, true, true))
-                .criterion("has_purpur_log", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.PURPUR_LOG))
-                .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:purpur_button_from_purpur_planks"))
-                        .addRecipe(new Identifier("randexten:purpur_door"))
-                        .addRecipe(new Identifier("randexten:purpur_gate"))
-                        .addRecipe(new Identifier("randexten:purpur_trapdoor"))
-                        .addRecipe(new Identifier("randexten:purpur_pressure_plate"))
-                        .addRecipe(new Identifier("randexten:purpur_fence"))
-                        .addRecipe(new Identifier("randexten:purpur_slabs"))
-                        .addRecipe(new Identifier("randexten:purpur_stairs"))
-                        .setExperience(20)
-                )
-                .parent(treeRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/tree_advancements/purpur_tree");
 
         // Food
         AdvancementEntry sandwich = Advancement.Builder.create()
@@ -684,6 +625,74 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .rewards(AdvancementRewards.Builder.experience(400))
                 .parent(legendaryItemRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/escape_rope");
+
+    }
+
+    // Todo do this for all
+    public void generateTreeAdvancement(Consumer<AdvancementEntry> consumer, AdvancementEntry mainRoot) {
+
+        AdvancementEntry treeRoot = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Blocks.OAK_SAPLING),
+                        Text.literal("New Trees"), Text.literal(""),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        false, false, true))
+                .criterion("has_a_sapling", InventoryChangedCriterion.Conditions.items(ItemPredicate.Builder.create().tag(ItemTags.SAPLINGS)))
+                .rewards(AdvancementRewards.Builder.experience(20))
+                .parent(mainRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/tree_advancements/burned_root");
+
+        AdvancementEntry burnedRoot = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.BURNED_TREE_SAPLING),
+                        Text.literal("In the Furnace with it"), Text.literal("Burn a Sapling"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_furnace", InventoryChangedCriterion.Conditions.items(Items.FURNACE))
+                .criterion("has_a_sapling", InventoryChangedCriterion.Conditions.items(ItemPredicate.Builder.create().tag(ItemTags.SAPLINGS)))
+                .rewards(AdvancementRewards.Builder.experience(20))
+                .parent(treeRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/tree_advancements/burned_root");
+
+
+        /// Tree
+        // Burned Tree
+        AdvancementEntry burnedTree = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.BURNED_LOG),
+                        Text.literal("Its Burned"), Text.literal("Let it Burn"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, false))
+                .criterion("has_burned_sapling", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.BURNED_TREE_SAPLING))
+                .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:burned_button_from_burned_planks"))
+                        .addRecipe(new Identifier("randexten:burned_door"))
+                        .addRecipe(new Identifier("randexten:burned_gate"))
+                        .addRecipe(new Identifier("randexten:burned_trapdoor"))
+                        .addRecipe(new Identifier("randexten:burned_pressure_plate"))
+                        .addRecipe(new Identifier("randexten:burned_fence"))
+                        .addRecipe(new Identifier("randexten:burned_slabs"))
+                        .addRecipe(new Identifier("randexten:burned_stairs"))
+                        .setExperience(20)
+                )
+                .parent(burnedRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/tree_advancements/burned_tree");
+
+        // PurPur Tree
+        AdvancementEntry purpurTree = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Blocks_RaEx.PURPUR_LOG),
+                        Text.literal("PurPur"), Text.literal("ColOR"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_purpur_log", InventoryChangedCriterion.Conditions.items(Blocks_RaEx.PURPUR_LOG))
+                .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:purpur_button_from_purpur_planks"))
+                        .addRecipe(new Identifier("randexten:purpur_door"))
+                        .addRecipe(new Identifier("randexten:purpur_gate"))
+                        .addRecipe(new Identifier("randexten:purpur_trapdoor"))
+                        .addRecipe(new Identifier("randexten:purpur_pressure_plate"))
+                        .addRecipe(new Identifier("randexten:purpur_fence"))
+                        .addRecipe(new Identifier("randexten:purpur_slabs"))
+                        .addRecipe(new Identifier("randexten:purpur_stairs"))
+                        .setExperience(20)
+                )
+                .parent(treeRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/tree_advancements/purpur_tree");
 
     }
 }
