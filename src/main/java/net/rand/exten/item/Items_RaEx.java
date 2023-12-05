@@ -125,7 +125,6 @@ public class Items_RaEx {
     public static final Item DUK_TAPE = registerItem("duk_tape",
             new Item(new FabricItemSettings()));
 
-    // Todo
     public static final Item SMOKE_BOMB = registerItem("smoke_bomb",
             new SmokeBombItem(new FabricItemSettings()));
 
