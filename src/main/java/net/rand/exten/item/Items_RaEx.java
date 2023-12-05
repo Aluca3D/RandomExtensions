@@ -18,10 +18,7 @@ import net.rand.exten.item.custom.food.Cheese;
 import net.rand.exten.item.custom.food.FoodComponents_RaEx;
 import net.rand.exten.item.custom.food.EscapePotion;
 import net.rand.exten.item.custom.food.Soda;
-import net.rand.exten.item.custom.items.projectile.BambooExplosiveItem;
-import net.rand.exten.item.custom.items.projectile.PebbleItem;
-import net.rand.exten.item.custom.items.projectile.StinkyCheeseItem;
-import net.rand.exten.item.custom.items.projectile.StrongBambooExplosiveItem;
+import net.rand.exten.item.custom.items.projectile.*;
 
 public class Items_RaEx {
     /**
@@ -127,6 +124,11 @@ public class Items_RaEx {
 
     public static final Item DUK_TAPE = registerItem("duk_tape",
             new Item(new FabricItemSettings()));
+
+    // Todo
+    public static final Item SMOKE_BOMB = registerItem("smoke_bomb",
+            new SmokeBombItem(new FabricItemSettings()));
+
 
     /**
      * Spawn Egg

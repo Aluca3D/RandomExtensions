@@ -59,6 +59,7 @@ public class Client_RaEx implements ClientModInitializer {
         EntityRendererRegistry.register(Entities_RaEx.STINKY_CHEESE_PROJECTILE, FlyingItemEntityRenderer::new);
         EntityRendererRegistry.register(Entities_RaEx.THROWN_BAMBOO_EXPLOSIVE_PROJECTILE, FlyingItemEntityRenderer::new);
         EntityRendererRegistry.register(Entities_RaEx.THROWN_STRONG_BAMBOO_EXPLOSIVE_PROJECTILE, FlyingItemEntityRenderer::new);
+        EntityRendererRegistry.register(Entities_RaEx.SMOKE_BOMB_PROJECTILE, FlyingItemEntityRenderer::new);
         EntityRendererRegistry.register(Entities_RaEx.LEAF_BULLED, FlyingItemEntityRenderer::new);
 
         EntityRendererRegistry.register(Entities_RaEx.NIGHTMARE_TV, NightmareTVRenderer::new);

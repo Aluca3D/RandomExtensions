@@ -16,7 +16,7 @@ public class CurseOfExploding extends Enchantment {
 
     @Override
     public void onUserDamaged(LivingEntity user, Entity attacker, int level) {
-        if (user.getHealth() <= 8) {
+        if (user.getHealth() <= 5) {
             if (!user.getWorld().isClient) {
 
                 TntEntity tntEntity = new TntEntity(EntityType.TNT, user.getWorld());
