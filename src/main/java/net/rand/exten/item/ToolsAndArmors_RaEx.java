@@ -5,6 +5,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.item.custom.ArmorItem_RaEx;
 import net.rand.exten.item.custom.ArmorMaterials_RaEx;
@@ -17,11 +18,11 @@ import net.rand.exten.item.custom.tools.*;
 public class ToolsAndArmors_RaEx {
     /**Special*/
     public static final Item LEAVE_STAFF = registerItem("leave_staff",
-            new LeaveStaff(new FabricItemSettings().maxCount(1).fireproof().maxDamage(240)));
+            new LeaveStaff(new FabricItemSettings().maxCount(1).fireproof().maxDamage(240).rarity(Rarity.EPIC)));
     public static final Item TOY_HAMMER = registerItem("toy_hammer",
-            new ToyHammer(ToolMaterials.WOOD,new FabricItemSettings().maxCount(1).maxDamage(960)));
+            new ToyHammer(ToolMaterials.WOOD,new FabricItemSettings().maxCount(1).maxDamage(960).rarity(Rarity.EPIC)));
     public static final Item ESCAPE_ROPE = registerItem("escape_rope",
-            new EscapeRope(new FabricItemSettings().maxCount(1).fireproof().maxDamage(64)));
+            new EscapeRope(new FabricItemSettings().maxCount(1).fireproof().maxDamage(64).rarity(Rarity.EPIC)));
 
     /**Long Sword*/
     public static final Item WOODEN_LONGSWORD = registerItem("wooden_longsword",

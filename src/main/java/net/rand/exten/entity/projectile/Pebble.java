@@ -3,6 +3,8 @@ package net.rand.exten.entity.projectile;
 import net.minecraft.entity.EntityStatuses;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.network.listener.ClientPlayPacketListener;
@@ -15,6 +17,7 @@ import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.World;
 import net.rand.exten.entity.Entities_RaEx;
 import net.rand.exten.item.Items_RaEx;
+import net.rand.exten.util.tools.Math_RaEx;
 
 public class Pebble extends ThrownItemEntity {
 
@@ -52,7 +55,13 @@ public class Pebble extends ThrownItemEntity {
     @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
         super.onEntityHit(entityHitResult);
-        entityHitResult.getEntity().damage(this.getDamageSources().thrown(this, this.getOwner()), 0.2f);
+        entityHitResult.getEntity().damage(this.getDamageSources().thrown(this, this.getOwner()), 0.8f);
+        Math_RaEx m = new Math_RaEx();
+        int rm = m.randomInt(25);
+
+        if (entityHitResult.getEntity() instanceof  LivingEntity livingEntity && rm == 1){
+            livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 40, 1, false, false));
+        }
     }
 
     @Override

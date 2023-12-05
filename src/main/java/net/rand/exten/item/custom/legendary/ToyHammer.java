@@ -1,18 +1,24 @@
 package net.rand.exten.item.custom.legendary;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.client.item.TooltipContext;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttribute;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.item.ToolItem;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.*;
+import net.minecraft.nbt.NbtElement;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.rand.exten.sound.Sounds_RaEx;
-import net.rand.exten.util.tools.Math_RaEx;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class ToyHammer extends ToolItem {
     public ToyHammer(ToolMaterial toolMaterial, Settings settings) {
@@ -25,27 +31,24 @@ public class ToyHammer extends ToolItem {
     }
 
     @Override
-    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        Math_RaEx m = new Math_RaEx();
-        int i = m.randomInt(3) + 1;
+    public boolean hasGlint(ItemStack stack) {
+        return false;
+    }
 
-        float yaw = attacker.getYaw();
-        float pitch = attacker.getPitch();
-        float roll = attacker.getRoll();
+    @Override
+    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+        if (!stack.hasEnchantments() && isEnchantable(stack)) {
+            stack.addEnchantment(Enchantments.KNOCKBACK, 10);
+            stack.addEnchantment(Enchantments.KNOCKBACK, 0);
+            stack.addHideFlag(ItemStack.TooltipSection.ENCHANTMENTS);
 
-        float f = -MathHelper.sin(yaw * ((float) Math.PI / 180)) * MathHelper.cos(pitch * ((float) Math.PI / 180));
-        float g = -MathHelper.sin((pitch + roll) * ((float) Math.PI / 180));
-        float h = MathHelper.cos(yaw * ((float) Math.PI / 180)) * MathHelper.cos(pitch * ((float) Math.PI / 180));
-
-        if (target instanceof PlayerEntity player) {
-            player.playSound(Sounds_RaEx.BOING, 2, 1);
-            player.setVelocity(f * i, g * i, h * i);
-
-        } else {
-            target.playSound(Sounds_RaEx.BOING, 2, 1);
-            target.setVelocity(f * i, g * i, h * i);
         }
+    }
 
+    @Override
+    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+
+        target.playSound(Sounds_RaEx.BOING, 2, 1);
         stack.damage(1, attacker, e -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
         return true;
     }

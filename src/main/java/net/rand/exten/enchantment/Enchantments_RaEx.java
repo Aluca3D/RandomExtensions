@@ -10,11 +10,15 @@ import net.rand.exten.RandomExtensions;
 import net.rand.exten.enchantment.enchantments.*;
 
 public class Enchantments_RaEx {
+    private static final EquipmentSlot[] ALL_ARMOR = new EquipmentSlot[]{EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET};
 
     public static final Enchantment POISONED_BLADE = register("poisoned_blade",
             new PoisonedBlade(Enchantment.Rarity.UNCOMMON,
                     EnchantmentTarget.WEAPON, EquipmentSlot.MAINHAND));
 
+    public static final Enchantment CURSE_OF_EXPLODING = register("curse_of_exploding",
+            new CurseOfExploding(Enchantment.Rarity.RARE,
+                    EnchantmentTarget.ARMOR, ALL_ARMOR));
 
     public static final Enchantment CURSE_OF_SELF_HARMING = register("curse_of_self_harming",
             new CurseOfSelfHarming(Enchantment.Rarity.RARE,

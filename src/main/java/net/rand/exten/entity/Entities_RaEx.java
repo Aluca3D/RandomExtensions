@@ -49,6 +49,11 @@ public class Entities_RaEx {
             FabricEntityTypeBuilder.<LeafBulled>create(SpawnGroup.MISC, LeafBulled::new)
                     .dimensions(EntityDimensions.fixed(0.5f, 0.5f)).build());
 
+    public static final EntityType<SmokeBomb> SMOKE_BOMB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(RandomExtensions.MOD_ID, "smoke_bomb_projectile"),
+            FabricEntityTypeBuilder.<SmokeBomb>create(SpawnGroup.MISC, SmokeBomb::new)
+                    .dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build());
+
     public static void registerEntityAttributes() {
         FabricDefaultAttributeRegistry.register(Entities_RaEx.NIGHTMARE_TV, NightmareTVEntity.createNightmareTVAttributes());
         FabricDefaultAttributeRegistry.register(Entities_RaEx.ROOMBA, RoombaEntity.createRoombaAttributes());
