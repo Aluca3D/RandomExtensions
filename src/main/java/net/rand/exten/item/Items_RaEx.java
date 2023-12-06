@@ -128,6 +128,10 @@ public class Items_RaEx {
     public static final Item SMOKE_BOMB = registerItem("smoke_bomb",
             new SmokeBombItem(new FabricItemSettings()));
 
+    //Todo
+    public static final Item NINE_V_BATTERY_ITEM = registerItem("nine_v_battery",
+            new NineVBatteryItem(new FabricItemSettings()));
+
 
     /**
      * Spawn Egg

@@ -106,6 +106,7 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         itemModelGenerator.register(ToolsAndArmors_RaEx.ESCAPE_ROPE, Models.GENERATED);
 
         itemModelGenerator.register(Items_RaEx.SMOKE_BOMB, Models.GENERATED);
+        itemModelGenerator.register(Items_RaEx.NINE_V_BATTERY_ITEM, Models.GENERATED);
 
         itemModelGenerator.register(Items_RaEx.SOUL, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.PEBBLE, Models.GENERATED);

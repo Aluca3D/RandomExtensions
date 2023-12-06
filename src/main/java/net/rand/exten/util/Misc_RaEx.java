@@ -14,10 +14,7 @@ import net.minecraft.util.Util;
 import net.minecraft.util.math.Position;
 import net.minecraft.world.World;
 import net.rand.exten.block.Blocks_RaEx;
-import net.rand.exten.entity.projectile.BambooExplosive;
-import net.rand.exten.entity.projectile.Pebble;
-import net.rand.exten.entity.projectile.StinkyCheese;
-import net.rand.exten.entity.projectile.StrongBambooExplosive;
+import net.rand.exten.entity.projectile.*;
 import net.rand.exten.item.Items_RaEx;
 
 public class Misc_RaEx {
@@ -76,6 +73,20 @@ public class Misc_RaEx {
         DispenserBlock.registerBehavior(Items_RaEx.PEBBLE, new ProjectileDispenserBehavior() {
             protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
                 return Util.make(new Pebble(world, position.getX(), position.getY(), position.getZ()), (entity) -> {
+                    entity.setItem(stack);
+                });
+            }
+        });
+        DispenserBlock.registerBehavior(Items_RaEx.SMOKE_BOMB, new ProjectileDispenserBehavior() {
+            protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
+                return Util.make(new SmokeBomb(world, position.getX(), position.getY(), position.getZ()), (entity) -> {
+                    entity.setItem(stack);
+                });
+            }
+        });
+        DispenserBlock.registerBehavior(Items_RaEx.NINE_V_BATTERY_ITEM, new ProjectileDispenserBehavior() {
+            protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
+                return Util.make(new NineVBattery(world, position.getX(), position.getY(), position.getZ()), (entity) -> {
                     entity.setItem(stack);
                 });
             }
