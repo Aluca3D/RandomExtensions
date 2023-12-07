@@ -52,6 +52,11 @@ public class Entities_RaEx {
     public static final EntityType<SmokeBomb> SMOKE_BOMB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(RandomExtensions.MOD_ID, "smoke_bomb_projectile"),
             FabricEntityTypeBuilder.<SmokeBomb>create(SpawnGroup.MISC, SmokeBomb::new)
+                    .dimensions(EntityDimensions.fixed(0.5f, 0.5f)).build());
+
+    public static final EntityType<NineVBattery> NINE_V_BATTERY = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(RandomExtensions.MOD_ID, "nine_v_battery"),
+            FabricEntityTypeBuilder.<NineVBattery>create(SpawnGroup.MISC, NineVBattery::new)
                     .dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build());
 
     public static void registerEntityAttributes() {
