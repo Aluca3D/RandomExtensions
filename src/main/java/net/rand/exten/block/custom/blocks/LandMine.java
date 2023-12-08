@@ -28,6 +28,9 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.explosion.Explosion;
 import net.rand.exten.block.custom.Properties_RaEx;
+import net.rand.exten.entity.Entities_RaEx;
+import net.rand.exten.entity.mobs.client.ExplosionEntityRenderer;
+import net.rand.exten.entity.mobs.custom.ExplosionEntity;
 import net.rand.exten.sound.Sounds_RaEx;
 import org.jetbrains.annotations.Nullable;
 
@@ -79,12 +82,10 @@ public class LandMine extends Block implements Waterloggable {
     }
 
     public void spawnExplosive(World world, BlockPos pos, Entity entity) {
-        TntEntity tntEntity = new TntEntity(EntityType.TNT, world);
-        tntEntity.setInvisible(true);
-        tntEntity.setNoGravity(true);
-        tntEntity.setFuse(0);
-        tntEntity.setPos(pos.getX(), pos.getY(), pos.getZ());
-        world.spawnEntity(tntEntity);
+        ExplosionEntity explosion = new ExplosionEntity(Entities_RaEx.EXPLOSION_ENTITY, world);
+        explosion.setFuse(0);
+        explosion.setPos(pos.getX(), pos.getY(), pos.getZ());
+        world.spawnEntity(explosion);
     }
 
     @Override

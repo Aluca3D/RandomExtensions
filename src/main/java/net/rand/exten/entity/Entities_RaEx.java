@@ -9,6 +9,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.rand.exten.RandomExtensions;
+import net.rand.exten.entity.mobs.custom.ExplosionEntity;
 import net.rand.exten.entity.mobs.custom.NightmareTVEntity;
 import net.rand.exten.entity.mobs.custom.RoombaEntity;
 import net.rand.exten.entity.projectile.*;
@@ -63,6 +64,11 @@ public class Entities_RaEx {
             new Identifier(RandomExtensions.MOD_ID, "holy_hand_grenade_projectile"),
             FabricEntityTypeBuilder.<HolyHandGrenade>create(SpawnGroup.MISC, HolyHandGrenade::new)
                     .dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build());
+
+    public static final EntityType<ExplosionEntity> EXPLOSION_ENTITY = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(RandomExtensions.MOD_ID, "explosion_entity"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MISC, ExplosionEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.2f, 0.2f)).build());
 
     public static void registerEntityAttributes() {
         FabricDefaultAttributeRegistry.register(Entities_RaEx.NIGHTMARE_TV, NightmareTVEntity.createNightmareTVAttributes());

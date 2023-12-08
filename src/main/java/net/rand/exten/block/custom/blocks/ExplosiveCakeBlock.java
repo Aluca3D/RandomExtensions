@@ -14,6 +14,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.rand.exten.entity.Entities_RaEx;
+import net.rand.exten.entity.mobs.custom.ExplosionEntity;
 
 public class ExplosiveCakeBlock extends Block {
     private static final VoxelShape SHAPE = Block.createCuboidShape(1, 0, 1, 15, 8, 15);
@@ -41,13 +43,10 @@ public class ExplosiveCakeBlock extends Block {
 
         } else {
             if (!world.isClient) {
-                TntEntity tntEntity = new TntEntity(EntityType.TNT, world);
-                tntEntity.setInvisible(true);
-                tntEntity.setNoGravity(true);
-                tntEntity.setFuse(0);
-                tntEntity.setPos(pos.getX(), pos.getY(), pos.getZ());
-                world.spawnEntity(tntEntity);
-
+                ExplosionEntity explosion = new ExplosionEntity(Entities_RaEx.EXPLOSION_ENTITY, world);
+                explosion.setFuse(0);
+                explosion.setPos(pos.getX(), pos.getY(), pos.getZ());
+                world.spawnEntity(explosion);
             }
 
             world.setBlockState(pos, Blocks.AIR.getDefaultState(), 11);

@@ -70,6 +70,8 @@ public class Client_RaEx implements ClientModInitializer {
         EntityRendererRegistry.register(Entities_RaEx.ROOMBA, RoombaRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModelLayers_RaEx.ROOMBA, RoombaModel::getTexturedModelData);
 
+        EntityRendererRegistry.register(Entities_RaEx.EXPLOSION_ENTITY, ExplosionEntityRenderer::new);
+
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> world != null && pos != null ? BiomeColors.getFoliageColor(world, pos)
                 : FoliageColors.getDefaultColor(), Blocks_RaEx.FAKE_LEAVES);
 
