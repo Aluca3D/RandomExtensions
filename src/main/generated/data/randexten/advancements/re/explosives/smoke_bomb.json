@@ -1,0 +1,42 @@
+{
+  "parent": "randexten:re/explosives/fun_with_explosives",
+  "criteria": {
+    "has_smoke_bomb": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:smoke_bomb"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "O-O"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:smoke_bomb"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "I cant see"
+    }
+  },
+  "requirements": [
+    [
+      "has_smoke_bomb"
+    ]
+  ],
+  "rewards": {
+    "experience": 40
+  },
+  "sends_telemetry_event": true
+}

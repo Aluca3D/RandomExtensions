@@ -673,6 +673,51 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .parent(bambooExplosive)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/explosives/strong_bamboo_explosive");
 
+        /// Fun with Explosives
+        AdvancementEntry funWithExplosives = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Items_RaEx.HOLY_HAND_GRENADE_ITEM),
+                        Text.literal("Have Fun with ExPlOSiVeS"), Text.literal("Even more Boom Boom"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_tnt", InventoryChangedCriterion.Conditions.items(Items.TNT))
+                .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:nine_v_battery"))
+                        .addRecipe(new Identifier("randexten:holy_hand_grenade"))
+                        .addRecipe(new Identifier("randexten:smoke_bomb"))
+                        .setExperience(20)
+                )
+                .parent(explosivesRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/explosives/fun_with_explosives");
+
+        AdvancementEntry holyHandGrenade = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Items_RaEx.HOLY_HAND_GRENADE_ITEM),
+                        Text.literal("Big Boom"), Text.literal(""),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.GOAL,
+                        true, true, true))
+                .criterion("has_holy_hand_grenade", InventoryChangedCriterion.Conditions.items(Items_RaEx.HOLY_HAND_GRENADE_ITEM))
+                .rewards(AdvancementRewards.Builder.experience(40))
+                .parent(funWithExplosives)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/explosives/holy_hand_grenade");
+
+        AdvancementEntry smokeBomb = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Items_RaEx.SMOKE_BOMB_ITEM),
+                        Text.literal("I cant see"), Text.literal("O-O"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.GOAL,
+                        true, true, true))
+                .criterion("has_smoke_bomb", InventoryChangedCriterion.Conditions.items(Items_RaEx.SMOKE_BOMB_ITEM))
+                .rewards(AdvancementRewards.Builder.experience(40))
+                .parent(funWithExplosives)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/explosives/smoke_bomb");
+
+        AdvancementEntry nineVBattery = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Items_RaEx.NINE_V_BATTERY_ITEM),
+                        Text.literal("Energising"), Text.literal("Lightning!!"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.GOAL,
+                        true, true, true))
+                .criterion("has_nine_v_battery", InventoryChangedCriterion.Conditions.items(Items_RaEx.NINE_V_BATTERY_ITEM))
+                .rewards(AdvancementRewards.Builder.experience(40))
+                .parent(funWithExplosives)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/explosives/nine_v_battery");
+
     }
 
     public void generateTreeAdvancement(Consumer<AdvancementEntry> consumer, AdvancementEntry mainRoot) {
