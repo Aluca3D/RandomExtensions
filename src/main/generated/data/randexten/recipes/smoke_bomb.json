@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:ink_sac"
+    },
+    "B": {
+      "item": "minecraft:black_dye"
+    },
+    "C": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "CA",
+    "CB"
+  ],
+  "result": {
+    "item": "randexten:smoke_bomb"
+  },
+  "show_notification": true
+}

@@ -3,7 +3,10 @@ package net.rand.exten.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.*;
+import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
@@ -165,7 +168,6 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .input(Blocks_RaEx.STRIPPED_PURPUR_LOG, 4)
                 .criterion(hasItem(Blocks_RaEx.STRIPPED_PURPUR_LOG), conditionsFromItem(Blocks_RaEx.STRIPPED_PURPUR_LOG))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.STRIPPED_PURPUR_WOOD)));
-
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.PURPUR_SLABS, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
                 .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_SLABS)));
@@ -559,6 +561,38 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_BOOTS)));
 
+        //// Grenades
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.SMOKE_BOMB_ITEM, 1)
+                .pattern("CA")
+                .pattern("CB")
+                .input('C', Items.IRON_INGOT)
+                .input('B', Items.BLACK_DYE)
+                .input('A', Items.INK_SAC)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.BLACK_DYE), conditionsFromItem(Items.BLACK_DYE))
+                .criterion(hasItem(Items.INK_SAC), conditionsFromItem(Items.INK_SAC))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.SMOKE_BOMB_ITEM)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.NINE_V_BATTERY_ITEM, 1)
+                .pattern("CA")
+                .pattern("CB")
+                .input('C', Items.COPPER_INGOT)
+                .input('B', Items.IRON_NUGGET)
+                .input('A', Items.GOLD_NUGGET)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
+                .criterion(hasItem(Items.GOLD_NUGGET), conditionsFromItem(Items.GOLD_NUGGET))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.NINE_V_BATTERY_ITEM)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.HOLY_HAND_GRENADE_ITEM, 1)
+                .pattern("CCC")
+                .pattern("CBC")
+                .input('C', Items.GOLD_INGOT)
+                .input('B', Items_RaEx.NINE_V_BATTERY_ITEM)
+                .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                .criterion(hasItem(Items_RaEx.NINE_V_BATTERY_ITEM), conditionsFromItem(Items_RaEx.NINE_V_BATTERY_ITEM))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.HOLY_HAND_GRENADE_ITEM)));
+
         //// Aquamarin
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items_RaEx.GEMS_UPGRADE_TEMPLATE),
@@ -821,7 +855,6 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items_RaEx.BAMBOO_EXPLOSIVE), conditionsFromItem(Items_RaEx.BAMBOO_EXPLOSIVE))
                 .criterion(hasItem(Items_RaEx.DUK_TAPE), conditionsFromItem(Items_RaEx.DUK_TAPE))
                 .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.BAMBOO_EXPLOSIVE_STRONG)));
-
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.DUK_TAPE, 8)
                 .input(Items.PAPER, 8)

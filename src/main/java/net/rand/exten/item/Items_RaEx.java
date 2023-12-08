@@ -125,17 +125,15 @@ public class Items_RaEx {
     public static final Item DUK_TAPE = registerItem("duk_tape",
             new Item(new FabricItemSettings()));
 
-    public static final Item SMOKE_BOMB = registerItem("smoke_bomb",
+    /** Explosives*/
+    public static final Item SMOKE_BOMB_ITEM = registerItem("smoke_bomb",
             new SmokeBombItem(new FabricItemSettings()));
-
-    //Todo
     public static final Item NINE_V_BATTERY_ITEM = registerItem("nine_v_battery",
             new NineVBatteryItem(new FabricItemSettings()));
+    public static final Item HOLY_HAND_GRENADE_ITEM = registerItem("holy_hand_grenade",
+            new HolyHandGrenadeItem(new FabricItemSettings()));
 
-
-    /**
-     * Spawn Egg
-     */
+    /**Spawn Egg*/
     public static final Item NIGHTMARE_TV_SPAWN_EGG = registerItem("nightmare_tv_spawn_egg",
             new SpawnEggItem(Entities_RaEx.NIGHTMARE_TV, 0x000000, 0xFFFFFF, new FabricItemSettings()));
 
