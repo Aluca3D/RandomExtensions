@@ -62,13 +62,15 @@ public class Blocks_RaEx {
 
     public static final Block EXPLOSIVE_CAKE_BLOCK = registerBlock("explosive_cake_block",
             new ExplosiveCakeBlock(FabricBlockSettings.copyOf(Blocks.TNT)));
-    public static final Block LAND_MINE = registerBlock("land_mine",
-            new LandMine(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
     public static final Block GRINDER = registerBlock("grinder",
             new Grinder(FabricBlockSettings.copyOf(Blocks.STONE)));
-
     public static final Block BARBED_WIRE = registerBlock("barbed_wire",
             new BarbedWire(FabricBlockSettings.copyOf(Blocks.COBWEB)));
+
+    public static final Block LAND_MINE = registerBlock("land_mine",
+            new LandMine(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block ELECTRIC_LAND_MINE = registerBlock("electric_land_mine",
+            new ElectricLandMine(FabricBlockSettings.copyOf(Blocks_RaEx.LAND_MINE)));
 
     public static final Block FAKE_LEAVES = registerBlockWithoutItem("fake_leaves",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).breakInstantly().dropsNothing()) {

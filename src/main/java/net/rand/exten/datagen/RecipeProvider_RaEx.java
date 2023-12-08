@@ -292,15 +292,6 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.STONE), conditionsFromItem(Items.STONE))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.GRINDER)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.LAND_MINE, 3)
-                .pattern("RRR")
-                .pattern("RSR")
-                .input('S', Items.TNT)
-                .input('R', Items.IRON_INGOT)
-                .criterion(hasItem(Items.TNT), conditionsFromItem(Items.TNT))
-                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.LAND_MINE)));
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK, 1)
                 .pattern("S")
                 .pattern("C")
@@ -592,6 +583,22 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
                 .criterion(hasItem(Items_RaEx.NINE_V_BATTERY_ITEM), conditionsFromItem(Items_RaEx.NINE_V_BATTERY_ITEM))
                 .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.HOLY_HAND_GRENADE_ITEM)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks_RaEx.LAND_MINE, 3)
+                .pattern("RRR")
+                .pattern("RSR")
+                .input('S', Items.TNT)
+                .input('R', Items.IRON_INGOT)
+                .criterion(hasItem(Items.TNT), conditionsFromItem(Items.TNT))
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.LAND_MINE)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks_RaEx.ELECTRIC_LAND_MINE)
+                .input(Blocks_RaEx.LAND_MINE, 1)
+                .input(Items_RaEx.NINE_V_BATTERY_ITEM, 1)
+                .criterion(hasItem(Blocks_RaEx.LAND_MINE), conditionsFromItem(Blocks_RaEx.LAND_MINE))
+                .criterion(hasItem(Items_RaEx.NINE_V_BATTERY_ITEM), conditionsFromItem(Items_RaEx.NINE_V_BATTERY_ITEM))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.ELECTRIC_LAND_MINE)));
 
         //// Aquamarin
         SmithingTransformRecipeJsonBuilder.create(
