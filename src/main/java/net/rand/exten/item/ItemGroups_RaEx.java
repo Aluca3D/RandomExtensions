@@ -190,8 +190,6 @@ public class ItemGroups_RaEx {
                         /// Misc
                         entries.add(Items_RaEx.DUK_TAPE);
                         entries.add(Blocks_RaEx.CHARCOAL_BLOCK);
-                        entries.add(Items_RaEx.SMOKE_BOMB);
-                        entries.add(Items_RaEx.NINE_V_BATTERY_ITEM);
                         entries.add(Items_RaEx.BAMBOO_EXPLOSIVE);
                         entries.add(Items_RaEx.BAMBOO_EXPLOSIVE_STRONG);
                         entries.add(Blocks_RaEx.GRINDER);
@@ -199,6 +197,11 @@ public class ItemGroups_RaEx {
                         entries.add(Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK);
                         entries.add(Blocks_RaEx.BARBED_WIRE);
                         entries.add(Blocks_RaEx.LAND_MINE);
+
+                        /// Explosives
+                        entries.add(Items_RaEx.SMOKE_BOMB_ITEM);
+                        entries.add(Items_RaEx.NINE_V_BATTERY_ITEM);
+                        entries.add(Items_RaEx.HOLY_HAND_GRENADE_ITEM);
 
                         /// Crystal
                         entries.add(Blocks_RaEx.MOSSY_CRYSTAL);

@@ -1,19 +1,15 @@
 package net.rand.exten.entity.projectile;
 
 import net.minecraft.entity.*;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
 import net.minecraft.particle.ItemStackParticleEffect;
 import net.minecraft.particle.ParticleTypes;
-import net.minecraft.potion.Potions;
-import net.minecraft.util.Arm;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.World;
@@ -40,7 +36,7 @@ public class SmokeBomb extends ThrownItemEntity {
 
     @Override
     protected Item getDefaultItem() {
-        return Items_RaEx.SMOKE_BOMB;
+        return Items_RaEx.SMOKE_BOMB_ITEM;
     }
 
     @Override

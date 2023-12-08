@@ -55,8 +55,13 @@ public class Entities_RaEx {
                     .dimensions(EntityDimensions.fixed(0.5f, 0.5f)).build());
 
     public static final EntityType<NineVBattery> NINE_V_BATTERY = Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(RandomExtensions.MOD_ID, "nine_v_battery"),
+            new Identifier(RandomExtensions.MOD_ID, "nine_v_battery_projectile"),
             FabricEntityTypeBuilder.<NineVBattery>create(SpawnGroup.MISC, NineVBattery::new)
+                    .dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build());
+
+    public static final EntityType<HolyHandGrenade> HOLY_HAND_GRENADE = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(RandomExtensions.MOD_ID, "holy_hand_grenade_projectile"),
+            FabricEntityTypeBuilder.<HolyHandGrenade>create(SpawnGroup.MISC, HolyHandGrenade::new)
                     .dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build());
 
     public static void registerEntityAttributes() {
