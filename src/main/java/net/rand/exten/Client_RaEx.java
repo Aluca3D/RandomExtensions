@@ -13,6 +13,7 @@ import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.CropBlocks_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
+import net.rand.exten.entity.explosives.ExplosionEntityRenderer;
 import net.rand.exten.entity.mobs.client.*;
 import net.rand.exten.screen.GrinderScreen;
 import net.rand.exten.screen.ScreenHandlers_RaEx;
@@ -74,7 +75,6 @@ public class Client_RaEx implements ClientModInitializer {
 
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> world != null && pos != null ? BiomeColors.getFoliageColor(world, pos)
                 : FoliageColors.getDefaultColor(), Blocks_RaEx.FAKE_LEAVES);
-
 
     }
 }

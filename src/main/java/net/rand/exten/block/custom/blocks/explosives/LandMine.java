@@ -1,11 +1,8 @@
-package net.rand.exten.block.custom.blocks;
+package net.rand.exten.block.custom.blocks.explosives;
 
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.TntEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
-import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
@@ -29,8 +26,7 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.explosion.Explosion;
 import net.rand.exten.block.custom.Properties_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
-import net.rand.exten.entity.mobs.client.ExplosionEntityRenderer;
-import net.rand.exten.entity.mobs.custom.ExplosionEntity;
+import net.rand.exten.entity.explosives.ExplosionEntity;
 import net.rand.exten.sound.Sounds_RaEx;
 import org.jetbrains.annotations.Nullable;
 
@@ -82,18 +78,19 @@ public class LandMine extends Block implements Waterloggable {
     }
 
     public void spawnExplosive(World world, BlockPos pos, Entity entity) {
+        if (world.isClient) {
+            return;
+        }
         ExplosionEntity explosion = new ExplosionEntity(Entities_RaEx.EXPLOSION_ENTITY, world);
+        explosion.setExplosionRadius(4);
         explosion.setFuse(0);
-        explosion.setPos(pos.getX(), pos.getY(), pos.getZ());
+        explosion.setPos((double)pos.getX() + 0.5, pos.getY(), (double)pos.getZ() + 0.5);
         world.spawnEntity(explosion);
     }
 
     @Override
     public void onDestroyedByExplosion(World world, BlockPos pos, Explosion explosion) {
-        if (world.isClient) {
-            return;
-        }
-        spawnExplosive(world, pos, explosion.getEntity());
+        this.spawnExplosive(world, pos, explosion.getCausingEntity());
     }
 
     public void replaceBlock(World world, BlockPos pos) {

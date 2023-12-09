@@ -1,4 +1,4 @@
-package net.rand.exten.entity.mobs.client;
+package net.rand.exten.entity.explosives;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -10,7 +10,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RotationAxis;
-import net.rand.exten.entity.mobs.custom.ExplosionEntity;
+import net.rand.exten.entity.explosives.ExplosionEntity;
 
 public class ExplosionEntityRenderer extends EntityRenderer<ExplosionEntity> {
     private final BlockRenderManager blockRenderManager;

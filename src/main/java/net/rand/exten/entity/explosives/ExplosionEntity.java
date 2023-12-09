@@ -1,4 +1,4 @@
-package net.rand.exten.entity.mobs.custom;
+package net.rand.exten.entity.explosives;
 
 import net.minecraft.entity.*;
 import net.minecraft.entity.data.DataTracker;
@@ -15,6 +15,8 @@ public class ExplosionEntity extends Entity {
 
     public ExplosionEntity(EntityType<? extends ExplosionEntity> type, World world) {
         super(type, world);
+        double d = world.random.nextDouble() * 6.2831854820251465;
+        this.setVelocity(-Math.sin(d) * 0.02, 0.2f, -Math.cos(d) * 0.02);
     }
 
     @Override
@@ -53,12 +55,16 @@ public class ExplosionEntity extends Entity {
         } else {
             this.updateWaterState();
             if (this.getWorld().isClient) {
-                this.getWorld().addParticle(ParticleTypes.SMOKE, this.getX(), this.getY() + 0.5, this.getZ(), 0.0, 0.0, 0.0);
+                this.particle();
             }
         }
     }
 
-    private void explode() {
+    public void particle() {
+        this.getWorld().addParticle(ParticleTypes.SMOKE, this.getX(), this.getY() + 0.5, this.getZ(), 0.0, 0.0, 0.0);
+    }
+
+    public void explode() {
         this.getWorld().createExplosion(this, this.getX(), this.getY(), this.getZ(), this.getExplosionRadius(), World.ExplosionSourceType.TNT);
     }
 
