@@ -84,6 +84,13 @@ public class Misc_RaEx {
                 });
             }
         });
+        DispenserBlock.registerBehavior(Items_RaEx.GLOW_BOMB_ITEM, new ProjectileDispenserBehavior() {
+            protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
+                return Util.make(new GlowBomb(world, position.getX(), position.getY(), position.getZ()), (entity) -> {
+                    entity.setItem(stack);
+                });
+            }
+        });
         DispenserBlock.registerBehavior(Items_RaEx.NINE_V_BATTERY_ITEM, new ProjectileDispenserBehavior() {
             protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
                 return Util.make(new NineVBattery(world, position.getX(), position.getY(), position.getZ()), (entity) -> {

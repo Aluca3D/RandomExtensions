@@ -128,6 +128,8 @@ public class Items_RaEx {
     /** Explosives*/
     public static final Item SMOKE_BOMB_ITEM = registerItem("smoke_bomb",
             new SmokeBombItem(new FabricItemSettings()));
+    public static final Item GLOW_BOMB_ITEM = registerItem("glow_bomb",
+            new GlowBombItem(new FabricItemSettings()));
     public static final Item NINE_V_BATTERY_ITEM = registerItem("nine_v_battery",
             new NineVBatteryItem(new FabricItemSettings()));
     public static final Item HOLY_HAND_GRENADE_ITEM = registerItem("holy_hand_grenade",

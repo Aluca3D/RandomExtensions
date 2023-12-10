@@ -559,10 +559,17 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .input('C', Items.IRON_INGOT)
                 .input('B', Items.BLACK_DYE)
                 .input('A', Items.INK_SAC)
-                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .criterion(hasItem(Items.BLACK_DYE), conditionsFromItem(Items.BLACK_DYE))
                 .criterion(hasItem(Items.INK_SAC), conditionsFromItem(Items.INK_SAC))
                 .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.SMOKE_BOMB_ITEM)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.GLOW_BOMB_ITEM, 1)
+                .input(Items_RaEx.SMOKE_BOMB_ITEM, 1)
+                .input(Items.GLOW_INK_SAC, 2)
+                .criterion(hasItem(Items_RaEx.SMOKE_BOMB_ITEM), conditionsFromItem(Items_RaEx.SMOKE_BOMB_ITEM))
+                .criterion(hasItem(Items.GLOW_INK_SAC), conditionsFromItem(Items.GLOW_INK_SAC))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.GLOW_BOMB_ITEM)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.NINE_V_BATTERY_ITEM, 1)
                 .pattern("CA")
