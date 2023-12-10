@@ -1,8 +1,9 @@
-package net.rand.exten.block.custom.blocks;
+package net.rand.exten.block.custom.blocks.explosives;
 
-import net.minecraft.block.*;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.TntEntity;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -14,6 +15,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.explosion.Explosion;
+import net.rand.exten.entity.Entities_RaEx;
+import net.rand.exten.entity.explosives.ExplosionEntity;
 
 public class ExplosiveCakeBlock extends Block {
     private static final VoxelShape SHAPE = Block.createCuboidShape(1, 0, 1, 15, 8, 15);
@@ -41,13 +45,7 @@ public class ExplosiveCakeBlock extends Block {
 
         } else {
             if (!world.isClient) {
-                TntEntity tntEntity = new TntEntity(EntityType.TNT, world);
-                tntEntity.setInvisible(true);
-                tntEntity.setNoGravity(true);
-                tntEntity.setFuse(0);
-                tntEntity.setPos(pos.getX(), pos.getY(), pos.getZ());
-                world.spawnEntity(tntEntity);
-
+                this.spawnExplosive(world, pos);
             }
 
             world.setBlockState(pos, Blocks.AIR.getDefaultState(), 11);
@@ -57,5 +55,26 @@ public class ExplosiveCakeBlock extends Block {
 
         }
         return ActionResult.success(world.isClient);
+    }
+
+    @Override
+    public void onDestroyedByExplosion(World world, BlockPos pos, Explosion explosion) {
+        if (world.isClient) {
+            return;
+        }
+        this.spawnExplosive(world, pos);
+    }
+
+    @Override
+    public boolean shouldDropItemsOnExplosion(Explosion explosion) {
+        return false;
+    }
+
+
+    public void spawnExplosive(World world, BlockPos pos) {
+        ExplosionEntity explosion = new ExplosionEntity(Entities_RaEx.EXPLOSION_ENTITY, world);
+        explosion.setFuse(0);
+        explosion.setPos(pos.getX(), pos.getY(), pos.getZ());
+        world.spawnEntity(explosion);
     }
 }

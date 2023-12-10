@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_land_mine": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:land_mine"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_nine_v_battery": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:nine_v_battery"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:electric_land_mine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_land_mine",
+      "has_nine_v_battery"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:electric_land_mine"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,9 +1,7 @@
-package net.rand.exten.block.custom.blocks;
+package net.rand.exten.block.custom.blocks.explosives;
 
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.TntEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluid;
@@ -25,7 +23,10 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
+import net.minecraft.world.explosion.Explosion;
 import net.rand.exten.block.custom.Properties_RaEx;
+import net.rand.exten.entity.Entities_RaEx;
+import net.rand.exten.entity.explosives.ExplosionEntity;
 import net.rand.exten.sound.Sounds_RaEx;
 import org.jetbrains.annotations.Nullable;
 
@@ -61,33 +62,48 @@ public class LandMine extends Block implements Waterloggable {
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         boolean b = state.get(IS_ON);
         if (!world.isClient && b) {
+            this.spawnExplosive(world, pos, entity);
             this.replaceBlock(world, pos);
-            TntEntity tntEntity = new TntEntity(EntityType.TNT, world);
-            tntEntity.setInvisible(true);
-            tntEntity.setNoGravity(true);
-            tntEntity.setFuse(0);
-            tntEntity.setPos(pos.getX(), pos.getY(), pos.getZ());
-            world.spawnEntity(tntEntity);
         }
     }
 
     public void setOn(BlockState state, World world, BlockPos pos) {
-        world.setBlockState(pos, (BlockState) state.with(IS_ON, true), Block.NOTIFY_ALL);
+        world.setBlockState(pos, state.with(IS_ON, true), Block.NOTIFY_ALL);
         this.updateNeighbors(world, pos);
     }
 
     public void setOff(BlockState state, World world, BlockPos pos) {
-        world.setBlockState(pos, (BlockState) state.with(IS_ON, false), Block.NOTIFY_ALL);
+        world.setBlockState(pos, state.with(IS_ON, false), Block.NOTIFY_ALL);
         this.updateNeighbors(world, pos);
     }
 
+    public void spawnExplosive(World world, BlockPos pos, Entity entity) {
+        if (world.isClient) {
+            return;
+        }
+        ExplosionEntity explosion = new ExplosionEntity(Entities_RaEx.EXPLOSION_ENTITY, world);
+        explosion.setExplosionRadius(4);
+        explosion.setFuse(0);
+        explosion.setPos((double)pos.getX() + 0.5, pos.getY(), (double)pos.getZ() + 0.5);
+        world.spawnEntity(explosion);
+    }
+
+    @Override
+    public void onDestroyedByExplosion(World world, BlockPos pos, Explosion explosion) {
+        this.spawnExplosive(world, pos, explosion.getCausingEntity());
+    }
+
     public void replaceBlock(World world, BlockPos pos) {
-        BlockState state = Blocks.AIR.getDefaultState();
-        world.setBlockState(pos, state);
+        world.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
     }
 
     private void updateNeighbors(World world, BlockPos pos) {
         world.updateNeighborsAlways(pos, this);
+    }
+
+    @Override
+    public boolean shouldDropItemsOnExplosion(Explosion explosion) {
+        return false;
     }
 
     @Override

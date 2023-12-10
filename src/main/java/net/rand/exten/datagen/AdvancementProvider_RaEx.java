@@ -683,6 +683,8 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:nine_v_battery"))
                         .addRecipe(new Identifier("randexten:holy_hand_grenade"))
                         .addRecipe(new Identifier("randexten:smoke_bomb"))
+                        .addRecipe(new Identifier("randexten:land_mine"))
+                        .addRecipe(new Identifier("randexten:electric_land_mine"))
                         .setExperience(20)
                 )
                 .parent(explosivesRoot)

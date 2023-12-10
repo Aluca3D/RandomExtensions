@@ -196,9 +196,10 @@ public class ItemGroups_RaEx {
                         entries.add(Items_RaEx.PEBBLE);
                         entries.add(Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK);
                         entries.add(Blocks_RaEx.BARBED_WIRE);
-                        entries.add(Blocks_RaEx.LAND_MINE);
 
                         /// Explosives
+                        entries.add(Blocks_RaEx.LAND_MINE);
+                        entries.add(Blocks_RaEx.ELECTRIC_LAND_MINE);
                         entries.add(Items_RaEx.SMOKE_BOMB_ITEM);
                         entries.add(Items_RaEx.NINE_V_BATTERY_ITEM);
                         entries.add(Items_RaEx.HOLY_HAND_GRENADE_ITEM);
