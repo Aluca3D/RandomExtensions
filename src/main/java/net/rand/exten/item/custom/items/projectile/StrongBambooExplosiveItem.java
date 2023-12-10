@@ -28,7 +28,6 @@ public class StrongBambooExplosiveItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        user.getItemCooldownManager().set(this, 10);
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.BLOCK_BAMBOO_BREAK, SoundCategory.NEUTRAL, 0.75f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
         if (!world.isClient) {
             StrongBambooExplosive strongBambooExplosiveProjectile = new StrongBambooExplosive(user, world);
@@ -39,7 +38,8 @@ public class StrongBambooExplosiveItem extends Item {
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));
         if (!user.getAbilities().creativeMode) {
-            itemStack.decrement(1);
+            user.getItemCooldownManager().set(this, 10);
+            itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
         }
 
         return TypedActionResult.success(itemStack, world.isClient());

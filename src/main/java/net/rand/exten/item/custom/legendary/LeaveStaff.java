@@ -43,7 +43,6 @@ public class LeaveStaff extends Item {
         ItemStack itemStack = user.getStackInHand(hand);
 
         world.playSound(null, user.getX(), user.getY(), user.getZ(), Sounds_RaEx.MAGIC_SHOT, SoundCategory.NEUTRAL, 1F, 1.75F);
-        user.getItemCooldownManager().set(this, 10);
         if (!world.isClient()) {
             LeafBulled leafBulled = new LeafBulled(user, world);
             leafBulled.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 2.75F, 0.25F);
@@ -52,6 +51,7 @@ public class LeaveStaff extends Item {
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));
         if (!user.getAbilities().creativeMode) {
+            user.getItemCooldownManager().set(this, 10);
             itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
         }
         return TypedActionResult.success(itemStack, world.isClient());

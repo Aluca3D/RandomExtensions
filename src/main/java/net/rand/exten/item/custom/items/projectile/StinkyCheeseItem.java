@@ -28,7 +28,6 @@ public class StinkyCheeseItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        user.getItemCooldownManager().set(this, 10);
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_GENERIC_EAT, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
         if (!world.isClient) {
             StinkyCheese stinkyCheese = new StinkyCheese(user, world);
@@ -39,7 +38,8 @@ public class StinkyCheeseItem extends Item {
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));
         if (!user.getAbilities().creativeMode) {
-            itemStack.decrement(1);
+            user.getItemCooldownManager().set(this, 10);
+            itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
         }
 
         return TypedActionResult.success(itemStack, world.isClient());
