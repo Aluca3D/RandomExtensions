@@ -13,13 +13,13 @@ import net.minecraft.world.World;
 import java.util.Map;
 
 public class ArmorItem_RaEx extends ArmorItem {
-
-    // Aquamarin
+    /**
+     * Aquamarin
+     */
     private static final Map<ArmorMaterial, StatusEffectInstance> D_AQUAMARIN_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(ArmorMaterials_RaEx.DIAMOND_AQUAMARIN,
                             new StatusEffectInstance(StatusEffects.WATER_BREATHING, 200, 0, false, false, true)).build();
-
 
     private static final Map<ArmorMaterial, StatusEffectInstance> N_AQUAMARIN_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
@@ -28,32 +28,35 @@ public class ArmorItem_RaEx extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> N_AQUAMARIN_EFFECT_MAP_2 =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(ArmorMaterials_RaEx.NETHERITE_AQUAMARIN,
-                            new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 400, 0, false, false, true)).build();
+                            new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 400, 0, false, false, true))
+                    .build();
 
-
-    // Ruby
+    /**
+     * Ruby
+     */
     private static final Map<ArmorMaterial, StatusEffectInstance> D_RUBY_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(ArmorMaterials_RaEx.DIAMOND_RUBY,
                             new StatusEffectInstance(StatusEffects.STRENGTH, 200, 0, false, false, true)).build();
 
-
     private static final Map<ArmorMaterial, StatusEffectInstance> N_RUBY_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(ArmorMaterials_RaEx.NETHERITE_RUBY,
                             new StatusEffectInstance(StatusEffects.STRENGTH, 400, 1, false, false, true)).build();
+
     private static final Map<ArmorMaterial, StatusEffectInstance> N_RUBY_EFFECT_MAP_2 =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(ArmorMaterials_RaEx.NETHERITE_RUBY,
-                            new StatusEffectInstance(StatusEffects.SPEED, 400, 0, false, false, true)).build();
+                            new StatusEffectInstance(StatusEffects.SPEED, 400, 0, false, false, true)).
+                    build();
 
-
-    // Topas
+    /**
+     * Topas
+     */
     private static final Map<ArmorMaterial, StatusEffectInstance> D_TOPAS_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(ArmorMaterials_RaEx.DIAMOND_TOPAS,
                             new StatusEffectInstance(StatusEffects.HASTE, 200, 0, false, false, true)).build();
-
 
     private static final Map<ArmorMaterial, StatusEffectInstance> N_TOPAS_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
@@ -62,7 +65,8 @@ public class ArmorItem_RaEx extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> N_TOPAS_EFFECT_MAP_2 =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(ArmorMaterials_RaEx.NETHERITE_TOPAS,
-                            new StatusEffectInstance(StatusEffects.NIGHT_VISION, 400, 0, false, false, true)).build();
+                            new StatusEffectInstance(StatusEffects.NIGHT_VISION, 400, 0, false, false, true))
+                    .build();
 
     public ArmorItem_RaEx(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
@@ -165,12 +169,6 @@ public class ArmorItem_RaEx extends ArmorItem {
 
         if (hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
             player.addStatusEffect(new StatusEffectInstance(mapStatusEffect));
-
-             /*
-             if(new Random().nextFloat() > 0.6f) { // 40% of damaging the armor! Possibly!
-                 player.getInventory().damageArmor(DamageSource.MAGIC, 1f, new int[]{0, 1, 2, 3});
-             }
-             */
         }
     }
 
