@@ -56,6 +56,11 @@ public class Entities_RaEx {
             FabricEntityTypeBuilder.<SmokeBomb>create(SpawnGroup.MISC, SmokeBomb::new)
                     .dimensions(EntityDimensions.fixed(0.5f, 0.5f)).build());
 
+    public static final EntityType<GlowBomb> GLOW_BOMB_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(RandomExtensions.MOD_ID, "glow_bomb_projectile"),
+            FabricEntityTypeBuilder.<GlowBomb>create(SpawnGroup.MISC, GlowBomb::new)
+                    .dimensions(EntityDimensions.fixed(0.5f, 0.5f)).build());
+
     public static final EntityType<NineVBattery> NINE_V_BATTERY = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(RandomExtensions.MOD_ID, "nine_v_battery_projectile"),
             FabricEntityTypeBuilder.<NineVBattery>create(SpawnGroup.MISC, NineVBattery::new)

@@ -1,36 +1,24 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_black_dye": {
+    "has_glow_ink_sac": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:black_dye"
+              "minecraft:glow_ink_sac"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_ink_sac": {
+    "has_smoke_bomb": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:ink_sac"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_iron_ingot": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:iron_ingot"
+              "randexten:smoke_bomb"
             ]
           }
         ]
@@ -39,7 +27,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:smoke_bomb"
+        "recipe": "minecraft:glow_bomb"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -47,14 +35,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_iron_ingot",
-      "has_black_dye",
-      "has_ink_sac"
+      "has_smoke_bomb",
+      "has_glow_ink_sac"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:smoke_bomb"
+      "minecraft:glow_bomb"
     ]
   },
   "sends_telemetry_event": false
