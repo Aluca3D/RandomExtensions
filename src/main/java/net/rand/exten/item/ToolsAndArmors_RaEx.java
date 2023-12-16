@@ -7,10 +7,12 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.rand.exten.RandomExtensions;
-import net.rand.exten.item.custom.ArmorItem_RaEx;
 import net.rand.exten.item.custom.ArmorMaterials_RaEx;
 import net.rand.exten.item.custom.ToolMaterial_RaEx;
+import net.rand.exten.item.custom.armor.AquamarinArmorItem;
+import net.rand.exten.item.custom.armor.RubyArmorItem;
 import net.rand.exten.item.custom.armor.ShulkerArmorItem;
+import net.rand.exten.item.custom.armor.TopasArmorItem;
 import net.rand.exten.item.custom.legendary.EscapeRope;
 import net.rand.exten.item.custom.legendary.LeaveStaff;
 import net.rand.exten.item.custom.legendary.ToyHammer;
@@ -103,7 +105,7 @@ public class ToolsAndArmors_RaEx {
      * Aquamarin Armor
      */
     public static final Item D_AQUAMARIN_HELMET = registerItem("diamond_aquamarin_helmet",
-            new ArmorItem_RaEx(ArmorMaterials_RaEx.DIAMOND_AQUAMARIN, ArmorItem.Type.HELMET, new FabricItemSettings()));
+            new AquamarinArmorItem(ArmorMaterials_RaEx.DIAMOND_AQUAMARIN, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item D_AQUAMARIN_CHESTPLATE = registerItem("diamond_aquamarin_chestplate",
             new ArmorItem(ArmorMaterials_RaEx.DIAMOND_AQUAMARIN, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     public static final Item D_AQUAMARIN_LEGGINGS = registerItem("diamond_aquamarin_leggings",
@@ -112,7 +114,7 @@ public class ToolsAndArmors_RaEx {
             new ArmorItem(ArmorMaterials_RaEx.DIAMOND_AQUAMARIN, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
     public static final Item N_AQUAMARIN_HELMET = registerItem("netherite_aquamarin_helmet",
-            new ArmorItem_RaEx(ArmorMaterials_RaEx.NETHERITE_AQUAMARIN, ArmorItem.Type.HELMET, new FabricItemSettings()));
+            new AquamarinArmorItem(ArmorMaterials_RaEx.NETHERITE_AQUAMARIN, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item N_AQUAMARIN_CHESTPLATE = registerItem("netherite_aquamarin_chestplate",
             new ArmorItem(ArmorMaterials_RaEx.NETHERITE_AQUAMARIN, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     public static final Item N_AQUAMARIN_LEGGINGS = registerItem("netherite_aquamarin_leggings",
@@ -124,7 +126,7 @@ public class ToolsAndArmors_RaEx {
      * Ruby Armor
      */
     public static final Item D_RUBY_HELMET = registerItem("diamond_ruby_helmet",
-            new ArmorItem_RaEx(ArmorMaterials_RaEx.DIAMOND_RUBY, ArmorItem.Type.HELMET, new FabricItemSettings()));
+            new RubyArmorItem(ArmorMaterials_RaEx.DIAMOND_RUBY, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item D_RUBY_CHESTPLATE = registerItem("diamond_ruby_chestplate",
             new ArmorItem(ArmorMaterials_RaEx.DIAMOND_RUBY, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     public static final Item D_RUBY_LEGGINGS = registerItem("diamond_ruby_leggings",
@@ -133,7 +135,7 @@ public class ToolsAndArmors_RaEx {
             new ArmorItem(ArmorMaterials_RaEx.DIAMOND_RUBY, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
     public static final Item N_RUBY_HELMET = registerItem("netherite_ruby_helmet",
-            new ArmorItem_RaEx(ArmorMaterials_RaEx.NETHERITE_RUBY, ArmorItem.Type.HELMET, new FabricItemSettings()));
+            new RubyArmorItem(ArmorMaterials_RaEx.NETHERITE_RUBY, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item N_RUBY_CHESTPLATE = registerItem("netherite_ruby_chestplate",
             new ArmorItem(ArmorMaterials_RaEx.NETHERITE_RUBY, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     public static final Item N_RUBY_LEGGINGS = registerItem("netherite_ruby_leggings",
@@ -145,7 +147,7 @@ public class ToolsAndArmors_RaEx {
      * Topas Armor
      */
     public static final Item D_TOPAS_HELMET = registerItem("diamond_topas_helmet",
-            new ArmorItem_RaEx(ArmorMaterials_RaEx.DIAMOND_TOPAS, ArmorItem.Type.HELMET, new FabricItemSettings()));
+            new TopasArmorItem(ArmorMaterials_RaEx.DIAMOND_TOPAS, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item D_TOPAS_CHESTPLATE = registerItem("diamond_topas_chestplate",
             new ArmorItem(ArmorMaterials_RaEx.DIAMOND_TOPAS, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     public static final Item D_TOPAS_LEGGINGS = registerItem("diamond_topas_leggings",
@@ -154,7 +156,7 @@ public class ToolsAndArmors_RaEx {
             new ArmorItem(ArmorMaterials_RaEx.DIAMOND_TOPAS, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
     public static final Item N_TOPAS_HELMET = registerItem("netherite_topas_helmet",
-            new ArmorItem_RaEx(ArmorMaterials_RaEx.NETHERITE_TOPAS, ArmorItem.Type.HELMET, new FabricItemSettings()));
+            new TopasArmorItem(ArmorMaterials_RaEx.NETHERITE_TOPAS, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item N_TOPAS_CHESTPLATE = registerItem("netherite_topas_chestplate",
             new ArmorItem(ArmorMaterials_RaEx.NETHERITE_TOPAS, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     public static final Item N_TOPAS_LEGGINGS = registerItem("netherite_topas_leggings",
