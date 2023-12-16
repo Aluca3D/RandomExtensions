@@ -5,6 +5,7 @@ import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.CropBlocks_RaEx;
 import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.block.custom.blocks.entity.BlockEntity_RaEx;
+import net.rand.exten.effects.Effects_RaEx;
 import net.rand.exten.enchantment.Enchantments_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
 import net.rand.exten.item.ItemGroups_RaEx;
@@ -47,6 +48,7 @@ public class RandomExtensions implements ModInitializer {
         CustomTrades_RaEx.registerCustomTrades();
         LootTableModifiers_RaEx.modifyLootTables();
         Misc_RaEx.registerMisc();
+        Effects_RaEx.registerEffects();
         WorldGeneration_RaEx.generateModWorldGeneration();
     }
 }
