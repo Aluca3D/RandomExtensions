@@ -30,7 +30,7 @@ public enum ArmorMaterials_RaEx implements ArmorMaterial {
     COPPER("copper", 20, new int[]{2, 4, 5, 2}, 6,
             SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
     /**Shulker*/
-    SHULKER("shulker", 25, new int[]{3, 5, 5, 3}, 8,
+    SHULKER("shulker", 12, new int[]{2, 3, 4, 2}, 18,
     SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 3.0f, 0.1f, () -> Ingredient.ofItems(Items.SHULKER_SHELL));
 
 

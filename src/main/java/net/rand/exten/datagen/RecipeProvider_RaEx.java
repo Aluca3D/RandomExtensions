@@ -524,6 +524,33 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_SWORD)));
 
         /// Armor
+        //// Shulker
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.SHULKER_HELMET, 1)
+                .input(Items.SHULKER_SHELL, 2)
+                .input(Items.LEATHER_HELMET)
+                .criterion(hasItem(Items.SHULKER_SHELL), conditionsFromItem(Items.SHULKER_SHELL))
+                .criterion(hasItem(Items.LEATHER_HELMET), conditionsFromItem(Items.LEATHER_HELMET))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.SHULKER_HELMET)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.SHULKER_CHESTPLATE, 1)
+                .input(Items.SHULKER_SHELL, 2)
+                .input(Items.LEATHER_CHESTPLATE)
+                .criterion(hasItem(Items.SHULKER_SHELL), conditionsFromItem(Items.SHULKER_SHELL))
+                .criterion(hasItem(Items.LEATHER_CHESTPLATE), conditionsFromItem(Items.LEATHER_CHESTPLATE))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.SHULKER_CHESTPLATE)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.SHULKER_LEGGINGS, 1)
+                .input(Items.SHULKER_SHELL, 2)
+                .input(Items.LEATHER_LEGGINGS)
+                .criterion(hasItem(Items.SHULKER_SHELL), conditionsFromItem(Items.SHULKER_SHELL))
+                .criterion(hasItem(Items.LEATHER_LEGGINGS), conditionsFromItem(Items.LEATHER_LEGGINGS))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.SHULKER_LEGGINGS)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.SHULKER_BOOTS, 1)
+                .input(Items.SHULKER_SHELL, 2)
+                .input(Items.LEATHER_BOOTS)
+                .criterion(hasItem(Items.SHULKER_SHELL), conditionsFromItem(Items.SHULKER_SHELL))
+                .criterion(hasItem(Items.LEATHER_BOOTS), conditionsFromItem(Items.LEATHER_BOOTS))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.SHULKER_BOOTS)));
+
+
         //// Copper
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_HELMET, 1)
                 .pattern("CCC")
