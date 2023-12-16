@@ -70,6 +70,12 @@ public class ItemGroups_RaEx {
                         entries.add(ToolsAndArmors_RaEx.NETHERITE_PAXEL);
 
                         // Armor
+                        /// Shulker
+                        entries.add(ToolsAndArmors_RaEx.SHULKER_HELMET);
+                        entries.add(ToolsAndArmors_RaEx.SHULKER_CHESTPLATE);
+                        entries.add(ToolsAndArmors_RaEx.SHULKER_LEGGINGS);
+                        entries.add(ToolsAndArmors_RaEx.SHULKER_BOOTS);
+
                         /// Copper
                         entries.add(ToolsAndArmors_RaEx.COPPER_HELMET);
                         entries.add(ToolsAndArmors_RaEx.COPPER_CHESTPLATE);

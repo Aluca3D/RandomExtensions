@@ -39,7 +39,7 @@ public class StrongBambooExplosiveItem extends Item {
         user.incrementStat(Stats.USED.getOrCreateStat(this));
         if (!user.getAbilities().creativeMode) {
             user.getItemCooldownManager().set(this, 10);
-            itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
+            itemStack.decrement(1);
         }
 
         return TypedActionResult.success(itemStack, world.isClient());

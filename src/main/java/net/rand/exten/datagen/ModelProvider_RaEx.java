@@ -146,6 +146,11 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         itemModelGenerator.register(Items_RaEx.FLOUR, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.POPCORN, Models.GENERATED);
 
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.SHULKER_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.SHULKER_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.SHULKER_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.SHULKER_BOOTS);
+
         itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_HELMET);
         itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_LEGGINGS);
