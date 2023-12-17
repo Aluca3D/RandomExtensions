@@ -3,12 +3,13 @@
 	"package": "net.rand.exten.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"BrewingRecipeRegistryMixin"
 	],
 	"client": [
-		"ItemRendererAccessor",
-		"ItemRendererMixin",
-		"ModelLoaderMixin",
+		"items.ItemRendererAccessor",
+		"items.ItemRendererMixin",
+		"items.ModelLoaderMixin",
 		"GameRendererMixin",
 		"ClientPlayerInteractionManagerMixin"
 	],

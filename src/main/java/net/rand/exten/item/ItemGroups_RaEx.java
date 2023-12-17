@@ -195,6 +195,8 @@ public class ItemGroups_RaEx {
 
                         /// Misc
                         entries.add(Items_RaEx.DUK_TAPE);
+                        entries.add(Items_RaEx.COPPER_NUGGET);
+                        entries.add(Items_RaEx.METAL_LUMP);
                         entries.add(Blocks_RaEx.CHARCOAL_BLOCK);
                         entries.add(Items_RaEx.BAMBOO_EXPLOSIVE);
                         entries.add(Items_RaEx.BAMBOO_EXPLOSIVE_STRONG);

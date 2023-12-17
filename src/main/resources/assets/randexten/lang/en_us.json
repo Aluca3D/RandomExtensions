@@ -1,6 +1,11 @@
 {
   "effect.randexten.lightning_attraction": "Lightning Attraction",
 
+  "item.minecraft.potion.effect.lightning_attraction_potion": "Lightning Attraction Potion",
+  "item.minecraft.splash_potion.effect.lightning_attraction_potion": "Lightning Attraction Splash Potion",
+  "item.minecraft.lingering_potion.effect.lightning_attraction_potion": "Lightning Attraction Lingering Potion",
+  "item.minecraft.tipped_arrow.effect.lightning_attraction_potion": "Arrow of Lightning Attraction",
+
   "item.randexten.aquamarin": "Aquamarin",
   "item.randexten.raw_aquamarin": "Raw Aquamarin",
 
@@ -116,6 +121,9 @@
   "item.randexten.cheese": "Cheese",
   "item.randexten.bucket_cheese": "Cheese Bucket",
   "item.randexten.escape_potion": "Escape Potion",
+
+  "item.randexten.metal_lump": "Metal Lump",
+  "item.randexten.copper_nugget": "Copper Nugget",
 
   "item.randexten.bamboo_explosive": "Bamboo Explosive",
   "item.randexten.bamboo_explosive.tooltip": "Goes Boom",

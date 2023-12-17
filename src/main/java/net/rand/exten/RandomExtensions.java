@@ -12,6 +12,7 @@ import net.rand.exten.item.ItemGroups_RaEx;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
 import net.rand.exten.item.custom.LootBag_RaEx;
+import net.rand.exten.potion.Potions_RaEx;
 import net.rand.exten.recipe.Recipes_RaEx;
 import net.rand.exten.screen.ScreenHandlers_RaEx;
 import net.rand.exten.sound.Sounds_RaEx;
@@ -37,6 +38,7 @@ public class RandomExtensions implements ModInitializer {
         StepBlockRegistry.registerStepBlocks();
         BlockEntity_RaEx.registerBlockEntities();
         Recipes_RaEx.registerRecipes();
+        Potions_RaEx.registerPotions();
         ScreenHandlers_RaEx.registerScreenHandler();
         CropBlocks_RaEx.registerRaExBlock();
         Enchantments_RaEx.registerEnchantments();

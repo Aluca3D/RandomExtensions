@@ -9,7 +9,6 @@ import net.rand.exten.RandomExtensions;
 import net.rand.exten.effects.effect.LightningAttraction;
 
 public class Effects_RaEx {
-
     public static final StatusEffect LIGHTNING_ATTRACTION = registerStatusEffect("lightning_attraction",
             new LightningAttraction(StatusEffectCategory.NEUTRAL, 0xfff936));
 

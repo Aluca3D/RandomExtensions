@@ -552,6 +552,17 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
 
 
         //// Copper
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, Items_RaEx.COPPER_NUGGET, RecipeCategory.MISC,
+                Items.COPPER_INGOT);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BREWING, Items_RaEx.METAL_LUMP, 2)
+                .input(Items_RaEx.COPPER_NUGGET)
+                .input(Items.IRON_NUGGET)
+                .input(Items.GOLD_NUGGET)
+                .criterion(hasItem(Items_RaEx.COPPER_NUGGET), conditionsFromItem(Items_RaEx.COPPER_NUGGET))
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
+                .criterion(hasItem(Items.GOLD_NUGGET), conditionsFromItem(Items.GOLD_NUGGET))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.METAL_LUMP)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_HELMET, 1)
                 .pattern("CCC")
                 .pattern("C C")
