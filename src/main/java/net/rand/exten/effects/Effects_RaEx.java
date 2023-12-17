@@ -10,7 +10,7 @@ import net.rand.exten.effects.effect.LightningAttraction;
 
 public class Effects_RaEx {
     public static final StatusEffect LIGHTNING_ATTRACTION = registerStatusEffect("lightning_attraction",
-            new LightningAttraction(StatusEffectCategory.NEUTRAL, 0xfff936));
+            new LightningAttraction(StatusEffectCategory.HARMFUL, 0xfff936));
 
     private static StatusEffect registerStatusEffect(String name, StatusEffect statusEffect) {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(RandomExtensions.MOD_ID, name), statusEffect);
