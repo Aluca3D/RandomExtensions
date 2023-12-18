@@ -1,4 +1,4 @@
-package net.rand.exten.mixin;
+package net.rand.exten.mixin.items;
 
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.item.ItemRenderer;

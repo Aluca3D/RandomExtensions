@@ -1,13 +1,11 @@
 {
-  "parent": "randexten:re/randexten",
+  "parent": "randexten:re/misc/misc_root",
   "criteria": {
-    "has_charcoal": {
+    "has_nugget": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:charcoal"
-            ]
+            "tag": "randexten:nuggets"
           }
         ]
       },
@@ -15,29 +13,30 @@
     }
   },
   "display": {
-    "announce_to_chat": false,
+    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
     "description": {
-      "text": ""
+      "text": "he, Lump"
     },
     "frame": "task",
     "hidden": true,
     "icon": {
-      "item": "randexten:charcoal_block"
+      "item": "randexten:metal_lump"
     },
-    "show_toast": false,
+    "show_toast": true,
     "title": {
-      "text": "Miscellaneous stuff"
+      "text": "A Lump of Metal"
     }
   },
   "requirements": [
     [
-      "has_charcoal"
+      "has_nugget"
     ]
   ],
   "rewards": {
+    "experience": 20,
     "recipes": [
-      "randexten:roomba_item"
+      "randexten:metal_lump"
     ]
   },
   "sends_telemetry_event": true

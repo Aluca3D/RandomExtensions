@@ -9,10 +9,7 @@ import net.minecraft.util.Rarity;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.item.custom.ArmorMaterials_RaEx;
 import net.rand.exten.item.custom.ToolMaterial_RaEx;
-import net.rand.exten.item.custom.armor.AquamarinArmorItem;
-import net.rand.exten.item.custom.armor.RubyArmorItem;
-import net.rand.exten.item.custom.armor.ShulkerArmorItem;
-import net.rand.exten.item.custom.armor.TopasArmorItem;
+import net.rand.exten.item.custom.armor.*;
 import net.rand.exten.item.custom.legendary.EscapeRope;
 import net.rand.exten.item.custom.legendary.LeaveStaff;
 import net.rand.exten.item.custom.legendary.ToyHammer;
@@ -93,7 +90,7 @@ public class ToolsAndArmors_RaEx {
             new SwordItem(ToolMaterial_RaEx.COPPER, 3, -2.4f, new FabricItemSettings()));
 
     public static final Item COPPER_HELMET = registerItem("cooper_helmet",
-            new ArmorItem(ArmorMaterials_RaEx.COPPER, ArmorItem.Type.HELMET, new FabricItemSettings()));
+            new CopperArmorItem(ArmorMaterials_RaEx.COPPER, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item COPPER_CHESTPLATE = registerItem("cooper_chestplate",
             new ArmorItem(ArmorMaterials_RaEx.COPPER, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     public static final Item COPPER_LEGGINGS = registerItem("cooper_leggings",

@@ -109,7 +109,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         Text.literal("Miscellaneous stuff"), Text.literal(""),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
                         false, false, true))
-                .criterion("has_charcoal", RecipeUnlockedCriterion.create(new Identifier("minecraft:charcoal")))
+                .criterion("has_charcoal", InventoryChangedCriterion.Conditions.items(Items.CHARCOAL))
                 .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:roomba_item"))
                 )
                 .parent(mainRoot)
@@ -125,6 +125,17 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(miscRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/misc/soul_ore");
+
+        AdvancementEntry metalLump = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(Items_RaEx.METAL_LUMP),
+                        Text.literal("A Lump of Metal"), Text.literal("he, Lump"),
+                        new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
+                        true, true, true))
+                .criterion("has_nugget", InventoryChangedCriterion.Conditions.items(ItemPredicate.Builder.create().tag(Tags_RaEx.Items.NUGGETS)))
+                .rewards(AdvancementRewards.Builder.experience(20)
+                        .addRecipe(new Identifier("randexten:metal_lump")))
+                .parent(miscRoot)
+                .build(consumer, RandomExtensions.MOD_ID + ":re/misc/metal_lump");
 
         AdvancementEntry roomba = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Items_RaEx.ROOMBA_ITEM),

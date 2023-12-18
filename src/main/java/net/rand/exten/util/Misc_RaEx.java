@@ -9,6 +9,7 @@ import net.minecraft.block.cauldron.CauldronBehavior;
 import net.minecraft.block.dispenser.ProjectileDispenserBehavior;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potions;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.Position;
@@ -16,6 +17,8 @@ import net.minecraft.world.World;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.entity.projectile.*;
 import net.rand.exten.item.Items_RaEx;
+import net.rand.exten.mixin.BrewingRecipeRegistryMixin;
+import net.rand.exten.potion.Potions_RaEx;
 
 public class Misc_RaEx {
     public static void registerMisc() {
@@ -23,6 +26,7 @@ public class Misc_RaEx {
         registerBehavior();
         registerStrippable();
         registerFlammable();
+        registerPotionRecipes();
     }
 
     private static void registerFuel() {
@@ -156,5 +160,9 @@ public class Misc_RaEx {
 
         StrippableBlockRegistry.register(Blocks_RaEx.PURPUR_LOG, Blocks_RaEx.STRIPPED_PURPUR_LOG);
         StrippableBlockRegistry.register(Blocks_RaEx.PURPUR_WOOD, Blocks_RaEx.STRIPPED_PURPUR_WOOD);
+    }
+
+    private static void registerPotionRecipes() {
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items_RaEx.METAL_LUMP, Potions_RaEx.LIGHTNING_ATTRACTION_POTION);
     }
 }
