@@ -13,7 +13,6 @@ public class Effects_RaEx {
     public static final StatusEffect LIGHTNING_ATTRACTION = registerStatusEffect("lightning_attraction",
             new LightningAttraction(StatusEffectCategory.HARMFUL, 0xfff936));
 
-    //Todo add Icon Texture
     public static final StatusEffect EVOKERS_BITE = registerStatusEffect("evokers_bite",
             new EvokersBite(StatusEffectCategory.HARMFUL, 0xa2b0be));
 
