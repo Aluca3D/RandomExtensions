@@ -165,6 +165,6 @@ public class Misc_RaEx {
     private static void registerPotionRecipes() {
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items_RaEx.METAL_LUMP, Potions_RaEx.LIGHTNING_ATTRACTION_POTION);
         //todo add tooth item for recipe
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items.BONE, Potions_RaEx.EVOKERS_BITE_POTION);
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items_RaEx.TOOTH, Potions_RaEx.EVOKERS_BITE_POTION);
     }
 }

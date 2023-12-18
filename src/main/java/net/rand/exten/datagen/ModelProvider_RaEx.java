@@ -136,6 +136,7 @@ public class ModelProvider_RaEx extends FabricModelProvider {
 
         itemModelGenerator.register(Items_RaEx.METAL_LUMP, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.COPPER_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(Items_RaEx.TOOTH, Models.GENERATED);
 
         itemModelGenerator.register(Items_RaEx.SANDWICH, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.BUCKET_CHEESE, Models.GENERATED);
