@@ -25,6 +25,7 @@ public class EvokersBite extends Enchantment {
         return super.isAcceptableItem(stack);
     }
 
+    @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         if (!user.getWorld().isClient()) {
             World world = user.getWorld();

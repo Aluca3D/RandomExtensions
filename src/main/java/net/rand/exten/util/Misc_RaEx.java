@@ -9,6 +9,7 @@ import net.minecraft.block.cauldron.CauldronBehavior;
 import net.minecraft.block.dispenser.ProjectileDispenserBehavior;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Util;
@@ -18,7 +19,7 @@ import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.entity.projectile.*;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.mixin.BrewingRecipeRegistryMixin;
-import net.rand.exten.potion.Potions_RaEx;
+import net.rand.exten.effects.Potions_RaEx;
 
 public class Misc_RaEx {
     public static void registerMisc() {
@@ -150,7 +151,6 @@ public class Misc_RaEx {
         FlammableBlockRegistry.getDefaultInstance().add(Blocks_RaEx.BURNED_BUTTON, 5, 3);
 
         FlammableBlockRegistry.getDefaultInstance().add(Blocks_RaEx.CHARCOAL_BLOCK, 5, 5);
-
         FlammableBlockRegistry.getDefaultInstance().add(Blocks_RaEx.FAKE_LEAVES, 100, 100);
     }
 
@@ -164,5 +164,7 @@ public class Misc_RaEx {
 
     private static void registerPotionRecipes() {
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items_RaEx.METAL_LUMP, Potions_RaEx.LIGHTNING_ATTRACTION_POTION);
+        //todo add tooth item for recipe
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items.BONE, Potions_RaEx.EVOKERS_BITE_POTION);
     }
 }

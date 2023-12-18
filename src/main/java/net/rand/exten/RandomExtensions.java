@@ -12,7 +12,7 @@ import net.rand.exten.item.ItemGroups_RaEx;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
 import net.rand.exten.item.custom.LootBag_RaEx;
-import net.rand.exten.potion.Potions_RaEx;
+import net.rand.exten.effects.Potions_RaEx;
 import net.rand.exten.recipe.Recipes_RaEx;
 import net.rand.exten.screen.ScreenHandlers_RaEx;
 import net.rand.exten.sound.Sounds_RaEx;
