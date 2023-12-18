@@ -272,6 +272,20 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
         offerFoodCookingRecipe(exporter, "raw_aquamarin", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_AQUAMARIN, Items_RaEx.AQUAMARIN, 0.2f);
         offerFoodCookingRecipe(exporter, "raw_topas", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_TOPAS, Items_RaEx.TOPAS, 0.2f);
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PURPLE_DYE)
+                .input(Blocks_RaEx.NIGHT_SHADE)
+                .criterion(hasItem(Blocks_RaEx.NIGHT_SHADE), conditionsFromItem(Blocks_RaEx.NIGHT_SHADE))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.PURPLE_DYE)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.TOOTH, 4)
+                .input(Items.BONE, 2)
+                .criterion(hasItem(Items.BONE), conditionsFromItem(Items.BONE))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.TOOTH)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.BONE_MEAL)
+                .input(Items_RaEx.TOOTH, 2)
+                .criterion(hasItem(Items_RaEx.TOOTH), conditionsFromItem(Items_RaEx.TOOTH))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.BONE_MEAL)));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.COBBLESTONE, 1)
                 .input(Items_RaEx.PEBBLE, 3)
                 .criterion(hasItem(Items_RaEx.PEBBLE), conditionsFromItem(Items_RaEx.PEBBLE))

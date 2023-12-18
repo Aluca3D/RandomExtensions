@@ -131,6 +131,9 @@ public class Items_RaEx {
     public static final Item METAL_LUMP = registerItem("metal_lump",
             new Item(new FabricItemSettings()));
 
+    public static final Item TOOTH = registerItem("tooth",
+            new Item(new FabricItemSettings()));
+
     /** Explosives*/
     public static final Item SMOKE_BOMB_ITEM = registerItem("smoke_bomb",
             new SmokeBombItem(new FabricItemSettings()));

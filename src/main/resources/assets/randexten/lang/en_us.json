@@ -1,10 +1,17 @@
 {
   "effect.randexten.lightning_attraction": "Lightning Attraction",
-
   "item.minecraft.potion.effect.lightning_attraction_potion": "Lightning Attraction Potion",
   "item.minecraft.splash_potion.effect.lightning_attraction_potion": "Lightning Attraction Splash Potion",
   "item.minecraft.lingering_potion.effect.lightning_attraction_potion": "Lightning Attraction Lingering Potion",
   "item.minecraft.tipped_arrow.effect.lightning_attraction_potion": "Arrow of Lightning Attraction",
+
+  "effect.randexten.evokers_bite": "Evokers Bite",
+  "item.minecraft.potion.effect.evokers_bite_potion": "Evokers Bite Potion",
+  "item.minecraft.splash_potion.effect.evokers_bite_potion": "Evokers Bite Splash Potion",
+  "item.minecraft.lingering_potion.effect.evokers_bite_potion": "Evokers Bite Lingering Potion",
+  "item.minecraft.tipped_arrow.effect.evokers_bite_potion": "Arrow of Evokers Bite",
+
+  "item.randexten.tooth": "Tooth",
 
   "item.randexten.aquamarin": "Aquamarin",
   "item.randexten.raw_aquamarin": "Raw Aquamarin",
