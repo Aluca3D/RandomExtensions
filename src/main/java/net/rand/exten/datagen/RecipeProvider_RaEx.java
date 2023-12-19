@@ -647,17 +647,20 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .pattern("RRR")
                 .pattern("RSR")
                 .input('S', Items.TNT)
-                .input('R', Items.IRON_INGOT)
+                .input('R', Items.COPPER_INGOT)
                 .criterion(hasItem(Items.TNT), conditionsFromItem(Items.TNT))
-                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.LAND_MINE)));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks_RaEx.ELECTRIC_LAND_MINE)
-                .input(Blocks_RaEx.LAND_MINE, 1)
-                .input(Items_RaEx.NINE_V_BATTERY_ITEM, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks_RaEx.STRONG_LAND_MINE)
+                .pattern("RRR")
+                .pattern("RSR")
+                .input('S', Blocks_RaEx.LAND_MINE)
+                .input('R', Items.IRON_INGOT)
                 .criterion(hasItem(Blocks_RaEx.LAND_MINE), conditionsFromItem(Blocks_RaEx.LAND_MINE))
-                .criterion(hasItem(Items_RaEx.NINE_V_BATTERY_ITEM), conditionsFromItem(Items_RaEx.NINE_V_BATTERY_ITEM))
-                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.ELECTRIC_LAND_MINE)));
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.STRONG_LAND_MINE)));
+
+
 
         //// Aquamarin
         SmithingTransformRecipeJsonBuilder.create(

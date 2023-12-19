@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "R": {
-      "item": "minecraft:copper_ingot"
+      "item": "minecraft:iron_ingot"
     },
     "S": {
-      "item": "minecraft:tnt"
+      "item": "randexten:land_mine"
     }
   },
   "pattern": [
@@ -14,8 +14,7 @@
     "RSR"
   ],
   "result": {
-    "count": 3,
-    "item": "randexten:land_mine"
+    "item": "randexten:strong_land_mine"
   },
   "show_notification": true
 }

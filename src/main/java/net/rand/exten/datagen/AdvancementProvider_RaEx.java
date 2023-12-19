@@ -696,7 +696,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         .addRecipe(new Identifier("randexten:smoke_bomb"))
                         .addRecipe(new Identifier("randexten:glow_bomb"))
                         .addRecipe(new Identifier("randexten:land_mine"))
-                        .addRecipe(new Identifier("randexten:electric_land_mine"))
+                        .addRecipe(new Identifier("randexten:strong_land_mine"))
                         .setExperience(20)
                 )
                 .parent(explosivesRoot)
