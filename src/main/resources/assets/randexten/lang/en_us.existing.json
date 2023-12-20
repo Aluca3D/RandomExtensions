@@ -232,5 +232,6 @@
 
   "block.randexten.cheese_step": "Cheese Step",
 
-  "death.attack.barbed_wire": "%1$s jumped into Barbed Wires"
+  "death.attack.barbed_wire": "%1$s jumped into Barbed Wires",
+  "death.attack.end_berry_bush": "%1$s loved End Berry's to much"
 }

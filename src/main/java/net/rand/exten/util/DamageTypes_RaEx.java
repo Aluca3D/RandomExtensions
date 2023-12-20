@@ -8,8 +8,9 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
 public class DamageTypes_RaEx {
-    //ToDo add for custom mob/Berry Bush
-    public static final RegistryKey<DamageType> BARBED_WIRE_DAMAGE_TYPE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, new Identifier("randexten", "barbed_wire_damage_type"));
+
+    public static final RegistryKey<DamageType> BARBED_WIRE_DAMAGE_TYPE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, new Identifier("randexten", "barbed_wire_dt"));
+    public static final RegistryKey<DamageType> END_BARY_BUSH_DAMAGE_TYPE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, new Identifier("randexten", "end_berry_bush_dt"));
 
     public static DamageSource of(World world, RegistryKey<DamageType> key) {
         return new DamageSource(world.getRegistryManager().get(RegistryKeys.DAMAGE_TYPE).entryOf(key));
