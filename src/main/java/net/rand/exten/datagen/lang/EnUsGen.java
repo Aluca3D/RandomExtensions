@@ -8,7 +8,6 @@ import net.rand.exten.entity.Entities_RaEx;
 import net.rand.exten.item.ItemGroups_RaEx;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.custom.LootBag_RaEx;
-import net.rand.exten.sound.Sounds_RaEx;
 
 import java.nio.file.Path;
 
@@ -43,13 +42,13 @@ public class EnUsGen extends FabricLanguageProvider {
         translationBuilder.add(Effects_RaEx.LIGHTNING_ATTRACTION, "Lightning Attraction");
 
         ///Enchantment
-        translationBuilder.add(Enchantments_RaEx.CURSE_OF_EXPLODING,"Curse of Exploding");
-        translationBuilder.add(Enchantments_RaEx.POISONED_BLADE,"Poisoned Blade");
-        translationBuilder.add(Enchantments_RaEx.CURSE_OF_SELF_HARMING,"Curse of Self Harming");
-        translationBuilder.add(Enchantments_RaEx.ESCAPER,"Escaper");
-        translationBuilder.add(Enchantments_RaEx.EVOKERS_BITE,"Evoker's Bite");
-        translationBuilder.add(Enchantments_RaEx.LIFE_STEAL,"Life Steal");
-        translationBuilder.add(Enchantments_RaEx.FREEZING_BLADE,"Freezing Blade");
+        translationBuilder.add(Enchantments_RaEx.CURSE_OF_EXPLODING, "Curse of Exploding");
+        translationBuilder.add(Enchantments_RaEx.POISONED_BLADE, "Poisoned Blade");
+        translationBuilder.add(Enchantments_RaEx.CURSE_OF_SELF_HARMING, "Curse of Self Harming");
+        translationBuilder.add(Enchantments_RaEx.ESCAPER, "Escaper");
+        translationBuilder.add(Enchantments_RaEx.EVOKERS_BITE, "Evoker's Bite");
+        translationBuilder.add(Enchantments_RaEx.LIFE_STEAL, "Life Steal");
+        translationBuilder.add(Enchantments_RaEx.FREEZING_BLADE, "Freezing Blade");
 
         ///Entity
         translationBuilder.add(Entities_RaEx.NIGHTMARE_TV, "NightmareTV");
