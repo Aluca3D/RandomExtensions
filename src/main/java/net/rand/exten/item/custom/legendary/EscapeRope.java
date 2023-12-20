@@ -28,8 +28,7 @@ public class EscapeRope extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        BlockPos blockPos;
-        if (user.isOnGround() && world.getDimension().bedWorks() && !world.isSkyVisible(blockPos = (user.getBlockPos()))) {
+        if (user.isOnGround() && world.getDimension().bedWorks() && !world.isSkyVisible(user.getBlockPos())) {
             world.playSound(null, user.getX(), user.getY(), user.getZ(),
                     SoundEvents.BLOCK_PORTAL_TRAVEL, SoundCategory.NEUTRAL, 0.125f,1); //ToDo new Sound
 

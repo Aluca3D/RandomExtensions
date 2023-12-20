@@ -14,7 +14,7 @@ import net.rand.exten.item.custom.LootBag_RaEx;
 
 public class ItemGroups_RaEx {
 
-    public static final ItemGroup RANEXT_GROUP = Registry.register(Registries.ITEM_GROUP,
+    public static final ItemGroup RANDEXTEN_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(RandomExtensions.MOD_ID, "randexten_group"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.randexten_group"))
                     .icon(() -> new ItemStack(Items_RaEx.AQUAMARIN)).entries((displayContext, entries) -> {
