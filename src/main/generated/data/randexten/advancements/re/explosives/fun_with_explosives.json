@@ -43,7 +43,7 @@
       "randexten:smoke_bomb",
       "randexten:glow_bomb",
       "randexten:land_mine",
-      "randexten:electric_land_mine"
+      "randexten:strong_land_mine"
     ]
   },
   "sends_telemetry_event": true

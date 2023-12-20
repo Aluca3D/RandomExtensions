@@ -208,7 +208,7 @@ public class ItemGroups_RaEx {
 
                         /// Explosives
                         entries.add(Blocks_RaEx.LAND_MINE);
-                        entries.add(Blocks_RaEx.ELECTRIC_LAND_MINE);
+                        entries.add(Blocks_RaEx.STRONG_LAND_MINE);
                         entries.add(Items_RaEx.SMOKE_BOMB_ITEM);
                         entries.add(Items_RaEx.GLOW_BOMB_ITEM);
                         entries.add(Items_RaEx.NINE_V_BATTERY_ITEM);
