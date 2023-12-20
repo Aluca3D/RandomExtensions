@@ -16,6 +16,7 @@ public class ShulkerArmorItem extends MainArmorItem {
     public ShulkerArmorItem(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
     }
+    // Todo add https://fabricmc.net/wiki/tutorial:colorprovider
     /**
      * Shulker
      */
