@@ -1,31 +1,28 @@
 {
-  "effect.randexten.lightning_attraction": "Lightning Attraction",
   "item.minecraft.potion.effect.lightning_attraction_potion": "Lightning Attraction Potion",
   "item.minecraft.splash_potion.effect.lightning_attraction_potion": "Lightning Attraction Splash Potion",
   "item.minecraft.lingering_potion.effect.lightning_attraction_potion": "Lightning Attraction Lingering Potion",
   "item.minecraft.tipped_arrow.effect.lightning_attraction_potion": "Arrow of Lightning Attraction",
 
-  "effect.randexten.evokers_bite": "Evokers Bite",
   "item.minecraft.potion.effect.evokers_bite_potion": "Evokers Bite Potion",
   "item.minecraft.splash_potion.effect.evokers_bite_potion": "Evokers Bite Splash Potion",
   "item.minecraft.lingering_potion.effect.evokers_bite_potion": "Evokers Bite Lingering Potion",
   "item.minecraft.tipped_arrow.effect.evokers_bite_potion": "Arrow of Evokers Bite",
 
-  "item.randexten.tooth": "Tooth",
-
-  "item.randexten.raw_aquamarin": "Raw Aquamarin",
-
-  "item.randexten.ruby": "Ruby",
-  "item.randexten.raw_ruby": "Raw Ruby",
-
-  "item.randexten.topas": "Topas",
-  "item.randexten.raw_topas": "Raw Topas",
-
-  "item.randexten.cheese_loot_bag": "Cheese Loot Bag",
   "item.randexten.cheese_loot_bag.tooltip": "Its filled with CHEESE!",
-
-  "item.randexten.mine_loot_bag": "Mine Loot Bag",
   "item.randexten.mine_loot_bag.tooltip": "Stuff from the Mine",
+
+  "death.attack.barbed_wire": "%1$s jumped into Barbed Wires",
+  "death.attack.end_berry_bush": "%1$s loved End Berry's to much",
+
+  "sounds.randexten.nightmare_tv_ambient": "NightmareTV Ambient",
+  "sounds.randexten.nightmare_tv_hurt": "NightmareTV Hurt",
+  "sounds.randexten.magic_shot": "Magic",
+  "sounds.randexten.roomba_ambient": "Roomba Ambient",
+  "sounds.randexten.on_off": "On/Off",
+  "sounds.randexten.roomba_hurt": "Roomba Hurt",
+  "sounds.randexten.boing": "Boing",
+
 
   "item.randexten.wooden_longsword": "Wooden Longsword",
   "item.randexten.stone_longsword": "Stone Longsword",
@@ -207,31 +204,11 @@
   "item.randexten.nine_v_battery": "9v Battery",
   "item.randexten.holy_hand_grenade": "Holy Hand Grenade",
 
-  "enchantment.randexten.escaper": "Escaper",
-  "enchantment.randexten.evokers_bite": "Evoker's Bite",
-  "enchantment.randexten.life_steal": "Life Steal",
-  "enchantment.randexten.freezing_blade": "Freezing Blade",
-  "enchantment.randexten.curse_of_self_harming": "Curse of Self Harming",
-  "enchantment.randexten.poisoned_blade": "Poisoned Blade",
-  "enchantment.randexten.curse_of_exploding": "Curse of Exploding",
-
   "item.randexten.end_barry": "End Barry",
   "block.randexten.end_barry_bush": "End Barry Bush",
 
   "item.randexten.nightmare_tv_spawn_egg": "NightmareTV Spawn Egg",
   "item.randexten.roomba_item": "Roomba",
-  "entity.randexten.nightmare_tv": "NightmareTV",
-  "entity.randexten.roomba": "Roomba",
-  "sounds.randexten.nightmare_tv_ambient": "NightmareTV Ambient",
-  "sounds.randexten.nightmare_tv_hurt": "NightmareTV Hurt",
-  "sounds.randexten.magic_shot": "Magic",
-  "sounds.randexten.roomba_ambient": "Roomba Ambient",
-  "sounds.randexten.on_off": "On/Off",
-  "sounds.randexten.roomba_hurt": "Roomba Hurt",
-  "sounds.randexten.boing": "Boing",
 
-  "block.randexten.cheese_step": "Cheese Step",
-
-  "death.attack.barbed_wire": "%1$s jumped into Barbed Wires",
-  "death.attack.end_berry_bush": "%1$s loved End Berry's to much"
+  "block.randexten.cheese_step": "Cheese Step"
 }
