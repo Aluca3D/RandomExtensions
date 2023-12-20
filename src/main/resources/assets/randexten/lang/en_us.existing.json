@@ -13,7 +13,6 @@
 
   "item.randexten.tooth": "Tooth",
 
-  "item.randexten.aquamarin": "Aquamarin",
   "item.randexten.raw_aquamarin": "Raw Aquamarin",
 
   "item.randexten.ruby": "Ruby",
@@ -231,7 +230,5 @@
   "sounds.randexten.roomba_hurt": "Roomba Hurt",
   "sounds.randexten.boing": "Boing",
 
-  "block.randexten.cheese_step": "Cheese Step",
-
-  "itemgroup.randexten_group": "Random Extensions"
+  "block.randexten.cheese_step": "Cheese Step"
 }
