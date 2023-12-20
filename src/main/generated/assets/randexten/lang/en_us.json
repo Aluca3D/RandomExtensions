@@ -1,4 +1,5 @@
 {
+  "Random Extensions": "Random Extensions",
   "block.randexten.aquamarin_block": "Aquamarin Block",
   "block.randexten.aquamarin_ore": "Deepslate Aquamarin Ore",
   "block.randexten.barbed_wire": "Barbed Wire",
@@ -58,6 +59,7 @@
   "block.randexten.tinted_obsidian_glass": "Tinted Obsidian Glass",
   "block.randexten.topas_block": "Topas Block",
   "block.randexten.topas_ore": "Deepslate Topas Ore",
+  "death.attack.barbed_wire": "%1$s jumped into Barbed Wires",
   "effect.randexten.evokers_bite": "Evokers Bite",
   "effect.randexten.lightning_attraction": "Lightning Attraction",
   "enchantment.randexten.curse_of_exploding": "Curse of Exploding",
@@ -178,7 +180,6 @@
   "item.randexten.toy_hammer": "Toy Hammer",
   "item.randexten.wooden_longsword": "Wooden Longsword",
   "item.randexten.wooden_paxel": "Wooden Paxel",
-  "itemgroup.randexten_group": "Random Extensions",
   "sounds.randexten.boing": "Boing",
   "sounds.randexten.magic_shot": "Magic",
   "sounds.randexten.nightmare_tv_ambient": "NightmareTV Ambient",

@@ -20,6 +20,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
+import net.rand.exten.util.DamageTypes_RaEx;
 import org.jetbrains.annotations.Nullable;
 
 public class BarbedWire extends Block implements Waterloggable {
@@ -57,7 +58,7 @@ public class BarbedWire extends Block implements Waterloggable {
         public void onEntityCollision (BlockState state, World world, BlockPos pos, Entity entity){
             entity.slowMovement(state, new Vec3d(0.8f, 0.75, 0.8f));
             if (!entity.bypassesSteppingEffects()) {
-                entity.damage(world.getDamageSources().generic(), 1.0f);
+                entity.damage(DamageTypes_RaEx.of(world, DamageTypes_RaEx.BARBED_WIRE_DAMAGE_TYPE), 1.0f);
             }
 
         }

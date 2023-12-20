@@ -230,5 +230,7 @@
   "sounds.randexten.roomba_hurt": "Roomba Hurt",
   "sounds.randexten.boing": "Boing",
 
-  "block.randexten.cheese_step": "Cheese Step"
+  "block.randexten.cheese_step": "Cheese Step",
+
+  "death.attack.barbed_wire": "%1$s jumped into Barbed Wires"
 }
