@@ -6,16 +6,16 @@
       "item": "minecraft:copper_ingot"
     },
     "S": {
-      "item": "randexten:copper_sword"
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "C",
-    "C",
-    "S"
+    "CC",
+    "CS",
+    " S"
   ],
   "result": {
-    "item": "randexten:copper_longsword"
+    "item": "randexten:copper_axe"
   },
   "show_notification": true
 }

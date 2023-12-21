@@ -13,21 +13,9 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_copper_sword": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "randexten:copper_sword"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:copper_longsword"
+        "recipe": "minecraft:copper_chestplate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -35,13 +23,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_copper_ingot",
-      "has_copper_sword"
+      "has_copper_ingot"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:copper_longsword"
+      "minecraft:copper_chestplate"
     ]
   },
   "sends_telemetry_event": false

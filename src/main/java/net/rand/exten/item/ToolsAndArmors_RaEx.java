@@ -78,24 +78,24 @@ public class ToolsAndArmors_RaEx {
     /**
      * Copper
      */
-    public static final Item COPPER_AXE = registerItem("cooper_axe",
+    public static final Item COPPER_AXE = registerItem("copper_axe",
             new AxeItem(ToolMaterial_RaEx.COPPER, 5, -3f, new FabricItemSettings()));
-    public static final Item COPPER_PICKAXE = registerItem("cooper_pickaxe",
+    public static final Item COPPER_PICKAXE = registerItem("copper_pickaxe",
             new PickaxeItem(ToolMaterial_RaEx.COPPER, 1, -2.8f, new FabricItemSettings()));
-    public static final Item COPPER_SHOVEL = registerItem("cooper_shovel",
+    public static final Item COPPER_SHOVEL = registerItem("copper_shovel",
             new ShovelItem(ToolMaterial_RaEx.COPPER, 1, -3f, new FabricItemSettings()));
-    public static final Item COPPER_HOE = registerItem("cooper_hoe",
+    public static final Item COPPER_HOE = registerItem("copper_hoe",
             new HoeItem(ToolMaterial_RaEx.COPPER, -2, -3f, new FabricItemSettings()));
-    public static final Item COPPER_SWORD = registerItem("cooper_sword",
+    public static final Item COPPER_SWORD = registerItem("copper_sword",
             new SwordItem(ToolMaterial_RaEx.COPPER, 3, -2.4f, new FabricItemSettings()));
 
-    public static final Item COPPER_HELMET = registerItem("cooper_helmet",
+    public static final Item COPPER_HELMET = registerItem("copper_helmet",
             new CopperArmorItem(ArmorMaterials_RaEx.COPPER, ArmorItem.Type.HELMET, new FabricItemSettings()));
-    public static final Item COPPER_CHESTPLATE = registerItem("cooper_chestplate",
+    public static final Item COPPER_CHESTPLATE = registerItem("copper_chestplate",
             new ArmorItem(ArmorMaterials_RaEx.COPPER, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
-    public static final Item COPPER_LEGGINGS = registerItem("cooper_leggings",
+    public static final Item COPPER_LEGGINGS = registerItem("copper_leggings",
             new ArmorItem(ArmorMaterials_RaEx.COPPER, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
-    public static final Item COPPER_BOOTS = registerItem("cooper_boots",
+    public static final Item COPPER_BOOTS = registerItem("copper_boots",
             new ArmorItem(ArmorMaterials_RaEx.COPPER, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
     /**

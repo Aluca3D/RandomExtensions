@@ -6,7 +6,7 @@
       "item": "minecraft:copper_ingot"
     },
     "S": {
-      "item": "randexten:copper_sword"
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     "S"
   ],
   "result": {
-    "item": "randexten:copper_longsword"
+    "item": "randexten:copper_sword"
   },
   "show_notification": true
 }

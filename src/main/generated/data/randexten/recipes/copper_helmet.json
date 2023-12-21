@@ -4,18 +4,14 @@
   "key": {
     "C": {
       "item": "minecraft:copper_ingot"
-    },
-    "S": {
-      "item": "randexten:copper_sword"
     }
   },
   "pattern": [
-    "C",
-    "C",
-    "S"
+    "CCC",
+    "C C"
   ],
   "result": {
-    "item": "randexten:copper_longsword"
+    "item": "randexten:copper_helmet"
   },
   "show_notification": true
 }
