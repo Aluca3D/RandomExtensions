@@ -24,57 +24,6 @@
   "sounds.randexten.boing": "Boing",
 
 
-  "item.randexten.wooden_longsword": "Wooden Longsword",
-  "item.randexten.stone_longsword": "Stone Longsword",
-  "item.randexten.iron_longsword": "Iron Longsword",
-  "item.randexten.golden_longsword": "Golden Longsword",
-  "item.randexten.diamond_longsword": "Diamond Longsword",
-  "item.randexten.netherite_longsword": "Netherite Longsword",
-
-  "item.randexten.diamond_aquamarin_helmet": "Aquamarin Diamond Helmet",
-  "item.randexten.diamond_aquamarin_chestplate": "Aquamarin Diamond Chestplate",
-  "item.randexten.diamond_aquamarin_leggings": "Aquamarin Diamond Leggings",
-  "item.randexten.diamond_aquamarin_boots": "Aquamarin Diamond Boots",
-
-  "item.randexten.netherite_aquamarin_helmet": "Aquamarin Netherite Helmet",
-  "item.randexten.netherite_aquamarin_chestplate": "Aquamarin Netherite Chestplate",
-  "item.randexten.netherite_aquamarin_leggings": "Aquamarin Netherite Leggings",
-  "item.randexten.netherite_aquamarin_boots": "Aquamarin Netherite Boots",
-
-  "item.randexten.diamond_ruby_helmet": "Ruby Diamond Helmet",
-  "item.randexten.diamond_ruby_chestplate": "Ruby Diamond Chestplate",
-  "item.randexten.diamond_ruby_leggings": "Ruby Diamond Leggings",
-  "item.randexten.diamond_ruby_boots": "Ruby Diamond Boots",
-
-  "item.randexten.netherite_ruby_helmet": "Ruby Netherite Helmet",
-  "item.randexten.netherite_ruby_chestplate": "Ruby Netherite Chestplate",
-  "item.randexten.netherite_ruby_leggings": "Ruby Netherite Leggings",
-  "item.randexten.netherite_ruby_boots": "Ruby Netherite Boots",
-
-  "item.randexten.diamond_topas_helmet": "Topas Diamond Helmet",
-  "item.randexten.diamond_topas_chestplate": "Topas Diamond Chestplate",
-  "item.randexten.diamond_topas_leggings": "Topas Diamond Leggings",
-  "item.randexten.diamond_topas_boots": "Topas Diamond Boots",
-
-  "item.randexten.netherite_topas_helmet": "Topas Netherite Helmet",
-  "item.randexten.netherite_topas_chestplate": "Topas Netherite Chestplate",
-  "item.randexten.netherite_topas_leggings": "Topas Netherite Leggings",
-  "item.randexten.netherite_topas_boots": "Topas Netherite Boots",
-
-  "item.randexten.gems_upgrade_template": "Gems Upgrade Template",
-
-  "block.randexten.ruby_ore": "Deepslate Ruby Ore",
-  "block.randexten.ruby_block": "Ruby Block",
-
-  "block.randexten.topas_ore": "Deepslate Topas Ore",
-  "block.randexten.topas_block": "Topas Block",
-
-  "block.randexten.aquamarin_ore": "Deepslate Aquamarin Ore",
-  "block.randexten.aquamarin_block": "Aquamarin Block",
-
-  "item.randexten.soul": "Soul",
-  "block.randexten.soul_ore": "Soul ore",
-
   "block.randexten.charcoal_block": "Charcoal Block",
   "block.randexten.cheese_block": "Cheese Block",
   "block.randexten.cheese_slabs": "Cheese Slab",

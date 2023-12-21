@@ -2,11 +2,13 @@ package net.rand.exten.datagen.lang;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.effects.Effects_RaEx;
 import net.rand.exten.enchantment.Enchantments_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
 import net.rand.exten.item.ItemGroups_RaEx;
 import net.rand.exten.item.Items_RaEx;
+import net.rand.exten.item.ToolsAndArmors_RaEx;
 import net.rand.exten.item.custom.LootBag_RaEx;
 
 import java.nio.file.Path;
@@ -30,12 +32,51 @@ public class EnUsGen extends FabricLanguageProvider {
         translationBuilder.add(Items_RaEx.TOPAS, "Topas");
         translationBuilder.add(Items_RaEx.RAW_TOPAS, "Raw Topas");
         translationBuilder.add(Items_RaEx.TOOTH, "Tooth");
+        translationBuilder.add(Items_RaEx.GEMS_UPGRADE_TEMPLATE, "Gems Upgrade Template");
+        translationBuilder.add(ToolsAndArmors_RaEx.WOODEN_LONGSWORD, "Wooden Longsword");
+        translationBuilder.add(ToolsAndArmors_RaEx.STONE_LONGSWORD, "Stone Longsword");
+        translationBuilder.add(ToolsAndArmors_RaEx.IRON_LONGSWORD, "Iron Longsword");
+        translationBuilder.add(ToolsAndArmors_RaEx.GOLDEN_LONGSWORD, "Golden Longsword");
+        translationBuilder.add(ToolsAndArmors_RaEx.DIAMOND_LONGSWORD, "Diamond Longsword");
+        translationBuilder.add(ToolsAndArmors_RaEx.NETHERITE_LONGSWORD, "Netherite Longsword");
+        translationBuilder.add(ToolsAndArmors_RaEx.D_AQUAMARIN_HELMET, "Aquamarin Diamond Helmet");
+        translationBuilder.add(ToolsAndArmors_RaEx.D_AQUAMARIN_CHESTPLATE, "Aquamarin Diamond Chestplate");
+        translationBuilder.add(ToolsAndArmors_RaEx.D_AQUAMARIN_LEGGINGS, "Aquamarin Diamond Leggings");
+        translationBuilder.add(ToolsAndArmors_RaEx.D_AQUAMARIN_BOOTS, "Aquamarin Diamond Boots");
+        translationBuilder.add(ToolsAndArmors_RaEx.N_AQUAMARIN_HELMET, "Aquamarin Netherite Helmet");
+        translationBuilder.add(ToolsAndArmors_RaEx.N_AQUAMARIN_CHESTPLATE, "Aquamarin Netherite Chestplate");
+        translationBuilder.add(ToolsAndArmors_RaEx.N_AQUAMARIN_LEGGINGS, "Aquamarin Netherite Leggings");
+        translationBuilder.add(ToolsAndArmors_RaEx.N_AQUAMARIN_BOOTS, "Aquamarin Netherite Boots");
+        translationBuilder.add(ToolsAndArmors_RaEx.D_RUBY_HELMET, "Ruby Diamond Helmet");
+        translationBuilder.add(ToolsAndArmors_RaEx.D_RUBY_CHESTPLATE, "Ruby Diamond Chestplate");
+        translationBuilder.add(ToolsAndArmors_RaEx.D_RUBY_LEGGINGS, "Ruby Diamond Leggings");
+        translationBuilder.add(ToolsAndArmors_RaEx.D_RUBY_BOOTS, "Ruby Diamond Boots");
+        translationBuilder.add(ToolsAndArmors_RaEx.N_RUBY_HELMET, "Ruby Netherite Helmet");
+        translationBuilder.add(ToolsAndArmors_RaEx.N_RUBY_CHESTPLATE, "Ruby Netherite Chestplate");
+        translationBuilder.add(ToolsAndArmors_RaEx.N_RUBY_LEGGINGS, "Ruby Netherite Leggings");
+        translationBuilder.add(ToolsAndArmors_RaEx.N_RUBY_BOOTS, "Ruby Netherite Boots");
+        translationBuilder.add(ToolsAndArmors_RaEx.D_TOPAS_HELMET, "Topas Diamond Helmet");
+        translationBuilder.add(ToolsAndArmors_RaEx.D_TOPAS_CHESTPLATE, "Topas Diamond Chestplate");
+        translationBuilder.add(ToolsAndArmors_RaEx.D_TOPAS_LEGGINGS, "Topas Diamond Leggings");
+        translationBuilder.add(ToolsAndArmors_RaEx.D_TOPAS_BOOTS, "Topas Diamond Boots");
+        translationBuilder.add(ToolsAndArmors_RaEx.N_TOPAS_HELMET, "Topas Netherite Helmet");
+        translationBuilder.add(ToolsAndArmors_RaEx.N_TOPAS_CHESTPLATE, "Topas Netherite Chestplate");
+        translationBuilder.add(ToolsAndArmors_RaEx.N_TOPAS_LEGGINGS, "Topas Netherite Leggings");
+        translationBuilder.add(ToolsAndArmors_RaEx.N_TOPAS_BOOTS, "Topas Netherite Boots");
+        translationBuilder.add(Items_RaEx.SOUL, "Soul");
 
         /// Loot Bag
         translationBuilder.add(LootBag_RaEx.CHEESE_LOOT_BAG, "Cheese Loot Bag");
         translationBuilder.add(LootBag_RaEx.MINE_LOOT_BAG, "Mine Loot Bag");
 
         /// Block
+        translationBuilder.add(Blocks_RaEx.AQUAMARIN_ORE, "Deepslate Aquamarin Ore");
+        translationBuilder.add(Blocks_RaEx.AQUAMARIN_BLOCK, "Aquamarin Block");
+        translationBuilder.add(Blocks_RaEx.TOPAS_ORE, "Deepslate Topas Ore");
+        translationBuilder.add(Blocks_RaEx.TOPAS_BLOCK, "Topas Block");
+        translationBuilder.add(Blocks_RaEx.RUBY_ORE, "Deepslate Ruby Ore");
+        translationBuilder.add(Blocks_RaEx.RUBY_BLOCK, "Ruby Block");
+        translationBuilder.add(Blocks_RaEx.SOUL_ORE, "Soul ore");
 
         /// Effect
         translationBuilder.add(Effects_RaEx.EVOKERS_BITE, "Evokers Bite");
