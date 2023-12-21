@@ -20,9 +20,6 @@ public class Tags_RaEx {
 
     public static class Items {
 
-        public static final TagKey<Item> NUGGETS =
-                createTag("nuggets");
-
         public static final TagKey<Item> GEMS =
                 createTag("gems");
 

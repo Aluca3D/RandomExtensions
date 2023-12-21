@@ -131,7 +131,9 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         Text.literal("A Lump of Metal"), Text.literal("he, Lump"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
                         true, true, true))
-                .criterion("has_nugget", InventoryChangedCriterion.Conditions.items(ItemPredicate.Builder.create().tag(Tags_RaEx.Items.NUGGETS)))
+                .criterion("has_gold_nugget", InventoryChangedCriterion.Conditions.items(Items.GOLD_NUGGET))
+                .criterion("has_iron_nugget", InventoryChangedCriterion.Conditions.items(Items.IRON_NUGGET))
+                .criterion("has_copper_nugget", InventoryChangedCriterion.Conditions.items(Items_RaEx.COPPER_NUGGET))
                 .rewards(AdvancementRewards.Builder.experience(20)
                         .addRecipe(new Identifier("randexten:metal_lump")))
                 .parent(miscRoot)
