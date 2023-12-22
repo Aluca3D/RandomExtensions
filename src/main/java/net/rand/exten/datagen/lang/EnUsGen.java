@@ -148,8 +148,8 @@ public class EnUsGen extends FabricLanguageProvider {
         translationBuilder.add(Blocks_RaEx.OBSIDIAN_GLASS_PANE, "Obsidian Glass Pane");
         translationBuilder.add(Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK, "Explosive Cake");
         translationBuilder.add(Blocks_RaEx.MOSSY_CRYSTAL, "Mossy Crystal");
-        translationBuilder.add(Blocks_RaEx.ICE_CRYSTAL, "Ice Crystal");
-        translationBuilder.add(Blocks_RaEx.SAND_CRYSTAL, "Sand Crystal");
+        translationBuilder.add(Blocks_RaEx.ICE_CRYSTAL, "Icey Crystal");
+        translationBuilder.add(Blocks_RaEx.SAND_CRYSTAL, "Sandy Crystal");
         translationBuilder.add(Blocks_RaEx.GRINDER, "Grinder");
         translationBuilder.add(Blocks_RaEx.NIGHT_SHADE, "Night Shade");
         translationBuilder.add(Blocks_RaEx.POTTED_NIGHT_SHADE, "Potted Night Shade");
@@ -185,11 +185,11 @@ public class EnUsGen extends FabricLanguageProvider {
         translationBuilder.add(Blocks_RaEx.BURNED_TREE_SAPLING, "Burned Tree Sapling");
         translationBuilder.add(Blocks_RaEx.POTTED_BURNED_TREE_SAPLING, "Burned Potted Tree Sapling");
         translationBuilder.add(CropBlocks_RaEx.END_BARRY_BUSH, "End Barry Bush");
-        translationBuilder.add(CropBlocks_RaEx.TOMATO_CROP, "Tomato");
-        translationBuilder.add(CropBlocks_RaEx.CORN_CROP, "Corn");
+        translationBuilder.add(CropBlocks_RaEx.TOMATO_CROP, "Tomato Crop");
+        translationBuilder.add(CropBlocks_RaEx.CORN_CROP, "Corn Crop");
 
         /// Effect
-        translationBuilder.add(Effects_RaEx.EVOKERS_BITE, "Evokers Bite");
+        translationBuilder.add(Effects_RaEx.EVOKERS_BITE, "Evoker's Bite");
         translationBuilder.add(Effects_RaEx.LIGHTNING_ATTRACTION, "Lightning Attraction");
 
         ///Enchantment

@@ -6,10 +6,10 @@
   "item.minecraft.lingering_potion.effect.lightning_attraction_potion": "Lightning Attraction Lingering Potion",
   "item.minecraft.tipped_arrow.effect.lightning_attraction_potion": "Arrow of Lightning Attraction",
 
-  "item.minecraft.potion.effect.evokers_bite_potion": "Evokers Bite Potion",
-  "item.minecraft.splash_potion.effect.evokers_bite_potion": "Evokers Bite Splash Potion",
-  "item.minecraft.lingering_potion.effect.evokers_bite_potion": "Evokers Bite Lingering Potion",
-  "item.minecraft.tipped_arrow.effect.evokers_bite_potion": "Arrow of Evokers Bite",
+  "item.minecraft.potion.effect.evokers_bite_potion": "Evoker's Bite Potion",
+  "item.minecraft.splash_potion.effect.evokers_bite_potion": "Evoker's Bite Splash Potion",
+  "item.minecraft.lingering_potion.effect.evokers_bite_potion": "Evoker's Bite Lingering Potion",
+  "item.minecraft.tipped_arrow.effect.evokers_bite_potion": "Arrow of Evoker's Bite",
 
   "item.randexten.cheese_loot_bag.tooltip": "Its filled with CHEESE!",
   "item.randexten.mine_loot_bag.tooltip": "Stuff from the Mine",

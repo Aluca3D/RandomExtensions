@@ -1,0 +1,31 @@
+{
+  "item.minecraft.potion.effect.lightning_attraction_potion": "Blitzattraktion Trank",
+  "item.minecraft.splash_potion.effect.lightning_attraction_potion": "Blitzattraktion Wurftrank",
+  "item.minecraft.lingering_potion.effect.lightning_attraction_potion": "Verweiltrank der Blitzattraktion",
+  "item.minecraft.tipped_arrow.effect.lightning_attraction_potion": "Pfeil der Blitzattraktion",
+
+  "item.minecraft.potion.effect.evokers_bite_potion": "Evoker's Biss Trank",
+  "item.minecraft.splash_potion.effect.evokers_bite_potion": "Evoker's Biss Wurftrank",
+  "item.minecraft.lingering_potion.effect.evokers_bite_potion": "Verweiltrank des Evoker's Biss",
+  "item.minecraft.tipped_arrow.effect.evokers_bite_potion": "Pfeil der Evoker's Biss",
+
+  "item.randexten.cheese_loot_bag.tooltip": "Es ist mit Käse Gefühlt!",
+  "item.randexten.mine_loot_bag.tooltip": "Zeug von der Mine",
+  "item.randexten.stinky_cheese.tooltip": "Eww, es Stinkt",
+  "item.randexten.bamboo_explosive.tooltip": "Geht Boom",
+  "item.randexten.bamboo_explosive_strong.tooltip": "Ein großer Boom",
+
+  "death.attack.barbed_wire": "%1$s \nsprang in Stacheldrähte",
+  "death.attack.pebble": "%1$s war zu Stoned",
+  "death.attack.end_berry_bush": "%1$s Liebte End Beeren zu viel",
+
+  "sounds.randexten.nightmare_tv_ambient": "NightmareTV Ambient",
+  "sounds.randexten.nightmare_tv_hurt": "NightmareTV Hurt",
+  "sounds.randexten.magic_shot": "Magie",
+  "sounds.randexten.roomba_ambient": "Roomba Ambient",
+  "sounds.randexten.on_off": "On/Off",
+  "sounds.randexten.roomba_hurt": "Roomba Hurt",
+  "sounds.randexten.boing": "Boing",
+
+  "entity.minecraft.villager.cheese_maker": "Käse Macher"
+}
