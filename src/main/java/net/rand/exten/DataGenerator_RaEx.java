@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 import net.rand.exten.datagen.*;
+import net.rand.exten.datagen.lang.EnUsGen;
 import net.rand.exten.world.ConfiguredFeatures_RaEx;
 import net.rand.exten.world.PlacedFeatures_RaEx;
 
@@ -21,6 +22,7 @@ public class DataGenerator_RaEx implements DataGeneratorEntrypoint {
         pack.addProvider(WorldGenerator_RaEx::new);
         pack.addProvider(PoiTagProvider_RaEx::new);
         pack.addProvider(AdvancementProvider_RaEx::new);
+        pack.addProvider(EnUsGen::new);
     }
     @Override
     public void buildRegistry(RegistryBuilder registryBuilder) {

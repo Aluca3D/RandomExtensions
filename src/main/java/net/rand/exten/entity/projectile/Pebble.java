@@ -17,6 +17,7 @@ import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.World;
 import net.rand.exten.entity.Entities_RaEx;
 import net.rand.exten.item.Items_RaEx;
+import net.rand.exten.util.DamageTypes_RaEx;
 import net.rand.exten.util.tools.Math_RaEx;
 
 public class Pebble extends ThrownItemEntity {
@@ -55,7 +56,7 @@ public class Pebble extends ThrownItemEntity {
     @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
         super.onEntityHit(entityHitResult);
-        entityHitResult.getEntity().damage(this.getDamageSources().thrown(this, this.getOwner()), 0.8f);
+        entityHitResult.getEntity().damage(DamageTypes_RaEx.of(entityHitResult.getEntity().getWorld(), DamageTypes_RaEx.PEBBLE_DAMAGE_TYPE), 0.8f);
         Math_RaEx m = new Math_RaEx();
         int rm = m.randomInt(25);
 

@@ -131,7 +131,9 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         Text.literal("A Lump of Metal"), Text.literal("he, Lump"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
                         true, true, true))
-                .criterion("has_nugget", InventoryChangedCriterion.Conditions.items(ItemPredicate.Builder.create().tag(Tags_RaEx.Items.NUGGETS)))
+                .criterion("has_gold_nugget", InventoryChangedCriterion.Conditions.items(Items.GOLD_NUGGET))
+                .criterion("has_iron_nugget", InventoryChangedCriterion.Conditions.items(Items.IRON_NUGGET))
+                .criterion("has_copper_nugget", InventoryChangedCriterion.Conditions.items(Items_RaEx.COPPER_NUGGET))
                 .rewards(AdvancementRewards.Builder.experience(20)
                         .addRecipe(new Identifier("randexten:metal_lump")))
                 .parent(miscRoot)
@@ -496,24 +498,24 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
                         true, true, true))
                 .criterion("has_copper_ingot", InventoryChangedCriterion.Conditions.items(Items.COPPER_INGOT))
-                .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:cooper_axe"))
-                        .addRecipe(new Identifier("randexten:cooper_pickaxe"))
-                        .addRecipe(new Identifier("randexten:cooper_shovel"))
-                        .addRecipe(new Identifier("randexten:cooper_hoe"))
-                        .addRecipe(new Identifier("randexten:cooper_sword"))
-                        .addRecipe(new Identifier("randexten:cooper_helmet"))
-                        .addRecipe(new Identifier("randexten:cooper_chestplate"))
-                        .addRecipe(new Identifier("randexten:cooper_leggings"))
-                        .addRecipe(new Identifier("randexten:cooper_boots"))
+                .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:copper_axe"))
+                        .addRecipe(new Identifier("randexten:copper_pickaxe"))
+                        .addRecipe(new Identifier("randexten:copper_shovel"))
+                        .addRecipe(new Identifier("randexten:copper_hoe"))
+                        .addRecipe(new Identifier("randexten:copper_sword"))
+                        .addRecipe(new Identifier("randexten:copper_helmet"))
+                        .addRecipe(new Identifier("randexten:copper_chestplate"))
+                        .addRecipe(new Identifier("randexten:copper_leggings"))
+                        .addRecipe(new Identifier("randexten:copper_boots"))
                         .addRecipe(new Identifier("randexten:copper_paxel"))
                         .addRecipe(new Identifier("randexten:copper_longsword"))
                         .setExperience(20)
                 )
                 .parent(mainRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/cooper/cooper_root");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/copper/copper_root");
 
         // Copper
-        AdvancementEntry cooperArmor = Advancement.Builder.create()
+        AdvancementEntry copperArmor = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.COPPER_HELMET),
                         Text.literal("Copper Armor"), Text.literal("Dose not Rust, i *promise*"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
@@ -524,9 +526,9 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .criterion("has_copper_boots", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_BOOTS))
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(copperRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/cooper/cooper_armor");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/copper/copper_armor");
 
-        AdvancementEntry cooperTools = Advancement.Builder.create()
+        AdvancementEntry copperTools = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.COPPER_AXE),
                         Text.literal("Tools of Copper"), Text.literal("Cant Rust"),
                         new Identifier(RandomExtensions.MOD_ID, background), AdvancementFrame.TASK,
@@ -538,7 +540,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .criterion("has_copper_sword", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_SWORD))
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(copperRoot)
-                .build(consumer, RandomExtensions.MOD_ID + ":re/cooper/cooper_tools");
+                .build(consumer, RandomExtensions.MOD_ID + ":re/copper/copper_tools");
     }
 
     public void generateCrystalAdvancement(Consumer<AdvancementEntry> consumer, AdvancementEntry mainRoot) {

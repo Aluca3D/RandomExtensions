@@ -73,12 +73,6 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
                 .add(Items_RaEx.TOPAS)
         ;
 
-        getOrCreateTagBuilder(Tags_RaEx.Items.NUGGETS)
-                .add(Items_RaEx.COPPER_NUGGET)
-                .add(Items.GOLD_NUGGET)
-                .add(Items.IRON_NUGGET)
-        ;
-
         getOrCreateTagBuilder(Tags_RaEx.Items.LEGENDARY)
                 .add(ToolsAndArmors_RaEx.TOY_HAMMER)
                 .add(ToolsAndArmors_RaEx.LEAVE_STAFF)

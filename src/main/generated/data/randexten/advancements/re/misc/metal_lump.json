@@ -1,11 +1,37 @@
 {
   "parent": "randexten:re/misc/misc_root",
   "criteria": {
-    "has_nugget": {
+    "has_copper_nugget": {
       "conditions": {
         "items": [
           {
-            "tag": "randexten:nuggets"
+            "items": [
+              "randexten:copper_nugget"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_gold_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:gold_nugget"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_iron_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_nugget"
+            ]
           }
         ]
       },
@@ -30,7 +56,13 @@
   },
   "requirements": [
     [
-      "has_nugget"
+      "has_gold_nugget"
+    ],
+    [
+      "has_iron_nugget"
+    ],
+    [
+      "has_copper_nugget"
     ]
   ],
   "rewards": {

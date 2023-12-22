@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "randexten:copper_nugget",
-    "minecraft:gold_nugget",
-    "minecraft:iron_nugget"
-  ]
-}
