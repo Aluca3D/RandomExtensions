@@ -63,9 +63,6 @@ public class LeaveStaff extends Item {
         BlockState blockStateBelow = user.getWorld().getBlockState(posBelow);
         Block below = blockStateBelow.getBlock();
 
-        //Hand hand = Hand.OFF_HAND;
-        //ItemStack itemStack = user.getStackInHand(hand);
-
         if (!user.isSneaking() && below.equals(Blocks.AIR)) {
             BlockState state = Blocks_RaEx.FAKE_LEAVES.getDefaultState();
             world.setBlockState(posBelow, state);
