@@ -121,7 +121,7 @@ public class DeGen extends FabricLanguageProvider {
 
         /// Loot Bag
         translationBuilder.add(LootBag_RaEx.CHEESE_LOOT_BAG, "Käse Beutetasche");
-        translationBuilder.add(LootBag_RaEx.MINE_LOOT_BAG, "Mine Beutetasche");
+        translationBuilder.add(LootBag_RaEx.MINE_LOOT_BAG, "Minen Beutetasche");
 
         /// Block
         translationBuilder.add(Blocks_RaEx.AQUAMARIN_ORE, "Tiefenschiefer Aquamarinertz");
