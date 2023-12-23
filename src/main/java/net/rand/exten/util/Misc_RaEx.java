@@ -9,16 +9,17 @@ import net.minecraft.block.cauldron.CauldronBehavior;
 import net.minecraft.block.dispenser.ProjectileDispenserBehavior;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.potion.Potions;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.Position;
 import net.minecraft.world.World;
 import net.rand.exten.block.Blocks_RaEx;
-import net.rand.exten.entity.projectile.BambooExplosive;
-import net.rand.exten.entity.projectile.Pebble;
-import net.rand.exten.entity.projectile.StinkyCheese;
-import net.rand.exten.entity.projectile.StrongBambooExplosive;
+import net.rand.exten.entity.projectile.*;
 import net.rand.exten.item.Items_RaEx;
+import net.rand.exten.mixin.BrewingRecipeRegistryMixin;
+import net.rand.exten.effects.Potions_RaEx;
 
 public class Misc_RaEx {
     public static void registerMisc() {
@@ -26,6 +27,7 @@ public class Misc_RaEx {
         registerBehavior();
         registerStrippable();
         registerFlammable();
+        registerPotionRecipes();
     }
 
     private static void registerFuel() {
@@ -80,6 +82,34 @@ public class Misc_RaEx {
                 });
             }
         });
+        DispenserBlock.registerBehavior(Items_RaEx.SMOKE_BOMB_ITEM, new ProjectileDispenserBehavior() {
+            protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
+                return Util.make(new SmokeBomb(world, position.getX(), position.getY(), position.getZ()), (entity) -> {
+                    entity.setItem(stack);
+                });
+            }
+        });
+        DispenserBlock.registerBehavior(Items_RaEx.GLOW_BOMB_ITEM, new ProjectileDispenserBehavior() {
+            protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
+                return Util.make(new GlowBomb(world, position.getX(), position.getY(), position.getZ()), (entity) -> {
+                    entity.setItem(stack);
+                });
+            }
+        });
+        DispenserBlock.registerBehavior(Items_RaEx.NINE_V_BATTERY_ITEM, new ProjectileDispenserBehavior() {
+            protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
+                return Util.make(new NineVBattery(world, position.getX(), position.getY(), position.getZ()), (entity) -> {
+                    entity.setItem(stack);
+                });
+            }
+        });
+        DispenserBlock.registerBehavior(Items_RaEx.HOLY_HAND_GRENADE_ITEM, new ProjectileDispenserBehavior() {
+            protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
+                return Util.make(new HolyHandGrenade(world, position.getX(), position.getY(), position.getZ()), (entity) -> {
+                    entity.setItem(stack);
+                });
+            }
+        });
 
         // CauldronBehavior
         CauldronBehavior.WATER_CAULDRON_BEHAVIOR.put(Items_RaEx.FLOUR, (state, world, pos, player, hand, stack) -> {
@@ -121,7 +151,6 @@ public class Misc_RaEx {
         FlammableBlockRegistry.getDefaultInstance().add(Blocks_RaEx.BURNED_BUTTON, 5, 3);
 
         FlammableBlockRegistry.getDefaultInstance().add(Blocks_RaEx.CHARCOAL_BLOCK, 5, 5);
-
         FlammableBlockRegistry.getDefaultInstance().add(Blocks_RaEx.FAKE_LEAVES, 100, 100);
     }
 
@@ -131,5 +160,10 @@ public class Misc_RaEx {
 
         StrippableBlockRegistry.register(Blocks_RaEx.PURPUR_LOG, Blocks_RaEx.STRIPPED_PURPUR_LOG);
         StrippableBlockRegistry.register(Blocks_RaEx.PURPUR_WOOD, Blocks_RaEx.STRIPPED_PURPUR_WOOD);
+    }
+
+    private static void registerPotionRecipes() {
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items_RaEx.METAL_LUMP, Potions_RaEx.LIGHTNING_ATTRACTION_POTION);
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items_RaEx.TOOTH, Potions_RaEx.EVOKERS_BITE_POTION);
     }
 }

@@ -4,6 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SweetBerryBushBlock;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -13,10 +16,12 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import net.rand.exten.item.Items_RaEx;
+import net.rand.exten.util.DamageTypes_RaEx;
 
 public class EndBarryBlock extends SweetBerryBushBlock {
     public EndBarryBlock(Settings settings) {
@@ -34,10 +39,25 @@ public class EndBarryBlock extends SweetBerryBushBlock {
     }
 
     @Override
+    public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+        if (!(entity instanceof LivingEntity) || entity.getType() == EntityType.FOX || entity.getType() == EntityType.BEE) {
+            return;
+        }
+        entity.slowMovement(state, new Vec3d(0.8f, 0.75, 0.8f));
+        if (!(world.isClient || state.get(AGE) <= 0 || entity.lastRenderX == entity.getX() && entity.lastRenderZ == entity.getZ())) {
+            double d = Math.abs(entity.getX() - entity.lastRenderX);
+            double e = Math.abs(entity.getZ() - entity.lastRenderZ);
+            if (d >= (double)0.003f || e >= (double)0.003f) {
+                entity.damage(DamageTypes_RaEx.of(world, DamageTypes_RaEx.END_BARY_BUSH_DAMAGE_TYPE), 1.0f);
+            }
+        }
+    }
+
+    @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         boolean bl;
         int i = state.get(AGE);
-        boolean bl2 = bl = i == 3;
+        bl = i == 3;
         if (!bl && player.getStackInHand(hand).isOf(Items.BONE_MEAL)) {
             return ActionResult.PASS;
         }

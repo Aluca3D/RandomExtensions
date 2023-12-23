@@ -1,0 +1,50 @@
+{
+  "parent": "randexten:re/explosives/root_explosives",
+  "criteria": {
+    "has_tnt": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:tnt"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Even more Boom Boom"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:holy_hand_grenade"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Have Fun with ExPlOSiVeS"
+    }
+  },
+  "requirements": [
+    [
+      "has_tnt"
+    ]
+  ],
+  "rewards": {
+    "experience": 20,
+    "recipes": [
+      "randexten:nine_v_battery",
+      "randexten:holy_hand_grenade",
+      "randexten:smoke_bomb",
+      "randexten:glow_bomb",
+      "randexten:land_mine",
+      "randexten:strong_land_mine"
+    ]
+  },
+  "sends_telemetry_event": true
+}

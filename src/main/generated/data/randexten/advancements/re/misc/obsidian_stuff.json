@@ -1,5 +1,5 @@
 {
-  "parent": "randexten:re/randexten",
+  "parent": "randexten:re/misc/misc_root",
   "criteria": {
     "has_obsidian": {
       "conditions": {

@@ -1,0 +1,42 @@
+{
+  "parent": "randexten:re/explosives/fun_with_explosives",
+  "criteria": {
+    "has_nine_v_battery": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:nine_v_battery"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Lightning!!"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:nine_v_battery"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Energising"
+    }
+  },
+  "requirements": [
+    [
+      "has_nine_v_battery"
+    ]
+  ],
+  "rewards": {
+    "experience": 40
+  },
+  "sends_telemetry_event": true
+}

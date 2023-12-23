@@ -5,12 +5,14 @@ import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.CropBlocks_RaEx;
 import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.block.custom.blocks.entity.BlockEntity_RaEx;
+import net.rand.exten.effects.Effects_RaEx;
 import net.rand.exten.enchantment.Enchantments_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
 import net.rand.exten.item.ItemGroups_RaEx;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
 import net.rand.exten.item.custom.LootBag_RaEx;
+import net.rand.exten.effects.Potions_RaEx;
 import net.rand.exten.recipe.Recipes_RaEx;
 import net.rand.exten.screen.ScreenHandlers_RaEx;
 import net.rand.exten.sound.Sounds_RaEx;
@@ -36,6 +38,7 @@ public class RandomExtensions implements ModInitializer {
         StepBlockRegistry.registerStepBlocks();
         BlockEntity_RaEx.registerBlockEntities();
         Recipes_RaEx.registerRecipes();
+        Potions_RaEx.registerPotions();
         ScreenHandlers_RaEx.registerScreenHandler();
         CropBlocks_RaEx.registerRaExBlock();
         Enchantments_RaEx.registerEnchantments();
@@ -47,6 +50,7 @@ public class RandomExtensions implements ModInitializer {
         CustomTrades_RaEx.registerCustomTrades();
         LootTableModifiers_RaEx.modifyLootTables();
         Misc_RaEx.registerMisc();
+        Effects_RaEx.registerEffects();
         WorldGeneration_RaEx.generateModWorldGeneration();
     }
 }

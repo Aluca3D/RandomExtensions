@@ -10,6 +10,7 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.CropBlocks_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
@@ -17,10 +18,7 @@ import net.rand.exten.item.custom.food.Cheese;
 import net.rand.exten.item.custom.food.FoodComponents_RaEx;
 import net.rand.exten.item.custom.food.EscapePotion;
 import net.rand.exten.item.custom.food.Soda;
-import net.rand.exten.item.custom.items.projectile.BambooExplosiveItem;
-import net.rand.exten.item.custom.items.projectile.PebbleItem;
-import net.rand.exten.item.custom.items.projectile.StinkyCheeseItem;
-import net.rand.exten.item.custom.items.projectile.StrongBambooExplosiveItem;
+import net.rand.exten.item.custom.items.projectile.*;
 
 public class Items_RaEx {
     /**
@@ -86,7 +84,7 @@ public class Items_RaEx {
      * Potions
      */
     public static final Item ESCAPE_POTION = registerItem("escape_potion",
-            new EscapePotion(new FabricItemSettings().maxDamage(16)));
+            new EscapePotion(new FabricItemSettings().maxDamage(16).rarity(Rarity.RARE)));
 
     /**
      * Soda
@@ -114,7 +112,7 @@ public class Items_RaEx {
      * Misc
      */
     public static final Item GEMS_UPGRADE_TEMPLATE = registerItem("gems_upgrade_template",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
 
     public static final Item BAMBOO_EXPLOSIVE = registerItem("bamboo_explosive",
             new BambooExplosiveItem(new FabricItemSettings()));
@@ -127,9 +125,26 @@ public class Items_RaEx {
     public static final Item DUK_TAPE = registerItem("duk_tape",
             new Item(new FabricItemSettings()));
 
-    /**
-     * Spawn Egg
-     */
+    public static final Item COPPER_NUGGET = registerItem("copper_nugget",
+            new Item(new FabricItemSettings()));
+
+    public static final Item METAL_LUMP = registerItem("metal_lump",
+            new Item(new FabricItemSettings()));
+
+    public static final Item TOOTH = registerItem("tooth",
+            new Item(new FabricItemSettings()));
+
+    /** Explosives*/
+    public static final Item SMOKE_BOMB_ITEM = registerItem("smoke_bomb",
+            new SmokeBombItem(new FabricItemSettings()));
+    public static final Item GLOW_BOMB_ITEM = registerItem("glow_bomb",
+            new GlowBombItem(new FabricItemSettings()));
+    public static final Item NINE_V_BATTERY_ITEM = registerItem("nine_v_battery",
+            new NineVBatteryItem(new FabricItemSettings()));
+    public static final Item HOLY_HAND_GRENADE_ITEM = registerItem("holy_hand_grenade",
+            new HolyHandGrenadeItem(new FabricItemSettings()));
+
+    /**Spawn Egg*/
     public static final Item NIGHTMARE_TV_SPAWN_EGG = registerItem("nightmare_tv_spawn_egg",
             new SpawnEggItem(Entities_RaEx.NIGHTMARE_TV, 0x000000, 0xFFFFFF, new FabricItemSettings()));
 

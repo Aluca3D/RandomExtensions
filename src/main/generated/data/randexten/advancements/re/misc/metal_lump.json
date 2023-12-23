@@ -1,0 +1,75 @@
+{
+  "parent": "randexten:re/misc/misc_root",
+  "criteria": {
+    "has_copper_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:copper_nugget"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_gold_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:gold_nugget"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_iron_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_nugget"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "he, Lump"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:metal_lump"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "A Lump of Metal"
+    }
+  },
+  "requirements": [
+    [
+      "has_gold_nugget"
+    ],
+    [
+      "has_iron_nugget"
+    ],
+    [
+      "has_copper_nugget"
+    ]
+  ],
+  "rewards": {
+    "experience": 20,
+    "recipes": [
+      "randexten:metal_lump"
+    ]
+  },
+  "sends_telemetry_event": true
+}

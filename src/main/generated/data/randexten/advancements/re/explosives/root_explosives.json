@@ -1,0 +1,45 @@
+{
+  "parent": "randexten:re/randexten",
+  "criteria": {
+    "has_gunpowder": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:gunpowder"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": "Lets make some Bombs"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "minecraft:tnt"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "BOOM"
+    }
+  },
+  "requirements": [
+    [
+      "has_gunpowder"
+    ]
+  ],
+  "rewards": {
+    "experience": 20,
+    "recipes": [
+      "randexten:bamboo_explosive"
+    ]
+  },
+  "sends_telemetry_event": true
+}

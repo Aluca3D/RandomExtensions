@@ -1,0 +1,42 @@
+{
+  "parent": "randexten:re/explosives/fun_with_explosives",
+  "criteria": {
+    "has_holy_hand_grenade": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:holy_hand_grenade"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": ""
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "item": "randexten:holy_hand_grenade"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Big Boom"
+    }
+  },
+  "requirements": [
+    [
+      "has_holy_hand_grenade"
+    ]
+  ],
+  "rewards": {
+    "experience": 40
+  },
+  "sends_telemetry_event": true
+}

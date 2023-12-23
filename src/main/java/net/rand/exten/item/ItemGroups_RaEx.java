@@ -14,7 +14,7 @@ import net.rand.exten.item.custom.LootBag_RaEx;
 
 public class ItemGroups_RaEx {
 
-    public static final ItemGroup RANEXT_GROUP = Registry.register(Registries.ITEM_GROUP,
+    public static final ItemGroup RANDEXTEN_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(RandomExtensions.MOD_ID, "randexten_group"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.randexten_group"))
                     .icon(() -> new ItemStack(Items_RaEx.AQUAMARIN)).entries((displayContext, entries) -> {
@@ -70,6 +70,12 @@ public class ItemGroups_RaEx {
                         entries.add(ToolsAndArmors_RaEx.NETHERITE_PAXEL);
 
                         // Armor
+                        /// Shulker
+                        entries.add(ToolsAndArmors_RaEx.SHULKER_HELMET);
+                        entries.add(ToolsAndArmors_RaEx.SHULKER_CHESTPLATE);
+                        entries.add(ToolsAndArmors_RaEx.SHULKER_LEGGINGS);
+                        entries.add(ToolsAndArmors_RaEx.SHULKER_BOOTS);
+
                         /// Copper
                         entries.add(ToolsAndArmors_RaEx.COPPER_HELMET);
                         entries.add(ToolsAndArmors_RaEx.COPPER_CHESTPLATE);
@@ -189,6 +195,9 @@ public class ItemGroups_RaEx {
 
                         /// Misc
                         entries.add(Items_RaEx.DUK_TAPE);
+                        entries.add(Items_RaEx.COPPER_NUGGET);
+                        entries.add(Items_RaEx.METAL_LUMP);
+                        entries.add(Items_RaEx.TOOTH);
                         entries.add(Blocks_RaEx.CHARCOAL_BLOCK);
                         entries.add(Items_RaEx.BAMBOO_EXPLOSIVE);
                         entries.add(Items_RaEx.BAMBOO_EXPLOSIVE_STRONG);
@@ -196,7 +205,14 @@ public class ItemGroups_RaEx {
                         entries.add(Items_RaEx.PEBBLE);
                         entries.add(Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK);
                         entries.add(Blocks_RaEx.BARBED_WIRE);
+
+                        /// Explosives
                         entries.add(Blocks_RaEx.LAND_MINE);
+                        entries.add(Blocks_RaEx.STRONG_LAND_MINE);
+                        entries.add(Items_RaEx.SMOKE_BOMB_ITEM);
+                        entries.add(Items_RaEx.GLOW_BOMB_ITEM);
+                        entries.add(Items_RaEx.NINE_V_BATTERY_ITEM);
+                        entries.add(Items_RaEx.HOLY_HAND_GRENADE_ITEM);
 
                         /// Crystal
                         entries.add(Blocks_RaEx.MOSSY_CRYSTAL);

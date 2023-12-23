@@ -3,13 +3,13 @@
   "category": "equipment",
   "ingredients": [
     {
-      "item": "randexten:cooper_axe"
+      "item": "randexten:copper_axe"
     },
     {
-      "item": "randexten:cooper_pickaxe"
+      "item": "randexten:copper_pickaxe"
     },
     {
-      "item": "randexten:cooper_shovel"
+      "item": "randexten:copper_shovel"
     }
   ],
   "result": {

@@ -105,6 +105,11 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         itemModelGenerator.register(Items_RaEx.ESCAPE_POTION, Models.GENERATED);
         itemModelGenerator.register(ToolsAndArmors_RaEx.ESCAPE_ROPE, Models.GENERATED);
 
+        itemModelGenerator.register(Items_RaEx.SMOKE_BOMB_ITEM, Models.GENERATED);
+        itemModelGenerator.register(Items_RaEx.GLOW_BOMB_ITEM, Models.GENERATED);
+        itemModelGenerator.register(Items_RaEx.NINE_V_BATTERY_ITEM, Models.GENERATED);
+        itemModelGenerator.register(Items_RaEx.HOLY_HAND_GRENADE_ITEM, Models.GENERATED);
+
         itemModelGenerator.register(Items_RaEx.SOUL, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.PEBBLE, Models.GENERATED);
 
@@ -129,6 +134,10 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         itemModelGenerator.register(LootBag_RaEx.CHEESE_LOOT_BAG, Models.GENERATED);
         itemModelGenerator.register(LootBag_RaEx.MINE_LOOT_BAG, Models.GENERATED);
 
+        itemModelGenerator.register(Items_RaEx.METAL_LUMP, Models.GENERATED);
+        itemModelGenerator.register(Items_RaEx.COPPER_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(Items_RaEx.TOOTH, Models.GENERATED);
+
         itemModelGenerator.register(Items_RaEx.SANDWICH, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.BUCKET_CHEESE, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.CHEESE, Models.GENERATED);
@@ -140,6 +149,11 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         itemModelGenerator.register(Items_RaEx.DOUGH, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.FLOUR, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.POPCORN, Models.GENERATED);
+
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.SHULKER_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.SHULKER_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.SHULKER_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.SHULKER_BOOTS);
 
         itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_HELMET);
         itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_CHESTPLATE);

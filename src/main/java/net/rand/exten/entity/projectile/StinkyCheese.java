@@ -66,6 +66,8 @@ public class StinkyCheese extends ThrownItemEntity {
             AreaEffectCloudEntity x = new AreaEffectCloudEntity(this.getWorld(), this.getX(), this.getY(), this.getZ());
             x.setRadius(2f);
             x.setPotion(Potions.POISON);
+            x.setOnFire(true);
+            x.setOnFireFor(20);
             x.setDuration(200); // time in ticks
             this.getWorld().spawnEntity(x);
 

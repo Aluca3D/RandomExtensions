@@ -3,7 +3,10 @@ package net.rand.exten.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.*;
+import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
@@ -165,7 +168,6 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .input(Blocks_RaEx.STRIPPED_PURPUR_LOG, 4)
                 .criterion(hasItem(Blocks_RaEx.STRIPPED_PURPUR_LOG), conditionsFromItem(Blocks_RaEx.STRIPPED_PURPUR_LOG))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.STRIPPED_PURPUR_WOOD)));
-
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.PURPUR_SLABS, Ingredient.ofItems(Blocks_RaEx.PURPUR_PLANKS))
                 .criterion(hasItem(Blocks_RaEx.PURPUR_PLANKS), conditionsFromItem(Blocks_RaEx.PURPUR_PLANKS))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_SLABS)));
@@ -270,6 +272,20 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
         offerFoodCookingRecipe(exporter, "raw_aquamarin", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_AQUAMARIN, Items_RaEx.AQUAMARIN, 0.2f);
         offerFoodCookingRecipe(exporter, "raw_topas", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_TOPAS, Items_RaEx.TOPAS, 0.2f);
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PURPLE_DYE)
+                .input(Blocks_RaEx.NIGHT_SHADE)
+                .criterion(hasItem(Blocks_RaEx.NIGHT_SHADE), conditionsFromItem(Blocks_RaEx.NIGHT_SHADE))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.PURPLE_DYE)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.TOOTH, 4)
+                .input(Items.BONE, 2)
+                .criterion(hasItem(Items.BONE), conditionsFromItem(Items.BONE))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.TOOTH)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.BONE_MEAL)
+                .input(Items_RaEx.TOOTH, 2)
+                .criterion(hasItem(Items_RaEx.TOOTH), conditionsFromItem(Items_RaEx.TOOTH))
+                .offerTo(exporter, new Identifier(getRecipeName(Items.BONE_MEAL)));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.COBBLESTONE, 1)
                 .input(Items_RaEx.PEBBLE, 3)
                 .criterion(hasItem(Items_RaEx.PEBBLE), conditionsFromItem(Items_RaEx.PEBBLE))
@@ -289,15 +305,6 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.GRINDSTONE), conditionsFromItem(Items.GRINDSTONE))
                 .criterion(hasItem(Items.STONE), conditionsFromItem(Items.STONE))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.GRINDER)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.LAND_MINE, 3)
-                .pattern("RRR")
-                .pattern("RSR")
-                .input('S', Items.TNT)
-                .input('R', Items.IRON_INGOT)
-                .criterion(hasItem(Items.TNT), conditionsFromItem(Items.TNT))
-                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.LAND_MINE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK, 1)
                 .pattern("S")
@@ -531,7 +538,45 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_SWORD)));
 
         /// Armor
+        //// Shulker
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.SHULKER_HELMET, 1)
+                .input(Items.SHULKER_SHELL, 2)
+                .input(Items.LEATHER_HELMET)
+                .criterion(hasItem(Items.SHULKER_SHELL), conditionsFromItem(Items.SHULKER_SHELL))
+                .criterion(hasItem(Items.LEATHER_HELMET), conditionsFromItem(Items.LEATHER_HELMET))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.SHULKER_HELMET)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.SHULKER_CHESTPLATE, 1)
+                .input(Items.SHULKER_SHELL, 2)
+                .input(Items.LEATHER_CHESTPLATE)
+                .criterion(hasItem(Items.SHULKER_SHELL), conditionsFromItem(Items.SHULKER_SHELL))
+                .criterion(hasItem(Items.LEATHER_CHESTPLATE), conditionsFromItem(Items.LEATHER_CHESTPLATE))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.SHULKER_CHESTPLATE)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.SHULKER_LEGGINGS, 1)
+                .input(Items.SHULKER_SHELL, 2)
+                .input(Items.LEATHER_LEGGINGS)
+                .criterion(hasItem(Items.SHULKER_SHELL), conditionsFromItem(Items.SHULKER_SHELL))
+                .criterion(hasItem(Items.LEATHER_LEGGINGS), conditionsFromItem(Items.LEATHER_LEGGINGS))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.SHULKER_LEGGINGS)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.SHULKER_BOOTS, 1)
+                .input(Items.SHULKER_SHELL, 2)
+                .input(Items.LEATHER_BOOTS)
+                .criterion(hasItem(Items.SHULKER_SHELL), conditionsFromItem(Items.SHULKER_SHELL))
+                .criterion(hasItem(Items.LEATHER_BOOTS), conditionsFromItem(Items.LEATHER_BOOTS))
+                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.SHULKER_BOOTS)));
+
+
         //// Copper
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, Items_RaEx.COPPER_NUGGET, RecipeCategory.MISC,
+                Items.COPPER_INGOT);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BREWING, Items_RaEx.METAL_LUMP, 2)
+                .input(Items_RaEx.COPPER_NUGGET)
+                .input(Items.IRON_NUGGET)
+                .input(Items.GOLD_NUGGET)
+                .criterion(hasItem(Items_RaEx.COPPER_NUGGET), conditionsFromItem(Items_RaEx.COPPER_NUGGET))
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
+                .criterion(hasItem(Items.GOLD_NUGGET), conditionsFromItem(Items.GOLD_NUGGET))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.METAL_LUMP)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_HELMET, 1)
                 .pattern("CCC")
                 .pattern("C C")
@@ -558,6 +603,64 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .input('C', Items.COPPER_INGOT)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_BOOTS)));
+
+        //// Grenades
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.SMOKE_BOMB_ITEM, 1)
+                .pattern("CA")
+                .pattern("CB")
+                .input('C', Items.IRON_INGOT)
+                .input('B', Items.BLACK_DYE)
+                .input('A', Items.INK_SAC)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.BLACK_DYE), conditionsFromItem(Items.BLACK_DYE))
+                .criterion(hasItem(Items.INK_SAC), conditionsFromItem(Items.INK_SAC))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.SMOKE_BOMB_ITEM)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.GLOW_BOMB_ITEM, 1)
+                .input(Items_RaEx.SMOKE_BOMB_ITEM, 1)
+                .input(Items.GLOW_INK_SAC, 2)
+                .criterion(hasItem(Items_RaEx.SMOKE_BOMB_ITEM), conditionsFromItem(Items_RaEx.SMOKE_BOMB_ITEM))
+                .criterion(hasItem(Items.GLOW_INK_SAC), conditionsFromItem(Items.GLOW_INK_SAC))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.GLOW_BOMB_ITEM)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.NINE_V_BATTERY_ITEM, 1)
+                .pattern("CA")
+                .pattern("CB")
+                .input('C', Items.COPPER_INGOT)
+                .input('B', Items.IRON_NUGGET)
+                .input('A', Items.GOLD_NUGGET)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
+                .criterion(hasItem(Items.GOLD_NUGGET), conditionsFromItem(Items.GOLD_NUGGET))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.NINE_V_BATTERY_ITEM)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.HOLY_HAND_GRENADE_ITEM, 1)
+                .pattern("CCC")
+                .pattern("CBC")
+                .input('C', Items.GOLD_INGOT)
+                .input('B', Items_RaEx.NINE_V_BATTERY_ITEM)
+                .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                .criterion(hasItem(Items_RaEx.NINE_V_BATTERY_ITEM), conditionsFromItem(Items_RaEx.NINE_V_BATTERY_ITEM))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.HOLY_HAND_GRENADE_ITEM)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks_RaEx.LAND_MINE, 3)
+                .pattern("RRR")
+                .pattern("RSR")
+                .input('S', Items.TNT)
+                .input('R', Items.COPPER_INGOT)
+                .criterion(hasItem(Items.TNT), conditionsFromItem(Items.TNT))
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.LAND_MINE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks_RaEx.STRONG_LAND_MINE)
+                .pattern("RRR")
+                .pattern("RSR")
+                .input('S', Blocks_RaEx.LAND_MINE)
+                .input('R', Items.IRON_INGOT)
+                .criterion(hasItem(Blocks_RaEx.LAND_MINE), conditionsFromItem(Blocks_RaEx.LAND_MINE))
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.STRONG_LAND_MINE)));
+
+
 
         //// Aquamarin
         SmithingTransformRecipeJsonBuilder.create(
@@ -821,7 +924,6 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items_RaEx.BAMBOO_EXPLOSIVE), conditionsFromItem(Items_RaEx.BAMBOO_EXPLOSIVE))
                 .criterion(hasItem(Items_RaEx.DUK_TAPE), conditionsFromItem(Items_RaEx.DUK_TAPE))
                 .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.BAMBOO_EXPLOSIVE_STRONG)));
-
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.DUK_TAPE, 8)
                 .input(Items.PAPER, 8)

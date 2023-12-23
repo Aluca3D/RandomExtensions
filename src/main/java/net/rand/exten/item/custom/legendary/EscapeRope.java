@@ -28,9 +28,9 @@ public class EscapeRope extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        if (user.isOnGround() && world.getDimension().bedWorks()) {
+        if (user.isOnGround() && world.getDimension().bedWorks() && !world.isSkyVisible(user.getBlockPos())) {
             world.playSound(null, user.getX(), user.getY(), user.getZ(),
-                    SoundEvents.BLOCK_PORTAL_TRAVEL, SoundCategory.NEUTRAL, 0.125f,1);
+                    SoundEvents.BLOCK_PORTAL_TRAVEL, SoundCategory.NEUTRAL, 0.125f,1); //ToDo new Sound
 
             if (!world.isClient) {
                 BlockPos pos = user.getBlockPos();
@@ -43,13 +43,13 @@ public class EscapeRope extends Item {
             }
             return TypedActionResult.success(itemStack, world.isClient());
         } else if (!world.isClient) {
-            user.sendMessage(Text.literal("Teleporting did not work"));
+            user.sendMessage(Text.literal("Teleporting did not work"));  //Todo change to Translatable to use in lang
         }
         return TypedActionResult.fail(itemStack);
     }
 
     private void teleportToSurface(BlockPos pos, PlayerEntity user) {
-        user.sendMessage(Text.literal("Teleported " + user.getName().getString() + " to Surface"));
+        user.sendMessage(Text.literal("Teleported " + user.getName().getString() + " to Surface"));  //Todo change to Translatable to use in lang
         user.requestTeleport(user.getX(), pos.getY(), user.getZ());
     }
 

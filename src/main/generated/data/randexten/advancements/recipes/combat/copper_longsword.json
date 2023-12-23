@@ -1,24 +1,24 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cooper_sword": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "randexten:cooper_sword"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_copper_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
               "minecraft:copper_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_copper_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "randexten:copper_sword"
             ]
           }
         ]
@@ -36,7 +36,7 @@
     [
       "has_the_recipe",
       "has_copper_ingot",
-      "has_cooper_sword"
+      "has_copper_sword"
     ]
   ],
   "rewards": {

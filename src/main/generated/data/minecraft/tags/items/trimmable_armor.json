@@ -25,9 +25,13 @@
     "randexten:netherite_topas_chestplate",
     "randexten:netherite_topas_leggings",
     "randexten:netherite_topas_boots",
-    "randexten:cooper_helmet",
-    "randexten:cooper_chestplate",
-    "randexten:cooper_leggings",
-    "randexten:cooper_boots"
+    "randexten:copper_helmet",
+    "randexten:copper_chestplate",
+    "randexten:copper_leggings",
+    "randexten:copper_boots",
+    "randexten:shulker_helmet",
+    "randexten:shulker_chestplate",
+    "randexten:shulker_leggings",
+    "randexten:shulker_boots"
   ]
 }

@@ -1,0 +1,40 @@
+{
+  "parent": "randexten:re/randexten",
+  "criteria": {
+    "has_a_sapling": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:saplings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "randexten:textures/block/cheese_block.png",
+    "description": {
+      "text": ""
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "minecraft:oak_sapling"
+    },
+    "show_toast": false,
+    "title": {
+      "text": "New Trees"
+    }
+  },
+  "requirements": [
+    [
+      "has_a_sapling"
+    ]
+  ],
+  "rewards": {
+    "experience": 20
+  },
+  "sends_telemetry_event": true
+}

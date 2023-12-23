@@ -1,0 +1,33 @@
+{
+  "itemgroup.randexten_group": "Random Extensions",
+
+  "item.minecraft.potion.effect.lightning_attraction_potion": "Lightning Attraction Potion",
+  "item.minecraft.splash_potion.effect.lightning_attraction_potion": "Lightning Attraction Splash Potion",
+  "item.minecraft.lingering_potion.effect.lightning_attraction_potion": "Lightning Attraction Lingering Potion",
+  "item.minecraft.tipped_arrow.effect.lightning_attraction_potion": "Arrow of Lightning Attraction",
+
+  "item.minecraft.potion.effect.evokers_bite_potion": "Evoker's Bite Potion",
+  "item.minecraft.splash_potion.effect.evokers_bite_potion": "Evoker's Bite Splash Potion",
+  "item.minecraft.lingering_potion.effect.evokers_bite_potion": "Evoker's Bite Lingering Potion",
+  "item.minecraft.tipped_arrow.effect.evokers_bite_potion": "Arrow of Evoker's Bite",
+
+  "item.randexten.cheese_loot_bag.tooltip": "Its filled with CHEESE!",
+  "item.randexten.mine_loot_bag.tooltip": "Stuff from the Mine",
+  "item.randexten.stinky_cheese.tooltip": "Eww, it stinks",
+  "item.randexten.bamboo_explosive.tooltip": "Goes Boom",
+  "item.randexten.bamboo_explosive_strong.tooltip": "Goes Big Boom",
+
+  "death.attack.barbed_wire": "%1$s jumped into Barbed Wires",
+  "death.attack.pebble": "%1$s was to Stoned",
+  "death.attack.end_berry_bush": "%1$s loved End Berry's to much",
+
+  "sounds.randexten.nightmare_tv_ambient": "NightmareTV Ambient",
+  "sounds.randexten.nightmare_tv_hurt": "NightmareTV Hurt",
+  "sounds.randexten.magic_shot": "Magic",
+  "sounds.randexten.roomba_ambient": "Roomba Ambient",
+  "sounds.randexten.on_off": "On/Off",
+  "sounds.randexten.roomba_hurt": "Roomba Hurt",
+  "sounds.randexten.boing": "Boing",
+
+  "entity.minecraft.villager.cheese_maker": "Cheese Maker"
+}
