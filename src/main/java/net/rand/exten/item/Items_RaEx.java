@@ -14,10 +14,7 @@ import net.minecraft.util.Rarity;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.CropBlocks_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
-import net.rand.exten.item.custom.food.Cheese;
-import net.rand.exten.item.custom.food.FoodComponents_RaEx;
-import net.rand.exten.item.custom.food.EscapePotion;
-import net.rand.exten.item.custom.food.Soda;
+import net.rand.exten.item.custom.food.*;
 import net.rand.exten.item.custom.items.projectile.*;
 
 public class Items_RaEx {
@@ -106,7 +103,7 @@ public class Items_RaEx {
      * Food Component
      */
     public static final Item FLOUR = registerItem("flour",
-            new Item(new FabricItemSettings()));
+            new Flour(new FabricItemSettings()));
 
     /**
      * Misc
