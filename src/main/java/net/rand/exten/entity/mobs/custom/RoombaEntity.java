@@ -223,8 +223,8 @@ public class RoombaEntity extends TameableEntity implements Mount{
     }
 
     @Override
-    public boolean canBreatheInWater() {
-        return true;
+    public boolean shouldDismountUnderwater() {
+        return false;
     }
 
     @Nullable

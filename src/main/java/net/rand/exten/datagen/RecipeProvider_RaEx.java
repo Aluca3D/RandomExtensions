@@ -8,8 +8,7 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.RecipeSerializer;
+import net.minecraft.recipe.*;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
@@ -65,7 +64,7 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.FOOD, Items_RaEx.CHEESE, RecipeCategory.FOOD,
                 Blocks_RaEx.CHEESE_BLOCK);
 
-        offerFoodCookingRecipe(exporter, "milk", RecipeSerializer.SMOKING, 150, Items.MILK_BUCKET, Items_RaEx.BUCKET_CHEESE, 0.2f);
+        offerFoodCookingRecipe(exporter, "milk", RecipeSerializer.SMOKING, SmokingRecipe::new, 150, Items.MILK_BUCKET, Items_RaEx.BUCKET_CHEESE, 0.2f);
 
         offerSingleOutputShapelessRecipe(exporter, Blocks_RaEx.CHEESE_BLOCK, Items_RaEx.BUCKET_CHEESE, "cheese_block_from_bucket_cheese");
 
@@ -193,20 +192,20 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
 
 
         //Food
-        offerFoodCookingRecipe(exporter, "smoking_dough", RecipeSerializer.SMOKING, 150, Items_RaEx.DOUGH, Items.BREAD, 0.2f);
-        offerFoodCookingRecipe(exporter, "dough", RecipeSerializer.SMELTING, 200, Items_RaEx.DOUGH, Items.BREAD, 0.1f);
-        offerFoodCookingRecipe(exporter, "campfire_dough", RecipeSerializer.CAMPFIRE_COOKING, 200, Items_RaEx.DOUGH, Items.BREAD, 0.1f);
+        offerFoodCookingRecipe(exporter, "smoking_dough", RecipeSerializer.SMOKING, SmokingRecipe::new, 150, Items_RaEx.DOUGH, Items.BREAD, 0.2f);
+        offerFoodCookingRecipe(exporter, "dough", RecipeSerializer.SMELTING, SmeltingRecipe::new, 200, Items_RaEx.DOUGH, Items.BREAD, 0.1f);
+        offerFoodCookingRecipe(exporter, "campfire_dough", RecipeSerializer.CAMPFIRE_COOKING, CampfireCookingRecipe::new, 200, Items_RaEx.DOUGH, Items.BREAD, 0.1f);
 
-        offerFoodCookingRecipe(exporter, "smoking_pizza", RecipeSerializer.SMOKING, 150, Items_RaEx.RAW_PIZZA, Items_RaEx.PIZZA, 0.2f);
-        offerFoodCookingRecipe(exporter, "pizza", RecipeSerializer.SMELTING, 200, Items_RaEx.RAW_PIZZA, Items_RaEx.PIZZA, 0.1f);
-        offerFoodCookingRecipe(exporter, "campfire_pizza", RecipeSerializer.CAMPFIRE_COOKING, 200, Items_RaEx.RAW_PIZZA, Items_RaEx.PIZZA, 0.1f);
+        offerFoodCookingRecipe(exporter, "smoking_pizza", RecipeSerializer.SMOKING, SmokingRecipe::new, 150, Items_RaEx.RAW_PIZZA, Items_RaEx.PIZZA, 0.2f);
+        offerFoodCookingRecipe(exporter, "pizza", RecipeSerializer.SMELTING, SmeltingRecipe::new, 200, Items_RaEx.RAW_PIZZA, Items_RaEx.PIZZA, 0.1f);
+        offerFoodCookingRecipe(exporter, "campfire_pizza", RecipeSerializer.CAMPFIRE_COOKING, CampfireCookingRecipe::new, 200, Items_RaEx.RAW_PIZZA, Items_RaEx.PIZZA, 0.1f);
 
-        offerFoodCookingRecipe(exporter, "campfire_rotten_flesh", RecipeSerializer.CAMPFIRE_COOKING, 200, Items.ROTTEN_FLESH, Items.LEATHER, 0.1f);
-        offerFoodCookingRecipe(exporter, "smoking_rotten_flesh", RecipeSerializer.SMOKING, 200, Items.ROTTEN_FLESH, Items.LEATHER, 0.1f);
+        offerFoodCookingRecipe(exporter, "campfire_rotten_flesh", RecipeSerializer.CAMPFIRE_COOKING, CampfireCookingRecipe::new, 200, Items.ROTTEN_FLESH, Items.LEATHER, 0.1f);
+        offerFoodCookingRecipe(exporter, "smoking_rotten_flesh", RecipeSerializer.SMOKING, SmokingRecipe::new, 200, Items.ROTTEN_FLESH, Items.LEATHER, 0.1f);
 
-        offerFoodCookingRecipe(exporter, "smoking_popcorn", RecipeSerializer.SMOKING, 200, Items_RaEx.CORN, Items_RaEx.POPCORN, 0.1f);
-        offerFoodCookingRecipe(exporter, "popcorn", RecipeSerializer.SMELTING, 200, Items_RaEx.CORN, Items_RaEx.POPCORN, 0.1f);
-        offerFoodCookingRecipe(exporter, "campfire_popcorn", RecipeSerializer.CAMPFIRE_COOKING, 200, Items_RaEx.CORN, Items_RaEx.POPCORN, 0.1f);
+        offerFoodCookingRecipe(exporter, "smoking_popcorn", RecipeSerializer.SMOKING, SmokingRecipe::new, 200, Items_RaEx.CORN, Items_RaEx.POPCORN, 0.1f);
+        offerFoodCookingRecipe(exporter, "popcorn", RecipeSerializer.SMELTING, SmeltingRecipe::new, 200, Items_RaEx.CORN, Items_RaEx.POPCORN, 0.1f);
+        offerFoodCookingRecipe(exporter, "campfire_popcorn", RecipeSerializer.CAMPFIRE_COOKING, CampfireCookingRecipe::new, 200, Items_RaEx.CORN, Items_RaEx.POPCORN, 0.1f);
 
         // Paxel
         ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.WOODEN_PAXEL)
@@ -268,9 +267,9 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.NETHERITE_PAXEL)));
 
         // Misc
-        offerFoodCookingRecipe(exporter, "raw_ruby", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_RUBY, Items_RaEx.RUBY, 0.2f);
-        offerFoodCookingRecipe(exporter, "raw_aquamarin", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_AQUAMARIN, Items_RaEx.AQUAMARIN, 0.2f);
-        offerFoodCookingRecipe(exporter, "raw_topas", RecipeSerializer.SMELTING, 150, Items_RaEx.RAW_TOPAS, Items_RaEx.TOPAS, 0.2f);
+        offerFoodCookingRecipe(exporter, "raw_ruby", RecipeSerializer.SMELTING, SmeltingRecipe::new, 150, Items_RaEx.RAW_RUBY, Items_RaEx.RUBY, 0.2f);
+        offerFoodCookingRecipe(exporter, "raw_aquamarin", RecipeSerializer.SMELTING, SmeltingRecipe::new, 150, Items_RaEx.RAW_AQUAMARIN, Items_RaEx.AQUAMARIN, 0.2f);
+        offerFoodCookingRecipe(exporter, "raw_topas", RecipeSerializer.SMELTING, SmeltingRecipe::new, 150, Items_RaEx.RAW_TOPAS, Items_RaEx.TOPAS, 0.2f);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PURPLE_DYE)
                 .input(Blocks_RaEx.NIGHT_SHADE)
@@ -659,7 +658,6 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks_RaEx.LAND_MINE), conditionsFromItem(Blocks_RaEx.LAND_MINE))
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.STRONG_LAND_MINE)));
-
 
 
         //// Aquamarin

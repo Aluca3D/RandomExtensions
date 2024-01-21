@@ -19,6 +19,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.util.DamageTypes_RaEx;
@@ -34,7 +35,7 @@ public class EndBarryBlock extends SweetBerryBushBlock {
     }
 
     @Override
-    public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
+    public ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state) {
         return new ItemStack(Items_RaEx.END_BARRY);
     }
 

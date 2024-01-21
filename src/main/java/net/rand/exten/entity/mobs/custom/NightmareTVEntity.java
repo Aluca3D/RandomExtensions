@@ -77,11 +77,6 @@ public class NightmareTVEntity extends HostileEntity {
     }
 
     @Override
-    public boolean canBreatheInWater() {
-        return true;
-    }
-
-    @Override
     protected void initGoals() {
         this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 4F));
         this.goalSelector.add(6, new WanderAroundFarGoal(this, 1D));
