@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ClientPlayerInteractionManager.class)
 public class ClientPlayerInteractionManagerMixin {
-
+    // Todo: fix Sword Range in Survival
     @Inject(method="getReachDistance", at=@At("HEAD"), cancellable = true)
     public void getReachDistance(CallbackInfoReturnable<Float> cir) {
         PlayerEntity player = MinecraftClient.getInstance().player;
