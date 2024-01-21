@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Lets make some Bombs"
-    },
-    "frame": "task",
+    "description": "Lets make some Bombs",
     "hidden": true,
     "icon": {
       "item": "minecraft:tnt"
     },
-    "show_toast": true,
-    "title": {
-      "text": "BOOM"
-    }
+    "title": "BOOM"
   },
   "requirements": [
     [

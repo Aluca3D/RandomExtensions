@@ -15,20 +15,14 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Lightning!!"
-    },
+    "description": "Lightning!!",
     "frame": "goal",
     "hidden": true,
     "icon": {
       "item": "randexten:nine_v_battery"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Energising"
-    }
+    "title": "Energising"
   },
   "requirements": [
     [

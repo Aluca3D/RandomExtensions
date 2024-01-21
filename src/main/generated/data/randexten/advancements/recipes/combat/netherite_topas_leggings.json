@@ -56,6 +56,5 @@
     "recipes": [
       "minecraft:netherite_topas_leggings"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

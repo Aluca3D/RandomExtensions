@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:bucket_cheese_from_milk"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

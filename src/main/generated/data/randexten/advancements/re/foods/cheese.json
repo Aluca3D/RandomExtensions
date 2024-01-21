@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Gromit, where are my crackers?"
-    },
-    "frame": "task",
+    "description": "Gromit, where are my crackers?",
     "hidden": true,
     "icon": {
       "item": "randexten:cheese"
     },
-    "show_toast": true,
-    "title": {
-      "text": "CHEESE"
-    }
+    "title": "CHEESE"
   },
   "requirements": [
     [

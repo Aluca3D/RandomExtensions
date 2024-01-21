@@ -15,20 +15,14 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Good Boy"
-    },
+    "description": "Good Boy",
     "frame": "challenge",
     "hidden": true,
     "icon": {
       "item": "randexten:roomba_item"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Roomba"
-    }
+    "title": "Roomba"
   },
   "requirements": [
     [

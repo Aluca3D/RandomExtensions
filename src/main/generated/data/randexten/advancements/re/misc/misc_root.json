@@ -17,18 +17,13 @@
   "display": {
     "announce_to_chat": false,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": ""
-    },
-    "frame": "task",
+    "description": "",
     "hidden": true,
     "icon": {
       "item": "randexten:charcoal_block"
     },
     "show_toast": false,
-    "title": {
-      "text": "Miscellaneous stuff"
-    }
+    "title": "Miscellaneous stuff"
   },
   "requirements": [
     [

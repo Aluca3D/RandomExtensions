@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:cobblestone_from_pebble"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

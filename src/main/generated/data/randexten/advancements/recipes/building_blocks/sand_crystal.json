@@ -56,6 +56,5 @@
     "recipes": [
       "minecraft:sand_crystal"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -30,6 +30,5 @@
     "recipes": [
       "randexten:gems_upgrade_template"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

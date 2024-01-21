@@ -15,21 +15,15 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Escape!"
-    },
+    "description": "Escape!",
     "frame": "goal",
     "hidden": true,
     "icon": {
       "item": "randexten:escape_rope",
       "nbt": "{Damage:0}"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Lets get aut of here"
-    }
+    "title": "Lets get aut of here"
   },
   "requirements": [
     [

@@ -43,6 +43,5 @@
     "recipes": [
       "minecraft:holy_hand_grenade"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

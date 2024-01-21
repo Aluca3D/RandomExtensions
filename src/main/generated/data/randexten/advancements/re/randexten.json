@@ -10,18 +10,12 @@
   "display": {
     "announce_to_chat": false,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Its filled with Random Stuff"
-    },
-    "frame": "task",
-    "hidden": false,
+    "description": "Its filled with Random Stuff",
     "icon": {
       "item": "randexten:cheese_block"
     },
     "show_toast": false,
-    "title": {
-      "text": "Random Extensions"
-    }
+    "title": "Random Extensions"
   },
   "requirements": [
     [

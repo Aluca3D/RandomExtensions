@@ -56,6 +56,5 @@
     "recipes": [
       "minecraft:netherite_aquamarin_helmet"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

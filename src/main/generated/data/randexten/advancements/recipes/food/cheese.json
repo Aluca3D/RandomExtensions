@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:cheese"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

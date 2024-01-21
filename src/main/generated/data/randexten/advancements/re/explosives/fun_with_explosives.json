@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Even more Boom Boom"
-    },
-    "frame": "task",
+    "description": "Even more Boom Boom",
     "hidden": true,
     "icon": {
       "item": "randexten:holy_hand_grenade"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Have Fun with ExPlOSiVeS"
-    }
+    "title": "Have Fun with ExPlOSiVeS"
   },
   "requirements": [
     [

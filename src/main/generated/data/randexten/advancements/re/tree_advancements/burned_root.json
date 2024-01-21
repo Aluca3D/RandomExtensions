@@ -15,18 +15,13 @@
   "display": {
     "announce_to_chat": false,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": ""
-    },
-    "frame": "task",
+    "description": "",
     "hidden": true,
     "icon": {
       "item": "minecraft:oak_sapling"
     },
     "show_toast": false,
-    "title": {
-      "text": "New Trees"
-    }
+    "title": "New Trees"
   },
   "requirements": [
     [

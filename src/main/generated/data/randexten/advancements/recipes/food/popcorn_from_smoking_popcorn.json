@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:popcorn_from_smoking_popcorn"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

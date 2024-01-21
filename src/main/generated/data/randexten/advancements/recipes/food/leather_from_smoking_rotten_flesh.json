@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:leather_from_smoking_rotten_flesh"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

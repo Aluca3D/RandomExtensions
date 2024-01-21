@@ -13,20 +13,12 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Why?"
-    },
-    "frame": "task",
-    "hidden": false,
+    "description": "Why?",
     "icon": {
       "item": "randexten:raw_pizza"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Still Raw"
-    }
+    "title": "Still Raw"
   },
   "requirements": [
     [

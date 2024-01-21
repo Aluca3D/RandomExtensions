@@ -15,21 +15,14 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Rust Prof"
-    },
-    "frame": "task",
+    "description": "Rust Prof",
     "hidden": true,
     "icon": {
       "item": "randexten:copper_pickaxe",
       "nbt": "{Damage:0}"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Copper"
-    }
+    "title": "Copper"
   },
   "requirements": [
     [

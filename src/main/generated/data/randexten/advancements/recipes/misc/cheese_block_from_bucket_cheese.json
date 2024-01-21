@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:cheese_block_from_bucket_cheese"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

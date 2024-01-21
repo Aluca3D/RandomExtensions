@@ -23,20 +23,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "ENERGY!?!"
-    },
+    "description": "ENERGY!?!",
     "frame": "challenge",
-    "hidden": false,
     "icon": {
       "item": "randexten:red_soda_can"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Dats a lot of drinks"
-    }
+    "title": "Dats a lot of drinks"
   },
   "requirements": [
     [

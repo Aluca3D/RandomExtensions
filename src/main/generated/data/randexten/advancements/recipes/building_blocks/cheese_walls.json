@@ -30,6 +30,5 @@
     "recipes": [
       "randexten:cheese_walls"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

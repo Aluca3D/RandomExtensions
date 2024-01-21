@@ -15,20 +15,14 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Duck.png"
-    },
+    "description": "Duck.png",
     "frame": "goal",
     "hidden": true,
     "icon": {
       "item": "randexten:duk_tape"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Duck Tape OwO"
-    }
+    "title": "Duck Tape OwO"
   },
   "requirements": [
     [

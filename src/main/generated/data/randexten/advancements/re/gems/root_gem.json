@@ -15,18 +15,13 @@
   "display": {
     "announce_to_chat": false,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "we, are the..."
-    },
-    "frame": "task",
+    "description": "we, are the...",
     "hidden": true,
     "icon": {
       "item": "randexten:aquamarin_ore"
     },
     "show_toast": false,
-    "title": {
-      "text": "Gems"
-    }
+    "title": "Gems"
   },
   "requirements": [
     [

@@ -56,6 +56,5 @@
     "recipes": [
       "minecraft:green_soda_can"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

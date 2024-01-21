@@ -51,20 +51,14 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Yes, yes it is"
-    },
+    "description": "Yes, yes it is",
     "frame": "challenge",
     "hidden": true,
     "icon": {
       "item": "randexten:cheese_stairs"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Its all Cheese?"
-    }
+    "title": "Its all Cheese?"
   },
   "requirements": [
     [

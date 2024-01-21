@@ -15,20 +15,12 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "explosive_sound.mp4"
-    },
-    "frame": "task",
-    "hidden": false,
+    "description": "explosive_sound.mp4",
     "icon": {
       "item": "randexten:bamboo_explosive_strong"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Even bigger BOOM"
-    }
+    "title": "Even bigger BOOM"
   },
   "requirements": [
     [

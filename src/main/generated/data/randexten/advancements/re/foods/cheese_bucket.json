@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Dear God"
-    },
-    "frame": "task",
+    "description": "Dear God",
     "hidden": true,
     "icon": {
       "item": "randexten:bucket_cheese"
     },
-    "show_toast": true,
-    "title": {
-      "text": "This, is a (Cheese filed) Bucket"
-    }
+    "title": "This, is a (Cheese filed) Bucket"
   },
   "requirements": [
     [

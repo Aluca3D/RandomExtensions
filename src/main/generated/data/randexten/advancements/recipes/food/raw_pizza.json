@@ -56,6 +56,5 @@
     "recipes": [
       "minecraft:raw_pizza"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

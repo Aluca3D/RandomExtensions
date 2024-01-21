@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:stone_longsword"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

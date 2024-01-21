@@ -56,6 +56,5 @@
     "recipes": [
       "minecraft:nine_v_battery"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

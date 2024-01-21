@@ -39,20 +39,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "he, Lump"
-    },
-    "frame": "task",
+    "description": "he, Lump",
     "hidden": true,
     "icon": {
       "item": "randexten:metal_lump"
     },
-    "show_toast": true,
-    "title": {
-      "text": "A Lump of Metal"
-    }
+    "title": "A Lump of Metal"
   },
   "requirements": [
     [

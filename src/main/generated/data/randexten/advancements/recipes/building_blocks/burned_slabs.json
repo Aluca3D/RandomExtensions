@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:burned_slabs"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

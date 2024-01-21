@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:burned_button_from_burned_planks"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

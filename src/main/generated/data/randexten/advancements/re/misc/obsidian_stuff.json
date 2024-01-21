@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "its BOOM prof"
-    },
-    "frame": "task",
+    "description": "its BOOM prof",
     "hidden": true,
     "icon": {
       "item": "randexten:obsidian_glass"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Stronger Glass"
-    }
+    "title": "Stronger Glass"
   },
   "requirements": [
     [

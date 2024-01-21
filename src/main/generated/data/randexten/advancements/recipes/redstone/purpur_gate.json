@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:purpur_gate"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

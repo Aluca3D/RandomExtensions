@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Bamboo goes BOOM"
-    },
-    "frame": "task",
+    "description": "Bamboo goes BOOM",
     "hidden": true,
     "icon": {
       "item": "randexten:bamboo_explosive"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Hehe, BamBOOM"
-    }
+    "title": "Hehe, BamBOOM"
   },
   "requirements": [
     [
