@@ -43,6 +43,5 @@
     "recipes": [
       "minecraft:dough"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

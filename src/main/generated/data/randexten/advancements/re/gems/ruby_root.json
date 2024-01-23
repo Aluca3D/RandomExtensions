@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Retro"
-    },
-    "frame": "task",
+    "description": "Retro",
     "hidden": true,
     "icon": {
       "item": "randexten:ruby_block"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Ruby Time"
-    }
+    "title": "Ruby Time"
   },
   "requirements": [
     [

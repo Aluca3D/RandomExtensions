@@ -43,6 +43,5 @@
     "recipes": [
       "minecraft:bamboo_explosive"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

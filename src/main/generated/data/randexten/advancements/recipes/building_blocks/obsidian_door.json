@@ -43,6 +43,5 @@
     "recipes": [
       "minecraft:obsidian_door"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

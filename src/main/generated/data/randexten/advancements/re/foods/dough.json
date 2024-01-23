@@ -15,20 +15,12 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "its Cauldron time"
-    },
-    "frame": "task",
-    "hidden": false,
+    "description": "its Cauldron time",
     "icon": {
       "item": "randexten:dough"
     },
-    "show_toast": true,
-    "title": {
-      "text": "A better way to make bread"
-    }
+    "title": "A better way to make bread"
   },
   "requirements": [
     [

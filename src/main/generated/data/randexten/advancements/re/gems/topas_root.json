@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Topas"
-    },
-    "frame": "task",
+    "description": "Topas",
     "hidden": true,
     "icon": {
       "item": "randexten:topas_block"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Topas"
-    }
+    "title": "Topas"
   },
   "requirements": [
     [

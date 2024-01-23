@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "maybe we can build something with that?"
-    },
-    "frame": "task",
+    "description": "maybe we can build something with that?",
     "hidden": true,
     "icon": {
       "item": "randexten:grinder"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Grinder"
-    }
+    "title": "Grinder"
   },
   "requirements": [
     [

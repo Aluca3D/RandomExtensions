@@ -13,20 +13,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Pizza Time"
-    },
+    "description": "Pizza Time",
     "frame": "challenge",
-    "hidden": false,
     "icon": {
       "item": "randexten:pizza"
     },
-    "show_toast": true,
-    "title": {
-      "text": "PIZZA"
-    }
+    "title": "PIZZA"
   },
   "requirements": [
     [

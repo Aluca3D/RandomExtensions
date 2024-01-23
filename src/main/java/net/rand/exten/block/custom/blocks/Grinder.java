@@ -1,8 +1,10 @@
 package net.rand.exten.block.custom.blocks;
 
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.AbstractFurnaceBlock;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.SmokerBlock;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
@@ -21,8 +23,14 @@ import net.rand.exten.block.custom.blocks.entity.GrinderEntity;
 import org.jetbrains.annotations.Nullable;
 
 public class Grinder extends AbstractFurnaceBlock {
+    public static final MapCodec<Grinder> CODEC = createCodec(Grinder::new);
     public Grinder(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    protected MapCodec<? extends AbstractFurnaceBlock> getCodec() {
+        return CODEC;
     }
 
     @Override

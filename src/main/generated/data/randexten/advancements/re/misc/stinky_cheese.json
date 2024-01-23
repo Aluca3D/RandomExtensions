@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Lets trow it at People that we don't like"
-    },
-    "frame": "task",
+    "description": "Lets trow it at People that we don't like",
     "hidden": true,
     "icon": {
       "item": "randexten:stinky_cheese"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Eww, Stinky"
-    }
+    "title": "Eww, Stinky"
   },
   "requirements": [
     [

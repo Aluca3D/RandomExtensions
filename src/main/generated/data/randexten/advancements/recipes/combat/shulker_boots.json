@@ -43,6 +43,5 @@
     "recipes": [
       "minecraft:shulker_boots"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

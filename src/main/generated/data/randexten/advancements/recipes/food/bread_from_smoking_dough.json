@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:bread_from_smoking_dough"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

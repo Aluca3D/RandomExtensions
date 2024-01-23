@@ -43,6 +43,5 @@
     "recipes": [
       "minecraft:duk_tape"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

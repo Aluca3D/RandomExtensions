@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:aquamarin_from_raw_aquamarin"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -56,6 +56,5 @@
     "recipes": [
       "minecraft:diamond_ruby_helmet"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

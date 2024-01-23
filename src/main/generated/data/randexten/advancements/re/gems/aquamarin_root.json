@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "we, are the..."
-    },
-    "frame": "task",
+    "description": "we, are the...",
     "hidden": true,
     "icon": {
       "item": "randexten:aquamarin_block"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Its Aquamarin"
-    }
+    "title": "Its Aquamarin"
   },
   "requirements": [
     [

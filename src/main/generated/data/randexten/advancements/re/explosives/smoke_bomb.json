@@ -15,20 +15,14 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "O-O"
-    },
+    "description": "O-O",
     "frame": "goal",
     "hidden": true,
     "icon": {
       "item": "randexten:smoke_bomb"
     },
-    "show_toast": true,
-    "title": {
-      "text": "I cant see"
-    }
+    "title": "I cant see"
   },
   "requirements": [
     [

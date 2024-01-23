@@ -15,20 +15,12 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Hehe, white powder"
-    },
-    "frame": "task",
-    "hidden": false,
+    "description": "Hehe, white powder",
     "icon": {
       "item": "randexten:flour"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Lets put it in the Grinder"
-    }
+    "title": "Lets put it in the Grinder"
   },
   "requirements": [
     [

@@ -43,6 +43,5 @@
     "recipes": [
       "minecraft:golden_longsword"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

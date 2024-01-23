@@ -6,20 +6,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "there are new things, like CHEESE"
-    },
-    "frame": "task",
+    "description": "there are new things, like CHEESE",
     "hidden": true,
     "icon": {
       "item": "randexten:cheese"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Many new Foods"
-    }
+    "title": "Many new Foods"
   },
   "requirements": [
     [

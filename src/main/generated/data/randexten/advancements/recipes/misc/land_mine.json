@@ -43,6 +43,5 @@
     "recipes": [
       "minecraft:land_mine"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

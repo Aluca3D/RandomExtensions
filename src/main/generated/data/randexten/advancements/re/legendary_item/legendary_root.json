@@ -13,21 +13,14 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Got one"
-    },
-    "frame": "task",
+    "description": "Got one",
     "hidden": true,
     "icon": {
       "item": "randexten:leave_staff",
       "nbt": "{Damage:0}"
     },
-    "show_toast": true,
-    "title": {
-      "text": "That's a Legendary"
-    }
+    "title": "That's a Legendary"
   },
   "requirements": [
     [

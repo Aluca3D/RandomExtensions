@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Needs to be backed"
-    },
-    "frame": "task",
+    "description": "Needs to be backed",
     "hidden": true,
     "icon": {
       "item": "randexten:raw_pizza"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Its Raw"
-    }
+    "title": "Its Raw"
   },
   "requirements": [
     [

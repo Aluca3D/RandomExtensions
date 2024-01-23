@@ -15,20 +15,12 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Let it Burn"
-    },
-    "frame": "task",
-    "hidden": false,
+    "description": "Let it Burn",
     "icon": {
       "item": "randexten:burned_log"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Its Burned"
-    }
+    "title": "Its Burned"
   },
   "requirements": [
     [

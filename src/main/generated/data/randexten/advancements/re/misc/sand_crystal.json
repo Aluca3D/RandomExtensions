@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Yellow"
-    },
-    "frame": "task",
+    "description": "Yellow",
     "hidden": true,
     "icon": {
       "item": "randexten:sand_crystal"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Sandy"
-    }
+    "title": "Sandy"
   },
   "requirements": [
     [

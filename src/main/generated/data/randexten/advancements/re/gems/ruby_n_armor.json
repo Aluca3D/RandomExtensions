@@ -51,21 +51,14 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Deja vu"
-    },
+    "description": "Deja vu",
     "frame": "challenge",
-    "hidden": false,
     "icon": {
       "item": "randexten:netherite_ruby_helmet",
       "nbt": "{Damage:0}"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Speed"
-    }
+    "title": "Speed"
   },
   "requirements": [
     [

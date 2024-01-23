@@ -8,19 +8,28 @@ import net.minecraft.block.LeveledCauldronBlock;
 import net.minecraft.block.cauldron.CauldronBehavior;
 import net.minecraft.block.dispenser.ProjectileDispenserBehavior;
 import net.minecraft.entity.projectile.ProjectileEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.item.ItemUsage;
 import net.minecraft.potion.Potions;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.stat.Stats;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.Position;
 import net.minecraft.world.World;
+import net.minecraft.world.event.GameEvent;
 import net.rand.exten.block.Blocks_RaEx;
+import net.rand.exten.effects.Potions_RaEx;
 import net.rand.exten.entity.projectile.*;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.mixin.BrewingRecipeRegistryMixin;
-import net.rand.exten.effects.Potions_RaEx;
 
+import java.util.Map;
+
+import static net.minecraft.block.cauldron.CauldronBehavior.WATER_CAULDRON_BEHAVIOR;
+// todo add Help Function
 public class Misc_RaEx {
     public static void registerMisc() {
         registerFuel();
@@ -53,6 +62,7 @@ public class Misc_RaEx {
     }
 
     private static void registerBehavior() {
+        Map<Item, CauldronBehavior> couldron_map = WATER_CAULDRON_BEHAVIOR.map();
         // DispenserBlock
         DispenserBlock.registerBehavior(Items_RaEx.BAMBOO_EXPLOSIVE, new ProjectileDispenserBehavior() {
             protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
@@ -112,28 +122,17 @@ public class Misc_RaEx {
         });
 
         // CauldronBehavior
-        CauldronBehavior.WATER_CAULDRON_BEHAVIOR.put(Items_RaEx.FLOUR, (state, world, pos, player, hand, stack) -> {
-            if (!stack.isOf(Items_RaEx.FLOUR)) {
-                return ActionResult.PASS;
-            } else {
-                if (!world.isClient) {
-                    ItemStack itemStack = new ItemStack(Items_RaEx.DOUGH, stack.getCount()).copyWithCount(1);
-                    if (!player.getAbilities().creativeMode) {
-                        stack.decrement(1);
-                    }
-                    if (stack.isEmpty()) {
-                        player.setStackInHand(hand, itemStack);
-                    } else if (player.getInventory().insertStack(itemStack)) {
-                        player.playerScreenHandler.syncState();
-                    } else {
-                        player.dropItem(itemStack, false);
-                    }
-
-                    LeveledCauldronBlock.decrementFluidLevel(state, world, pos);
-                }
-
-                return ActionResult.success(world.isClient);
+        couldron_map.put(Items_RaEx.FLOUR, (state, world, pos, player, hand, stack) -> {
+            if (!world.isClient) {
+                Item item = stack.getItem();
+                player.setStackInHand(hand, ItemUsage.exchangeStack(stack, player, new ItemStack(Items_RaEx.DOUGH)));
+                player.incrementStat(Stats.USE_CAULDRON);
+                player.incrementStat(Stats.USED.getOrCreateStat(item));
+                LeveledCauldronBlock.decrementFluidLevel(state, world, pos);
+                world.playSound(null, pos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                world.emitGameEvent(null, GameEvent.FLUID_PICKUP, pos);
             }
+            return ActionResult.success(world.isClient);
         });
     }
 

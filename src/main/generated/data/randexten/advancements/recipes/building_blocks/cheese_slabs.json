@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:cheese_slabs"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

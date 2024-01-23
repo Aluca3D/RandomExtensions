@@ -43,6 +43,5 @@
     "recipes": [
       "minecraft:strong_land_mine"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

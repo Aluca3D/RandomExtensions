@@ -15,18 +15,13 @@
   "display": {
     "announce_to_chat": false,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Lets Trow some thinks"
-    },
-    "frame": "task",
+    "description": "Lets Trow some thinks",
     "hidden": true,
     "icon": {
       "item": "minecraft:snowball"
     },
     "show_toast": false,
-    "title": {
-      "text": "Projectiles"
-    }
+    "title": "Projectiles"
   },
   "requirements": [
     [

@@ -13,20 +13,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Mmmm, Sandwich"
-    },
-    "frame": "task",
+    "description": "Mmmm, Sandwich",
     "hidden": true,
     "icon": {
       "item": "randexten:sandwich"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Sandwich"
-    }
+    "title": "Sandwich"
   },
   "requirements": [
     [

@@ -15,21 +15,15 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Yeet"
-    },
+    "description": "Yeet",
     "frame": "goal",
     "hidden": true,
     "icon": {
       "item": "randexten:toy_hammer",
       "nbt": "{Damage:0}"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Bonk"
-    }
+    "title": "Bonk"
   },
   "requirements": [
     [

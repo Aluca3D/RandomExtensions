@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Burp"
-    },
-    "frame": "task",
+    "description": "Burp",
     "hidden": true,
     "icon": {
       "item": "randexten:empty_soda_can"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Lets Make some Drinks"
-    }
+    "title": "Lets Make some Drinks"
   },
   "requirements": [
     [

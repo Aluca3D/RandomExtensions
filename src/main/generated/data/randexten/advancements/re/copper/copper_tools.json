@@ -63,21 +63,14 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Cant Rust"
-    },
-    "frame": "task",
+    "description": "Cant Rust",
     "hidden": true,
     "icon": {
       "item": "randexten:copper_axe",
       "nbt": "{Damage:0}"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Tools of Copper"
-    }
+    "title": "Tools of Copper"
   },
   "requirements": [
     [

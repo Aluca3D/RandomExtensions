@@ -56,6 +56,5 @@
     "recipes": [
       "minecraft:diamond_aquamarin_boots"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

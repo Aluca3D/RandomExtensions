@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:purpur_button_from_purpur_planks"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

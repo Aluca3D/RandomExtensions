@@ -51,21 +51,14 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "i cant swim"
-    },
+    "description": "i cant swim",
     "frame": "goal",
-    "hidden": false,
     "icon": {
       "item": "randexten:diamond_aquamarin_helmet",
       "nbt": "{Damage:0}"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Lets be Fish"
-    }
+    "title": "Lets be Fish"
   },
   "requirements": [
     [

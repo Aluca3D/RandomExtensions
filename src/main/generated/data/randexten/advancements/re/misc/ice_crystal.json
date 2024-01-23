@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Blue"
-    },
-    "frame": "task",
+    "description": "Blue",
     "hidden": true,
     "icon": {
       "item": "randexten:ice_crystal"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Cold"
-    }
+    "title": "Cold"
   },
   "requirements": [
     [

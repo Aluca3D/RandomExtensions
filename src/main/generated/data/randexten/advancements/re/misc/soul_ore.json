@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "their is no joke"
-    },
-    "frame": "task",
+    "description": "their is no joke",
     "hidden": true,
     "icon": {
       "item": "randexten:soul_ore"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Soul"
-    }
+    "title": "Soul"
   },
   "requirements": [
     [

@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:empty_soda_can"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

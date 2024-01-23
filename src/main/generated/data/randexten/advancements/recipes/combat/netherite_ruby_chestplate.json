@@ -56,6 +56,5 @@
     "recipes": [
       "minecraft:netherite_ruby_chestplate"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -56,6 +56,5 @@
     "recipes": [
       "minecraft:netherite_paxel"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

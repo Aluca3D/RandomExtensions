@@ -43,6 +43,5 @@
     "recipes": [
       "minecraft:tinted_obsidian_glass"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

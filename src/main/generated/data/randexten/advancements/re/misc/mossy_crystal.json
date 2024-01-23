@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Green"
-    },
-    "frame": "task",
+    "description": "Green",
     "hidden": true,
     "icon": {
       "item": "randexten:mossy_crystal"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Moss"
-    }
+    "title": "Moss"
   },
   "requirements": [
     [

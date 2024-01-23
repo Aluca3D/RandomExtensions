@@ -56,6 +56,5 @@
     "recipes": [
       "minecraft:red_soda_can"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

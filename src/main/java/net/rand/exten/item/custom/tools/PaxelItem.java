@@ -33,7 +33,7 @@ public class PaxelItem extends MiningToolItem {
         super(attackDamage, attackSpeed, material, Tags_RaEx.Blocks.PAXEL_MINEABLE, settings);
     }
 
-    public ActionResult useOnBlockAxe(ItemUsageContext context) {
+    public void useOnBlockAxe(ItemUsageContext context) {
         World world = context.getWorld();
         BlockPos blockPos = context.getBlockPos();
         PlayerEntity playerEntity = context.getPlayer();
@@ -64,12 +64,10 @@ public class PaxelItem extends MiningToolItem {
             if (playerEntity != null) {
                 itemStack.damage(1, playerEntity, p -> p.sendToolBreakStatus(context.getHand()));
             }
-            return ActionResult.success(world.isClient);
         }
-        return ActionResult.PASS;
     }
 
-    public ActionResult useOnBlockShovel(ItemUsageContext context) {
+    public void useOnBlockShovel(ItemUsageContext context) {
         World world = context.getWorld();
         BlockPos blockPos = context.getBlockPos();
         BlockState blockState = world.getBlockState(blockPos);
@@ -80,7 +78,7 @@ public class PaxelItem extends MiningToolItem {
             if (blockState2 != null && world.getBlockState(blockPos.up()).isAir()) {
                 world.playSound(playerEntity, blockPos, SoundEvents.ITEM_SHOVEL_FLATTEN, SoundCategory.BLOCKS, 1.0f, 1.0f);
                 blockState3 = blockState2;
-            } else if (blockState.getBlock() instanceof CampfireBlock && blockState.get(CampfireBlock.LIT).booleanValue()) {
+            } else if (blockState.getBlock() instanceof CampfireBlock && blockState.get(CampfireBlock.LIT)) {
                 if (!world.isClient()) {
                     world.syncWorldEvent(null, WorldEvents.FIRE_EXTINGUISHED, blockPos, 0);
                 }
@@ -95,11 +93,8 @@ public class PaxelItem extends MiningToolItem {
                         context.getStack().damage(1, playerEntity, p -> p.sendToolBreakStatus(context.getHand()));
                     }
                 }
-                return ActionResult.success(world.isClient);
             }
-            return ActionResult.PASS;
         }
-        return ActionResult.PASS;
     }
 
     @Override

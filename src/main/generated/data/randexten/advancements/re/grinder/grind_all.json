@@ -27,20 +27,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Automation, Baby"
-    },
+    "description": "Automation, Baby",
     "frame": "goal",
-    "hidden": false,
     "icon": {
       "item": "randexten:grinder"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Grind Everything"
-    }
+    "title": "Grind Everything"
   },
   "requirements": [
     [

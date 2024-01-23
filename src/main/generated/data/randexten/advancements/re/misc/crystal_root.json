@@ -39,20 +39,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Alternative Medicine"
-    },
-    "frame": "task",
+    "description": "Alternative Medicine",
     "hidden": true,
     "icon": {
       "item": "randexten:mossy_crystal"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Crystals"
-    }
+    "title": "Crystals"
   },
   "requirements": [
     [

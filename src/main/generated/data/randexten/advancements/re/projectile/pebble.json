@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "Throw at Friend"
-    },
-    "frame": "task",
+    "description": "Throw at Friend",
     "hidden": true,
     "icon": {
       "item": "randexten:pebble"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Rock"
-    }
+    "title": "Rock"
   },
   "requirements": [
     [

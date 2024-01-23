@@ -15,20 +15,13 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "ColOR"
-    },
-    "frame": "task",
+    "description": "ColOR",
     "hidden": true,
     "icon": {
       "item": "randexten:purpur_log"
     },
-    "show_toast": true,
-    "title": {
-      "text": "PurPur"
-    }
+    "title": "PurPur"
   },
   "requirements": [
     [

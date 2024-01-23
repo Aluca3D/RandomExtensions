@@ -43,6 +43,5 @@
     "recipes": [
       "minecraft:glow_bomb"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

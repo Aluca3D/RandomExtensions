@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:topas_from_raw_topas"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

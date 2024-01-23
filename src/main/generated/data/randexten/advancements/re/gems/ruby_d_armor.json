@@ -51,21 +51,14 @@
     }
   },
   "display": {
-    "announce_to_chat": true,
     "background": "randexten:textures/block/cheese_block.png",
-    "description": {
-      "text": "fight me"
-    },
+    "description": "fight me",
     "frame": "goal",
-    "hidden": false,
     "icon": {
       "item": "randexten:diamond_ruby_helmet",
       "nbt": "{Damage:0}"
     },
-    "show_toast": true,
-    "title": {
-      "text": "Battle time"
-    }
+    "title": "Battle time"
   },
   "requirements": [
     [
