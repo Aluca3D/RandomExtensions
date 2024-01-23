@@ -23,7 +23,6 @@ public class LootBag_RaEx {
             new LootBag(new FabricItemSettings(), "item.randexten.cheese_loot_bag.tooltip") {
                 @Override
                 protected void ItemList(PlayerEntity user, Random rItem) {
-                    //Todo weight (wen possible)
                     List<Item> givenList = Arrays.asList(
                             Items_RaEx.CHEESE, Items_RaEx.CHEESE, Items_RaEx.CHEESE, Items_RaEx.CHEESE, Blocks_RaEx.CHEESE_BLOCK.asItem(),
                             Items_RaEx.CHEESE, Items_RaEx.CHEESE, Items_RaEx.CHEESE, Items_RaEx.STINKY_CHEESE, Items_RaEx.STINKY_CHEESE

@@ -27,18 +27,17 @@ public abstract class LootBag extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        user.getItemCooldownManager().set(this, 5);
         Random rItem = new Random();
-        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_BUNDLE_DROP_CONTENTS,
-                SoundCategory.PLAYERS, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
 
         ItemList(user, rItem);
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));
+        user.getItemCooldownManager().set(this, 5);
+        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_BUNDLE_DROP_CONTENTS,
+                SoundCategory.PLAYERS, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
 
         if (!user.getAbilities().creativeMode) {
             itemStack.decrement(1);
-
         }
         return TypedActionResult.success(itemStack, world.isClient());
     }
@@ -48,6 +47,6 @@ public abstract class LootBag extends Item {
         tooltip.add(Text.translatable(text));
     }
 
+    //Todo rewrite funktion to be a []
     protected abstract void ItemList(PlayerEntity user, Random rItem);
-
 }
