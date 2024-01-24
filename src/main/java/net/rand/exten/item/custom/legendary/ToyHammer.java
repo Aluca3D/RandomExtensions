@@ -36,6 +36,11 @@ public class ToyHammer extends ToolItem {
     }
 
     @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return false;
+    }
+
+    @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (!stack.hasEnchantments() && isEnchantable(stack)) {
             stack.addEnchantment(Enchantments.KNOCKBACK, 10);

@@ -31,19 +31,19 @@ public class ToolsAndArmors_RaEx {
      * Long Sword
      */
     public static final Item WOODEN_LONGSWORD = registerItem("wooden_longsword",
-            new LongSwordItem(ToolMaterials.WOOD, 3, -2.4f, new FabricItemSettings()));
+            new LongSwordItem(ToolMaterials.WOOD, 4, -3.4f, new FabricItemSettings()));
     public static final Item STONE_LONGSWORD = registerItem("stone_longsword",
-            new LongSwordItem(ToolMaterials.STONE, 3, -2.4f, new FabricItemSettings()));
+            new LongSwordItem(ToolMaterials.STONE, 4, -3.4f, new FabricItemSettings()));
     public static final Item COPPER_LONGSWORD = registerItem("copper_longsword",
-            new LongSwordItem(ToolMaterial_RaEx.COPPER, 3, -2.4f, new FabricItemSettings()));
+            new LongSwordItem(ToolMaterial_RaEx.COPPER, 4, -3.4f, new FabricItemSettings()));
     public static final Item IRON_LONGSWORD = registerItem("iron_longsword",
-            new LongSwordItem(ToolMaterials.IRON, 3, -2.4f, new FabricItemSettings()));
+            new LongSwordItem(ToolMaterials.IRON, 4, -3.4f, new FabricItemSettings()));
     public static final Item GOLDEN_LONGSWORD = registerItem("golden_longsword",
-            new LongSwordItem(ToolMaterials.GOLD, 3, -2.4f, new FabricItemSettings()));
+            new LongSwordItem(ToolMaterials.GOLD, 4, -3.4f, new FabricItemSettings()));
     public static final Item DIAMOND_LONGSWORD = registerItem("diamond_longsword",
-            new LongSwordItem(ToolMaterials.DIAMOND, 3, -2.4f, new FabricItemSettings()));
+            new LongSwordItem(ToolMaterials.DIAMOND, 4, -3.4f, new FabricItemSettings()));
     public static final Item NETHERITE_LONGSWORD = registerItem("netherite_longsword",
-            new LongSwordItem(ToolMaterials.NETHERITE, 3, -2.4f, new FabricItemSettings()));
+            new LongSwordItem(ToolMaterials.NETHERITE, 4, -3.4f, new FabricItemSettings()));
 
     /**
      * Paxel

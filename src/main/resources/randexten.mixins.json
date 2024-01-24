@@ -9,8 +9,7 @@
 	"client": [
 		"items.ItemRendererAccessor",
 		"items.ItemRendererMixin",
-		"items.ModelLoaderMixin",
-		"ClientPlayerInteractionManagerMixin"
+		"items.ModelLoaderMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

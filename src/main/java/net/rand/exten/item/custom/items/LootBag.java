@@ -13,32 +13,33 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public abstract class LootBag extends Item {
+public class LootBag extends Item {
     private final String text;
+    private final Item[] items;
 
-    public LootBag(Settings settings, String text) {
+    public LootBag(Settings settings, String text, Item[] items) {
         super(settings);
         this.text = text;
+        this.items = items;
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
+
+        ItemList(user); //Spawn Loot Item
+
+        user.incrementStat(Stats.USED.getOrCreateStat(this));
         user.getItemCooldownManager().set(this, 5);
-        Random rItem = new Random();
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_BUNDLE_DROP_CONTENTS,
                 SoundCategory.PLAYERS, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
 
-        ItemList(user, rItem);
-
-        user.incrementStat(Stats.USED.getOrCreateStat(this));
-
         if (!user.getAbilities().creativeMode) {
             itemStack.decrement(1);
-
         }
         return TypedActionResult.success(itemStack, world.isClient());
     }
@@ -48,6 +49,10 @@ public abstract class LootBag extends Item {
         tooltip.add(Text.translatable(text));
     }
 
-    protected abstract void ItemList(PlayerEntity user, Random rItem);
-
+    public void ItemList(PlayerEntity user) {
+        Random r = new Random();
+        List<Item> givenList = Arrays.stream(items).toList(); //get Items list
+        Item randomItem = givenList.get(r.nextInt(givenList.size())); //select random Item
+        user.dropItem(randomItem); //drop Item
+    }
 }
