@@ -7,13 +7,12 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.AnimalEntity;
-import net.minecraft.entity.passive.FoxEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
@@ -26,15 +25,13 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.EntityView;
 import net.minecraft.world.World;
+import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.sound.Sounds_RaEx;
+import net.rand.exten.util.tools.Math_RaEx;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.EnumSet;
-import java.util.List;
-import java.util.function.Predicate;
-
-public class RoombaEntity extends TameableEntity implements Mount{
-   public final AnimationState idleAnimationState = new AnimationState();
+public class RoombaEntity extends TameableEntity implements Mount {
+    public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
     public final AnimationState sitAnimationState = new AnimationState();
 
@@ -44,6 +41,16 @@ public class RoombaEntity extends TameableEntity implements Mount{
 
     @Override
     public boolean shouldDropXp() {
+        return false;
+    }
+
+    @Override
+    public boolean shouldDismountUnderwater() {
+        return false;
+    }
+
+    @Override
+    protected boolean shouldSwimInFluids() {
         return false;
     }
 
@@ -74,7 +81,7 @@ public class RoombaEntity extends TameableEntity implements Mount{
             --this.idleAnimationTimeout;
         }
 
-        if(isInSittingPose()) {
+        if (isInSittingPose()) {
             sitAnimationState.startIfNotRunning(this.age);
         } else {
             sitAnimationState.stop();
@@ -91,21 +98,50 @@ public class RoombaEntity extends TameableEntity implements Mount{
         super.writeCustomDataToNbt(nbt);
     }
 
+    public boolean isHealingItem(ItemStack stack) {
+        return stack.isOf(Items_RaEx.SOUL);
+    }
+
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
-        if(hand == Hand.MAIN_HAND) {
-            if (!this.isTamed()) {
-                if (!this.getWorld().isClient()) {
-                    this.playSound(Sounds_RaEx.ON_OFF, 1, 1);
-                    super.setOwner(player);
-                    this.navigation.recalculatePath();
-                    this.setTarget(null);
-                    this.getWorld().sendEntityStatus(this, (byte) 7);
-                    setSitting(false);
-                    setInSittingPose(false);
+        ItemStack itemstack = player.getStackInHand(hand);
+        Item item = itemstack.getItem();
+
+        Math_RaEx r = new Math_RaEx();
+
+        Item isTamingItem = Items_RaEx.SOUL;
+
+        // Taming
+        if (item == isTamingItem && !this.isTamed()) {
+            if (this.getWorld().isClient()) {
+                return ActionResult.CONSUME;
+            } else {
+                if (!player.getAbilities().creativeMode) {
+                    itemstack.decrement(1);
                 }
-                return ActionResult.SUCCESS;
-            } else if (this.isTamed() && this.isOwner(player)) {
+                this.playSound(Sounds_RaEx.ON_OFF, 1, 1);
+                super.setOwner(player);
+                this.navigation.recalculatePath();
+                this.setTarget(null);
+                this.getWorld().sendEntityStatus(this, (byte) 7);
+                setSitting(false);
+                setInSittingPose(false);
+            }
+        }
+
+        // Healing
+        if (this.isHealingItem(itemstack) && this.getHealth() < this.getMaxHealth()) {
+            if (!player.getAbilities().creativeMode) {
+                itemstack.decrement(1);
+            }
+            this.heal(r.randomInt(6));
+            this.getWorld().sendEntityStatus(this, EntityStatuses.ADD_BREEDING_PARTICLES);
+            return ActionResult.SUCCESS;
+        }
+
+        // Set Riding/Sitting
+        if (hand == Hand.MAIN_HAND && item == Items.AIR) {
+            if (this.isTamed() && this.isOwner(player)) {
                 if (!player.isSneaking() && !this.isSitting()) {
                     setRiding(player);
                 } else {
@@ -161,7 +197,7 @@ public class RoombaEntity extends TameableEntity implements Mount{
 
     @Override
     public void travel(Vec3d movementInput) {
-        if(this.hasPassengers() && getControllingPassenger() instanceof PlayerEntity) {
+        if (this.hasPassengers() && getControllingPassenger() instanceof PlayerEntity) {
             LivingEntity livingentity = this.getControllingPassenger();
             this.setYaw(livingentity.getYaw());
             this.prevYaw = this.getYaw();
@@ -176,9 +212,9 @@ public class RoombaEntity extends TameableEntity implements Mount{
             }
 
             if (this.isLogicalSideForUpdatingMovement()) {
-                float newSpeed = (float)this.getAttributeValue(EntityAttributes.GENERIC_MOVEMENT_SPEED);
+                float newSpeed = (float) this.getAttributeValue(EntityAttributes.GENERIC_MOVEMENT_SPEED);
 
-                if(MinecraftClient.getInstance().options.sprintKey.isPressed()) {
+                if (MinecraftClient.getInstance().options.sprintKey.isPressed()) {
                     newSpeed *= 1.25f; // Change this to ~1.5 or so
                 }
 
@@ -220,11 +256,6 @@ public class RoombaEntity extends TameableEntity implements Mount{
         if (this.getWorld().isClient) {
             setupAnimationStates();
         }
-    }
-
-    @Override
-    public boolean shouldDismountUnderwater() {
-        return false;
     }
 
     @Nullable

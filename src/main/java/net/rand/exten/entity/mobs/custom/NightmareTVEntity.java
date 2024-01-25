@@ -35,6 +35,11 @@ public class NightmareTVEntity extends HostileEntity {
         super(entityType, world);
     }
 
+    @Override
+    protected boolean shouldSwimInFluids() {
+        return false;
+    }
+
     public static DefaultAttributeContainer.Builder createNightmareTVAttributes() {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 50)
