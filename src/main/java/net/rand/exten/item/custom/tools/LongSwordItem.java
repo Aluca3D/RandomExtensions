@@ -11,7 +11,8 @@ import net.minecraft.item.ToolMaterial;
 
 public class LongSwordItem extends SwordItem {
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
-
+    //Todo add two handed check
+    //if player has offhand free, deal extra damage/move even slower
     public LongSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
