@@ -17,6 +17,9 @@
   "item.randexten.bamboo_explosive.tooltip": "Goes Boom",
   "item.randexten.bamboo_explosive_strong.tooltip": "Goes Big Boom",
 
+  "item.randexten.escape_rope_1": "But nothing happened",
+  "item.randexten.escape_rope_2": "%1$s was Teleported to the Surface",
+
   "death.attack.barbed_wire": "%1$s jumped into Barbed Wires",
   "death.attack.pebble": "%1$s was to Stoned",
   "death.attack.end_berry_bush": "%1$s loved End Berry's to much",
