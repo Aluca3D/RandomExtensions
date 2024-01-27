@@ -129,6 +129,8 @@
   "item.randexten.end_barry": "End Barry",
   "item.randexten.escape_potion": "Escape Potion",
   "item.randexten.escape_rope": "Escape Rope",
+  "item.randexten.escape_rope_1": "But nothing happened",
+  "item.randexten.escape_rope_2": "%1$s was Teleported to the Surface",
   "item.randexten.flour": "Flour",
   "item.randexten.gems_upgrade_template": "Gems Upgrade Template",
   "item.randexten.glow_bomb": "Glow Bomb",
