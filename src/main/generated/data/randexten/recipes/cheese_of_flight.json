@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "randexten:cheese"
+    },
+    {
+      "item": "randexten:cheese"
+    },
+    {
+      "item": "randexten:cheese"
+    },
+    {
+      "item": "randexten:cheese"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "minecraft:shulker_shell"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "randexten:cheese_of_flight"
+  }
+}

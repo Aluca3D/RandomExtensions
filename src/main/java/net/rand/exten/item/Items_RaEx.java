@@ -15,6 +15,7 @@ import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.CropBlocks_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
 import net.rand.exten.item.custom.food.*;
+import net.rand.exten.item.custom.items.CheeseOfFlight;
 import net.rand.exten.item.custom.items.projectile.*;
 
 public class Items_RaEx {
@@ -131,7 +132,15 @@ public class Items_RaEx {
     public static final Item TOOTH = registerItem("tooth",
             new Item(new FabricItemSettings()));
 
-    /** Explosives*/
+    /**
+     * Funny Items
+     */
+    public static final Item CHEESE_OF_FLIGHT = registerItem("cheese_of_flight",
+            new CheeseOfFlight(new FabricItemSettings()));
+
+    /**
+     * Explosives
+     */
     public static final Item SMOKE_BOMB_ITEM = registerItem("smoke_bomb",
             new SmokeBombItem(new FabricItemSettings()));
     public static final Item GLOW_BOMB_ITEM = registerItem("glow_bomb",
@@ -141,7 +150,9 @@ public class Items_RaEx {
     public static final Item HOLY_HAND_GRENADE_ITEM = registerItem("holy_hand_grenade",
             new HolyHandGrenadeItem(new FabricItemSettings()));
 
-    /**Spawn Egg*/
+    /**
+     * Spawn Egg
+     */
     public static final Item NIGHTMARE_TV_SPAWN_EGG = registerItem("nightmare_tv_spawn_egg",
             new SpawnEggItem(Entities_RaEx.NIGHTMARE_TV, 0x000000, 0xFFFFFF, new FabricItemSettings()));
 

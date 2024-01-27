@@ -206,6 +206,9 @@ public class ItemGroups_RaEx {
                         entries.add(Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK);
                         entries.add(Blocks_RaEx.BARBED_WIRE);
 
+                        /// Funny Items and Blocks
+                        entries.add(Items_RaEx.CHEESE_OF_FLIGHT);
+
                         /// Redstone
                         entries.add(Blocks_RaEx.SWITCH);
 
