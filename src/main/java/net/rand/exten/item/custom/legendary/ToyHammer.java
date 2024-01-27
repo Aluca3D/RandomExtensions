@@ -46,13 +46,11 @@ public class ToyHammer extends ToolItem {
             stack.addEnchantment(Enchantments.KNOCKBACK, 10);
             stack.addEnchantment(Enchantments.KNOCKBACK, 0);
             stack.addHideFlag(ItemStack.TooltipSection.ENCHANTMENTS);
-
         }
     }
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-
         target.playSound(Sounds_RaEx.BOING, 2, 1);
         stack.damage(1, attacker, e -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
         return true;
