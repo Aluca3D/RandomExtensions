@@ -188,6 +188,8 @@ public class DeGen extends FabricLanguageProvider {
         translationBuilder.add(CropBlocks_RaEx.TOMATO_CROP, "Tomaten Pflanze");
         translationBuilder.add(CropBlocks_RaEx.CORN_CROP, "Mais Pflanze");
 
+        translationBuilder.add(Blocks_RaEx.SWITCH, "Schalter");
+
         /// Effect
         translationBuilder.add(Effects_RaEx.EVOKERS_BITE, "Evoker's Biss");
         translationBuilder.add(Effects_RaEx.LIGHTNING_ATTRACTION, "Blitzattraktion");

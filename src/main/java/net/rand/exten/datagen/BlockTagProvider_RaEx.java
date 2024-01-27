@@ -45,7 +45,6 @@ public class BlockTagProvider_RaEx extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks_RaEx.SAND_CRYSTAL)
                 .add(Blocks_RaEx.LAND_MINE)
                 .add(Blocks_RaEx.BARBED_WIRE)
-
         ;
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
@@ -89,7 +88,6 @@ public class BlockTagProvider_RaEx extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.CROPS)
                 .add(CropBlocks_RaEx.CORN_CROP)
                 .add(CropBlocks_RaEx.TOMATO_CROP)
-
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
@@ -98,7 +96,6 @@ public class BlockTagProvider_RaEx extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks_RaEx.OBSIDIAN_GLASS)
                 .add(Blocks_RaEx.OBSIDIAN_GLASS_PANE)
                 .add(Blocks_RaEx.TINTED_OBSIDIAN_GLASS)
-
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
@@ -108,13 +105,11 @@ public class BlockTagProvider_RaEx extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks_RaEx.RUBY_ORE)
                 .add(Blocks_RaEx.TOPAS_BLOCK)
                 .add(Blocks_RaEx.TOPAS_ORE)
-
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(Blocks_RaEx.AQUAMARIN_BLOCK)
                 .add(Blocks_RaEx.BARBED_WIRE)
-
         ;
 
 
@@ -166,6 +161,10 @@ public class BlockTagProvider_RaEx extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks_RaEx.PURPUR_TRAPDOOR)
         ;
 
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(Blocks_RaEx.BURNED_LOG, Blocks_RaEx.STRIPPED_BURNED_LOG, Blocks_RaEx.BURNED_WOOD, Blocks_RaEx.STRIPPED_BURNED_WOOD)
+        ;
+
         getOrCreateTagBuilder(BlockTags.LOGS)
                 .add(Blocks_RaEx.PURPUR_LOG)
                 .add(Blocks_RaEx.STRIPPED_BURNED_LOG)
@@ -201,11 +200,6 @@ public class BlockTagProvider_RaEx extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
                 .add(Blocks_RaEx.POTTED_NIGHT_SHADE)
-
-        ;
-
-        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
-                .add(Blocks_RaEx.BURNED_LOG, Blocks_RaEx.STRIPPED_BURNED_LOG, Blocks_RaEx.BURNED_WOOD, Blocks_RaEx.STRIPPED_BURNED_WOOD)
 
         ;
 

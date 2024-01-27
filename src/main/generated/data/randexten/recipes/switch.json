@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "minecraft:smooth_stone"
+    },
+    {
+      "tag": "minecraft:buttons"
+    },
+    {
+      "tag": "minecraft:buttons"
+    },
+    {
+      "tag": "minecraft:buttons"
+    },
+    {
+      "tag": "minecraft:buttons"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "randexten:switch"
+  }
+}

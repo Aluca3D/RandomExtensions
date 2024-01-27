@@ -39,6 +39,7 @@ public class StepBlock extends Block implements Waterloggable {
         super(settings);
         this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH).with(TOP_OR_BOTTOM, true));
     }
+
     @Override
     public boolean hasSidedTransparency(BlockState state) {
         return true;
@@ -55,36 +56,35 @@ public class StepBlock extends Block implements Waterloggable {
         Boolean b = state.get(TOP_OR_BOTTOM);
         if (b) {
             switch (dir) {
-                case NORTH:{
+                case NORTH: {
                     return SHAPE_NORTH;
                 }
-                case SOUTH:{
+                case SOUTH: {
                     return SHAPE_SOUTH;
                 }
-                case EAST:{
+                case EAST: {
                     return SHAPE_EAST;
                 }
-                case WEST:{
+                case WEST: {
                     return SHAPE_WEST;
                 }
             }
         } else {
             switch (dir) {
-                case NORTH:{
+                case NORTH: {
                     return TOP_SHAPE_NORTH;
                 }
-                case SOUTH:{
+                case SOUTH: {
                     return TOP_SHAPE_SOUTH;
                 }
-                case EAST:{
+                case EAST: {
                     return TOP_SHAPE_EAST;
                 }
-                case WEST:{
+                case WEST: {
                     return TOP_SHAPE_WEST;
                 }
             }
         }
-
         return null;
     }
 
@@ -99,7 +99,7 @@ public class StepBlock extends Block implements Waterloggable {
         FluidState fluidState = ctx.getWorld().getFluidState(blockPos);
         BlockState blockState2 = this.getDefaultState().with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
         Direction direction = ctx.getSide();
-        if (direction == Direction.DOWN || direction != Direction.UP && ctx.getHitPos().y - (double)blockPos.getY() > 0.5) {
+        if (direction == Direction.DOWN || direction != Direction.UP && ctx.getHitPos().y - (double) blockPos.getY() > 0.5) {
             return blockState2.with(FACING, ctx.getHorizontalPlayerFacing().getOpposite()).with(TOP_OR_BOTTOM, false);
         }
         return blockState2.with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
@@ -107,7 +107,7 @@ public class StepBlock extends Block implements Waterloggable {
 
     @Override
     public FluidState getFluidState(BlockState state) {
-        if (state.get(WATERLOGGED).booleanValue()) {
+        if (state.get(WATERLOGGED)) {
             return Fluids.WATER.getStill(false);
         }
         return super.getFluidState(state);
@@ -125,7 +125,7 @@ public class StepBlock extends Block implements Waterloggable {
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        if (state.get(WATERLOGGED).booleanValue()) {
+        if (state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
@@ -133,15 +133,10 @@ public class StepBlock extends Block implements Waterloggable {
 
     @Override
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
-        switch (type) {
-            case LAND, AIR: {
-                return false;
-            }
-            case WATER: {
-                return world.getFluidState(pos).isIn(FluidTags.WATER);
-            }
-        }
-        return false;
+        return switch (type) {
+            case LAND, AIR -> false;
+            case WATER -> world.getFluidState(pos).isIn(FluidTags.WATER);
+        };
     }
 
 }
