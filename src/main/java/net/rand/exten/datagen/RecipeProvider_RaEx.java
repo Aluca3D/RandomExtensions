@@ -190,7 +190,6 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.PURPUR_PRESSURE_PLATE)));
         offerSingleOutputShapelessRecipe(exporter, Blocks_RaEx.PURPUR_BUTTON, Blocks_RaEx.PURPUR_PLANKS, "");
 
-
         //Food
         offerFoodCookingRecipe(exporter, "smoking_dough", RecipeSerializer.SMOKING, SmokingRecipe::new, 150, Items_RaEx.DOUGH, Items.BREAD, 0.2f);
         offerFoodCookingRecipe(exporter, "dough", RecipeSerializer.SMELTING, SmeltingRecipe::new, 200, Items_RaEx.DOUGH, Items.BREAD, 0.1f);
@@ -270,6 +269,12 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
         offerFoodCookingRecipe(exporter, "raw_ruby", RecipeSerializer.SMELTING, SmeltingRecipe::new, 150, Items_RaEx.RAW_RUBY, Items_RaEx.RUBY, 0.2f);
         offerFoodCookingRecipe(exporter, "raw_aquamarin", RecipeSerializer.SMELTING, SmeltingRecipe::new, 150, Items_RaEx.RAW_AQUAMARIN, Items_RaEx.AQUAMARIN, 0.2f);
         offerFoodCookingRecipe(exporter, "raw_topas", RecipeSerializer.SMELTING, SmeltingRecipe::new, 150, Items_RaEx.RAW_TOPAS, Items_RaEx.TOPAS, 0.2f);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, Blocks_RaEx.SWITCH, 4)
+                .input(Items.SMOOTH_STONE)
+                .input(Ingredient.fromTag(ItemTags.BUTTONS), 4)
+                .criterion(hasItem(Items.SMOOTH_STONE), conditionsFromItem(Items.SMOOTH_STONE))
+                .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.SWITCH)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PURPLE_DYE)
                 .input(Blocks_RaEx.NIGHT_SHADE)

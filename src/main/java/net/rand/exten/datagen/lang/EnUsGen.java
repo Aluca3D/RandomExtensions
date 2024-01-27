@@ -188,6 +188,8 @@ public class EnUsGen extends FabricLanguageProvider {
         translationBuilder.add(CropBlocks_RaEx.TOMATO_CROP, "Tomato Crop");
         translationBuilder.add(CropBlocks_RaEx.CORN_CROP, "Corn Crop");
 
+        translationBuilder.add(Blocks_RaEx.SWITCH, "Switch");
+
         /// Effect
         translationBuilder.add(Effects_RaEx.EVOKERS_BITE, "Evoker's Bite");
         translationBuilder.add(Effects_RaEx.LIGHTNING_ATTRACTION, "Lightning Attraction");

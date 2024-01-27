@@ -206,6 +206,9 @@ public class ItemGroups_RaEx {
                         entries.add(Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK);
                         entries.add(Blocks_RaEx.BARBED_WIRE);
 
+                        /// Redstone
+                        entries.add(Blocks_RaEx.SWITCH);
+
                         /// Explosives
                         entries.add(Blocks_RaEx.LAND_MINE);
                         entries.add(Blocks_RaEx.STRONG_LAND_MINE);

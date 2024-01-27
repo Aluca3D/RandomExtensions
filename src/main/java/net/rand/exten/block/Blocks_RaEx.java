@@ -17,6 +17,7 @@ import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.custom.blocks.BarbedWire;
 import net.rand.exten.block.custom.blocks.Grinder;
 import net.rand.exten.block.custom.blocks.SoulOre;
+import net.rand.exten.block.custom.blocks.SwitchBlock;
 import net.rand.exten.block.custom.blocks.explosives.ExplosiveCakeBlock;
 import net.rand.exten.block.custom.blocks.explosives.LandMine;
 import net.rand.exten.block.custom.blocks.explosives.StrongLandMine;
@@ -87,6 +88,12 @@ public class Blocks_RaEx {
                     }
                 }
             });
+
+    /**
+     * Redstone
+     */
+    public static final Block SWITCH = registerBlock("switch",
+            new SwitchBlock(FabricBlockSettings.copyOf(Blocks.LEVER)));
 
     /**
      * Crystal

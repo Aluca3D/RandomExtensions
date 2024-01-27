@@ -90,6 +90,8 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
         generateGrinderAdvancement(consumer, mainRoot);
         generateMiscAdvancement(consumer, mainRoot);
 
+        generateRecipes(consumer);
+
         // Soda
         AdvancementEntry drinkAll = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Items_RaEx.RED_SODA_CAN),
@@ -731,7 +733,6 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
     }
 
     public void generateTreeAdvancement(Consumer<AdvancementEntry> consumer, AdvancementEntry mainRoot) {
-
         AdvancementEntry treeRoot = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(Blocks.OAK_SAPLING),
                         Text.literal("New Trees"), Text.literal(""),
@@ -795,4 +796,12 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .build(consumer, RandomExtensions.MOD_ID + ":re/tree_advancements/purpur_tree");
 
     }
+
+    public void generateRecipes(Consumer<AdvancementEntry> consumer) {
+        AdvancementEntry switchRecipe = Advancement.Builder.create()
+                .criterion("has_smooth_stone", InventoryChangedCriterion.Conditions.items(Blocks.SMOOTH_STONE))
+                .rewards(AdvancementRewards.Builder.recipe(new Identifier("randexten:switch")))
+                .build(consumer, RandomExtensions.MOD_ID + ":re/recipes/switch");
+    }
+
 }

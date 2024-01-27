@@ -79,6 +79,9 @@ public class LootTableProvider_RaEx extends FabricBlockLootTableProvider {
         addDrop(Blocks_RaEx.CHEESE_WALLS);
         addDrop(StepBlockRegistry.CHEESE_STEP);
 
+        // Redstone
+        addDrop(Blocks_RaEx.SWITCH);
+
         // Misc
         addDrop(Blocks_RaEx.CHARCOAL_BLOCK);
         addDrop(Blocks_RaEx.SOUL_ORE);
