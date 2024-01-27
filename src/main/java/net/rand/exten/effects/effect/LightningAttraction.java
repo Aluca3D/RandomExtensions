@@ -26,7 +26,7 @@ public class LightningAttraction extends StatusEffect {
     private void lightningAttraction(World world, LivingEntity entity) {
         BlockPos blockPos;
         Math_RaEx m = new Math_RaEx();
-        int r = m.randomInt(100);
+        int r = m.randomInt(250);
         if (world.isThundering() && world.isSkyVisible(blockPos = (entity.getBlockPos())) && r == 1) {
             LightningEntity lightningEntity = EntityType.LIGHTNING_BOLT.create(world);
             if (lightningEntity != null) {
