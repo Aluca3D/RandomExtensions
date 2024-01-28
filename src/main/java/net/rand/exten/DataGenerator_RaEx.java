@@ -14,7 +14,6 @@ public class DataGenerator_RaEx implements DataGeneratorEntrypoint {
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
-
         pack.addProvider(RecipeProvider_RaEx::new);
         pack.addProvider(ModelProvider_RaEx::new);
         pack.addProvider(BlockTagProvider_RaEx::new);
@@ -26,6 +25,7 @@ public class DataGenerator_RaEx implements DataGeneratorEntrypoint {
         pack.addProvider(EnUsGen::new);
         pack.addProvider(DeGen::new);
     }
+
     @Override
     public void buildRegistry(RegistryBuilder registryBuilder) {
         registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ConfiguredFeatures_RaEx::bootstrap);
