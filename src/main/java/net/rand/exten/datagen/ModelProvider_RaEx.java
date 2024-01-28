@@ -132,6 +132,8 @@ public class ModelProvider_RaEx extends FabricModelProvider {
 
         itemModelGenerator.register(Items_RaEx.STINKY_CHEESE, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.CHEESE_OF_FLIGHT, Models.GENERATED);
+
+        itemModelGenerator.register(LootBag_RaEx.EMPTY_LOOT_BAG, Models.GENERATED);
         itemModelGenerator.register(LootBag_RaEx.CHEESE_LOOT_BAG, Models.GENERATED);
         itemModelGenerator.register(LootBag_RaEx.MINE_LOOT_BAG, Models.GENERATED);
 

@@ -130,9 +130,10 @@ public class ItemGroups_RaEx {
                         entries.add(Blocks_RaEx.CHEESE_SLABS);
                         entries.add(Blocks_RaEx.CHEESE_WALLS);
                         entries.add(Blocks_RaEx.CHEESE_STATION);
-                        entries.add(LootBag_RaEx.CHEESE_LOOT_BAG);
 
                         ///Loot Bag
+                        entries.add(LootBag_RaEx.EMPTY_LOOT_BAG);
+                        entries.add(LootBag_RaEx.CHEESE_LOOT_BAG);
                         entries.add(LootBag_RaEx.MINE_LOOT_BAG);
 
                         /// Foods
