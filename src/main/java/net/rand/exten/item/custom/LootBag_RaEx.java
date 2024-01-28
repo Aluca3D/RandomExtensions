@@ -6,6 +6,7 @@ import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.item.Items_RaEx;
@@ -14,6 +15,9 @@ import net.rand.exten.item.custom.items.LootBag;
 import java.util.Arrays;
 
 public class LootBag_RaEx {
+
+    public static final Item EMPTY_LOOT_BAG = registerItem("empty_loot_bag",
+            new Item(new FabricItemSettings()));
 
     public static final Item CHEESE_LOOT_BAG = registerItem("cheese_loot_bag",
             new LootBag(new FabricItemSettings(), "item.randexten.cheese_loot_bag.tooltip", Arrays.asList(

@@ -16,6 +16,7 @@ import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
+import net.rand.exten.item.custom.LootBag_RaEx;
 import net.rand.exten.util.Tags_RaEx;
 
 public class RecipeProvider_RaEx extends FabricRecipeProvider {
@@ -26,7 +27,7 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
-
+        //Todo make into multiple files
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.ROOMBA_ITEM, 1)
                 .pattern("BOB")
                 .pattern("IHI")
@@ -264,6 +265,25 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL), conditionsFromItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.NETHERITE_PAXEL)));
+
+        // LootBags
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, LootBag_RaEx.EMPTY_LOOT_BAG)
+                .pattern(" S ")
+                .pattern("S S")
+                .pattern(" S ")
+                .input('S', Items.LEATHER)
+                .criterion(hasItem(Items.LEATHER), conditionsFromItem(Items.LEATHER))
+                .offerTo(exporter, new Identifier(getRecipeName(LootBag_RaEx.EMPTY_LOOT_BAG)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, LootBag_RaEx.MINE_LOOT_BAG)
+                .input(LootBag_RaEx.EMPTY_LOOT_BAG)
+                .input(Items.DIAMOND)
+                .input(Items.STONE_PICKAXE)
+                .input(Items.TORCH, 3)
+                .criterion(hasItem(LootBag_RaEx.EMPTY_LOOT_BAG), conditionsFromItem(LootBag_RaEx.EMPTY_LOOT_BAG))
+                .criterion(hasItem(Items.STONE_PICKAXE), conditionsFromItem(Items.STONE_PICKAXE))
+                .criterion(hasItem(Items.TORCH), conditionsFromItem(Items.TORCH))
+                .offerTo(exporter, new Identifier(getRecipeName(LootBag_RaEx.MINE_LOOT_BAG)));
 
         // Misc
         offerFoodCookingRecipe(exporter, "raw_ruby", RecipeSerializer.SMELTING, SmeltingRecipe::new, 150, Items_RaEx.RAW_RUBY, Items_RaEx.RUBY, 0.2f);
