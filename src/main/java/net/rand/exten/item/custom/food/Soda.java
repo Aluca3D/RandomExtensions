@@ -24,6 +24,7 @@ public class Soda extends Item {
         this.statusEffect2 = statusEffect2;
     }
 
+    @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         super.finishUsing(stack, world, user);
         if (user instanceof ServerPlayerEntity serverPlayerEntity) {

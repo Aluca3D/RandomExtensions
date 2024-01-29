@@ -15,7 +15,7 @@ import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.CropBlocks_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
 import net.rand.exten.item.custom.food.*;
-import net.rand.exten.item.custom.items.CheeseOfFlight;
+import net.rand.exten.item.custom.food.CheeseOfFlight;
 import net.rand.exten.item.custom.items.projectile.*;
 
 public class Items_RaEx {
@@ -136,7 +136,7 @@ public class Items_RaEx {
      * Funny Items
      */
     public static final Item CHEESE_OF_FLIGHT = registerItem("cheese_of_flight",
-            new CheeseOfFlight(new FabricItemSettings()));
+            new CheeseOfFlight(new FabricItemSettings().food(FoodComponents_RaEx.CHEESE)));
 
     /**
      * Explosives
