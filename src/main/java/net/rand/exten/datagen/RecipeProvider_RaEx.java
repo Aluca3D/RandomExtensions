@@ -528,6 +528,15 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.SMOOTH_STONE), conditionsFromItem(Items.SMOOTH_STONE))
                 .offerTo(exporter, new Identifier(getRecipeName(Blocks_RaEx.SWITCH)));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.CHEESE_OF_FLIGHT, 4)
+                .input(Items_RaEx.CHEESE, 4)
+                .input(Items.FEATHER,4)
+                .input(Items.SHULKER_SHELL)
+                .criterion(hasItem(Items_RaEx.CHEESE), conditionsFromItem(Items_RaEx.CHEESE))
+                .criterion(hasItem(Items.FEATHER), conditionsFromItem(Items.FEATHER))
+                .criterion(hasItem(Items.SHULKER_SHELL), conditionsFromItem(Items.SHULKER_SHELL))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.CHEESE_OF_FLIGHT)));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PURPLE_DYE)
                 .input(Blocks_RaEx.NIGHT_SHADE)
                 .criterion(hasItem(Blocks_RaEx.NIGHT_SHADE), conditionsFromItem(Blocks_RaEx.NIGHT_SHADE))

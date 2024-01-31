@@ -105,6 +105,7 @@ public class EnUsGen extends FabricLanguageProvider {
         translationBuilder.add(Items_RaEx.FLOUR, "Flour");
         translationBuilder.add(Items_RaEx.STINKY_CHEESE, "Stinky Cheese");
         translationBuilder.add(Items_RaEx.CHEESE, "Cheese");
+        translationBuilder.add(Items_RaEx.CHEESE_OF_FLIGHT, "Cheese of Flight");
         translationBuilder.add(Items_RaEx.BUCKET_CHEESE, "Cheese Bucket");
         translationBuilder.add(Items_RaEx.ESCAPE_POTION, "Escape Potion");
         translationBuilder.add(Items_RaEx.DUK_TAPE, "Duk Tape");

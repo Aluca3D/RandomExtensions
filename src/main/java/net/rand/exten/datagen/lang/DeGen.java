@@ -105,6 +105,7 @@ public class DeGen extends FabricLanguageProvider {
         translationBuilder.add(Items_RaEx.FLOUR, "Mehl");
         translationBuilder.add(Items_RaEx.STINKY_CHEESE, "Stinkender Käse");
         translationBuilder.add(Items_RaEx.CHEESE, "Käse");
+        translationBuilder.add(Items_RaEx.CHEESE_OF_FLIGHT, "Käse des Fliegens");
         translationBuilder.add(Items_RaEx.BUCKET_CHEESE, "Käse Eimer");
         translationBuilder.add(Items_RaEx.ESCAPE_POTION, "Trank der Flucht");
         translationBuilder.add(Items_RaEx.DUK_TAPE, "Duk Tape");
