@@ -55,6 +55,11 @@ public class RoombaEntity extends TameableEntity implements Mount {
     }
 
     @Override
+    protected int getNextAirUnderwater(int air) {
+        return air;
+    }
+
+    @Override
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new EscapeDangerGoal(this, 2));
