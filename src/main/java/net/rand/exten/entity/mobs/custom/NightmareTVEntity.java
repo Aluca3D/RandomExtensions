@@ -83,6 +83,7 @@ public class NightmareTVEntity extends HostileEntity {
 
     @Override
     protected void initGoals() {
+        this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 4F));
         this.goalSelector.add(6, new WanderAroundFarGoal(this, 1D));
         this.goalSelector.add(1, new NightmareTVGoal(this));
