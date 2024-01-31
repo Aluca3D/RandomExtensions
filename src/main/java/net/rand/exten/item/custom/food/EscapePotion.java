@@ -57,7 +57,8 @@ public class EscapePotion extends Item {
                 return stack;
             }
         } else if (!world.isClient) {
-            user.sendMessage(Text.literal("Teleporting did not work"));
+            user.sendMessage(Text.translatable("item.randexten.escape_rope_1"));
+
         }
         return stack;
     }
@@ -83,7 +84,8 @@ public class EscapePotion extends Item {
     }
 
     private void teleportToSurface(BlockPos pos, PlayerEntity user) {
-        user.sendMessage(Text.literal("Teleported " + user.getName().getString() + " to Surface"));
+        String player = user.getName().getString();
+        user.sendMessage(Text.translatable("item.randexten.escape_rope_2", player));
         user.requestTeleport(user.getX(), pos.getY(), user.getZ());
     }
 }
