@@ -1,4 +1,4 @@
-package net.rand.exten.item.custom.armor;
+package net.rand.exten.item.custom.wearable;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -8,8 +8,8 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public abstract class MainArmorItem extends ArmorItem {
-    public MainArmorItem(ArmorMaterial material, Type type, Settings settings) {
+public abstract class ArmorItem_RaEx extends ArmorItem {
+    public ArmorItem_RaEx(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
     }
 
