@@ -169,5 +169,18 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
                 .add(Items.SNOWBALL)
         ;
 
+        getOrCreateTagBuilder(Tags_RaEx.Items.COMMON_HAT)
+                .add(Items_RaEx.SUNGLASSES)
+                .add(Items_RaEx.TOP_HAT)
+        ;
+        getOrCreateTagBuilder(Tags_RaEx.Items.UNCOMMON_HAT)
+                .add(Items_RaEx.TOP_TOP_HAT)
+        ;
+        getOrCreateTagBuilder(Tags_RaEx.Items.RARE_HAT)
+                .add(Items_RaEx.TOP_TOP_TOP_HAT)
+        ;
+        getOrCreateTagBuilder(Tags_RaEx.Items.EPIC_HAT)
+        ;
+
     }
 }

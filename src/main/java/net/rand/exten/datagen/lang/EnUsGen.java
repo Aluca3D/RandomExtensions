@@ -128,6 +128,7 @@ public class EnUsGen extends FabricLanguageProvider {
         translationBuilder.add(LootBag_RaEx.EMPTY_LOOT_BAG, "Empty Loot Bag");
         translationBuilder.add(LootBag_RaEx.CHEESE_LOOT_BAG, "Cheese Loot Bag");
         translationBuilder.add(LootBag_RaEx.MINE_LOOT_BAG, "Mine Loot Bag");
+        translationBuilder.add(LootBag_RaEx.HAT_LOOT_BAG, "Hat Loot Bag");
 
         /// Block
         translationBuilder.add(Blocks_RaEx.AQUAMARIN_ORE, "Deepslate Aquamarin Ore");

@@ -20,6 +20,18 @@ public class Tags_RaEx {
 
     public static class Items {
 
+        public static final TagKey<Item> COMMON_HAT =
+                createTag("common_hat");
+
+        public static final TagKey<Item> UNCOMMON_HAT =
+                createTag("uncommon_hat");
+
+        public static final TagKey<Item> RARE_HAT =
+                createTag("rare_hat");
+
+        public static final TagKey<Item> EPIC_HAT =
+                createTag("epic_hat");
+
         public static final TagKey<Item> GEMS =
                 createTag("gems");
 
