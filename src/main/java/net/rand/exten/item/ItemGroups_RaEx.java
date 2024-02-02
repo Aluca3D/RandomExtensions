@@ -135,6 +135,7 @@ public class ItemGroups_RaEx {
                         entries.add(LootBag_RaEx.EMPTY_LOOT_BAG);
                         entries.add(LootBag_RaEx.CHEESE_LOOT_BAG);
                         entries.add(LootBag_RaEx.MINE_LOOT_BAG);
+                        entries.add(LootBag_RaEx.HAT_LOOT_BAG);
 
                         /// Foods
                         entries.add(Items_RaEx.FLOUR);

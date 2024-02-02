@@ -6,7 +6,6 @@ import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Rarity;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.item.Items_RaEx;
@@ -24,6 +23,22 @@ public class LootBag_RaEx {
                     Items_RaEx.CHEESE, Items_RaEx.CHEESE, Items_RaEx.CHEESE, Items_RaEx.CHEESE, Items_RaEx.CHEESE, Items_RaEx.CHEESE, Items_RaEx.CHEESE,
                     Blocks_RaEx.CHEESE_BLOCK.asItem(),
                     Items_RaEx.STINKY_CHEESE, Items_RaEx.STINKY_CHEESE
+            ).toArray(new Item[0])));
+
+    //todo: add Texture/Model/Lang
+    public static final Item HAT_LOOT_BAG = registerItem("hat_loot_bag",
+            new LootBag(new FabricItemSettings(), "item.randexten.hat_loot_bag.tooltip", Arrays.asList(
+                    // Common
+                    Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES,
+                    Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES,
+                    Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT,
+                    Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT,
+                    // Uncommon
+                    Items_RaEx.TOP_TOP_HAT, Items_RaEx.TOP_TOP_HAT, Items_RaEx.TOP_TOP_HAT, Items_RaEx.TOP_TOP_HAT, Items_RaEx.TOP_TOP_HAT, Items_RaEx.TOP_TOP_HAT,
+                    // Rare
+                    Items_RaEx.TOP_TOP_TOP_HAT, Items_RaEx.TOP_TOP_TOP_HAT, Items_RaEx.TOP_TOP_TOP_HAT
+                    // Epic
+
             ).toArray(new Item[0])));
 
     //todo: add to underground structure loot (Mineshaft,...)
