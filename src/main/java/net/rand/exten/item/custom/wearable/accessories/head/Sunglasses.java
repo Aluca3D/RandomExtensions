@@ -1,7 +1,5 @@
-package net.rand.exten.item.custom.wearable.hats;
+package net.rand.exten.item.custom.wearable.accessories.head;
 
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -14,9 +12,6 @@ public class Sunglasses extends Hats {
 
     @Override
     public void SpecialAbility(PlayerEntity user, ItemStack stack, World world) {
-        if (world.isDay()) {
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 400, 1, false, false));
 
-        }
     }
 }

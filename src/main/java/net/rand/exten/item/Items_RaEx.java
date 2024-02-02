@@ -16,7 +16,8 @@ import net.rand.exten.block.CropBlocks_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
 import net.rand.exten.item.custom.food.*;
 import net.rand.exten.item.custom.items.projectile.*;
-import net.rand.exten.item.custom.wearable.hats.Sunglasses;
+import net.rand.exten.item.custom.wearable.accessories.head.Sunglasses;
+import net.rand.exten.item.custom.wearable.accessories.head.TopHat;
 
 public class Items_RaEx {
     /**
@@ -133,10 +134,12 @@ public class Items_RaEx {
             new Item(new FabricItemSettings()));
 
     /**
-     * Hats
+     * Head Wearable
      */
     public static final Item SUNGLASSES = registerItem("sunglasses",
             new Sunglasses(new FabricItemSettings().maxCount(1)));
+    public static final Item TOP_HAT = registerItem("top_hat",
+            new TopHat(new FabricItemSettings().maxCount(1)));
 
     /**
      * Funny Items
