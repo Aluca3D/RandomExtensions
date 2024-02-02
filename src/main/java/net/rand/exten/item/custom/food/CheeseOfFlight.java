@@ -35,11 +35,12 @@ public class CheeseOfFlight extends Item {
 
     @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-
         if (user.isSneaking()) {
             if (!user.getAbilities().creativeMode) {
                 stack.decrement(1);
+                user.getItemCooldownManager().set(this, 20);
             }
+
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 20, 60, false, true, false), user);
         }
         return super.useOnEntity(stack, user, entity, hand);
