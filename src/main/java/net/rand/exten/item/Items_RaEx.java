@@ -18,6 +18,8 @@ import net.rand.exten.item.custom.food.*;
 import net.rand.exten.item.custom.items.projectile.*;
 import net.rand.exten.item.custom.wearable.accessories.head.Sunglasses;
 import net.rand.exten.item.custom.wearable.accessories.head.TopHat;
+import net.rand.exten.item.custom.wearable.accessories.head.TopTopHat;
+import net.rand.exten.item.custom.wearable.accessories.head.TopTopTopHat;
 
 public class Items_RaEx {
     /**
@@ -140,6 +142,10 @@ public class Items_RaEx {
             new Sunglasses(new FabricItemSettings().maxCount(1)));
     public static final Item TOP_HAT = registerItem("top_hat",
             new TopHat(new FabricItemSettings().maxCount(1)));
+    public static final Item TOP_TOP_HAT = registerItem("top_top_hat",
+            new TopTopHat(new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON)));
+    public static final Item TOP_TOP_TOP_HAT = registerItem("top_top_top_hat",
+            new TopTopTopHat(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
 
     /**
      * Funny Items

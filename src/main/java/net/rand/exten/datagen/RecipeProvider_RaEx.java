@@ -292,6 +292,20 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
     }
 
     public void generateMisc(RecipeExporter exporter) {
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.TOP_TOP_HAT)
+                .input(Items_RaEx.TOP_HAT)
+                .input(Items_RaEx.TOP_HAT)
+                .criterion(hasItem(Items_RaEx.TOP_HAT), conditionsFromItem(Items_RaEx.TOP_HAT))
+                .criterion(hasItem(Items_RaEx.TOP_HAT), conditionsFromItem(Items_RaEx.TOP_HAT))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.TOP_TOP_HAT)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.TOP_TOP_TOP_HAT)
+                .input(Items_RaEx.TOP_HAT)
+                .input(Items_RaEx.TOP_TOP_HAT)
+                .criterion(hasItem(Items_RaEx.TOP_HAT), conditionsFromItem(Items_RaEx.TOP_HAT))
+                .criterion(hasItem(Items_RaEx.TOP_TOP_HAT), conditionsFromItem(Items_RaEx.TOP_TOP_HAT))
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.TOP_TOP_TOP_HAT)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.ROOMBA_ITEM, 1)
                 .pattern("BOB")
                 .pattern("IHI")
@@ -530,7 +544,7 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.CHEESE_OF_FLIGHT, 4)
                 .input(Items_RaEx.CHEESE, 4)
-                .input(Items.FEATHER,4)
+                .input(Items.FEATHER, 4)
                 .input(Items.SHULKER_SHELL)
                 .criterion(hasItem(Items_RaEx.CHEESE), conditionsFromItem(Items_RaEx.CHEESE))
                 .criterion(hasItem(Items.FEATHER), conditionsFromItem(Items.FEATHER))
