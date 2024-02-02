@@ -207,6 +207,12 @@ public class ItemGroups_RaEx {
                         entries.add(Blocks_RaEx.EXPLOSIVE_CAKE_BLOCK);
                         entries.add(Blocks_RaEx.BARBED_WIRE);
 
+                        /// Head Wearable
+                        entries.add(Items_RaEx.SUNGLASSES);
+                        entries.add(Items_RaEx.TOP_HAT);
+                        entries.add(Items_RaEx.TOP_TOP_HAT);
+                        entries.add(Items_RaEx.TOP_TOP_TOP_HAT);
+
                         /// Funny Items and Blocks
                         entries.add(Items_RaEx.CHEESE_OF_FLIGHT);
 
@@ -245,6 +251,4 @@ public class ItemGroups_RaEx {
     public static void registerItemGroups() {
         RandomExtensions.LOGGER.info("Register Item Groups for" + RandomExtensions.MOD_ID);
     }
-
-
 }

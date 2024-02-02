@@ -119,6 +119,10 @@ public class DeGen extends FabricLanguageProvider {
         translationBuilder.add(Items_RaEx.EMPTY_SODA_CAN, "Leere Dose");
         translationBuilder.add(Items_RaEx.GREEN_SODA_CAN, "Grüne Limonade");
         translationBuilder.add(Items_RaEx.RED_SODA_CAN, "Rote Limonade");
+        translationBuilder.add(Items_RaEx.SUNGLASSES, "Sonnenbrille");
+        translationBuilder.add(Items_RaEx.TOP_HAT, "Zylinder");
+        translationBuilder.add(Items_RaEx.TOP_TOP_HAT, "Grosser Zylinder");
+        translationBuilder.add(Items_RaEx.TOP_TOP_TOP_HAT, "Grösserer Zylinder");
 
         /// Loot Bag
         translationBuilder.add(LootBag_RaEx.EMPTY_LOOT_BAG, "Lehre Beutetasche");

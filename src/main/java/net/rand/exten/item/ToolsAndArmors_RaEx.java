@@ -9,7 +9,7 @@ import net.minecraft.util.Rarity;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.item.custom.ArmorMaterials_RaEx;
 import net.rand.exten.item.custom.ToolMaterial_RaEx;
-import net.rand.exten.item.custom.armor.*;
+import net.rand.exten.item.custom.wearable.armor.*;
 import net.rand.exten.item.custom.legendary.EscapeRope;
 import net.rand.exten.item.custom.legendary.LeaveStaff;
 import net.rand.exten.item.custom.legendary.ToyHammer;

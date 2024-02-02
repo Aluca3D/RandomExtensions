@@ -1,18 +1,16 @@
-package net.rand.exten.item.custom.armor;
+package net.rand.exten.item.custom.wearable.armor;
 
 import com.google.common.collect.ImmutableMap;
-import net.minecraft.entity.attribute.EntityAttribute;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.rand.exten.item.custom.ArmorMaterials_RaEx;
+import net.rand.exten.item.custom.wearable.ArmorItem_RaEx;
 
 import java.util.Map;
 
-public class ShulkerArmorItem extends MainArmorItem {
+public class ShulkerArmorItem extends ArmorItem_RaEx {
     public ShulkerArmorItem(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
     }

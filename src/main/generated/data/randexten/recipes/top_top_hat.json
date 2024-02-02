@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "randexten:top_hat"
+    },
+    {
+      "item": "randexten:top_hat"
+    }
+  ],
+  "result": {
+    "item": "randexten:top_top_hat"
+  }
+}
