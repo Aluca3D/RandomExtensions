@@ -29,20 +29,20 @@ public abstract class LootBag extends Item {
         RandomItemPicker picker = new RandomItemPicker();
         ItemStack itemStack = user.getStackInHand(hand);
 
-        user.dropItem(ItemList(user, picker)); //drop/Spawn Loot Item
+        user.dropItem(ItemList(picker)); //drop/Spawn Loot Item
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));
-        user.getItemCooldownManager().set(this, 5);
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_BUNDLE_DROP_CONTENTS,
                 SoundCategory.PLAYERS, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
 
         if (!user.getAbilities().creativeMode) {
             itemStack.decrement(1);
+            user.getItemCooldownManager().set(this, 5);
         }
         return TypedActionResult.success(itemStack, world.isClient());
     }
 
-    public abstract Item ItemList(PlayerEntity user, RandomItemPicker picker);
+    public abstract Item ItemList(RandomItemPicker picker);
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {

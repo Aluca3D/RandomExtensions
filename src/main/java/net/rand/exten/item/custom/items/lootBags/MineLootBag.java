@@ -1,6 +1,5 @@
 package net.rand.exten.item.custom.items.lootBags;
 
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.rand.exten.item.Items_RaEx;
@@ -13,7 +12,7 @@ public class MineLootBag extends LootBag {
     }
 
     @Override
-    public Item ItemList(PlayerEntity user, RandomItemPicker picker) {
+    public Item ItemList(RandomItemPicker picker) {
         // Common: 12
         picker.addItemWithRarity(Items.COBBLESTONE, 12);
         picker.addItemWithRarity(Items.OAK_PLANKS, 12);
