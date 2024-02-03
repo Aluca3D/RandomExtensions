@@ -11,7 +11,6 @@ import net.rand.exten.block.custom.crops.CornCropBlock;
 import net.rand.exten.block.custom.crops.TomatoCropBlock;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
-import net.rand.exten.item.custom.LootBag_RaEx;
 
 import java.util.Optional;
 
@@ -133,10 +132,10 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         itemModelGenerator.register(Items_RaEx.STINKY_CHEESE, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.CHEESE_OF_FLIGHT, Models.GENERATED);
 
-        itemModelGenerator.register(LootBag_RaEx.EMPTY_LOOT_BAG, Models.GENERATED);
-        itemModelGenerator.register(LootBag_RaEx.CHEESE_LOOT_BAG, Models.GENERATED);
-        itemModelGenerator.register(LootBag_RaEx.MINE_LOOT_BAG, Models.GENERATED);
-        itemModelGenerator.register(LootBag_RaEx.HAT_LOOT_BAG, Models.GENERATED);
+        itemModelGenerator.register(Items_RaEx.EMPTY_LOOT_BAG, Models.GENERATED);
+        itemModelGenerator.register(Items_RaEx.CHEESE_LOOT_BAG, Models.GENERATED);
+        itemModelGenerator.register(Items_RaEx.MINE_LOOT_BAG, Models.GENERATED);
+        itemModelGenerator.register(Items_RaEx.HAT_LOOT_BAG, Models.GENERATED);
 
         itemModelGenerator.register(Items_RaEx.METAL_LUMP, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.COPPER_NUGGET, Models.GENERATED);

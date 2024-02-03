@@ -1,6 +1,6 @@
 package net.rand.exten.item.custom.items.lootBags;
 
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.custom.items.LootBag;
 import net.rand.exten.util.tools.RandomItemPicker;
@@ -11,7 +11,7 @@ public class HatLootBag extends LootBag {
     }
 
     @Override
-    public Item ItemList(RandomItemPicker picker) {
+    public ItemStack ItemList(RandomItemPicker picker) {
         // Common: 12
         picker.addItemWithRarity(Items_RaEx.SUNGLASSES, 12);
         picker.addItemWithRarity(Items_RaEx.TOP_HAT.asItem(), 12);

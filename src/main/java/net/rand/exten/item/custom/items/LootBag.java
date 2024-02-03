@@ -3,6 +3,7 @@ package net.rand.exten.item.custom.items;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -29,7 +30,7 @@ public abstract class LootBag extends Item {
         RandomItemPicker picker = new RandomItemPicker();
         ItemStack itemStack = user.getStackInHand(hand);
 
-        user.dropItem(ItemList(picker)); //drop/Spawn Loot Item
+        user.dropStack(ItemList(picker)); //drop/Spawn Loot Item
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_BUNDLE_DROP_CONTENTS,
@@ -42,7 +43,7 @@ public abstract class LootBag extends Item {
         return TypedActionResult.success(itemStack, world.isClient());
     }
 
-    public abstract Item ItemList(RandomItemPicker picker);
+    public abstract ItemStack ItemList(RandomItemPicker picker);
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {

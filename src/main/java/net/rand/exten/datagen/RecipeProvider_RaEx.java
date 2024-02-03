@@ -16,7 +16,6 @@ import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
-import net.rand.exten.item.custom.LootBag_RaEx;
 import net.rand.exten.util.Tags_RaEx;
 
 public class RecipeProvider_RaEx extends FabricRecipeProvider {
@@ -466,23 +465,23 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
         offerSingleOutputShapelessRecipe(exporter, Blocks_RaEx.PURPUR_BUTTON, Blocks_RaEx.PURPUR_PLANKS, "");
 
         // LootBags
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, LootBag_RaEx.EMPTY_LOOT_BAG)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.EMPTY_LOOT_BAG)
                 .pattern(" S ")
                 .pattern("S S")
                 .pattern(" S ")
                 .input('S', Items.LEATHER)
                 .criterion(hasItem(Items.LEATHER), conditionsFromItem(Items.LEATHER))
-                .offerTo(exporter, new Identifier(getRecipeName(LootBag_RaEx.EMPTY_LOOT_BAG)));
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.EMPTY_LOOT_BAG)));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, LootBag_RaEx.MINE_LOOT_BAG)
-                .input(LootBag_RaEx.EMPTY_LOOT_BAG)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.MINE_LOOT_BAG)
+                .input(Items_RaEx.EMPTY_LOOT_BAG)
                 .input(Items.DIAMOND)
                 .input(Items.STONE_PICKAXE)
                 .input(Items.TORCH, 3)
-                .criterion(hasItem(LootBag_RaEx.EMPTY_LOOT_BAG), conditionsFromItem(LootBag_RaEx.EMPTY_LOOT_BAG))
+                .criterion(hasItem(Items_RaEx.EMPTY_LOOT_BAG), conditionsFromItem(Items_RaEx.EMPTY_LOOT_BAG))
                 .criterion(hasItem(Items.STONE_PICKAXE), conditionsFromItem(Items.STONE_PICKAXE))
                 .criterion(hasItem(Items.TORCH), conditionsFromItem(Items.TORCH))
-                .offerTo(exporter, new Identifier(getRecipeName(LootBag_RaEx.MINE_LOOT_BAG)));
+                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.MINE_LOOT_BAG)));
 
         // Obsidian
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks_RaEx.OBSIDIAN_GLASS, 6)

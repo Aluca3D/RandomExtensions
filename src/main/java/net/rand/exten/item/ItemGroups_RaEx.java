@@ -10,7 +10,6 @@ import net.minecraft.util.Identifier;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.StepBlockRegistry;
-import net.rand.exten.item.custom.LootBag_RaEx;
 
 public class ItemGroups_RaEx {
 
@@ -132,10 +131,10 @@ public class ItemGroups_RaEx {
                         entries.add(Blocks_RaEx.CHEESE_STATION);
 
                         ///Loot Bag
-                        entries.add(LootBag_RaEx.EMPTY_LOOT_BAG);
-                        entries.add(LootBag_RaEx.CHEESE_LOOT_BAG);
-                        entries.add(LootBag_RaEx.MINE_LOOT_BAG);
-                        entries.add(LootBag_RaEx.HAT_LOOT_BAG);
+                        entries.add(Items_RaEx.EMPTY_LOOT_BAG);
+                        entries.add(Items_RaEx.CHEESE_LOOT_BAG);
+                        entries.add(Items_RaEx.MINE_LOOT_BAG);
+                        entries.add(Items_RaEx.HAT_LOOT_BAG);
 
                         /// Foods
                         entries.add(Items_RaEx.FLOUR);

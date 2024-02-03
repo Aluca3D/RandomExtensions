@@ -10,7 +10,6 @@ import net.rand.exten.enchantment.Enchantments_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
-import net.rand.exten.item.custom.LootBag_RaEx;
 
 import java.nio.file.Path;
 
@@ -125,10 +124,10 @@ public class DeGen extends FabricLanguageProvider {
         translationBuilder.add(Items_RaEx.TOP_TOP_TOP_HAT, "Grösserer Zylinder");
 
         /// Loot Bag
-        translationBuilder.add(LootBag_RaEx.EMPTY_LOOT_BAG, "Lehre Beutetasche");
-        translationBuilder.add(LootBag_RaEx.CHEESE_LOOT_BAG, "Käse Beutetasche");
-        translationBuilder.add(LootBag_RaEx.MINE_LOOT_BAG, "Minen Beutetasche");
-        translationBuilder.add(LootBag_RaEx.HAT_LOOT_BAG, "Hut Beutetasche");
+        translationBuilder.add(Items_RaEx.EMPTY_LOOT_BAG, "Lehre Beutetasche");
+        translationBuilder.add(Items_RaEx.CHEESE_LOOT_BAG, "Käse Beutetasche");
+        translationBuilder.add(Items_RaEx.MINE_LOOT_BAG, "Minen Beutetasche");
+        translationBuilder.add(Items_RaEx.HAT_LOOT_BAG, "Hut Beutetasche");
 
         /// Block
         translationBuilder.add(Blocks_RaEx.AQUAMARIN_ORE, "Tiefenschiefer Aquamarinertz");

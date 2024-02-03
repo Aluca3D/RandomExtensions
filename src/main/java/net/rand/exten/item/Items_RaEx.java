@@ -15,6 +15,9 @@ import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.CropBlocks_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
 import net.rand.exten.item.custom.food.*;
+import net.rand.exten.item.custom.items.lootBags.CheeseLootBag;
+import net.rand.exten.item.custom.items.lootBags.HatLootBag;
+import net.rand.exten.item.custom.items.lootBags.MineLootBag;
 import net.rand.exten.item.custom.items.projectile.*;
 import net.rand.exten.item.custom.wearable.accessories.head.Sunglasses;
 import net.rand.exten.item.custom.wearable.accessories.head.TopHat;
@@ -134,6 +137,23 @@ public class Items_RaEx {
 
     public static final Item TOOTH = registerItem("tooth",
             new Item(new FabricItemSettings()));
+
+    /**
+     * LootBags
+     */
+    public static final Item EMPTY_LOOT_BAG = registerItem("empty_loot_bag",
+            new Item(new FabricItemSettings()));
+
+    public static final Item CHEESE_LOOT_BAG = registerItem("cheese_loot_bag",
+            new CheeseLootBag(new FabricItemSettings(), "item.randexten.cheese_loot_bag.tooltip"));
+
+    public static final Item HAT_LOOT_BAG = registerItem("hat_loot_bag",
+            new HatLootBag(new FabricItemSettings(), "item.randexten.hat_loot_bag.tooltip"));
+
+    //todo: add to underground structure loot (Mineshaft,...)
+    public static final Item MINE_LOOT_BAG = registerItem("mine_loot_bag",
+            new MineLootBag(new FabricItemSettings(), "item.randexten.mine_loot_bag.tooltip"));
+
 
     /**
      * Head Wearable

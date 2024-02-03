@@ -10,7 +10,6 @@ import net.rand.exten.enchantment.Enchantments_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
-import net.rand.exten.item.custom.LootBag_RaEx;
 
 import java.nio.file.Path;
 
@@ -125,10 +124,10 @@ public class EnUsGen extends FabricLanguageProvider {
         translationBuilder.add(Items_RaEx.TOP_TOP_TOP_HAT, "Top Top Top Hat");
 
         /// Loot Bag
-        translationBuilder.add(LootBag_RaEx.EMPTY_LOOT_BAG, "Empty Loot Bag");
-        translationBuilder.add(LootBag_RaEx.CHEESE_LOOT_BAG, "Cheese Loot Bag");
-        translationBuilder.add(LootBag_RaEx.MINE_LOOT_BAG, "Mine Loot Bag");
-        translationBuilder.add(LootBag_RaEx.HAT_LOOT_BAG, "Hat Loot Bag");
+        translationBuilder.add(Items_RaEx.EMPTY_LOOT_BAG, "Empty Loot Bag");
+        translationBuilder.add(Items_RaEx.CHEESE_LOOT_BAG, "Cheese Loot Bag");
+        translationBuilder.add(Items_RaEx.MINE_LOOT_BAG, "Mine Loot Bag");
+        translationBuilder.add(Items_RaEx.HAT_LOOT_BAG, "Hat Loot Bag");
 
         /// Block
         translationBuilder.add(Blocks_RaEx.AQUAMARIN_ORE, "Deepslate Aquamarin Ore");
