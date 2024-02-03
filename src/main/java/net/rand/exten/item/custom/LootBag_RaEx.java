@@ -10,47 +10,25 @@ import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.custom.items.LootBag;
+import net.rand.exten.item.custom.items.lootBags.CheeseLootBag;
+import net.rand.exten.item.custom.items.lootBags.HatLootBag;
+import net.rand.exten.item.custom.items.lootBags.MineLootBag;
 
 import java.util.Arrays;
 
 public class LootBag_RaEx {
-    //Todo redo LootBag_RaEx into Classes for all LootBags to put Rarity of Item Selection in them
     public static final Item EMPTY_LOOT_BAG = registerItem("empty_loot_bag",
             new Item(new FabricItemSettings()));
 
     public static final Item CHEESE_LOOT_BAG = registerItem("cheese_loot_bag",
-            new LootBag(new FabricItemSettings(), "item.randexten.cheese_loot_bag.tooltip", Arrays.asList(
-                    Items_RaEx.CHEESE, Items_RaEx.CHEESE, Items_RaEx.CHEESE, Items_RaEx.CHEESE, Items_RaEx.CHEESE, Items_RaEx.CHEESE, Items_RaEx.CHEESE,
-                    Blocks_RaEx.CHEESE_BLOCK.asItem(),
-                    Items_RaEx.STINKY_CHEESE, Items_RaEx.STINKY_CHEESE
-            ).toArray(new Item[0])));
+            new CheeseLootBag(new FabricItemSettings(), "item.randexten.cheese_loot_bag.tooltip"));
 
-    //todo: add Texture
     public static final Item HAT_LOOT_BAG = registerItem("hat_loot_bag",
-            new LootBag(new FabricItemSettings(), "item.randexten.hat_loot_bag.tooltip", Arrays.asList(
-                    // Common
-                    Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES,
-                    Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES, Items_RaEx.SUNGLASSES,
-                    Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT,
-                    Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT, Items_RaEx.TOP_HAT,
-                    // Uncommon
-                    Items_RaEx.TOP_TOP_HAT, Items_RaEx.TOP_TOP_HAT, Items_RaEx.TOP_TOP_HAT, Items_RaEx.TOP_TOP_HAT, Items_RaEx.TOP_TOP_HAT, Items_RaEx.TOP_TOP_HAT,
-                    // Rare
-                    Items_RaEx.TOP_TOP_TOP_HAT, Items_RaEx.TOP_TOP_TOP_HAT, Items_RaEx.TOP_TOP_TOP_HAT
-                    // Epic
-
-            ).toArray(new Item[0])));
+            new HatLootBag(new FabricItemSettings(), "item.randexten.hat_loot_bag.tooltip"));
 
     //todo: add to underground structure loot (Mineshaft,...)
     public static final Item MINE_LOOT_BAG = registerItem("mine_loot_bag",
-            new LootBag(new FabricItemSettings(), "item.randexten.mine_loot_bag.tooltip", Arrays.asList(
-                    Items.COBBLESTONE, Items.COBBLESTONE, Items.COBBLESTONE, Items.COBBLESTONE,
-                    Items.STICK, Items.STICK, Items.STICK, Items.STICK,
-                    Items.TORCH, Items.TORCH, Items.TORCH, Items.TORCH,
-                    Items.COAL, Items.COAL, Items.COAL, Items.COAL,
-                    Items.OAK_PLANKS, Items.OAK_PLANKS, Items.OAK_PLANKS, Items.OAK_PLANKS,
-                    Items_RaEx.ESCAPE_POTION
-            ).toArray(new Item[0])));
+            new MineLootBag(new FabricItemSettings(), "item.randexten.mine_loot_bag.tooltip"));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(RandomExtensions.MOD_ID, name), item);
