@@ -154,10 +154,11 @@ public class Items_RaEx {
     public static final Item MINE_LOOT_BAG = registerItem("mine_loot_bag",
             new MineLootBag(new FabricItemSettings(), "item.randexten.mine_loot_bag.tooltip"));
 
-
     /**
      * Head Wearable
      */
+    // Todo: add Witch/Mage Hat(witch_hat) Boater(boater), Rainbow Sunglasses(Maybe Animated),
+    //  Nightmare TV Head(Drop), Horns, Car Ears, Headphones, Straw Hat
     public static final Item SUNGLASSES = registerItem("sunglasses",
             new Sunglasses(new FabricItemSettings().maxCount(1)));
     public static final Item TOP_HAT = registerItem("top_hat",
