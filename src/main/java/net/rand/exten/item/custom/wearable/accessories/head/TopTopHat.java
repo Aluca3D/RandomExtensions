@@ -16,7 +16,6 @@ public class TopTopHat extends Hats {
     public TopTopHat(Settings settings) {
         super(settings);
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
-        builder.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier("Accessory modifier", 1, EntityAttributeModifier.Operation.ADDITION));
         builder.put(EntityAttributes.GENERIC_MAX_HEALTH, new EntityAttributeModifier("Accessory modifier", 2, EntityAttributeModifier.Operation.ADDITION));
         this.attributeModifiers = builder.build();
     }

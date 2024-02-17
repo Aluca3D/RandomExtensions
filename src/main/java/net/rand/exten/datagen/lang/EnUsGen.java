@@ -119,8 +119,10 @@ public class EnUsGen extends FabricLanguageProvider {
         translationBuilder.add(Items_RaEx.GREEN_SODA_CAN, "Green Soda");
         translationBuilder.add(Items_RaEx.RED_SODA_CAN, "Red Soda");
         translationBuilder.add(Items_RaEx.SUNGLASSES, "Sunglasses");
+        translationBuilder.add(Items_RaEx.BOATER, "Boater");
         translationBuilder.add(Items_RaEx.TOP_HAT, "Top Hat");
         translationBuilder.add(Items_RaEx.TOP_TOP_HAT, "Top Top Hat");
+        translationBuilder.add(Items_RaEx.DEVIL_HORNS, "Devil Horns");
         translationBuilder.add(Items_RaEx.TOP_TOP_TOP_HAT, "Top Top Top Hat");
 
         /// Loot Bag

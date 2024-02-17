@@ -208,10 +208,16 @@ public class ItemGroups_RaEx {
                         entries.add(Blocks_RaEx.BARBED_WIRE);
 
                         /// Head Wearable
+                        /// Common
                         entries.add(Items_RaEx.SUNGLASSES);
                         entries.add(Items_RaEx.TOP_HAT);
+                        entries.add(Items_RaEx.BOATER);
+                        /// Uncommon
                         entries.add(Items_RaEx.TOP_TOP_HAT);
+                        entries.add(Items_RaEx.DEVIL_HORNS);
+                        /// Rare
                         entries.add(Items_RaEx.TOP_TOP_TOP_HAT);
+                        /// Epic
 
                         /// Funny Items and Blocks
                         entries.add(Items_RaEx.CHEESE_OF_FLIGHT);

@@ -14,9 +14,11 @@ public class HatLootBag extends LootBag {
     public ItemStack ItemList(RandomItemPicker picker) {
         // Common: 12
         picker.addItemWithRarity(Items_RaEx.SUNGLASSES, 12);
-        picker.addItemWithRarity(Items_RaEx.TOP_HAT.asItem(), 12);
+        picker.addItemWithRarity(Items_RaEx.TOP_HAT, 12);
+        picker.addItemWithRarity(Items_RaEx.BOATER, 12);
         // Uncommon: 6
         picker.addItemWithRarity(Items_RaEx.TOP_TOP_HAT, 6);
+        picker.addItemWithRarity(Items_RaEx.DEVIL_HORNS, 6);
         // Rare: 3
         picker.addItemWithRarity(Items_RaEx.TOP_TOP_TOP_HAT, 3);
         // Epic: 1

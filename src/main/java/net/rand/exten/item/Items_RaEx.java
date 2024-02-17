@@ -19,10 +19,7 @@ import net.rand.exten.item.custom.items.lootBags.CheeseLootBag;
 import net.rand.exten.item.custom.items.lootBags.HatLootBag;
 import net.rand.exten.item.custom.items.lootBags.MineLootBag;
 import net.rand.exten.item.custom.items.projectile.*;
-import net.rand.exten.item.custom.wearable.accessories.head.Sunglasses;
-import net.rand.exten.item.custom.wearable.accessories.head.TopHat;
-import net.rand.exten.item.custom.wearable.accessories.head.TopTopHat;
-import net.rand.exten.item.custom.wearable.accessories.head.TopTopTopHat;
+import net.rand.exten.item.custom.wearable.accessories.head.*;
 
 public class Items_RaEx {
     /**
@@ -157,16 +154,28 @@ public class Items_RaEx {
     /**
      * Head Wearable
      */
-    // Todo: add Witch/Mage Hat(witch_hat) Boater(boater), Rainbow Sunglasses(Maybe Animated),
+    // Todo: add Witch/Mage Hat(witch_hat), Rainbow Sunglasses(Maybe Animated),
     //  Nightmare TV Head(Drop), Horns, Car Ears, Headphones, Straw Hat
+
+    // Common
     public static final Item SUNGLASSES = registerItem("sunglasses",
             new Sunglasses(new FabricItemSettings().maxCount(1)));
     public static final Item TOP_HAT = registerItem("top_hat",
             new TopHat(new FabricItemSettings().maxCount(1)));
+    public static final Item BOATER = registerItem("boater",
+            new Boater(new FabricItemSettings().maxCount(1)));
+
+    // Uncommon
     public static final Item TOP_TOP_HAT = registerItem("top_top_hat",
             new TopTopHat(new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON)));
+    public static final Item DEVIL_HORNS = registerItem("devil_horns",
+            new DevilHorns(new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON)));
+
+    // Rare
     public static final Item TOP_TOP_TOP_HAT = registerItem("top_top_top_hat",
             new TopTopTopHat(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+
+    //Epic
 
     /**
      * Funny Items
