@@ -217,7 +217,9 @@ public class ItemGroups_RaEx {
                         entries.add(Items_RaEx.DEVIL_HORNS);
                         /// Rare
                         entries.add(Items_RaEx.TOP_TOP_TOP_HAT);
+                        entries.add(Items_RaEx.RAINBOW_SUNGLASSES);
                         /// Epic
+                        entries.add(Items_RaEx.UNICORN_HORN);
 
                         /// Funny Items and Blocks
                         entries.add(Items_RaEx.CHEESE_OF_FLIGHT);

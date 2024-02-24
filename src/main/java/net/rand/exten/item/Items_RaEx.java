@@ -154,8 +154,9 @@ public class Items_RaEx {
     /**
      * Head Wearable
      */
-    // Todo: add Witch/Mage Hat(witch_hat), Rainbow Sunglasses(Maybe Animated),
-    //  Nightmare TV Head(Drop), Horns, Car Ears, Headphones, Straw Hat
+    // Todo: add Witch/Mage Hat(witch_hat),
+    //  Nightmare TV Head(Drop), Horns, Cat Ears, Headphones, Straw Hat
+    // Finished Models:
 
     // Common
     public static final Item SUNGLASSES = registerItem("sunglasses",
@@ -174,8 +175,12 @@ public class Items_RaEx {
     // Rare
     public static final Item TOP_TOP_TOP_HAT = registerItem("top_top_top_hat",
             new TopTopTopHat(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item RAINBOW_SUNGLASSES = registerItem("rainbow_sunglasses",
+            new RainbowSunglasses(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
 
     //Epic
+    public static final Item UNICORN_HORN = registerItem("unicorn_horn",
+            new UnicornHorn(new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC)));
 
     /**
      * Funny Items
