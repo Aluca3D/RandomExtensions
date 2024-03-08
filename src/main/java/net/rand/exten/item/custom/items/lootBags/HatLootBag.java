@@ -16,8 +16,10 @@ public class HatLootBag extends LootBag {
         picker.addItemWithRarity(Items_RaEx.SUNGLASSES, 12);
         picker.addItemWithRarity(Items_RaEx.TOP_HAT, 12);
         picker.addItemWithRarity(Items_RaEx.BOATER, 12);
+        picker.addItemWithRarity(Items_RaEx.STRAW_HAT, 12);
         // Uncommon: 6
         picker.addItemWithRarity(Items_RaEx.DEVIL_HORNS, 6);
+        picker.addItemWithRarity(Items_RaEx.HEADPHONES, 6);
         // Rare: 3
         picker.addItemWithRarity(Items_RaEx.RAINBOW_SUNGLASSES, 3);
 

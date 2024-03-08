@@ -172,14 +172,22 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(Tags_RaEx.Items.COMMON_HAT)
                 .add(Items_RaEx.SUNGLASSES)
                 .add(Items_RaEx.TOP_HAT)
+                .add(Items_RaEx.BOATER)
+                .add(Items_RaEx.STRAW_HAT)
         ;
         getOrCreateTagBuilder(Tags_RaEx.Items.UNCOMMON_HAT)
                 .add(Items_RaEx.TOP_TOP_HAT)
+                .add(Items_RaEx.DEVIL_HORNS)
+                .add(Items_RaEx.HEADPHONES)
         ;
         getOrCreateTagBuilder(Tags_RaEx.Items.RARE_HAT)
                 .add(Items_RaEx.TOP_TOP_TOP_HAT)
+                .add(Items_RaEx.RAINBOW_SUNGLASSES)
+                .add(Items_RaEx.NIGHTMARE_TV_HEAD)
         ;
         getOrCreateTagBuilder(Tags_RaEx.Items.EPIC_HAT)
+                .add(Items_RaEx.UNICORN_HORN)
+                .add(Items_RaEx.PIRAT_STRAW_HAT)
         ;
 
     }

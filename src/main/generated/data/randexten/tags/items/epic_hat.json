@@ -1,4 +1,7 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "randexten:unicorn_horn",
+    "randexten:pirat_straw_hat"
+  ]
 }
