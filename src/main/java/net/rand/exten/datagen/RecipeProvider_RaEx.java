@@ -14,6 +14,7 @@ import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.StepBlockRegistry;
+import net.rand.exten.item.AccessorieItems;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
 import net.rand.exten.util.Tags_RaEx;
@@ -291,19 +292,19 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
     }
 
     public void generateMisc(RecipeExporter exporter) {
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.TOP_TOP_HAT)
-                .input(Items_RaEx.TOP_HAT)
-                .input(Items_RaEx.TOP_HAT)
-                .criterion(hasItem(Items_RaEx.TOP_HAT), conditionsFromItem(Items_RaEx.TOP_HAT))
-                .criterion(hasItem(Items_RaEx.TOP_HAT), conditionsFromItem(Items_RaEx.TOP_HAT))
-                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.TOP_TOP_HAT)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, AccessorieItems.TOP_TOP_HAT)
+                .input(AccessorieItems.TOP_HAT)
+                .input(AccessorieItems.TOP_HAT)
+                .criterion(hasItem(AccessorieItems.TOP_HAT), conditionsFromItem(AccessorieItems.TOP_HAT))
+                .criterion(hasItem(AccessorieItems.TOP_HAT), conditionsFromItem(AccessorieItems.TOP_HAT))
+                .offerTo(exporter, new Identifier(getRecipeName(AccessorieItems.TOP_TOP_HAT)));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.TOP_TOP_TOP_HAT)
-                .input(Items_RaEx.TOP_HAT)
-                .input(Items_RaEx.TOP_TOP_HAT)
-                .criterion(hasItem(Items_RaEx.TOP_HAT), conditionsFromItem(Items_RaEx.TOP_HAT))
-                .criterion(hasItem(Items_RaEx.TOP_TOP_HAT), conditionsFromItem(Items_RaEx.TOP_TOP_HAT))
-                .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.TOP_TOP_TOP_HAT)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, AccessorieItems.TOP_TOP_TOP_HAT)
+                .input(AccessorieItems.TOP_HAT)
+                .input(AccessorieItems.TOP_TOP_HAT)
+                .criterion(hasItem(AccessorieItems.TOP_HAT), conditionsFromItem(AccessorieItems.TOP_HAT))
+                .criterion(hasItem(AccessorieItems.TOP_TOP_HAT), conditionsFromItem(AccessorieItems.TOP_TOP_HAT))
+                .offerTo(exporter, new Identifier(getRecipeName(AccessorieItems.TOP_TOP_TOP_HAT)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items_RaEx.ROOMBA_ITEM, 1)
                 .pattern("BOB")

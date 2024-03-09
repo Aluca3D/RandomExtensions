@@ -7,6 +7,7 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.rand.exten.block.Blocks_RaEx;
+import net.rand.exten.item.AccessorieItems;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
 import net.rand.exten.util.Tags_RaEx;
@@ -170,24 +171,24 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
         ;
 
         getOrCreateTagBuilder(Tags_RaEx.Items.COMMON_HAT)
-                .add(Items_RaEx.SUNGLASSES)
-                .add(Items_RaEx.TOP_HAT)
-                .add(Items_RaEx.BOATER)
-                .add(Items_RaEx.STRAW_HAT)
+                .add(AccessorieItems.SUNGLASSES)
+                .add(AccessorieItems.TOP_HAT)
+                .add(AccessorieItems.BOATER)
+                .add(AccessorieItems.STRAW_HAT)
         ;
         getOrCreateTagBuilder(Tags_RaEx.Items.UNCOMMON_HAT)
-                .add(Items_RaEx.TOP_TOP_HAT)
-                .add(Items_RaEx.DEVIL_HORNS)
-                .add(Items_RaEx.HEADPHONES)
+                .add(AccessorieItems.TOP_TOP_HAT)
+                .add(AccessorieItems.DEVIL_HORNS)
+                .add(AccessorieItems.HEADPHONES)
         ;
         getOrCreateTagBuilder(Tags_RaEx.Items.RARE_HAT)
-                .add(Items_RaEx.TOP_TOP_TOP_HAT)
-                .add(Items_RaEx.RAINBOW_SUNGLASSES)
-                .add(Items_RaEx.NIGHTMARE_TV_HEAD)
+                .add(AccessorieItems.TOP_TOP_TOP_HAT)
+                .add(AccessorieItems.RAINBOW_SUNGLASSES)
+                .add(AccessorieItems.NIGHTMARE_TV_HEAD)
         ;
         getOrCreateTagBuilder(Tags_RaEx.Items.EPIC_HAT)
-                .add(Items_RaEx.UNICORN_HORN)
-                .add(Items_RaEx.PIRAT_STRAW_HAT)
+                .add(AccessorieItems.UNICORN_HORN)
+                .add(AccessorieItems.PIRAT_STRAW_HAT)
         ;
 
     }

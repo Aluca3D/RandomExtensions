@@ -209,21 +209,21 @@ public class ItemGroups_RaEx {
 
                         /// Head Wearable
                         /// Common
-                        entries.add(Items_RaEx.SUNGLASSES);
-                        entries.add(Items_RaEx.TOP_HAT);
-                        entries.add(Items_RaEx.BOATER);
-                        entries.add(Items_RaEx.STRAW_HAT);
+                        entries.add(AccessorieItems.SUNGLASSES);
+                        entries.add(AccessorieItems.TOP_HAT);
+                        entries.add(AccessorieItems.BOATER);
+                        entries.add(AccessorieItems.STRAW_HAT);
                         /// Uncommon
-                        entries.add(Items_RaEx.TOP_TOP_HAT);
-                        entries.add(Items_RaEx.DEVIL_HORNS);
-                        entries.add(Items_RaEx.HEADPHONES);
+                        entries.add(AccessorieItems.TOP_TOP_HAT);
+                        entries.add(AccessorieItems.DEVIL_HORNS);
+                        entries.add(AccessorieItems.HEADPHONES);
                         /// Rare
-                        entries.add(Items_RaEx.TOP_TOP_TOP_HAT);
-                        entries.add(Items_RaEx.RAINBOW_SUNGLASSES);
-                        entries.add(Items_RaEx.NIGHTMARE_TV_HEAD);
+                        entries.add(AccessorieItems.TOP_TOP_TOP_HAT);
+                        entries.add(AccessorieItems.RAINBOW_SUNGLASSES);
+                        entries.add(AccessorieItems.NIGHTMARE_TV_HEAD);
                         /// Epic
-                        entries.add(Items_RaEx.UNICORN_HORN);
-                        entries.add(Items_RaEx.PIRAT_STRAW_HAT);
+                        entries.add(AccessorieItems.UNICORN_HORN);
+                        entries.add(AccessorieItems.PIRAT_STRAW_HAT);
 
                         /// Funny Items and Blocks
                         entries.add(Items_RaEx.CHEESE_OF_FLIGHT);

@@ -8,6 +8,7 @@ import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.effects.Effects_RaEx;
 import net.rand.exten.enchantment.Enchantments_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
+import net.rand.exten.item.AccessorieItems;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
 
@@ -118,18 +119,18 @@ public class EnUsGen extends FabricLanguageProvider {
         translationBuilder.add(Items_RaEx.EMPTY_SODA_CAN, "Empty Can");
         translationBuilder.add(Items_RaEx.GREEN_SODA_CAN, "Green Soda");
         translationBuilder.add(Items_RaEx.RED_SODA_CAN, "Red Soda");
-        translationBuilder.add(Items_RaEx.SUNGLASSES, "Sunglasses");
-        translationBuilder.add(Items_RaEx.BOATER, "Boater");
-        translationBuilder.add(Items_RaEx.TOP_HAT, "Top Hat");
-        translationBuilder.add(Items_RaEx.TOP_TOP_HAT, "Top Top Hat");
-        translationBuilder.add(Items_RaEx.DEVIL_HORNS, "Devil Horns");
-        translationBuilder.add(Items_RaEx.TOP_TOP_TOP_HAT, "Top Top Top Hat");
-        translationBuilder.add(Items_RaEx.UNICORN_HORN, "Unicorn Horn");
-        translationBuilder.add(Items_RaEx.RAINBOW_SUNGLASSES, "Rainbow Sunglasses");
-        translationBuilder.add(Items_RaEx.STRAW_HAT, "Straw Hat");
-        translationBuilder.add(Items_RaEx.HEADPHONES, "Headphones");
-        translationBuilder.add(Items_RaEx.NIGHTMARE_TV_HEAD, "NightmareTV Head");
-        translationBuilder.add(Items_RaEx.PIRAT_STRAW_HAT, "Straw Hat");
+        translationBuilder.add(AccessorieItems.SUNGLASSES, "Sunglasses");
+        translationBuilder.add(AccessorieItems.BOATER, "Boater");
+        translationBuilder.add(AccessorieItems.TOP_HAT, "Top Hat");
+        translationBuilder.add(AccessorieItems.TOP_TOP_HAT, "Top Top Hat");
+        translationBuilder.add(AccessorieItems.DEVIL_HORNS, "Devil Horns");
+        translationBuilder.add(AccessorieItems.TOP_TOP_TOP_HAT, "Top Top Top Hat");
+        translationBuilder.add(AccessorieItems.UNICORN_HORN, "Unicorn Horn");
+        translationBuilder.add(AccessorieItems.RAINBOW_SUNGLASSES, "Rainbow Sunglasses");
+        translationBuilder.add(AccessorieItems.STRAW_HAT, "Straw Hat");
+        translationBuilder.add(AccessorieItems.HEADPHONES, "Headphones");
+        translationBuilder.add(AccessorieItems.NIGHTMARE_TV_HEAD, "NightmareTV Head");
+        translationBuilder.add(AccessorieItems.PIRAT_STRAW_HAT, "Straw Hat");
 
         /// Loot Bag
         translationBuilder.add(Items_RaEx.EMPTY_LOOT_BAG, "Empty Loot Bag");

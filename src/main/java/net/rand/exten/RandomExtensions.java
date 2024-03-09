@@ -8,6 +8,7 @@ import net.rand.exten.block.custom.blocks.entity.BlockEntity_RaEx;
 import net.rand.exten.effects.Effects_RaEx;
 import net.rand.exten.enchantment.Enchantments_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
+import net.rand.exten.item.AccessorieItems;
 import net.rand.exten.item.ItemGroups_RaEx;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
@@ -32,6 +33,7 @@ public class RandomExtensions implements ModInitializer {
     public void onInitialize() {
         ItemGroups_RaEx.registerItemGroups();
         Items_RaEx.registerRaExItems();
+        AccessorieItems.registerRaExItems();
         Blocks_RaEx.registerRaExBlock();
         StepBlockRegistry.registerStepBlocks();
         BlockEntity_RaEx.registerBlockEntities();

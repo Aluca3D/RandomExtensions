@@ -8,6 +8,7 @@ import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.effects.Effects_RaEx;
 import net.rand.exten.enchantment.Enchantments_RaEx;
 import net.rand.exten.entity.Entities_RaEx;
+import net.rand.exten.item.AccessorieItems;
 import net.rand.exten.item.Items_RaEx;
 import net.rand.exten.item.ToolsAndArmors_RaEx;
 
@@ -118,18 +119,18 @@ public class DeGen extends FabricLanguageProvider {
         translationBuilder.add(Items_RaEx.EMPTY_SODA_CAN, "Leere Dose");
         translationBuilder.add(Items_RaEx.GREEN_SODA_CAN, "Grüne Limonade");
         translationBuilder.add(Items_RaEx.RED_SODA_CAN, "Rote Limonade");
-        translationBuilder.add(Items_RaEx.SUNGLASSES, "Sonnenbrille");
-        translationBuilder.add(Items_RaEx.BOATER, "Steife Strohhut");
-        translationBuilder.add(Items_RaEx.TOP_HAT, "Zylinder");
-        translationBuilder.add(Items_RaEx.TOP_TOP_HAT, "Grosser Zylinder");
-        translationBuilder.add(Items_RaEx.DEVIL_HORNS, "Teufel Hörner");
-        translationBuilder.add(Items_RaEx.TOP_TOP_TOP_HAT, "Grösserer Zylinder");
-        translationBuilder.add(Items_RaEx.UNICORN_HORN, "Einhorn Horn");
-        translationBuilder.add(Items_RaEx.RAINBOW_SUNGLASSES, "Regenbogen Sonnenbrille");
-        translationBuilder.add(Items_RaEx.STRAW_HAT, "Stroh Hut");
-        translationBuilder.add(Items_RaEx.HEADPHONES, "Kopfhörer");
-        translationBuilder.add(Items_RaEx.NIGHTMARE_TV_HEAD, "NightmareTV Kopf");
-        translationBuilder.add(Items_RaEx.PIRAT_STRAW_HAT, "Stroh Hut");
+        translationBuilder.add(AccessorieItems.SUNGLASSES, "Sonnenbrille");
+        translationBuilder.add(AccessorieItems.BOATER, "Steife Strohhut");
+        translationBuilder.add(AccessorieItems.TOP_HAT, "Zylinder");
+        translationBuilder.add(AccessorieItems.TOP_TOP_HAT, "Grosser Zylinder");
+        translationBuilder.add(AccessorieItems.DEVIL_HORNS, "Teufel Hörner");
+        translationBuilder.add(AccessorieItems.TOP_TOP_TOP_HAT, "Grösserer Zylinder");
+        translationBuilder.add(AccessorieItems.UNICORN_HORN, "Einhorn Horn");
+        translationBuilder.add(AccessorieItems.RAINBOW_SUNGLASSES, "Regenbogen Sonnenbrille");
+        translationBuilder.add(AccessorieItems.STRAW_HAT, "Stroh Hut");
+        translationBuilder.add(AccessorieItems.HEADPHONES, "Kopfhörer");
+        translationBuilder.add(AccessorieItems.NIGHTMARE_TV_HEAD, "NightmareTV Kopf");
+        translationBuilder.add(AccessorieItems.PIRAT_STRAW_HAT, "Stroh Hut");
 
         /// Loot Bag
         translationBuilder.add(Items_RaEx.EMPTY_LOOT_BAG, "Lehre Beutetasche");
