@@ -29,7 +29,7 @@ public class EscapePotion extends Item {
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         super.finishUsing(stack, world, user);
 
-        if (user.isOnGround() && world.getDimension().bedWorks()) {
+        if (user.isOnGround() && world.getDimension().bedWorks() && !world.isSkyVisible(user.getBlockPos())) {
             world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.BLOCK_PORTAL_TRAVEL, SoundCategory.NEUTRAL, 0.125f,1);
 
             if (user instanceof ServerPlayerEntity serverPlayerEntity) {
