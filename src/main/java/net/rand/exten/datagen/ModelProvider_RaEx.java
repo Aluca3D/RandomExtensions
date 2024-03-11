@@ -10,7 +10,10 @@ import net.rand.exten.block.CropBlocks_RaEx;
 import net.rand.exten.block.custom.crops.CornCropBlock;
 import net.rand.exten.block.custom.crops.TomatoCropBlock;
 import net.rand.exten.item.Items_RaEx;
-import net.rand.exten.item.ToolsAndArmors_RaEx;
+import net.rand.exten.item.mains.Armors;
+import net.rand.exten.item.mains.Specials;
+import net.rand.exten.item.mains.Tools;
+import net.rand.exten.item.mains.Weapons;
 
 import java.util.Optional;
 
@@ -90,19 +93,19 @@ public class ModelProvider_RaEx extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ToolsAndArmors_RaEx.LEAVE_STAFF, Models.HANDHELD);
+        itemModelGenerator.register(Specials.LEAVE_STAFF, Models.HANDHELD);
 
-        itemModelGenerator.register(ToolsAndArmors_RaEx.WOODEN_PAXEL, Models.HANDHELD);
-        itemModelGenerator.register(ToolsAndArmors_RaEx.STONE_PAXEL, Models.HANDHELD);
-        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_PAXEL, Models.HANDHELD);
-        itemModelGenerator.register(ToolsAndArmors_RaEx.IRON_PAXEL, Models.HANDHELD);
-        itemModelGenerator.register(ToolsAndArmors_RaEx.GOLDEN_PAXEL, Models.HANDHELD);
-        itemModelGenerator.register(ToolsAndArmors_RaEx.DIAMOND_PAXEL, Models.HANDHELD);
-        itemModelGenerator.register(ToolsAndArmors_RaEx.NETHERITE_PAXEL, Models.HANDHELD);
+        itemModelGenerator.register(Tools.WOODEN_PAXEL, Models.HANDHELD);
+        itemModelGenerator.register(Tools.STONE_PAXEL, Models.HANDHELD);
+        itemModelGenerator.register(Tools.COPPER_PAXEL, Models.HANDHELD);
+        itemModelGenerator.register(Tools.IRON_PAXEL, Models.HANDHELD);
+        itemModelGenerator.register(Tools.GOLDEN_PAXEL, Models.HANDHELD);
+        itemModelGenerator.register(Tools.DIAMOND_PAXEL, Models.HANDHELD);
+        itemModelGenerator.register(Tools.NETHERITE_PAXEL, Models.HANDHELD);
 
-        itemModelGenerator.register(ToolsAndArmors_RaEx.TOY_HAMMER, Models.HANDHELD);
+        itemModelGenerator.register(Specials.TOY_HAMMER, Models.HANDHELD);
         itemModelGenerator.register(Items_RaEx.ESCAPE_POTION, Models.GENERATED);
-        itemModelGenerator.register(ToolsAndArmors_RaEx.ESCAPE_ROPE, Models.GENERATED);
+        itemModelGenerator.register(Specials.ESCAPE_ROPE, Models.GENERATED);
 
         itemModelGenerator.register(Items_RaEx.SMOKE_BOMB_ITEM, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.GLOW_BOMB_ITEM, Models.GENERATED);
@@ -153,52 +156,52 @@ public class ModelProvider_RaEx extends FabricModelProvider {
         itemModelGenerator.register(Items_RaEx.FLOUR, Models.GENERATED);
         itemModelGenerator.register(Items_RaEx.POPCORN, Models.GENERATED);
 
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.SHULKER_HELMET);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.SHULKER_CHESTPLATE);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.SHULKER_LEGGINGS);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.SHULKER_BOOTS);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.SHULKER_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.SHULKER_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.SHULKER_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.SHULKER_BOOTS);
 
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_HELMET);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_CHESTPLATE);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_LEGGINGS);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.COPPER_BOOTS);
-        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_AXE, Models.HANDHELD);
-        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_SHOVEL, Models.HANDHELD);
-        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_HOE, Models.HANDHELD);
-        itemModelGenerator.register(ToolsAndArmors_RaEx.COPPER_SWORD, Models.HANDHELD);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.COPPER_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.COPPER_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.COPPER_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.COPPER_BOOTS);
+        itemModelGenerator.register(Tools.COPPER_AXE, Models.HANDHELD);
+        itemModelGenerator.register(Tools.COPPER_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(Tools.COPPER_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(Tools.COPPER_HOE, Models.HANDHELD);
+        itemModelGenerator.register(Weapons.COPPER_SWORD, Models.HANDHELD);
 
         itemModelGenerator.register(Items_RaEx.GEMS_UPGRADE_TEMPLATE, Models.GENERATED);
 
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.D_AQUAMARIN_HELMET);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.D_AQUAMARIN_CHESTPLATE);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.D_AQUAMARIN_LEGGINGS);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.D_AQUAMARIN_BOOTS);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.D_AQUAMARIN_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.D_AQUAMARIN_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.D_AQUAMARIN_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.D_AQUAMARIN_BOOTS);
 
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.N_AQUAMARIN_HELMET);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.N_AQUAMARIN_CHESTPLATE);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.N_AQUAMARIN_LEGGINGS);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.N_AQUAMARIN_BOOTS);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.N_AQUAMARIN_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.N_AQUAMARIN_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.N_AQUAMARIN_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.N_AQUAMARIN_BOOTS);
 
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.D_RUBY_HELMET);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.D_RUBY_CHESTPLATE);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.D_RUBY_LEGGINGS);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.D_RUBY_BOOTS);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.D_RUBY_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.D_RUBY_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.D_RUBY_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.D_RUBY_BOOTS);
 
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.N_RUBY_HELMET);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.N_RUBY_CHESTPLATE);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.N_RUBY_LEGGINGS);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.N_RUBY_BOOTS);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.N_RUBY_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.N_RUBY_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.N_RUBY_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.N_RUBY_BOOTS);
 
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.D_TOPAS_HELMET);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.D_TOPAS_CHESTPLATE);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.D_TOPAS_LEGGINGS);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.D_TOPAS_BOOTS);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.D_TOPAS_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.D_TOPAS_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.D_TOPAS_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.D_TOPAS_BOOTS);
 
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.N_TOPAS_HELMET);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.N_TOPAS_CHESTPLATE);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.N_TOPAS_LEGGINGS);
-        itemModelGenerator.registerArmor((ArmorItem) ToolsAndArmors_RaEx.N_TOPAS_BOOTS);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.N_TOPAS_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.N_TOPAS_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.N_TOPAS_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) Armors.N_TOPAS_BOOTS);
 
 
         itemModelGenerator.register(Items_RaEx.NIGHTMARE_TV_SPAWN_EGG,

@@ -15,8 +15,10 @@ import net.minecraft.util.Identifier;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.StepBlockRegistry;
 import net.rand.exten.item.AccessorieItems;
+import net.rand.exten.item.mains.Armors;
 import net.rand.exten.item.Items_RaEx;
-import net.rand.exten.item.ToolsAndArmors_RaEx;
+import net.rand.exten.item.mains.Tools;
+import net.rand.exten.item.mains.Weapons;
 import net.rand.exten.util.Tags_RaEx;
 
 public class RecipeProvider_RaEx extends FabricRecipeProvider {
@@ -36,96 +38,96 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
 
     public void generateTools(RecipeExporter exporter) {
         // Paxel
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.WOODEN_PAXEL)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, Tools.WOODEN_PAXEL)
                 .input(Items.WOODEN_AXE, 1)
                 .input(Items.WOODEN_PICKAXE, 1)
                 .input(Items.WOODEN_SHOVEL, 1)
                 .criterion(hasItem(Items.WOODEN_AXE), conditionsFromItem(Items.WOODEN_AXE))
                 .criterion(hasItem(Items.WOODEN_PICKAXE), conditionsFromItem(Items.WOODEN_PICKAXE))
                 .criterion(hasItem(Items.WOODEN_SHOVEL), conditionsFromItem(Items.WOODEN_SHOVEL))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.WOODEN_PAXEL)));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.STONE_PAXEL)
+                .offerTo(exporter, new Identifier(getRecipeName(Tools.WOODEN_PAXEL)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, Tools.STONE_PAXEL)
                 .input(Items.STONE_AXE, 1)
                 .input(Items.STONE_PICKAXE, 1)
                 .input(Items.STONE_SHOVEL, 1)
                 .criterion(hasItem(Items.STONE_AXE), conditionsFromItem(Items.STONE_AXE))
                 .criterion(hasItem(Items.STONE_PICKAXE), conditionsFromItem(Items.STONE_PICKAXE))
                 .criterion(hasItem(Items.STONE_SHOVEL), conditionsFromItem(Items.STONE_SHOVEL))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.STONE_PAXEL)));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_PAXEL)
-                .input(ToolsAndArmors_RaEx.COPPER_AXE, 1)
-                .input(ToolsAndArmors_RaEx.COPPER_PICKAXE, 1)
-                .input(ToolsAndArmors_RaEx.COPPER_SHOVEL, 1)
-                .criterion(hasItem(ToolsAndArmors_RaEx.COPPER_AXE), conditionsFromItem(ToolsAndArmors_RaEx.COPPER_AXE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.COPPER_PICKAXE), conditionsFromItem(ToolsAndArmors_RaEx.COPPER_PICKAXE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.COPPER_SHOVEL), conditionsFromItem(ToolsAndArmors_RaEx.COPPER_SHOVEL))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_PAXEL)));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.IRON_PAXEL)
+                .offerTo(exporter, new Identifier(getRecipeName(Tools.STONE_PAXEL)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, Tools.COPPER_PAXEL)
+                .input(Tools.COPPER_AXE, 1)
+                .input(Tools.COPPER_PICKAXE, 1)
+                .input(Tools.COPPER_SHOVEL, 1)
+                .criterion(hasItem(Tools.COPPER_AXE), conditionsFromItem(Tools.COPPER_AXE))
+                .criterion(hasItem(Tools.COPPER_PICKAXE), conditionsFromItem(Tools.COPPER_PICKAXE))
+                .criterion(hasItem(Tools.COPPER_SHOVEL), conditionsFromItem(Tools.COPPER_SHOVEL))
+                .offerTo(exporter, new Identifier(getRecipeName(Tools.COPPER_PAXEL)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, Tools.IRON_PAXEL)
                 .input(Items.IRON_AXE, 1)
                 .input(Items.IRON_PICKAXE, 1)
                 .input(Items.IRON_SHOVEL, 1)
                 .criterion(hasItem(Items.IRON_AXE), conditionsFromItem(Items.IRON_AXE))
                 .criterion(hasItem(Items.IRON_PICKAXE), conditionsFromItem(Items.IRON_PICKAXE))
                 .criterion(hasItem(Items.IRON_SHOVEL), conditionsFromItem(Items.IRON_SHOVEL))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.IRON_PAXEL)));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.GOLDEN_PAXEL)
+                .offerTo(exporter, new Identifier(getRecipeName(Tools.IRON_PAXEL)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, Tools.GOLDEN_PAXEL)
                 .input(Items.GOLDEN_AXE, 1)
                 .input(Items.GOLDEN_PICKAXE, 1)
                 .input(Items.GOLDEN_SHOVEL, 1)
                 .criterion(hasItem(Items.GOLDEN_AXE), conditionsFromItem(Items.GOLDEN_AXE))
                 .criterion(hasItem(Items.GOLDEN_PICKAXE), conditionsFromItem(Items.GOLDEN_PICKAXE))
                 .criterion(hasItem(Items.GOLDEN_SHOVEL), conditionsFromItem(Items.GOLDEN_SHOVEL))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.GOLDEN_PAXEL)));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.DIAMOND_PAXEL)
+                .offerTo(exporter, new Identifier(getRecipeName(Tools.GOLDEN_PAXEL)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, Tools.DIAMOND_PAXEL)
                 .input(Items.DIAMOND_AXE, 1)
                 .input(Items.DIAMOND_PICKAXE, 1)
                 .input(Items.DIAMOND_SHOVEL, 1)
                 .criterion(hasItem(Items.DIAMOND_AXE), conditionsFromItem(Items.DIAMOND_AXE))
                 .criterion(hasItem(Items.DIAMOND_PICKAXE), conditionsFromItem(Items.DIAMOND_PICKAXE))
                 .criterion(hasItem(Items.DIAMOND_SHOVEL), conditionsFromItem(Items.DIAMOND_SHOVEL))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.DIAMOND_PAXEL)));
+                .offerTo(exporter, new Identifier(getRecipeName(Tools.DIAMOND_PAXEL)));
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.ofItems(ToolsAndArmors_RaEx.DIAMOND_PAXEL),
+                        Ingredient.ofItems(Tools.DIAMOND_PAXEL),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
-                        RecipeCategory.TOOLS, ToolsAndArmors_RaEx.NETHERITE_PAXEL)
+                        RecipeCategory.TOOLS, Tools.NETHERITE_PAXEL)
                 .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL), conditionsFromItem(ToolsAndArmors_RaEx.DIAMOND_PAXEL))
+                .criterion(hasItem(Tools.DIAMOND_PAXEL), conditionsFromItem(Tools.DIAMOND_PAXEL))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.NETHERITE_PAXEL)));
+                .offerTo(exporter, new Identifier(getRecipeName(Tools.NETHERITE_PAXEL)));
 
         // Armor and Tools
         offerSmithingTemplateCopyingRecipe(exporter, Items_RaEx.GEMS_UPGRADE_TEMPLATE, Tags_RaEx.Items.GEMS);
 
         //// Long Sword
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.WOODEN_LONGSWORD, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Weapons.WOODEN_LONGSWORD, 1)
                 .pattern("C")
                 .pattern("C")
                 .pattern("S")
                 .input('C', ItemTags.PLANKS)
                 .input('S', Items.WOODEN_SWORD)
                 .criterion(hasItem(Items.WOODEN_SWORD), conditionsFromItem(Items.WOODEN_SWORD))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.WOODEN_LONGSWORD)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.STONE_LONGSWORD, 1)
+                .offerTo(exporter, new Identifier(getRecipeName(Weapons.WOODEN_LONGSWORD)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Weapons.STONE_LONGSWORD, 1)
                 .pattern("C")
                 .pattern("C")
                 .pattern("S")
                 .input('C', ItemTags.STONE_TOOL_MATERIALS)
                 .input('S', Items.STONE_SWORD)
                 .criterion(hasItem(Items.STONE_SWORD), conditionsFromItem(Items.STONE_SWORD))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.STONE_LONGSWORD)));
+                .offerTo(exporter, new Identifier(getRecipeName(Weapons.STONE_LONGSWORD)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_LONGSWORD, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Weapons.COPPER_LONGSWORD, 1)
                 .pattern("C")
                 .pattern("C")
                 .pattern("S")
                 .input('C', Items.COPPER_INGOT)
-                .input('S', ToolsAndArmors_RaEx.COPPER_SWORD)
+                .input('S', Weapons.COPPER_SWORD)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
-                .criterion(hasItem(ToolsAndArmors_RaEx.COPPER_SWORD), conditionsFromItem(ToolsAndArmors_RaEx.COPPER_SWORD))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_LONGSWORD)));
+                .criterion(hasItem(Weapons.COPPER_SWORD), conditionsFromItem(Weapons.COPPER_SWORD))
+                .offerTo(exporter, new Identifier(getRecipeName(Weapons.COPPER_LONGSWORD)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.GOLDEN_LONGSWORD, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Weapons.GOLDEN_LONGSWORD, 1)
                 .pattern("C")
                 .pattern("C")
                 .pattern("S")
@@ -133,8 +135,8 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .input('S', Items.GOLDEN_SWORD)
                 .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
                 .criterion(hasItem(Items.GOLDEN_SWORD), conditionsFromItem(Items.GOLDEN_SWORD))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.GOLDEN_LONGSWORD)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.IRON_LONGSWORD, 1)
+                .offerTo(exporter, new Identifier(getRecipeName(Weapons.GOLDEN_LONGSWORD)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Weapons.IRON_LONGSWORD, 1)
                 .pattern("C")
                 .pattern("C")
                 .pattern("S")
@@ -142,8 +144,8 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .input('S', Items.IRON_SWORD)
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .criterion(hasItem(Items.IRON_SWORD), conditionsFromItem(Items.IRON_SWORD))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.IRON_LONGSWORD)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.DIAMOND_LONGSWORD, 1)
+                .offerTo(exporter, new Identifier(getRecipeName(Weapons.IRON_LONGSWORD)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Weapons.DIAMOND_LONGSWORD, 1)
                 .pattern("C")
                 .pattern("C")
                 .pattern("S")
@@ -151,19 +153,19 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .input('S', Items.DIAMOND_SWORD)
                 .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
                 .criterion(hasItem(Items.DIAMOND_SWORD), conditionsFromItem(Items.DIAMOND_SWORD))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.DIAMOND_LONGSWORD)));
+                .offerTo(exporter, new Identifier(getRecipeName(Weapons.DIAMOND_LONGSWORD)));
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.ofItems(ToolsAndArmors_RaEx.DIAMOND_LONGSWORD),
+                        Ingredient.ofItems(Weapons.DIAMOND_LONGSWORD),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.NETHERITE_LONGSWORD)
+                        RecipeCategory.COMBAT, Weapons.NETHERITE_LONGSWORD)
                 .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.DIAMOND_LONGSWORD), conditionsFromItem(ToolsAndArmors_RaEx.DIAMOND_LONGSWORD))
+                .criterion(hasItem(Weapons.DIAMOND_LONGSWORD), conditionsFromItem(Weapons.DIAMOND_LONGSWORD))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.NETHERITE_LONGSWORD)));
+                .offerTo(exporter, new Identifier(getRecipeName(Weapons.NETHERITE_LONGSWORD)));
 
         //// Copper
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_AXE, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, Tools.COPPER_AXE, 1)
                 .pattern("CC")
                 .pattern("CS")
                 .pattern(" S")
@@ -171,8 +173,8 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .input('S', Items.STICK)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_AXE)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_SHOVEL, 1)
+                .offerTo(exporter, new Identifier(getRecipeName(Tools.COPPER_AXE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, Tools.COPPER_SHOVEL, 1)
                 .pattern("C")
                 .pattern("S")
                 .pattern("S")
@@ -180,8 +182,8 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .input('S', Items.STICK)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_SHOVEL)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_PICKAXE, 1)
+                .offerTo(exporter, new Identifier(getRecipeName(Tools.COPPER_SHOVEL)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, Tools.COPPER_PICKAXE, 1)
                 .pattern("CCC")
                 .pattern(" S ")
                 .pattern(" S ")
@@ -189,8 +191,8 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .input('S', Items.STICK)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_PICKAXE)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ToolsAndArmors_RaEx.COPPER_HOE, 1)
+                .offerTo(exporter, new Identifier(getRecipeName(Tools.COPPER_PICKAXE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, Tools.COPPER_HOE, 1)
                 .pattern("CC")
                 .pattern(" S")
                 .pattern(" S")
@@ -198,8 +200,8 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .input('S', Items.STICK)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_HOE)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_SWORD, 1)
+                .offerTo(exporter, new Identifier(getRecipeName(Tools.COPPER_HOE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Weapons.COPPER_SWORD, 1)
                 .pattern("C")
                 .pattern("C")
                 .pattern("S")
@@ -207,7 +209,7 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .input('S', Items.STICK)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_SWORD)));
+                .offerTo(exporter, new Identifier(getRecipeName(Weapons.COPPER_SWORD)));
 
     }
 
@@ -602,30 +604,30 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
 
     public void generateArmor(RecipeExporter exporter) {
         //// Shulker
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.SHULKER_HELMET, 1)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, Armors.SHULKER_HELMET, 1)
                 .input(Items.SHULKER_SHELL, 2)
                 .input(Items.LEATHER_HELMET)
                 .criterion(hasItem(Items.SHULKER_SHELL), conditionsFromItem(Items.SHULKER_SHELL))
                 .criterion(hasItem(Items.LEATHER_HELMET), conditionsFromItem(Items.LEATHER_HELMET))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.SHULKER_HELMET)));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.SHULKER_CHESTPLATE, 1)
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.SHULKER_HELMET)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, Armors.SHULKER_CHESTPLATE, 1)
                 .input(Items.SHULKER_SHELL, 2)
                 .input(Items.LEATHER_CHESTPLATE)
                 .criterion(hasItem(Items.SHULKER_SHELL), conditionsFromItem(Items.SHULKER_SHELL))
                 .criterion(hasItem(Items.LEATHER_CHESTPLATE), conditionsFromItem(Items.LEATHER_CHESTPLATE))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.SHULKER_CHESTPLATE)));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.SHULKER_LEGGINGS, 1)
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.SHULKER_CHESTPLATE)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, Armors.SHULKER_LEGGINGS, 1)
                 .input(Items.SHULKER_SHELL, 2)
                 .input(Items.LEATHER_LEGGINGS)
                 .criterion(hasItem(Items.SHULKER_SHELL), conditionsFromItem(Items.SHULKER_SHELL))
                 .criterion(hasItem(Items.LEATHER_LEGGINGS), conditionsFromItem(Items.LEATHER_LEGGINGS))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.SHULKER_LEGGINGS)));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.SHULKER_BOOTS, 1)
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.SHULKER_LEGGINGS)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, Armors.SHULKER_BOOTS, 1)
                 .input(Items.SHULKER_SHELL, 2)
                 .input(Items.LEATHER_BOOTS)
                 .criterion(hasItem(Items.SHULKER_SHELL), conditionsFromItem(Items.SHULKER_SHELL))
                 .criterion(hasItem(Items.LEATHER_BOOTS), conditionsFromItem(Items.LEATHER_BOOTS))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.SHULKER_BOOTS)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.SHULKER_BOOTS)));
 
 
         //// Copper
@@ -640,196 +642,196 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                 .criterion(hasItem(Items.GOLD_NUGGET), conditionsFromItem(Items.GOLD_NUGGET))
                 .offerTo(exporter, new Identifier(getRecipeName(Items_RaEx.METAL_LUMP)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_HELMET, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Armors.COPPER_HELMET, 1)
                 .pattern("CCC")
                 .pattern("C C")
                 .input('C', Items.COPPER_INGOT)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_HELMET)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_CHESTPLATE, 1)
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.COPPER_HELMET)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Armors.COPPER_CHESTPLATE, 1)
                 .pattern("C C")
                 .pattern("CCC")
                 .pattern("CCC")
                 .input('C', Items.COPPER_INGOT)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_CHESTPLATE)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_LEGGINGS, 1)
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.COPPER_CHESTPLATE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Armors.COPPER_LEGGINGS, 1)
                 .pattern("CCC")
                 .pattern("C C")
                 .pattern("C C")
                 .input('C', Items.COPPER_INGOT)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_LEGGINGS)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ToolsAndArmors_RaEx.COPPER_BOOTS, 1)
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.COPPER_LEGGINGS)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Armors.COPPER_BOOTS, 1)
                 .pattern("C C")
                 .pattern("C C")
                 .input('C', Items.COPPER_INGOT)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.COPPER_BOOTS)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.COPPER_BOOTS)));
 
         //// Aquamarin
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items_RaEx.GEMS_UPGRADE_TEMPLATE),
                         Ingredient.ofItems(Items.DIAMOND_HELMET),
                         Ingredient.ofItems(Items_RaEx.AQUAMARIN),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.D_AQUAMARIN_HELMET)
+                        RecipeCategory.COMBAT, Armors.D_AQUAMARIN_HELMET)
                 .criterion(hasItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE), conditionsFromItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE))
                 .criterion(hasItem(Items.DIAMOND_HELMET), conditionsFromItem(Items.DIAMOND_HELMET))
                 .criterion(hasItem(Items_RaEx.AQUAMARIN), conditionsFromItem(Items_RaEx.AQUAMARIN))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.D_AQUAMARIN_HELMET)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.D_AQUAMARIN_HELMET)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items_RaEx.GEMS_UPGRADE_TEMPLATE),
                         Ingredient.ofItems(Items.DIAMOND_CHESTPLATE),
                         Ingredient.ofItems(Items_RaEx.AQUAMARIN),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.D_AQUAMARIN_CHESTPLATE)
+                        RecipeCategory.COMBAT, Armors.D_AQUAMARIN_CHESTPLATE)
                 .criterion(hasItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE), conditionsFromItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE))
                 .criterion(hasItem(Items.DIAMOND_CHESTPLATE), conditionsFromItem(Items.DIAMOND_CHESTPLATE))
                 .criterion(hasItem(Items_RaEx.AQUAMARIN), conditionsFromItem(Items_RaEx.AQUAMARIN))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.D_AQUAMARIN_CHESTPLATE)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.D_AQUAMARIN_CHESTPLATE)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items_RaEx.GEMS_UPGRADE_TEMPLATE),
                         Ingredient.ofItems(Items.DIAMOND_LEGGINGS),
                         Ingredient.ofItems(Items_RaEx.AQUAMARIN),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.D_AQUAMARIN_LEGGINGS)
+                        RecipeCategory.COMBAT, Armors.D_AQUAMARIN_LEGGINGS)
                 .criterion(hasItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE), conditionsFromItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE))
                 .criterion(hasItem(Items.DIAMOND_LEGGINGS), conditionsFromItem(Items.DIAMOND_LEGGINGS))
                 .criterion(hasItem(Items_RaEx.AQUAMARIN), conditionsFromItem(Items_RaEx.AQUAMARIN))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.D_AQUAMARIN_LEGGINGS)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.D_AQUAMARIN_LEGGINGS)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items_RaEx.GEMS_UPGRADE_TEMPLATE),
                         Ingredient.ofItems(Items.DIAMOND_BOOTS),
                         Ingredient.ofItems(Items_RaEx.AQUAMARIN),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.D_AQUAMARIN_BOOTS)
+                        RecipeCategory.COMBAT, Armors.D_AQUAMARIN_BOOTS)
                 .criterion(hasItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE), conditionsFromItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE))
                 .criterion(hasItem(Items.DIAMOND_BOOTS), conditionsFromItem(Items.DIAMOND_BOOTS))
                 .criterion(hasItem(Items_RaEx.AQUAMARIN), conditionsFromItem(Items_RaEx.AQUAMARIN))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.D_AQUAMARIN_BOOTS)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.D_AQUAMARIN_BOOTS)));
 
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.ofItems(ToolsAndArmors_RaEx.D_AQUAMARIN_HELMET),
+                        Ingredient.ofItems(Armors.D_AQUAMARIN_HELMET),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.N_AQUAMARIN_HELMET)
+                        RecipeCategory.COMBAT, Armors.N_AQUAMARIN_HELMET)
                 .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.D_AQUAMARIN_HELMET), conditionsFromItem(ToolsAndArmors_RaEx.D_AQUAMARIN_HELMET))
+                .criterion(hasItem(Armors.D_AQUAMARIN_HELMET), conditionsFromItem(Armors.D_AQUAMARIN_HELMET))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.N_AQUAMARIN_HELMET)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.N_AQUAMARIN_HELMET)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.ofItems(ToolsAndArmors_RaEx.D_AQUAMARIN_CHESTPLATE),
+                        Ingredient.ofItems(Armors.D_AQUAMARIN_CHESTPLATE),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.N_AQUAMARIN_CHESTPLATE)
+                        RecipeCategory.COMBAT, Armors.N_AQUAMARIN_CHESTPLATE)
                 .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.D_AQUAMARIN_CHESTPLATE), conditionsFromItem(ToolsAndArmors_RaEx.D_AQUAMARIN_CHESTPLATE))
+                .criterion(hasItem(Armors.D_AQUAMARIN_CHESTPLATE), conditionsFromItem(Armors.D_AQUAMARIN_CHESTPLATE))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.N_AQUAMARIN_CHESTPLATE)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.N_AQUAMARIN_CHESTPLATE)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.ofItems(ToolsAndArmors_RaEx.D_AQUAMARIN_LEGGINGS),
+                        Ingredient.ofItems(Armors.D_AQUAMARIN_LEGGINGS),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.N_AQUAMARIN_LEGGINGS)
+                        RecipeCategory.COMBAT, Armors.N_AQUAMARIN_LEGGINGS)
                 .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.D_AQUAMARIN_LEGGINGS), conditionsFromItem(ToolsAndArmors_RaEx.D_AQUAMARIN_LEGGINGS))
+                .criterion(hasItem(Armors.D_AQUAMARIN_LEGGINGS), conditionsFromItem(Armors.D_AQUAMARIN_LEGGINGS))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.N_AQUAMARIN_LEGGINGS)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.N_AQUAMARIN_LEGGINGS)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.ofItems(ToolsAndArmors_RaEx.D_AQUAMARIN_BOOTS),
+                        Ingredient.ofItems(Armors.D_AQUAMARIN_BOOTS),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.N_AQUAMARIN_BOOTS)
+                        RecipeCategory.COMBAT, Armors.N_AQUAMARIN_BOOTS)
                 .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.D_AQUAMARIN_BOOTS), conditionsFromItem(ToolsAndArmors_RaEx.D_AQUAMARIN_BOOTS))
+                .criterion(hasItem(Armors.D_AQUAMARIN_BOOTS), conditionsFromItem(Armors.D_AQUAMARIN_BOOTS))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.N_AQUAMARIN_BOOTS)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.N_AQUAMARIN_BOOTS)));
 
         //// Ruby
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items_RaEx.GEMS_UPGRADE_TEMPLATE),
                         Ingredient.ofItems(Items.DIAMOND_HELMET),
                         Ingredient.ofItems(Items_RaEx.RUBY),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.D_RUBY_HELMET)
+                        RecipeCategory.COMBAT, Armors.D_RUBY_HELMET)
                 .criterion(hasItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE), conditionsFromItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE))
                 .criterion(hasItem(Items.DIAMOND_HELMET), conditionsFromItem(Items.DIAMOND_HELMET))
                 .criterion(hasItem(Items_RaEx.RUBY), conditionsFromItem(Items_RaEx.RUBY))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.D_RUBY_HELMET)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.D_RUBY_HELMET)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items_RaEx.GEMS_UPGRADE_TEMPLATE),
                         Ingredient.ofItems(Items.DIAMOND_CHESTPLATE),
                         Ingredient.ofItems(Items_RaEx.RUBY),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.D_RUBY_CHESTPLATE)
+                        RecipeCategory.COMBAT, Armors.D_RUBY_CHESTPLATE)
                 .criterion(hasItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE), conditionsFromItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE))
                 .criterion(hasItem(Items.DIAMOND_CHESTPLATE), conditionsFromItem(Items.DIAMOND_CHESTPLATE))
                 .criterion(hasItem(Items_RaEx.RUBY), conditionsFromItem(Items_RaEx.RUBY))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.D_RUBY_CHESTPLATE)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.D_RUBY_CHESTPLATE)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items_RaEx.GEMS_UPGRADE_TEMPLATE),
                         Ingredient.ofItems(Items.DIAMOND_LEGGINGS),
                         Ingredient.ofItems(Items_RaEx.RUBY),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.D_RUBY_LEGGINGS)
+                        RecipeCategory.COMBAT, Armors.D_RUBY_LEGGINGS)
                 .criterion(hasItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE), conditionsFromItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE))
                 .criterion(hasItem(Items.DIAMOND_LEGGINGS), conditionsFromItem(Items.DIAMOND_LEGGINGS))
                 .criterion(hasItem(Items_RaEx.RUBY), conditionsFromItem(Items_RaEx.RUBY))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.D_RUBY_LEGGINGS)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.D_RUBY_LEGGINGS)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items_RaEx.GEMS_UPGRADE_TEMPLATE),
                         Ingredient.ofItems(Items.DIAMOND_BOOTS),
                         Ingredient.ofItems(Items_RaEx.RUBY),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.D_RUBY_BOOTS)
+                        RecipeCategory.COMBAT, Armors.D_RUBY_BOOTS)
                 .criterion(hasItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE), conditionsFromItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE))
                 .criterion(hasItem(Items.DIAMOND_BOOTS), conditionsFromItem(Items.DIAMOND_BOOTS))
                 .criterion(hasItem(Items_RaEx.RUBY), conditionsFromItem(Items_RaEx.RUBY))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.D_RUBY_BOOTS)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.D_RUBY_BOOTS)));
 
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.ofItems(ToolsAndArmors_RaEx.D_RUBY_HELMET),
+                        Ingredient.ofItems(Armors.D_RUBY_HELMET),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.N_RUBY_HELMET)
+                        RecipeCategory.COMBAT, Armors.N_RUBY_HELMET)
                 .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.D_RUBY_HELMET), conditionsFromItem(ToolsAndArmors_RaEx.D_RUBY_HELMET))
+                .criterion(hasItem(Armors.D_RUBY_HELMET), conditionsFromItem(Armors.D_RUBY_HELMET))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.N_RUBY_HELMET)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.N_RUBY_HELMET)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.ofItems(ToolsAndArmors_RaEx.D_RUBY_CHESTPLATE),
+                        Ingredient.ofItems(Armors.D_RUBY_CHESTPLATE),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.N_RUBY_CHESTPLATE)
+                        RecipeCategory.COMBAT, Armors.N_RUBY_CHESTPLATE)
                 .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.D_RUBY_CHESTPLATE), conditionsFromItem(ToolsAndArmors_RaEx.D_RUBY_CHESTPLATE))
+                .criterion(hasItem(Armors.D_RUBY_CHESTPLATE), conditionsFromItem(Armors.D_RUBY_CHESTPLATE))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.N_RUBY_CHESTPLATE)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.N_RUBY_CHESTPLATE)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.ofItems(ToolsAndArmors_RaEx.D_RUBY_LEGGINGS),
+                        Ingredient.ofItems(Armors.D_RUBY_LEGGINGS),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.N_RUBY_LEGGINGS)
+                        RecipeCategory.COMBAT, Armors.N_RUBY_LEGGINGS)
                 .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.D_RUBY_LEGGINGS), conditionsFromItem(ToolsAndArmors_RaEx.D_RUBY_LEGGINGS))
+                .criterion(hasItem(Armors.D_RUBY_LEGGINGS), conditionsFromItem(Armors.D_RUBY_LEGGINGS))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.N_RUBY_LEGGINGS)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.N_RUBY_LEGGINGS)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.ofItems(ToolsAndArmors_RaEx.D_RUBY_BOOTS),
+                        Ingredient.ofItems(Armors.D_RUBY_BOOTS),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.N_RUBY_BOOTS)
+                        RecipeCategory.COMBAT, Armors.N_RUBY_BOOTS)
                 .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.D_RUBY_BOOTS), conditionsFromItem(ToolsAndArmors_RaEx.D_RUBY_BOOTS))
+                .criterion(hasItem(Armors.D_RUBY_BOOTS), conditionsFromItem(Armors.D_RUBY_BOOTS))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.N_RUBY_BOOTS)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.N_RUBY_BOOTS)));
 
 
         //// Topas
@@ -837,82 +839,82 @@ public class RecipeProvider_RaEx extends FabricRecipeProvider {
                         Ingredient.ofItems(Items_RaEx.GEMS_UPGRADE_TEMPLATE),
                         Ingredient.ofItems(Items.DIAMOND_HELMET),
                         Ingredient.ofItems(Items_RaEx.TOPAS),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.D_TOPAS_HELMET)
+                        RecipeCategory.COMBAT, Armors.D_TOPAS_HELMET)
                 .criterion(hasItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE), conditionsFromItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE))
                 .criterion(hasItem(Items.DIAMOND_HELMET), conditionsFromItem(Items.DIAMOND_HELMET))
                 .criterion(hasItem(Items_RaEx.TOPAS), conditionsFromItem(Items_RaEx.TOPAS))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.D_TOPAS_HELMET)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.D_TOPAS_HELMET)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items_RaEx.GEMS_UPGRADE_TEMPLATE),
                         Ingredient.ofItems(Items.DIAMOND_CHESTPLATE),
                         Ingredient.ofItems(Items_RaEx.TOPAS),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.D_TOPAS_CHESTPLATE)
+                        RecipeCategory.COMBAT, Armors.D_TOPAS_CHESTPLATE)
                 .criterion(hasItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE), conditionsFromItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE))
                 .criterion(hasItem(Items.DIAMOND_CHESTPLATE), conditionsFromItem(Items.DIAMOND_CHESTPLATE))
                 .criterion(hasItem(Items_RaEx.TOPAS), conditionsFromItem(Items_RaEx.TOPAS))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.D_TOPAS_CHESTPLATE)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.D_TOPAS_CHESTPLATE)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items_RaEx.GEMS_UPGRADE_TEMPLATE),
                         Ingredient.ofItems(Items.DIAMOND_LEGGINGS),
                         Ingredient.ofItems(Items_RaEx.TOPAS),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.D_TOPAS_LEGGINGS)
+                        RecipeCategory.COMBAT, Armors.D_TOPAS_LEGGINGS)
                 .criterion(hasItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE), conditionsFromItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE))
                 .criterion(hasItem(Items.DIAMOND_LEGGINGS), conditionsFromItem(Items.DIAMOND_LEGGINGS))
                 .criterion(hasItem(Items_RaEx.TOPAS), conditionsFromItem(Items_RaEx.TOPAS))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.D_TOPAS_LEGGINGS)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.D_TOPAS_LEGGINGS)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items_RaEx.GEMS_UPGRADE_TEMPLATE),
                         Ingredient.ofItems(Items.DIAMOND_BOOTS),
                         Ingredient.ofItems(Items_RaEx.TOPAS),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.D_TOPAS_BOOTS)
+                        RecipeCategory.COMBAT, Armors.D_TOPAS_BOOTS)
                 .criterion(hasItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE), conditionsFromItem(Items_RaEx.GEMS_UPGRADE_TEMPLATE))
                 .criterion(hasItem(Items.DIAMOND_BOOTS), conditionsFromItem(Items.DIAMOND_BOOTS))
                 .criterion(hasItem(Items_RaEx.TOPAS), conditionsFromItem(Items_RaEx.TOPAS))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.D_TOPAS_BOOTS)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.D_TOPAS_BOOTS)));
 
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.ofItems(ToolsAndArmors_RaEx.D_TOPAS_HELMET),
+                        Ingredient.ofItems(Armors.D_TOPAS_HELMET),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.N_TOPAS_HELMET)
+                        RecipeCategory.COMBAT, Armors.N_TOPAS_HELMET)
                 .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.D_TOPAS_HELMET), conditionsFromItem(ToolsAndArmors_RaEx.D_TOPAS_HELMET))
+                .criterion(hasItem(Armors.D_TOPAS_HELMET), conditionsFromItem(Armors.D_TOPAS_HELMET))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.N_TOPAS_HELMET)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.N_TOPAS_HELMET)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.ofItems(ToolsAndArmors_RaEx.D_TOPAS_CHESTPLATE),
+                        Ingredient.ofItems(Armors.D_TOPAS_CHESTPLATE),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.N_TOPAS_CHESTPLATE)
+                        RecipeCategory.COMBAT, Armors.N_TOPAS_CHESTPLATE)
                 .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.D_TOPAS_CHESTPLATE), conditionsFromItem(ToolsAndArmors_RaEx.D_TOPAS_CHESTPLATE))
+                .criterion(hasItem(Armors.D_TOPAS_CHESTPLATE), conditionsFromItem(Armors.D_TOPAS_CHESTPLATE))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.N_TOPAS_CHESTPLATE)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.N_TOPAS_CHESTPLATE)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.ofItems(ToolsAndArmors_RaEx.D_TOPAS_LEGGINGS),
+                        Ingredient.ofItems(Armors.D_TOPAS_LEGGINGS),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.N_TOPAS_LEGGINGS)
+                        RecipeCategory.COMBAT, Armors.N_TOPAS_LEGGINGS)
                 .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.D_TOPAS_LEGGINGS), conditionsFromItem(ToolsAndArmors_RaEx.D_TOPAS_LEGGINGS))
+                .criterion(hasItem(Armors.D_TOPAS_LEGGINGS), conditionsFromItem(Armors.D_TOPAS_LEGGINGS))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.N_TOPAS_LEGGINGS)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.N_TOPAS_LEGGINGS)));
 
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.ofItems(ToolsAndArmors_RaEx.D_TOPAS_BOOTS),
+                        Ingredient.ofItems(Armors.D_TOPAS_BOOTS),
                         Ingredient.ofItems(Items.NETHERITE_INGOT),
-                        RecipeCategory.COMBAT, ToolsAndArmors_RaEx.N_TOPAS_BOOTS)
+                        RecipeCategory.COMBAT, Armors.N_TOPAS_BOOTS)
                 .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
-                .criterion(hasItem(ToolsAndArmors_RaEx.D_TOPAS_BOOTS), conditionsFromItem(ToolsAndArmors_RaEx.D_TOPAS_BOOTS))
+                .criterion(hasItem(Armors.D_TOPAS_BOOTS), conditionsFromItem(Armors.D_TOPAS_BOOTS))
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ToolsAndArmors_RaEx.N_TOPAS_BOOTS)));
+                .offerTo(exporter, new Identifier(getRecipeName(Armors.N_TOPAS_BOOTS)));
 
     }
 

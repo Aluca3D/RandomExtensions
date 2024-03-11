@@ -5,7 +5,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorMaterial;
-import net.rand.exten.item.custom.ArmorMaterials_RaEx;
+import net.rand.exten.item.custom.materials.ArmorMaterials_RaEx;
 import net.rand.exten.item.custom.wearable.ArmorItem_RaEx;
 
 import java.util.Map;

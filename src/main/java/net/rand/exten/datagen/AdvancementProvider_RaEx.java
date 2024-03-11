@@ -17,8 +17,11 @@ import net.minecraft.util.Identifier;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.StepBlockRegistry;
+import net.rand.exten.item.mains.Armors;
 import net.rand.exten.item.Items_RaEx;
-import net.rand.exten.item.ToolsAndArmors_RaEx;
+import net.rand.exten.item.mains.Specials;
+import net.rand.exten.item.mains.Tools;
+import net.rand.exten.item.mains.Weapons;
 import net.rand.exten.util.Tags_RaEx;
 
 import java.util.Optional;
@@ -153,7 +156,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .build(consumer, RandomExtensions.MOD_ID + ":re/misc/roomba");
 
         AdvancementEntry longSword = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.IRON_LONGSWORD),
+                .display(new AdvancementDisplay(new ItemStack(Weapons.IRON_LONGSWORD),
                         Text.literal("They are LONG"), Text.literal("he Sword Long"),
                         Optional.of(new Identifier(RandomExtensions.MOD_ID, background)), AdvancementFrame.TASK,
                         false, false, true))
@@ -390,27 +393,27 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .build(consumer, RandomExtensions.MOD_ID + ":re/gems/aquamarin_root");
 
         AdvancementEntry aquamarinDArmor = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.D_AQUAMARIN_HELMET),
+                .display(new AdvancementDisplay(new ItemStack(Armors.D_AQUAMARIN_HELMET),
                         Text.literal("Lets be Fish"), Text.literal("i cant swim"),
                         Optional.of(new Identifier(RandomExtensions.MOD_ID, background)), AdvancementFrame.GOAL,
                         true, true, false))
-                .criterion("has_aquamarin_armor_helmet", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.D_AQUAMARIN_HELMET))
-                .criterion("has_aquamarin_armor_chestplate", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.D_AQUAMARIN_CHESTPLATE))
-                .criterion("has_aquamarin_armor_leggings", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.D_AQUAMARIN_LEGGINGS))
-                .criterion("has_aquamarin_armor_boots", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.D_AQUAMARIN_BOOTS))
+                .criterion("has_aquamarin_armor_helmet", InventoryChangedCriterion.Conditions.items(Armors.D_AQUAMARIN_HELMET))
+                .criterion("has_aquamarin_armor_chestplate", InventoryChangedCriterion.Conditions.items(Armors.D_AQUAMARIN_CHESTPLATE))
+                .criterion("has_aquamarin_armor_leggings", InventoryChangedCriterion.Conditions.items(Armors.D_AQUAMARIN_LEGGINGS))
+                .criterion("has_aquamarin_armor_boots", InventoryChangedCriterion.Conditions.items(Armors.D_AQUAMARIN_BOOTS))
                 .rewards(AdvancementRewards.Builder.experience(40))
                 .parent(aquamarinRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/gems/aquamarin_d_armor");
 
         AdvancementEntry aquamarinNArmor = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.N_AQUAMARIN_HELMET),
+                .display(new AdvancementDisplay(new ItemStack(Armors.N_AQUAMARIN_HELMET),
                         Text.literal("I can finally Breath"), Text.literal("Aqua-man"),
                         Optional.of(new Identifier(RandomExtensions.MOD_ID, background)), AdvancementFrame.CHALLENGE,
                         true, true, false))
-                .criterion("has_aquamarin_armor_helmet", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_AQUAMARIN_HELMET))
-                .criterion("has_aquamarin_armor_chestplate", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_AQUAMARIN_CHESTPLATE))
-                .criterion("has_aquamarin_armor_leggings", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_AQUAMARIN_LEGGINGS))
-                .criterion("has_aquamarin_armor_boots", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_AQUAMARIN_BOOTS))
+                .criterion("has_aquamarin_armor_helmet", InventoryChangedCriterion.Conditions.items(Armors.N_AQUAMARIN_HELMET))
+                .criterion("has_aquamarin_armor_chestplate", InventoryChangedCriterion.Conditions.items(Armors.N_AQUAMARIN_CHESTPLATE))
+                .criterion("has_aquamarin_armor_leggings", InventoryChangedCriterion.Conditions.items(Armors.N_AQUAMARIN_LEGGINGS))
+                .criterion("has_aquamarin_armor_boots", InventoryChangedCriterion.Conditions.items(Armors.N_AQUAMARIN_BOOTS))
                 .rewards(AdvancementRewards.Builder.experience(200))
                 .parent(aquamarinDArmor)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/gems/aquamarin_n_armor");
@@ -426,27 +429,27 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .build(consumer, RandomExtensions.MOD_ID + ":re/gems/ruby_root");
 
         AdvancementEntry rubyDArmor = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.D_RUBY_HELMET),
+                .display(new AdvancementDisplay(new ItemStack(Armors.D_RUBY_HELMET),
                         Text.literal("Battle time"), Text.literal("fight me"),
                         Optional.of(new Identifier(RandomExtensions.MOD_ID, background)), AdvancementFrame.GOAL,
                         true, true, false))
-                .criterion("has_ruby_armor_helmet", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.D_RUBY_HELMET))
-                .criterion("has_ruby_armor_chestplate", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.D_RUBY_CHESTPLATE))
-                .criterion("has_ruby_armor_leggings", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.D_RUBY_LEGGINGS))
-                .criterion("has_ruby_armor_boots", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.D_RUBY_BOOTS))
+                .criterion("has_ruby_armor_helmet", InventoryChangedCriterion.Conditions.items(Armors.D_RUBY_HELMET))
+                .criterion("has_ruby_armor_chestplate", InventoryChangedCriterion.Conditions.items(Armors.D_RUBY_CHESTPLATE))
+                .criterion("has_ruby_armor_leggings", InventoryChangedCriterion.Conditions.items(Armors.D_RUBY_LEGGINGS))
+                .criterion("has_ruby_armor_boots", InventoryChangedCriterion.Conditions.items(Armors.D_RUBY_BOOTS))
                 .rewards(AdvancementRewards.Builder.experience(40))
                 .parent(rubyRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/gems/ruby_d_armor");
 
         AdvancementEntry rubyNArmor = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.N_RUBY_HELMET),
+                .display(new AdvancementDisplay(new ItemStack(Armors.N_RUBY_HELMET),
                         Text.literal("Speed"), Text.literal("Deja vu"),
                         Optional.of(new Identifier(RandomExtensions.MOD_ID, background)), AdvancementFrame.CHALLENGE,
                         true, true, false))
-                .criterion("has_ruby_armor_helmet", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_RUBY_HELMET))
-                .criterion("has_ruby_armor_chestplate", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_RUBY_CHESTPLATE))
-                .criterion("has_ruby_armor_leggings", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_RUBY_LEGGINGS))
-                .criterion("has_ruby_armor_boots", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_RUBY_BOOTS))
+                .criterion("has_ruby_armor_helmet", InventoryChangedCriterion.Conditions.items(Armors.N_RUBY_HELMET))
+                .criterion("has_ruby_armor_chestplate", InventoryChangedCriterion.Conditions.items(Armors.N_RUBY_CHESTPLATE))
+                .criterion("has_ruby_armor_leggings", InventoryChangedCriterion.Conditions.items(Armors.N_RUBY_LEGGINGS))
+                .criterion("has_ruby_armor_boots", InventoryChangedCriterion.Conditions.items(Armors.N_RUBY_BOOTS))
                 .rewards(AdvancementRewards.Builder.experience(200))
                 .parent(rubyDArmor)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/gems/ruby_n_armor");
@@ -462,27 +465,27 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
                 .build(consumer, RandomExtensions.MOD_ID + ":re/gems/topas_root");
 
         AdvancementEntry topasDArmor = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.D_TOPAS_HELMET),
+                .display(new AdvancementDisplay(new ItemStack(Armors.D_TOPAS_HELMET),
                         Text.literal("Let go Mining"), Text.literal("Side to Side"),
                         Optional.of(new Identifier(RandomExtensions.MOD_ID, background)), AdvancementFrame.GOAL,
                         true, true, false))
-                .criterion("has_topas_armor_helmet", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.D_TOPAS_HELMET))
-                .criterion("has_topas_armor_chestplate", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.D_TOPAS_CHESTPLATE))
-                .criterion("has_topas_armor_leggings", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.D_TOPAS_LEGGINGS))
-                .criterion("has_topas_armor_boots", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.D_TOPAS_BOOTS))
+                .criterion("has_topas_armor_helmet", InventoryChangedCriterion.Conditions.items(Armors.D_TOPAS_HELMET))
+                .criterion("has_topas_armor_chestplate", InventoryChangedCriterion.Conditions.items(Armors.D_TOPAS_CHESTPLATE))
+                .criterion("has_topas_armor_leggings", InventoryChangedCriterion.Conditions.items(Armors.D_TOPAS_LEGGINGS))
+                .criterion("has_topas_armor_boots", InventoryChangedCriterion.Conditions.items(Armors.D_TOPAS_BOOTS))
                 .rewards(AdvancementRewards.Builder.experience(40))
                 .parent(topasRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/gems/topas_d_armor");
 
         AdvancementEntry topasNArmor = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.N_TOPAS_HELMET),
+                .display(new AdvancementDisplay(new ItemStack(Armors.N_TOPAS_HELMET),
                         Text.literal("Better Mining"), Text.literal("i still cant see"),
                         Optional.of(new Identifier(RandomExtensions.MOD_ID, background)), AdvancementFrame.CHALLENGE,
                         true, true, false))
-                .criterion("has_topas_armor_helmet", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_TOPAS_HELMET))
-                .criterion("has_topas_armor_chestplate", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_TOPAS_CHESTPLATE))
-                .criterion("has_topas_armor_leggings", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_TOPAS_LEGGINGS))
-                .criterion("has_topas_armor_boots", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.N_TOPAS_BOOTS))
+                .criterion("has_topas_armor_helmet", InventoryChangedCriterion.Conditions.items(Armors.N_TOPAS_HELMET))
+                .criterion("has_topas_armor_chestplate", InventoryChangedCriterion.Conditions.items(Armors.N_TOPAS_CHESTPLATE))
+                .criterion("has_topas_armor_leggings", InventoryChangedCriterion.Conditions.items(Armors.N_TOPAS_LEGGINGS))
+                .criterion("has_topas_armor_boots", InventoryChangedCriterion.Conditions.items(Armors.N_TOPAS_BOOTS))
                 .rewards(AdvancementRewards.Builder.experience(200))
                 .parent(topasDArmor)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/gems/topas_n_armor");
@@ -491,7 +494,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
 
     public void generateCooperAdvancement(Consumer<AdvancementEntry> consumer, AdvancementEntry mainRoot) {
         AdvancementEntry copperRoot = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.COPPER_PICKAXE),
+                .display(new AdvancementDisplay(new ItemStack(Tools.COPPER_PICKAXE),
                         Text.literal("Copper"), Text.literal("Rust Prof"),
                         Optional.of(new Identifier(RandomExtensions.MOD_ID, background)), AdvancementFrame.TASK,
                         true, true, true))
@@ -514,28 +517,28 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
 
         // Copper
         AdvancementEntry copperArmor = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.COPPER_HELMET),
+                .display(new AdvancementDisplay(new ItemStack(Armors.COPPER_HELMET),
                         Text.literal("Copper Armor"), Text.literal("Dose not Rust, i *promise*"),
                         Optional.of(new Identifier(RandomExtensions.MOD_ID, background)), AdvancementFrame.TASK,
                         true, true, true))
-                .criterion("has_copper_helmet", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_HELMET))
-                .criterion("has_copper_chestplate", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_CHESTPLATE))
-                .criterion("has_copper_leggings", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_LEGGINGS))
-                .criterion("has_copper_boots", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_BOOTS))
+                .criterion("has_copper_helmet", InventoryChangedCriterion.Conditions.items(Armors.COPPER_HELMET))
+                .criterion("has_copper_chestplate", InventoryChangedCriterion.Conditions.items(Armors.COPPER_CHESTPLATE))
+                .criterion("has_copper_leggings", InventoryChangedCriterion.Conditions.items(Armors.COPPER_LEGGINGS))
+                .criterion("has_copper_boots", InventoryChangedCriterion.Conditions.items(Armors.COPPER_BOOTS))
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(copperRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/copper/copper_armor");
 
         AdvancementEntry copperTools = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.COPPER_AXE),
+                .display(new AdvancementDisplay(new ItemStack(Tools.COPPER_AXE),
                         Text.literal("Tools of Copper"), Text.literal("Cant Rust"),
                         Optional.of(new Identifier(RandomExtensions.MOD_ID, background)), AdvancementFrame.TASK,
                         true, true, true))
-                .criterion("has_copper_axe", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_AXE))
-                .criterion("has_copper_pickaxe", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_PICKAXE))
-                .criterion("has_copper_shovel", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_SHOVEL))
-                .criterion("has_copper_hoe", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_HOE))
-                .criterion("has_copper_sword", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.COPPER_SWORD))
+                .criterion("has_copper_axe", InventoryChangedCriterion.Conditions.items(Tools.COPPER_AXE))
+                .criterion("has_copper_pickaxe", InventoryChangedCriterion.Conditions.items(Tools.COPPER_PICKAXE))
+                .criterion("has_copper_shovel", InventoryChangedCriterion.Conditions.items(Tools.COPPER_SHOVEL))
+                .criterion("has_copper_hoe", InventoryChangedCriterion.Conditions.items(Tools.COPPER_HOE))
+                .criterion("has_copper_sword", InventoryChangedCriterion.Conditions.items(Weapons.COPPER_SWORD))
                 .rewards(AdvancementRewards.Builder.experience(20))
                 .parent(copperRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/copper/copper_tools");
@@ -593,7 +596,7 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
 
     public void generateLegendaryAdvancement(Consumer<AdvancementEntry> consumer, AdvancementEntry mainRoot) {
         AdvancementEntry legendaryItemRoot = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.LEAVE_STAFF),
+                .display(new AdvancementDisplay(new ItemStack(Specials.LEAVE_STAFF),
                         Text.literal("That's a Legendary"), Text.literal("Got one"),
                         Optional.of(new Identifier(RandomExtensions.MOD_ID, background)), AdvancementFrame.TASK,
                         true, true, true))
@@ -604,31 +607,31 @@ public class AdvancementProvider_RaEx extends FabricAdvancementProvider {
 
         // Legendary
         AdvancementEntry leaveStaff = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.LEAVE_STAFF),
+                .display(new AdvancementDisplay(new ItemStack(Specials.LEAVE_STAFF),
                         Text.literal("Do you like Tree jokes?"), Text.literal("Because they leaf me in tears"),
                         Optional.of(new Identifier(RandomExtensions.MOD_ID, background)), AdvancementFrame.GOAL,
                         true, true, true))
-                .criterion("has_leave_staff", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.LEAVE_STAFF))
+                .criterion("has_leave_staff", InventoryChangedCriterion.Conditions.items(Specials.LEAVE_STAFF))
                 .rewards(AdvancementRewards.Builder.experience(400))
                 .parent(legendaryItemRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/leave_staff");
 
         AdvancementEntry toyHammer = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.TOY_HAMMER),
+                .display(new AdvancementDisplay(new ItemStack(Specials.TOY_HAMMER),
                         Text.literal("Bonk"), Text.literal("Yeet"),
                         Optional.of(new Identifier(RandomExtensions.MOD_ID, background)), AdvancementFrame.GOAL,
                         true, true, true))
-                .criterion("has_toy_hammer", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.TOY_HAMMER))
+                .criterion("has_toy_hammer", InventoryChangedCriterion.Conditions.items(Specials.TOY_HAMMER))
                 .rewards(AdvancementRewards.Builder.experience(400))
                 .parent(legendaryItemRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/toy_hammer");
 
         AdvancementEntry escapeRope = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(ToolsAndArmors_RaEx.ESCAPE_ROPE),
+                .display(new AdvancementDisplay(new ItemStack(Specials.ESCAPE_ROPE),
                         Text.literal("Lets get aut of here"), Text.literal("Escape!"),
                         Optional.of(new Identifier(RandomExtensions.MOD_ID, background)), AdvancementFrame.GOAL,
                         true, true, true))
-                .criterion("has_escape_rope", InventoryChangedCriterion.Conditions.items(ToolsAndArmors_RaEx.ESCAPE_ROPE))
+                .criterion("has_escape_rope", InventoryChangedCriterion.Conditions.items(Specials.ESCAPE_ROPE))
                 .rewards(AdvancementRewards.Builder.experience(400))
                 .parent(legendaryItemRoot)
                 .build(consumer, RandomExtensions.MOD_ID + ":re/legendary_item/escape_rope");

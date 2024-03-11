@@ -1,4 +1,4 @@
-package net.rand.exten.item.custom;
+package net.rand.exten.item.custom.materials;
 
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
