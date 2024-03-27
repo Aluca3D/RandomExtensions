@@ -4,11 +4,13 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.rand.exten.block.Blocks_RaEx;
+import net.rand.exten.item.AccessorieItems;
+import net.rand.exten.item.mains.Armors;
 import net.rand.exten.item.Items_RaEx;
-import net.rand.exten.item.ToolsAndArmors_RaEx;
+import net.rand.exten.item.mains.Specials;
+import net.rand.exten.item.mains.Weapons;
 import net.rand.exten.util.Tags_RaEx;
 
 import java.util.concurrent.CompletableFuture;
@@ -22,29 +24,29 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(
-                        ToolsAndArmors_RaEx.D_AQUAMARIN_HELMET, ToolsAndArmors_RaEx.D_AQUAMARIN_CHESTPLATE,
-                        ToolsAndArmors_RaEx.D_AQUAMARIN_LEGGINGS, ToolsAndArmors_RaEx.D_AQUAMARIN_BOOTS,
+                        Armors.D_AQUAMARIN_HELMET, Armors.D_AQUAMARIN_CHESTPLATE,
+                        Armors.D_AQUAMARIN_LEGGINGS, Armors.D_AQUAMARIN_BOOTS,
 
-                        ToolsAndArmors_RaEx.N_AQUAMARIN_HELMET, ToolsAndArmors_RaEx.N_AQUAMARIN_CHESTPLATE,
-                        ToolsAndArmors_RaEx.N_AQUAMARIN_LEGGINGS, ToolsAndArmors_RaEx.N_AQUAMARIN_BOOTS,
+                        Armors.N_AQUAMARIN_HELMET, Armors.N_AQUAMARIN_CHESTPLATE,
+                        Armors.N_AQUAMARIN_LEGGINGS, Armors.N_AQUAMARIN_BOOTS,
 
-                        ToolsAndArmors_RaEx.D_RUBY_HELMET, ToolsAndArmors_RaEx.D_RUBY_CHESTPLATE,
-                        ToolsAndArmors_RaEx.D_RUBY_LEGGINGS, ToolsAndArmors_RaEx.D_RUBY_BOOTS,
+                        Armors.D_RUBY_HELMET, Armors.D_RUBY_CHESTPLATE,
+                        Armors.D_RUBY_LEGGINGS, Armors.D_RUBY_BOOTS,
 
-                        ToolsAndArmors_RaEx.N_RUBY_HELMET, ToolsAndArmors_RaEx.N_RUBY_CHESTPLATE,
-                        ToolsAndArmors_RaEx.N_RUBY_LEGGINGS, ToolsAndArmors_RaEx.N_RUBY_BOOTS,
+                        Armors.N_RUBY_HELMET, Armors.N_RUBY_CHESTPLATE,
+                        Armors.N_RUBY_LEGGINGS, Armors.N_RUBY_BOOTS,
 
-                        ToolsAndArmors_RaEx.D_TOPAS_HELMET, ToolsAndArmors_RaEx.D_TOPAS_CHESTPLATE,
-                        ToolsAndArmors_RaEx.D_TOPAS_LEGGINGS, ToolsAndArmors_RaEx.D_TOPAS_BOOTS,
+                        Armors.D_TOPAS_HELMET, Armors.D_TOPAS_CHESTPLATE,
+                        Armors.D_TOPAS_LEGGINGS, Armors.D_TOPAS_BOOTS,
 
-                        ToolsAndArmors_RaEx.N_TOPAS_HELMET, ToolsAndArmors_RaEx.N_TOPAS_CHESTPLATE,
-                        ToolsAndArmors_RaEx.N_TOPAS_LEGGINGS, ToolsAndArmors_RaEx.N_TOPAS_BOOTS,
+                        Armors.N_TOPAS_HELMET, Armors.N_TOPAS_CHESTPLATE,
+                        Armors.N_TOPAS_LEGGINGS, Armors.N_TOPAS_BOOTS,
 
-                        ToolsAndArmors_RaEx.COPPER_HELMET, ToolsAndArmors_RaEx.COPPER_CHESTPLATE,
-                        ToolsAndArmors_RaEx.COPPER_LEGGINGS, ToolsAndArmors_RaEx.COPPER_BOOTS,
+                        Armors.COPPER_HELMET, Armors.COPPER_CHESTPLATE,
+                        Armors.COPPER_LEGGINGS, Armors.COPPER_BOOTS,
 
-                        ToolsAndArmors_RaEx.SHULKER_HELMET, ToolsAndArmors_RaEx.SHULKER_CHESTPLATE,
-                        ToolsAndArmors_RaEx.SHULKER_LEGGINGS, ToolsAndArmors_RaEx.SHULKER_BOOTS
+                        Armors.SHULKER_HELMET, Armors.SHULKER_CHESTPLATE,
+                        Armors.SHULKER_LEGGINGS, Armors.SHULKER_BOOTS
 
                 );
 
@@ -137,27 +139,27 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
         ;
 
         getOrCreateTagBuilder(Tags_RaEx.Items.LEGENDARY)
-                .add(ToolsAndArmors_RaEx.TOY_HAMMER)
-                .add(ToolsAndArmors_RaEx.LEAVE_STAFF)
-                .add(ToolsAndArmors_RaEx.ESCAPE_ROPE)
+                .add(Specials.TOY_HAMMER)
+                .add(Specials.LEAVE_STAFF)
+                .add(Specials.ESCAPE_ROPE)
         ;
 
         getOrCreateTagBuilder(Tags_RaEx.Items.SWORD)
                 .add(Items.WOODEN_SWORD)
                 .add(Items.STONE_SWORD)
-                .add(ToolsAndArmors_RaEx.COPPER_SWORD)
+                .add(Weapons.COPPER_SWORD)
                 .add(Items.IRON_SWORD)
                 .add(Items.GOLDEN_SWORD)
                 .add(Items.DIAMOND_SWORD)
                 .add(Items.NETHERITE_SWORD)
 
-                .add(ToolsAndArmors_RaEx.WOODEN_LONGSWORD)
-                .add(ToolsAndArmors_RaEx.STONE_LONGSWORD)
-                .add(ToolsAndArmors_RaEx.COPPER_LONGSWORD)
-                .add(ToolsAndArmors_RaEx.IRON_LONGSWORD)
-                .add(ToolsAndArmors_RaEx.GOLDEN_LONGSWORD)
-                .add(ToolsAndArmors_RaEx.DIAMOND_LONGSWORD)
-                .add(ToolsAndArmors_RaEx.NETHERITE_LONGSWORD)
+                .add(Weapons.WOODEN_LONGSWORD)
+                .add(Weapons.STONE_LONGSWORD)
+                .add(Weapons.COPPER_LONGSWORD)
+                .add(Weapons.IRON_LONGSWORD)
+                .add(Weapons.GOLDEN_LONGSWORD)
+                .add(Weapons.DIAMOND_LONGSWORD)
+                .add(Weapons.NETHERITE_LONGSWORD)
         ;
 
         getOrCreateTagBuilder(Tags_RaEx.Items.PROJECTILE)
@@ -167,6 +169,23 @@ public class ItemTagProvider_RaEx extends FabricTagProvider.ItemTagProvider {
                 .add(Items_RaEx.BAMBOO_EXPLOSIVE_STRONG)
 
                 .add(Items.SNOWBALL)
+        ;
+
+        getOrCreateTagBuilder(Tags_RaEx.Items.COMMON_HAT)
+                .add(AccessorieItems.SUNGLASSES)
+                .add(AccessorieItems.TOP_HAT)
+                .add(AccessorieItems.BOATER)
+        ;
+        getOrCreateTagBuilder(Tags_RaEx.Items.UNCOMMON_HAT)
+                .add(AccessorieItems.TOP_TOP_HAT)
+                .add(AccessorieItems.DEVIL_HORNS)
+        ;
+        getOrCreateTagBuilder(Tags_RaEx.Items.RARE_HAT)
+                .add(AccessorieItems.TOP_TOP_TOP_HAT)
+                .add(AccessorieItems.RAINBOW_SUNGLASSES)
+        ;
+        getOrCreateTagBuilder(Tags_RaEx.Items.EPIC_HAT)
+                .add(AccessorieItems.UNICORN_HORN)
         ;
 
     }

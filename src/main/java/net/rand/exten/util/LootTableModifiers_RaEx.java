@@ -9,7 +9,6 @@ import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
 import net.rand.exten.item.Items_RaEx;
-import net.rand.exten.item.custom.LootBag_RaEx;
 
 public class LootTableModifiers_RaEx {
     private static final Identifier GRASS_ID =
@@ -22,6 +21,8 @@ public class LootTableModifiers_RaEx {
             new Identifier("minecraft", "entities/cow");
     private static final Identifier ZOMBIE_ID =
             new Identifier("minecraft", "entities/zombie");
+    private static final Identifier SKELETON_ID =
+            new Identifier("minecraft", "entities/skeleton");
 
 
     public static void modifyLootTables() {
@@ -78,7 +79,7 @@ public class LootTableModifiers_RaEx {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.01f)) // 1f = 100% Drop rate
-                        .with(ItemEntry.builder(LootBag_RaEx.CHEESE_LOOT_BAG))
+                        .with(ItemEntry.builder(Items_RaEx.CHEESE_LOOT_BAG))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
@@ -102,12 +103,46 @@ public class LootTableModifiers_RaEx {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.01f)) // 1f = 100% Drop rate
-                        .with(ItemEntry.builder(LootBag_RaEx.MINE_LOOT_BAG))
+                        .with(ItemEntry.builder(Items_RaEx.MINE_LOOT_BAG))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
             }
 
+        });
+
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (ZOMBIE_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.125f)) // 1f = 100% Drop rate
+                        .with(ItemEntry.builder(Items_RaEx.HAT_LOOT_BAG))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+                tableBuilder.pool(poolBuilder.build());
+            }
+        });
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (SKELETON_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.125f)) // 1f = 100% Drop rate
+                        .with(ItemEntry.builder(Items_RaEx.HAT_LOOT_BAG))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+                tableBuilder.pool(poolBuilder.build());
+            }
+        });
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (CREEPER_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.125f)) // 1f = 100% Drop rate
+                        .with(ItemEntry.builder(Items_RaEx.HAT_LOOT_BAG))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+
+                tableBuilder.pool(poolBuilder.build());
+            }
         });
     }
 }

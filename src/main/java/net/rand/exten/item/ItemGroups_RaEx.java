@@ -10,7 +10,10 @@ import net.minecraft.util.Identifier;
 import net.rand.exten.RandomExtensions;
 import net.rand.exten.block.Blocks_RaEx;
 import net.rand.exten.block.StepBlockRegistry;
-import net.rand.exten.item.custom.LootBag_RaEx;
+import net.rand.exten.item.mains.Armors;
+import net.rand.exten.item.mains.Specials;
+import net.rand.exten.item.mains.Tools;
+import net.rand.exten.item.mains.Weapons;
 
 public class ItemGroups_RaEx {
 
@@ -39,83 +42,83 @@ public class ItemGroups_RaEx {
 
                         // Tools
                         /// Special
-                        entries.add(ToolsAndArmors_RaEx.LEAVE_STAFF);
-                        entries.add(ToolsAndArmors_RaEx.TOY_HAMMER);
+                        entries.add(Specials.LEAVE_STAFF);
+                        entries.add(Specials.TOY_HAMMER);
+                        entries.add(Specials.ESCAPE_ROPE);
                         entries.add(Items_RaEx.ESCAPE_POTION);
-                        entries.add(ToolsAndArmors_RaEx.ESCAPE_ROPE);
 
                         /// LongSword
-                        entries.add(ToolsAndArmors_RaEx.WOODEN_LONGSWORD);
-                        entries.add(ToolsAndArmors_RaEx.STONE_LONGSWORD);
-                        entries.add(ToolsAndArmors_RaEx.COPPER_LONGSWORD);
-                        entries.add(ToolsAndArmors_RaEx.IRON_LONGSWORD);
-                        entries.add(ToolsAndArmors_RaEx.GOLDEN_LONGSWORD);
-                        entries.add(ToolsAndArmors_RaEx.DIAMOND_LONGSWORD);
-                        entries.add(ToolsAndArmors_RaEx.NETHERITE_LONGSWORD);
+                        entries.add(Weapons.WOODEN_LONGSWORD);
+                        entries.add(Weapons.STONE_LONGSWORD);
+                        entries.add(Weapons.COPPER_LONGSWORD);
+                        entries.add(Weapons.IRON_LONGSWORD);
+                        entries.add(Weapons.GOLDEN_LONGSWORD);
+                        entries.add(Weapons.DIAMOND_LONGSWORD);
+                        entries.add(Weapons.NETHERITE_LONGSWORD);
 
                         /// Copper
-                        entries.add(ToolsAndArmors_RaEx.COPPER_SHOVEL);
-                        entries.add(ToolsAndArmors_RaEx.COPPER_PICKAXE);
-                        entries.add(ToolsAndArmors_RaEx.COPPER_AXE);
-                        entries.add(ToolsAndArmors_RaEx.COPPER_HOE);
-                        entries.add(ToolsAndArmors_RaEx.COPPER_SWORD);
+                        entries.add(Tools.COPPER_SHOVEL);
+                        entries.add(Tools.COPPER_PICKAXE);
+                        entries.add(Tools.COPPER_AXE);
+                        entries.add(Tools.COPPER_HOE);
+                        entries.add(Weapons.COPPER_SWORD);
 
                         /// Paxel
-                        entries.add(ToolsAndArmors_RaEx.WOODEN_PAXEL);
-                        entries.add(ToolsAndArmors_RaEx.STONE_PAXEL);
-                        entries.add(ToolsAndArmors_RaEx.COPPER_PAXEL);
-                        entries.add(ToolsAndArmors_RaEx.IRON_PAXEL);
-                        entries.add(ToolsAndArmors_RaEx.GOLDEN_PAXEL);
-                        entries.add(ToolsAndArmors_RaEx.DIAMOND_PAXEL);
-                        entries.add(ToolsAndArmors_RaEx.NETHERITE_PAXEL);
+                        entries.add(Tools.WOODEN_PAXEL);
+                        entries.add(Tools.STONE_PAXEL);
+                        entries.add(Tools.COPPER_PAXEL);
+                        entries.add(Tools.IRON_PAXEL);
+                        entries.add(Tools.GOLDEN_PAXEL);
+                        entries.add(Tools.DIAMOND_PAXEL);
+                        entries.add(Tools.NETHERITE_PAXEL);
 
                         // Armor
                         /// Shulker
-                        entries.add(ToolsAndArmors_RaEx.SHULKER_HELMET);
-                        entries.add(ToolsAndArmors_RaEx.SHULKER_CHESTPLATE);
-                        entries.add(ToolsAndArmors_RaEx.SHULKER_LEGGINGS);
-                        entries.add(ToolsAndArmors_RaEx.SHULKER_BOOTS);
+                        entries.add(Armors.SHULKER_HELMET);
+                        entries.add(Armors.SHULKER_CHESTPLATE);
+                        entries.add(Armors.SHULKER_LEGGINGS);
+                        entries.add(Armors.SHULKER_BOOTS);
 
                         /// Copper
-                        entries.add(ToolsAndArmors_RaEx.COPPER_HELMET);
-                        entries.add(ToolsAndArmors_RaEx.COPPER_CHESTPLATE);
-                        entries.add(ToolsAndArmors_RaEx.COPPER_LEGGINGS);
-                        entries.add(ToolsAndArmors_RaEx.COPPER_BOOTS);
+                        entries.add(Armors.COPPER_HELMET);
+                        entries.add(Armors.COPPER_CHESTPLATE);
+                        entries.add(Armors.COPPER_LEGGINGS);
+                        entries.add(Armors.COPPER_BOOTS);
 
                         entries.add(Items_RaEx.GEMS_UPGRADE_TEMPLATE);
 
                         /// Aquamarin
-                        entries.add(ToolsAndArmors_RaEx.D_AQUAMARIN_HELMET);
-                        entries.add(ToolsAndArmors_RaEx.D_AQUAMARIN_CHESTPLATE);
-                        entries.add(ToolsAndArmors_RaEx.D_AQUAMARIN_LEGGINGS);
-                        entries.add(ToolsAndArmors_RaEx.D_AQUAMARIN_BOOTS);
+                        entries.add(Armors.D_AQUAMARIN_HELMET);
+                        entries.add(Armors.D_AQUAMARIN_CHESTPLATE);
+                        entries.add(Armors.D_AQUAMARIN_LEGGINGS);
+                        entries.add(Armors.D_AQUAMARIN_BOOTS);
 
-                        entries.add(ToolsAndArmors_RaEx.N_AQUAMARIN_HELMET);
-                        entries.add(ToolsAndArmors_RaEx.N_AQUAMARIN_CHESTPLATE);
-                        entries.add(ToolsAndArmors_RaEx.N_AQUAMARIN_LEGGINGS);
-                        entries.add(ToolsAndArmors_RaEx.N_AQUAMARIN_BOOTS);
+                        entries.add(Armors.N_AQUAMARIN_HELMET);
+                        entries.add(Armors.N_AQUAMARIN_CHESTPLATE);
+                        entries.add(Armors.N_AQUAMARIN_LEGGINGS);
+                        entries.add(Armors.N_AQUAMARIN_BOOTS);
 
                         /// Ruby
-                        entries.add(ToolsAndArmors_RaEx.D_RUBY_HELMET);
-                        entries.add(ToolsAndArmors_RaEx.D_RUBY_CHESTPLATE);
-                        entries.add(ToolsAndArmors_RaEx.D_RUBY_LEGGINGS);
-                        entries.add(ToolsAndArmors_RaEx.D_RUBY_BOOTS);
+                        entries.add(Armors.D_RUBY_HELMET);
+                        entries.add(Armors.D_RUBY_CHESTPLATE);
+                        entries.add(Armors.D_RUBY_LEGGINGS);
+                        entries.add(Armors.D_RUBY_BOOTS);
 
-                        entries.add(ToolsAndArmors_RaEx.N_RUBY_HELMET);
-                        entries.add(ToolsAndArmors_RaEx.N_RUBY_CHESTPLATE);
-                        entries.add(ToolsAndArmors_RaEx.N_RUBY_LEGGINGS);
-                        entries.add(ToolsAndArmors_RaEx.N_RUBY_BOOTS);
+                        entries.add(Armors.N_RUBY_HELMET);
+                        entries.add(Armors.N_RUBY_CHESTPLATE);
+                        entries.add(Armors.N_RUBY_LEGGINGS);
+                        entries.add(Armors.N_RUBY_BOOTS);
 
                         /// Topas
-                        entries.add(ToolsAndArmors_RaEx.D_TOPAS_HELMET);
-                        entries.add(ToolsAndArmors_RaEx.D_TOPAS_CHESTPLATE);
-                        entries.add(ToolsAndArmors_RaEx.D_TOPAS_LEGGINGS);
-                        entries.add(ToolsAndArmors_RaEx.D_TOPAS_BOOTS);
+                        entries.add(Armors.D_TOPAS_HELMET);
+                        entries.add(Armors.D_TOPAS_CHESTPLATE);
+                        entries.add(Armors.D_TOPAS_LEGGINGS);
+                        entries.add(Armors.D_TOPAS_BOOTS);
 
-                        entries.add(ToolsAndArmors_RaEx.N_TOPAS_HELMET);
-                        entries.add(ToolsAndArmors_RaEx.N_TOPAS_CHESTPLATE);
-                        entries.add(ToolsAndArmors_RaEx.N_TOPAS_LEGGINGS);
-                        entries.add(ToolsAndArmors_RaEx.N_TOPAS_BOOTS);
+                        entries.add(Armors.N_TOPAS_HELMET);
+                        entries.add(Armors.N_TOPAS_CHESTPLATE);
+                        entries.add(Armors.N_TOPAS_LEGGINGS);
+                        entries.add(Armors.N_TOPAS_BOOTS);
 
                         /// Souls
                         entries.add(Blocks_RaEx.SOUL_ORE);
@@ -132,9 +135,10 @@ public class ItemGroups_RaEx {
                         entries.add(Blocks_RaEx.CHEESE_STATION);
 
                         ///Loot Bag
-                        entries.add(LootBag_RaEx.EMPTY_LOOT_BAG);
-                        entries.add(LootBag_RaEx.CHEESE_LOOT_BAG);
-                        entries.add(LootBag_RaEx.MINE_LOOT_BAG);
+                        entries.add(Items_RaEx.EMPTY_LOOT_BAG);
+                        entries.add(Items_RaEx.CHEESE_LOOT_BAG);
+                        entries.add(Items_RaEx.MINE_LOOT_BAG);
+                        entries.add(Items_RaEx.HAT_LOOT_BAG);
 
                         /// Foods
                         entries.add(Items_RaEx.FLOUR);
@@ -208,10 +212,18 @@ public class ItemGroups_RaEx {
                         entries.add(Blocks_RaEx.BARBED_WIRE);
 
                         /// Head Wearable
-                        entries.add(Items_RaEx.SUNGLASSES);
-                        entries.add(Items_RaEx.TOP_HAT);
-                        entries.add(Items_RaEx.TOP_TOP_HAT);
-                        entries.add(Items_RaEx.TOP_TOP_TOP_HAT);
+                        /// Common
+                        entries.add(AccessorieItems.SUNGLASSES);
+                        entries.add(AccessorieItems.TOP_HAT);
+                        entries.add(AccessorieItems.BOATER);
+                        /// Uncommon
+                        entries.add(AccessorieItems.TOP_TOP_HAT);
+                        entries.add(AccessorieItems.DEVIL_HORNS);
+                        /// Rare
+                        entries.add(AccessorieItems.TOP_TOP_TOP_HAT);
+                        entries.add(AccessorieItems.RAINBOW_SUNGLASSES);
+                        /// Epic
+                        entries.add(AccessorieItems.UNICORN_HORN);
 
                         /// Funny Items and Blocks
                         entries.add(Items_RaEx.CHEESE_OF_FLIGHT);

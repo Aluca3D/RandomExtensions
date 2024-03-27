@@ -1,68 +1,21 @@
-package net.rand.exten.item;
+package net.rand.exten.item.mains;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.*;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ToolMaterials;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.rand.exten.RandomExtensions;
-import net.rand.exten.item.custom.ArmorMaterials_RaEx;
-import net.rand.exten.item.custom.ToolMaterial_RaEx;
-import net.rand.exten.item.custom.wearable.armor.*;
+import net.rand.exten.item.custom.materials.ArmorMaterials_RaEx;
 import net.rand.exten.item.custom.legendary.EscapeRope;
 import net.rand.exten.item.custom.legendary.LeaveStaff;
 import net.rand.exten.item.custom.legendary.ToyHammer;
-import net.rand.exten.item.custom.tools.LongSwordItem;
-import net.rand.exten.item.custom.tools.PaxelItem;
+import net.rand.exten.item.custom.wearable.armor.*;
 
-public class ToolsAndArmors_RaEx {
-    /**
-     * Special
-     */
-    public static final Item LEAVE_STAFF = registerItem("leave_staff",
-            new LeaveStaff(new FabricItemSettings().maxCount(1).fireproof().maxDamage(240).rarity(Rarity.EPIC)));
-    public static final Item TOY_HAMMER = registerItem("toy_hammer",
-            new ToyHammer(ToolMaterials.WOOD, new FabricItemSettings().maxCount(1).maxDamage(960).rarity(Rarity.EPIC)));
-    public static final Item ESCAPE_ROPE = registerItem("escape_rope",
-            new EscapeRope(new FabricItemSettings().maxCount(1).fireproof().maxDamage(64).rarity(Rarity.EPIC)));
-
-    /**
-     * Long Sword
-     */
-    public static final Item WOODEN_LONGSWORD = registerItem("wooden_longsword",
-            new LongSwordItem(ToolMaterials.WOOD, 4, -2.9f, -0.01f, new FabricItemSettings()));
-    public static final Item STONE_LONGSWORD = registerItem("stone_longsword",
-            new LongSwordItem(ToolMaterials.STONE, 4, -2.9f, -0.02f, new FabricItemSettings()));
-    public static final Item COPPER_LONGSWORD = registerItem("copper_longsword",
-            new LongSwordItem(ToolMaterial_RaEx.COPPER, 4, -3f, -0.01f, new FabricItemSettings()));
-    public static final Item IRON_LONGSWORD = registerItem("iron_longsword",
-            new LongSwordItem(ToolMaterials.IRON, 4, -2.9f, -0.02f, new FabricItemSettings()));
-    public static final Item GOLDEN_LONGSWORD = registerItem("golden_longsword",
-            new LongSwordItem(ToolMaterials.GOLD, 4, -2.6f, -0.01f, new FabricItemSettings()));
-    public static final Item DIAMOND_LONGSWORD = registerItem("diamond_longsword",
-            new LongSwordItem(ToolMaterials.DIAMOND, 4, -2.9f, -0.02f, new FabricItemSettings()));
-    public static final Item NETHERITE_LONGSWORD = registerItem("netherite_longsword",
-            new LongSwordItem(ToolMaterials.NETHERITE, 4, -2.8f, -0.02f, new FabricItemSettings()));
-
-    /**
-     * Paxel
-     */
-    public static final Item WOODEN_PAXEL = registerItem("wooden_paxel",
-            new PaxelItem(ToolMaterials.WOOD, 4, -3f, new FabricItemSettings()));
-    public static final Item STONE_PAXEL = registerItem("stone_paxel",
-            new PaxelItem(ToolMaterials.STONE, 6, -3f, new FabricItemSettings()));
-    public static final Item IRON_PAXEL = registerItem("iron_paxel",
-            new PaxelItem(ToolMaterials.IRON, 6, -3f, new FabricItemSettings()));
-    public static final Item COPPER_PAXEL = registerItem("copper_paxel",
-            new PaxelItem(ToolMaterial_RaEx.COPPER, 6, -3f, new FabricItemSettings()));
-    public static final Item GOLDEN_PAXEL = registerItem("golden_paxel",
-            new PaxelItem(ToolMaterials.GOLD, 4, -3f, new FabricItemSettings()));
-    public static final Item DIAMOND_PAXEL = registerItem("diamond_paxel",
-            new PaxelItem(ToolMaterials.DIAMOND, 6, -3f, new FabricItemSettings()));
-    public static final Item NETHERITE_PAXEL = registerItem("netherite_paxel",
-            new PaxelItem(ToolMaterials.NETHERITE, 7, -3f, new FabricItemSettings().fireproof()));
-
+public class Armors {
     /**
      * Shulker
      */
@@ -78,17 +31,6 @@ public class ToolsAndArmors_RaEx {
     /**
      * Copper
      */
-    public static final Item COPPER_AXE = registerItem("copper_axe",
-            new AxeItem(ToolMaterial_RaEx.COPPER, 5, -3f, new FabricItemSettings()));
-    public static final Item COPPER_PICKAXE = registerItem("copper_pickaxe",
-            new PickaxeItem(ToolMaterial_RaEx.COPPER, 1, -2.8f, new FabricItemSettings()));
-    public static final Item COPPER_SHOVEL = registerItem("copper_shovel",
-            new ShovelItem(ToolMaterial_RaEx.COPPER, 1, -3f, new FabricItemSettings()));
-    public static final Item COPPER_HOE = registerItem("copper_hoe",
-            new HoeItem(ToolMaterial_RaEx.COPPER, -2, -3f, new FabricItemSettings()));
-    public static final Item COPPER_SWORD = registerItem("copper_sword",
-            new SwordItem(ToolMaterial_RaEx.COPPER, 3, -2.5f, new FabricItemSettings()));
-
     public static final Item COPPER_HELMET = registerItem("copper_helmet",
             new CopperArmorItem(ArmorMaterials_RaEx.COPPER, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item COPPER_CHESTPLATE = registerItem("copper_chestplate",
@@ -166,9 +108,7 @@ public class ToolsAndArmors_RaEx {
     }
 
     public static void registerRaExItems() {
-        RandomExtensions.LOGGER.info("Register Armor and Tools for " + RandomExtensions.MOD_ID);
-
-
+        RandomExtensions.LOGGER.info("Register Armors for " + RandomExtensions.MOD_ID);
     }
 }
 
