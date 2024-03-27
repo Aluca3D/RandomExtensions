@@ -17,13 +17,10 @@ public class HatLootBag extends LootBag {
         picker.addItemWithRarity(AccessorieItems.SUNGLASSES, 12);
         picker.addItemWithRarity(AccessorieItems.TOP_HAT, 12);
         picker.addItemWithRarity(AccessorieItems.BOATER, 12);
-        picker.addItemWithRarity(AccessorieItems.STRAW_HAT, 12);
         // Uncommon: 6
         picker.addItemWithRarity(AccessorieItems.DEVIL_HORNS, 6);
-        picker.addItemWithRarity(AccessorieItems.HEADPHONES, 6);
         // Rare: 3
         picker.addItemWithRarity(AccessorieItems.RAINBOW_SUNGLASSES, 3);
-
         // Epic: 1
         picker.addItemWithRarity(AccessorieItems.UNICORN_HORN, 1);
 

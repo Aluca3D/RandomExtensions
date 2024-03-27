@@ -130,10 +130,6 @@ public class DeGen extends FabricLanguageProvider {
         translationBuilder.add(AccessorieItems.TOP_TOP_TOP_HAT, "Grösserer Zylinder");
         translationBuilder.add(AccessorieItems.UNICORN_HORN, "Einhorn Horn");
         translationBuilder.add(AccessorieItems.RAINBOW_SUNGLASSES, "Regenbogen Sonnenbrille");
-        translationBuilder.add(AccessorieItems.STRAW_HAT, "Stroh Hut");
-        translationBuilder.add(AccessorieItems.HEADPHONES, "Kopfhörer");
-        translationBuilder.add(AccessorieItems.NIGHTMARE_TV_HEAD, "NightmareTV Kopf");
-        translationBuilder.add(AccessorieItems.PIRAT_STRAW_HAT, "Stroh Hut");
 
         /// Loot Bag
         translationBuilder.add(Items_RaEx.EMPTY_LOOT_BAG, "Lehre Beutetasche");
